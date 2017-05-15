@@ -1,0 +1,6 @@
+framework module Pods_Talkative_ParentsTests {
+  umbrella header "Pods-Talkative ParentsTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

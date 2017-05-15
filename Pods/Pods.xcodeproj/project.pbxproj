@@ -1,0 +1,660 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0AC5DB6DA4F1A7360FE071AB7BAD4D17 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
+		0D4269EF7F4C87AE373076B4CFC66B4C /* Pods-Talkative Parents-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E222C42FD2E9AACC4B6B12CA2AE50C14 /* Pods-Talkative Parents-dummy.m */; };
+		43D6EDEA706096F98ECB149A6AB34F6B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
+		583F3EFFC2F6EDBAF661E88AEBED28C2 /* Pods-Talkative Parents-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A96F36F453CAAB3B948C032305D32DDC /* Pods-Talkative Parents-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		646C8953BE07385027202E7B447FA317 /* Pods-Talkative ParentsUITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E4814120CEFD88C24FEF98D558292070 /* Pods-Talkative ParentsUITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6DF3615503234E8F9B47309778589FCC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
+		73EBB15A35503DB1E0E78815FA67C839 /* Pods-Talkative ParentsUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 146002013A43E4967D2C58C7BB05A522 /* Pods-Talkative ParentsUITests-dummy.m */; };
+		88AD10DD576980BBE344722DB54AA266 /* Pods-Talkative ParentsTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = BF47009D7D744A219305B709A334A700 /* Pods-Talkative ParentsTests-dummy.m */; };
+		FD6C2F2ED27CD46EAEF19C65E049AABF /* Pods-Talkative ParentsTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B82C2547919D1E1F7CEAF96098D3CE08 /* Pods-Talkative ParentsTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		146002013A43E4967D2C58C7BB05A522 /* Pods-Talkative ParentsUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Talkative ParentsUITests-dummy.m"; sourceTree = "<group>"; };
+		1CA682753DD6F62ACA4C5F3FFBEC68D6 /* Pods-Talkative ParentsUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Talkative ParentsUITests-acknowledgements.plist"; sourceTree = "<group>"; };
+		3D2F9B9DC6781E3AA2CC217C241427A6 /* Pods_Talkative_ParentsUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Talkative_ParentsUITests.framework; path = "Pods-Talkative ParentsUITests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		61E77BA3488AE217BD5F3D8636D2B8EB /* Pods-Talkative ParentsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Talkative ParentsTests.debug.xcconfig"; sourceTree = "<group>"; };
+		652F538E7E0994C2217BDD83E53902CE /* Pods-Talkative Parents.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-Talkative Parents.modulemap"; sourceTree = "<group>"; };
+		68A1CF25B7F73B728129A4C06D779CE2 /* Pods_Talkative_Parents.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Talkative_Parents.framework; path = "Pods-Talkative Parents.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6DB272B3BB398969FE3A511B933ABD8F /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		70EF12E72B1D0DC7C6A31D44C1366C88 /* Pods_Talkative_ParentsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Talkative_ParentsTests.framework; path = "Pods-Talkative ParentsTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7185EF26CFBD36FF40D1B0BE0066AEDC /* Pods-Talkative ParentsTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-Talkative ParentsTests.modulemap"; sourceTree = "<group>"; };
+		7D4A087B578472CFC2499903D6AA4734 /* Pods-Talkative Parents-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Talkative Parents-acknowledgements.plist"; sourceTree = "<group>"; };
+		844B9A631F4487FE1BE5DD3B363DDB16 /* Pods-Talkative ParentsUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-Talkative ParentsUITests.modulemap"; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9E652123F1AF6BA82F974EB54CCA9126 /* Pods-Talkative Parents-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Talkative Parents-acknowledgements.markdown"; sourceTree = "<group>"; };
+		A96F36F453CAAB3B948C032305D32DDC /* Pods-Talkative Parents-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Talkative Parents-umbrella.h"; sourceTree = "<group>"; };
+		ACA8BCC72EF335A36858218CF4859CDD /* Pods-Talkative ParentsUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Talkative ParentsUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		AD797233D037FC6BFA46751D5A83F8C9 /* Pods-Talkative ParentsUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Talkative ParentsUITests.release.xcconfig"; sourceTree = "<group>"; };
+		B2BD33734B7979DEA95CCE010478F8E6 /* Pods-Talkative Parents.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Talkative Parents.debug.xcconfig"; sourceTree = "<group>"; };
+		B82C2547919D1E1F7CEAF96098D3CE08 /* Pods-Talkative ParentsTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Talkative ParentsTests-umbrella.h"; sourceTree = "<group>"; };
+		BF47009D7D744A219305B709A334A700 /* Pods-Talkative ParentsTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Talkative ParentsTests-dummy.m"; sourceTree = "<group>"; };
+		C1E4CF71C28CE3CEB6C44C86D3A4461B /* Pods-Talkative ParentsTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Talkative ParentsTests-frameworks.sh"; sourceTree = "<group>"; };
+		C616F4EF98D177A8B361F2EDF6EAD712 /* Pods-Talkative ParentsUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Talkative ParentsUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		D16807DF1637FC1914B436508E0FCC1E /* Pods-Talkative ParentsTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Talkative ParentsTests-resources.sh"; sourceTree = "<group>"; };
+		D1E8492BA9906BD2D89AA4C5269F20D9 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D641258C5406E156534F72E80FF932DF /* Pods-Talkative Parents-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Talkative Parents-frameworks.sh"; sourceTree = "<group>"; };
+		D7841645FEF89B0F030707BD7189E9E4 /* Pods-Talkative ParentsUITests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Talkative ParentsUITests-frameworks.sh"; sourceTree = "<group>"; };
+		D87FF2B58CFA62888FA7E721CE15B1A0 /* Pods-Talkative ParentsTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Talkative ParentsTests-acknowledgements.plist"; sourceTree = "<group>"; };
+		DA6909AFE8FE3E35016AAAF1DF80A9FF /* Pods-Talkative ParentsUITests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Talkative ParentsUITests-resources.sh"; sourceTree = "<group>"; };
+		E01751D26CE19E8C8BFDBF45149E804B /* Pods-Talkative Parents-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Talkative Parents-resources.sh"; sourceTree = "<group>"; };
+		E1EA5148307E9664929265E80B3B3F69 /* Pods-Talkative ParentsTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Talkative ParentsTests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		E222C42FD2E9AACC4B6B12CA2AE50C14 /* Pods-Talkative Parents-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Talkative Parents-dummy.m"; sourceTree = "<group>"; };
+		E4814120CEFD88C24FEF98D558292070 /* Pods-Talkative ParentsUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Talkative ParentsUITests-umbrella.h"; sourceTree = "<group>"; };
+		EFBADFD100233A3735842D259A0A37F9 /* Pods-Talkative Parents.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Talkative Parents.release.xcconfig"; sourceTree = "<group>"; };
+		F1F1D33CEE336C2C9BC98421A42BD00A /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FAC204090B0F36A1209C49AC8F634530 /* Pods-Talkative ParentsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Talkative ParentsTests.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1904BAA8FCF67A4B0CDFF875E30404AA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0AC5DB6DA4F1A7360FE071AB7BAD4D17 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7D06729DD50CD3EDBEC8787FAA72D02C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				43D6EDEA706096F98ECB149A6AB34F6B /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A080A20E12B9DF156E4386C7F736279C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6DF3615503234E8F9B47309778589FCC /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		679D4EDD8A7DEDA5355C5AA9DF5B0015 /* Pods-Talkative ParentsTests */ = {
+			isa = PBXGroup;
+			children = (
+				6DB272B3BB398969FE3A511B933ABD8F /* Info.plist */,
+				7185EF26CFBD36FF40D1B0BE0066AEDC /* Pods-Talkative ParentsTests.modulemap */,
+				E1EA5148307E9664929265E80B3B3F69 /* Pods-Talkative ParentsTests-acknowledgements.markdown */,
+				D87FF2B58CFA62888FA7E721CE15B1A0 /* Pods-Talkative ParentsTests-acknowledgements.plist */,
+				BF47009D7D744A219305B709A334A700 /* Pods-Talkative ParentsTests-dummy.m */,
+				C1E4CF71C28CE3CEB6C44C86D3A4461B /* Pods-Talkative ParentsTests-frameworks.sh */,
+				D16807DF1637FC1914B436508E0FCC1E /* Pods-Talkative ParentsTests-resources.sh */,
+				B82C2547919D1E1F7CEAF96098D3CE08 /* Pods-Talkative ParentsTests-umbrella.h */,
+				61E77BA3488AE217BD5F3D8636D2B8EB /* Pods-Talkative ParentsTests.debug.xcconfig */,
+				FAC204090B0F36A1209C49AC8F634530 /* Pods-Talkative ParentsTests.release.xcconfig */,
+			);
+			name = "Pods-Talkative ParentsTests";
+			path = "Target Support Files/Pods-Talkative ParentsTests";
+			sourceTree = "<group>";
+		};
+		6CC98FC882EE79DE33F5852F07DBB26C /* Pods-Talkative Parents */ = {
+			isa = PBXGroup;
+			children = (
+				D1E8492BA9906BD2D89AA4C5269F20D9 /* Info.plist */,
+				652F538E7E0994C2217BDD83E53902CE /* Pods-Talkative Parents.modulemap */,
+				9E652123F1AF6BA82F974EB54CCA9126 /* Pods-Talkative Parents-acknowledgements.markdown */,
+				7D4A087B578472CFC2499903D6AA4734 /* Pods-Talkative Parents-acknowledgements.plist */,
+				E222C42FD2E9AACC4B6B12CA2AE50C14 /* Pods-Talkative Parents-dummy.m */,
+				D641258C5406E156534F72E80FF932DF /* Pods-Talkative Parents-frameworks.sh */,
+				E01751D26CE19E8C8BFDBF45149E804B /* Pods-Talkative Parents-resources.sh */,
+				A96F36F453CAAB3B948C032305D32DDC /* Pods-Talkative Parents-umbrella.h */,
+				B2BD33734B7979DEA95CCE010478F8E6 /* Pods-Talkative Parents.debug.xcconfig */,
+				EFBADFD100233A3735842D259A0A37F9 /* Pods-Talkative Parents.release.xcconfig */,
+			);
+			name = "Pods-Talkative Parents";
+			path = "Target Support Files/Pods-Talkative Parents";
+			sourceTree = "<group>";
+		};
+		7531C8F8DE19F1AA3C8A7AC97A91DC29 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		79446BE4461487B03252E8B99B554A9A /* Pods-Talkative ParentsUITests */ = {
+			isa = PBXGroup;
+			children = (
+				F1F1D33CEE336C2C9BC98421A42BD00A /* Info.plist */,
+				844B9A631F4487FE1BE5DD3B363DDB16 /* Pods-Talkative ParentsUITests.modulemap */,
+				C616F4EF98D177A8B361F2EDF6EAD712 /* Pods-Talkative ParentsUITests-acknowledgements.markdown */,
+				1CA682753DD6F62ACA4C5F3FFBEC68D6 /* Pods-Talkative ParentsUITests-acknowledgements.plist */,
+				146002013A43E4967D2C58C7BB05A522 /* Pods-Talkative ParentsUITests-dummy.m */,
+				D7841645FEF89B0F030707BD7189E9E4 /* Pods-Talkative ParentsUITests-frameworks.sh */,
+				DA6909AFE8FE3E35016AAAF1DF80A9FF /* Pods-Talkative ParentsUITests-resources.sh */,
+				E4814120CEFD88C24FEF98D558292070 /* Pods-Talkative ParentsUITests-umbrella.h */,
+				ACA8BCC72EF335A36858218CF4859CDD /* Pods-Talkative ParentsUITests.debug.xcconfig */,
+				AD797233D037FC6BFA46751D5A83F8C9 /* Pods-Talkative ParentsUITests.release.xcconfig */,
+			);
+			name = "Pods-Talkative ParentsUITests";
+			path = "Target Support Files/Pods-Talkative ParentsUITests";
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
+				EE083F716F59E9702AFEFD09FB15A411 /* Products */,
+				811C839D10DA3EB21B50B0AE777640D9 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		811C839D10DA3EB21B50B0AE777640D9 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				6CC98FC882EE79DE33F5852F07DBB26C /* Pods-Talkative Parents */,
+				679D4EDD8A7DEDA5355C5AA9DF5B0015 /* Pods-Talkative ParentsTests */,
+				79446BE4461487B03252E8B99B554A9A /* Pods-Talkative ParentsUITests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7531C8F8DE19F1AA3C8A7AC97A91DC29 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EE083F716F59E9702AFEFD09FB15A411 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				68A1CF25B7F73B728129A4C06D779CE2 /* Pods_Talkative_Parents.framework */,
+				70EF12E72B1D0DC7C6A31D44C1366C88 /* Pods_Talkative_ParentsTests.framework */,
+				3D2F9B9DC6781E3AA2CC217C241427A6 /* Pods_Talkative_ParentsUITests.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		9266E6149C180A5DFCE96CC575921F0F /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FD6C2F2ED27CD46EAEF19C65E049AABF /* Pods-Talkative ParentsTests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F86EFDE41B82D57CC30AD339EB9A7F0B /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				583F3EFFC2F6EDBAF661E88AEBED28C2 /* Pods-Talkative Parents-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F9361E4622714FCE11B0956710C3A961 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				646C8953BE07385027202E7B447FA317 /* Pods-Talkative ParentsUITests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		55D9785C23C9C7C4CAB91112E33F6422 /* Pods-Talkative ParentsUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C17003D1488516FC9A0A38A730E662FD /* Build configuration list for PBXNativeTarget "Pods-Talkative ParentsUITests" */;
+			buildPhases = (
+				6C73FC4EF99A7833F1EB4AF0F242AA63 /* Sources */,
+				1904BAA8FCF67A4B0CDFF875E30404AA /* Frameworks */,
+				F9361E4622714FCE11B0956710C3A961 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-Talkative ParentsUITests";
+			productName = "Pods-Talkative ParentsUITests";
+			productReference = 3D2F9B9DC6781E3AA2CC217C241427A6 /* Pods_Talkative_ParentsUITests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		97DD79A24D531FE709F0939CAC51C30B /* Pods-Talkative ParentsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E5D4E88A690C3C7A7EAAE896F6F776C5 /* Build configuration list for PBXNativeTarget "Pods-Talkative ParentsTests" */;
+			buildPhases = (
+				B9EC67F3C4DC002EA85553EA28612E6A /* Sources */,
+				7D06729DD50CD3EDBEC8787FAA72D02C /* Frameworks */,
+				9266E6149C180A5DFCE96CC575921F0F /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-Talkative ParentsTests";
+			productName = "Pods-Talkative ParentsTests";
+			productReference = 70EF12E72B1D0DC7C6A31D44C1366C88 /* Pods_Talkative_ParentsTests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		E1C0780BC685F86256B485672F3D619B /* Pods-Talkative Parents */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F14E5FA41FFA7EC07A923EEF86EA4A90 /* Build configuration list for PBXNativeTarget "Pods-Talkative Parents" */;
+			buildPhases = (
+				39FE94EDA504A6C9C035EAC20089F68D /* Sources */,
+				A080A20E12B9DF156E4386C7F736279C /* Frameworks */,
+				F86EFDE41B82D57CC30AD339EB9A7F0B /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-Talkative Parents";
+			productName = "Pods-Talkative Parents";
+			productReference = 68A1CF25B7F73B728129A4C06D779CE2 /* Pods_Talkative_Parents.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0700;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = EE083F716F59E9702AFEFD09FB15A411 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E1C0780BC685F86256B485672F3D619B /* Pods-Talkative Parents */,
+				97DD79A24D531FE709F0939CAC51C30B /* Pods-Talkative ParentsTests */,
+				55D9785C23C9C7C4CAB91112E33F6422 /* Pods-Talkative ParentsUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		39FE94EDA504A6C9C035EAC20089F68D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0D4269EF7F4C87AE373076B4CFC66B4C /* Pods-Talkative Parents-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6C73FC4EF99A7833F1EB4AF0F242AA63 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				73EBB15A35503DB1E0E78815FA67C839 /* Pods-Talkative ParentsUITests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B9EC67F3C4DC002EA85553EA28612E6A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				88AD10DD576980BBE344722DB54AA266 /* Pods-Talkative ParentsTests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		015A368F878AC3E2CEAE21DDE8026304 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		20D1910A7B819293AAD4FBFCDAA8201D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EFBADFD100233A3735842D259A0A37F9 /* Pods-Talkative Parents.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-Talkative Parents/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Talkative Parents/Pods-Talkative Parents.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_Talkative_Parents;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		21E9D8DC7753051F9F3D33F806BF01BE /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FAC204090B0F36A1209C49AC8F634530 /* Pods-Talkative ParentsTests.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-Talkative ParentsTests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Talkative ParentsTests/Pods-Talkative ParentsTests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_Talkative_ParentsTests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		44CDBB6D11DE06DB64D6268622BDC47E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		88A635399E3B80231E3F59A782938DE7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = ACA8BCC72EF335A36858218CF4859CDD /* Pods-Talkative ParentsUITests.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-Talkative ParentsUITests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Talkative ParentsUITests/Pods-Talkative ParentsUITests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_Talkative_ParentsUITests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		8A5C5D2536CB490EE812C5C7D737F6F8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B2BD33734B7979DEA95CCE010478F8E6 /* Pods-Talkative Parents.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-Talkative Parents/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Talkative Parents/Pods-Talkative Parents.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_Talkative_Parents;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		DD3C75835FE13F986B49DE60A608A810 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 61E77BA3488AE217BD5F3D8636D2B8EB /* Pods-Talkative ParentsTests.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-Talkative ParentsTests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Talkative ParentsTests/Pods-Talkative ParentsTests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_Talkative_ParentsTests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		E59A480C747BAC6FAAF0D15DF5DC9EB3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AD797233D037FC6BFA46751D5A83F8C9 /* Pods-Talkative ParentsUITests.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-Talkative ParentsUITests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Talkative ParentsUITests/Pods-Talkative ParentsUITests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_Talkative_ParentsUITests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				015A368F878AC3E2CEAE21DDE8026304 /* Debug */,
+				44CDBB6D11DE06DB64D6268622BDC47E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C17003D1488516FC9A0A38A730E662FD /* Build configuration list for PBXNativeTarget "Pods-Talkative ParentsUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				88A635399E3B80231E3F59A782938DE7 /* Debug */,
+				E59A480C747BAC6FAAF0D15DF5DC9EB3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E5D4E88A690C3C7A7EAAE896F6F776C5 /* Build configuration list for PBXNativeTarget "Pods-Talkative ParentsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DD3C75835FE13F986B49DE60A608A810 /* Debug */,
+				21E9D8DC7753051F9F3D33F806BF01BE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F14E5FA41FFA7EC07A923EEF86EA4A90 /* Build configuration list for PBXNativeTarget "Pods-Talkative Parents" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8A5C5D2536CB490EE812C5C7D737F6F8 /* Debug */,
+				20D1910A7B819293AAD4FBFCDAA8201D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}
