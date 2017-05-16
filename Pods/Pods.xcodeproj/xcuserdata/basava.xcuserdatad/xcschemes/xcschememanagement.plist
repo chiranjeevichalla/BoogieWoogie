@@ -4,6 +4,26 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>Alamofire.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>AsyncSwift.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>ChameleonFramework.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>ObjectMapper.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-Talkative Parents.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -19,8 +39,54 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>SwiftyJSON.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
-	<dict/>
+	<dict>
+		<key>1CB48FD694FEDE4BDEDC82CBC1783122</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>55D9785C23C9C7C4CAB91112E33F6422</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>6D039956D20C2E6F538A049A3463917E</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>76BD4592010354D6C23D6ECCA20D83A8</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>7F45F2F21482C3777494ACE42307212D</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>88E9EC28B8B46C3631E6B242B50F4442</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>97DD79A24D531FE709F0939CAC51C30B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>CD6C9FB6B052E1CF663F8A56041EA163</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+	</dict>
 </dict>
 </plist>

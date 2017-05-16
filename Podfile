@@ -4,6 +4,11 @@
 target 'Talkative Parents' do
   # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
   use_frameworks!
+  pod 'Alamofire', '~> 4.0'
+  pod 'SwiftyJSON'
+  pod 'ObjectMapper', '~> 2.2'
+  pod 'AsyncSwift'
+  pod 'ChameleonFramework/Swift', :git => 'https://github.com/ViccAlexander/Chameleon.git'
 
   # Pods for Talkative Parents
 

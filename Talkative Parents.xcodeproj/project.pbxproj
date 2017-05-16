@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		181E64761EC9CB70007E7C87 /* UserDefaultsConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181E64751EC9CB70007E7C87 /* UserDefaultsConstants.swift */; };
+		181E64781EC9CB7D007E7C87 /* Commons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181E64771EC9CB7D007E7C87 /* Commons.swift */; };
+		181E647A1EC9CB88007E7C87 /* CommonService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181E64791EC9CB88007E7C87 /* CommonService.swift */; };
+		181E647C1EC9CB92007E7C87 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181E647B1EC9CB92007E7C87 /* Constants.swift */; };
+		181E647E1EC9CBA2007E7C87 /* UIFont-Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181E647D1EC9CBA2007E7C87 /* UIFont-Config.swift */; };
 		183F93591EC9829300B11BEB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183F93581EC9829300B11BEB /* AppDelegate.swift */; };
 		183F935B1EC9829300B11BEB /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183F935A1EC9829300B11BEB /* FirstViewController.swift */; };
 		183F935D1EC9829300B11BEB /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183F935C1EC9829300B11BEB /* SecondViewController.swift */; };
@@ -38,6 +43,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		181E64751EC9CB70007E7C87 /* UserDefaultsConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaultsConstants.swift; sourceTree = "<group>"; };
+		181E64771EC9CB7D007E7C87 /* Commons.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Commons.swift; sourceTree = "<group>"; };
+		181E64791EC9CB88007E7C87 /* CommonService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommonService.swift; sourceTree = "<group>"; };
+		181E647B1EC9CB92007E7C87 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		181E647D1EC9CBA2007E7C87 /* UIFont-Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIFont-Config.swift"; sourceTree = "<group>"; };
 		183F93551EC9829300B11BEB /* Talkative Parents.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Talkative Parents.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		183F93581EC9829300B11BEB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		183F935A1EC9829300B11BEB /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -91,6 +101,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		181E64731EC9CA7B007E7C87 /* SERVICES */ = {
+			isa = PBXGroup;
+			children = (
+				181E64791EC9CB88007E7C87 /* CommonService.swift */,
+			);
+			name = SERVICES;
+			sourceTree = "<group>";
+		};
+		181E64741EC9CA84007E7C87 /* COMMONS */ = {
+			isa = PBXGroup;
+			children = (
+				181E647D1EC9CBA2007E7C87 /* UIFont-Config.swift */,
+				181E647B1EC9CB92007E7C87 /* Constants.swift */,
+				181E64771EC9CB7D007E7C87 /* Commons.swift */,
+				181E64751EC9CB70007E7C87 /* UserDefaultsConstants.swift */,
+			);
+			name = COMMONS;
+			sourceTree = "<group>";
+		};
 		183F934C1EC9829300B11BEB = {
 			isa = PBXGroup;
 			children = (
@@ -116,6 +145,8 @@
 		183F93571EC9829300B11BEB /* Talkative Parents */ = {
 			isa = PBXGroup;
 			children = (
+				181E64741EC9CA84007E7C87 /* COMMONS */,
+				181E64731EC9CA7B007E7C87 /* SERVICES */,
 				183F93581EC9829300B11BEB /* AppDelegate.swift */,
 				183F935A1EC9829300B11BEB /* FirstViewController.swift */,
 				183F935C1EC9829300B11BEB /* SecondViewController.swift */,
@@ -451,6 +482,11 @@
 			files = (
 				183F935D1EC9829300B11BEB /* SecondViewController.swift in Sources */,
 				183F93591EC9829300B11BEB /* AppDelegate.swift in Sources */,
+				181E647A1EC9CB88007E7C87 /* CommonService.swift in Sources */,
+				181E64781EC9CB7D007E7C87 /* Commons.swift in Sources */,
+				181E647C1EC9CB92007E7C87 /* Constants.swift in Sources */,
+				181E64761EC9CB70007E7C87 /* UserDefaultsConstants.swift in Sources */,
+				181E647E1EC9CBA2007E7C87 /* UIFont-Config.swift in Sources */,
 				183F935B1EC9829300B11BEB /* FirstViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -704,6 +740,7 @@
 				183F93811EC9829400B11BEB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		183F93821EC9829400B11BEB /* Build configuration list for PBXNativeTarget "Talkative ParentsTests" */ = {
 			isa = XCConfigurationList;
@@ -712,6 +749,7 @@
 				183F93841EC9829400B11BEB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		183F93851EC9829400B11BEB /* Build configuration list for PBXNativeTarget "Talkative ParentsUITests" */ = {
 			isa = XCConfigurationList;
@@ -720,6 +758,7 @@
 				183F93871EC9829400B11BEB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
