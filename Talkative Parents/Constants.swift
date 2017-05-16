@@ -41,7 +41,7 @@ class Constants: NSObject {
     //Prod details
     private let _BaseUrlProd = "http://sample-env.qhbnxmw4sq.us-east-1.elasticbeanstalk.com/"
     
-    var _user : User = User()
+//    var _user : User = User()
     
     
     private var _pushToken : String = ""
@@ -107,14 +107,14 @@ class Constants: NSObject {
         return _NoNetworkMessage
     }
     
-    func setUser() {
-        self._user._id = self._UserDefaults.getIdFromBackEnd()
-        self._user._profileUrl = self._UserDefaults.getProfileUrl()
-        self._user._phoneNumber = self._UserDefaults.getPhoneNumber()
-        self._user._emailId = self._UserDefaults.getEmailId()
-        self._user._referenceNumber = self._UserDefaults.getUserId()
-        self._user._name = self._UserDefaults.getUserName()
-    }
+//    func setUser() {
+//        self._user._id = self._UserDefaults.getIdFromBackEnd()
+//        self._user._profileUrl = self._UserDefaults.getProfileUrl()
+//        self._user._phoneNumber = self._UserDefaults.getPhoneNumber()
+//        self._user._emailId = self._UserDefaults.getEmailId()
+//        self._user._referenceNumber = self._UserDefaults.getUserId()
+//        self._user._name = self._UserDefaults.getUserName()
+//    }
     
     func getOneSignalAppId() -> String {
         if isDev {

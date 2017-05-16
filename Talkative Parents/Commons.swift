@@ -14,25 +14,24 @@ import UIKit
 //import SwiftyDrop
 import RKDropdownAlert
 import ChameleonFramework
-import Eureka
-import GooglePlaces
+//import Eureka
 
-public final class LocationRow : SelectorRow<PushSelectorCell<Address1>, LocationMapViewController>, RowType {
-    public required init(tag: String?) {
-        super.init(tag: tag)
-        presentationMode = .show(controllerProvider: ControllerProvider.callback { return LocationMapViewController(){ _ in } }, onDismiss: { vc in _ = vc.navigationController?.popViewController(animated: true) })
-        
-        displayValueFor = {
-            guard let place = $0 else { return "" }
-//            let fmt = NumberFormatter()
-//            fmt.maximumFractionDigits = 4
-//            fmt.minimumFractionDigits = 4
-//            let latitude = fmt.string(from: NSNumber(value: location.coordinate.latitude))!
-//            let longitude = fmt.string(from: NSNumber(value: location.coordinate.longitude))!
-            return place.getAddress()
-        }
-    }
-}
+//public final class LocationRow : SelectorRow<PushSelectorCell<Address1>, LocationMapViewController>, RowType {
+//    public required init(tag: String?) {
+//        super.init(tag: tag)
+//        presentationMode = .show(controllerProvider: ControllerProvider.callback { return LocationMapViewController(){ _ in } }, onDismiss: { vc in _ = vc.navigationController?.popViewController(animated: true) })
+//        
+//        displayValueFor = {
+//            guard let place = $0 else { return "" }
+////            let fmt = NumberFormatter()
+////            fmt.maximumFractionDigits = 4
+////            fmt.minimumFractionDigits = 4
+////            let latitude = fmt.string(from: NSNumber(value: location.coordinate.latitude))!
+////            let longitude = fmt.string(from: NSNumber(value: location.coordinate.longitude))!
+//            return place.getAddress()
+//        }
+//    }
+//}
 
 
 class Commons {

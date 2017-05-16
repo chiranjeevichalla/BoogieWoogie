@@ -12,6 +12,7 @@
 		181E647A1EC9CB88007E7C87 /* CommonService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181E64791EC9CB88007E7C87 /* CommonService.swift */; };
 		181E647C1EC9CB92007E7C87 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181E647B1EC9CB92007E7C87 /* Constants.swift */; };
 		181E647E1EC9CBA2007E7C87 /* UIFont-Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181E647D1EC9CBA2007E7C87 /* UIFont-Config.swift */; };
+		181E64821ECAD7F2007E7C87 /* ProgressHUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181E64811ECAD7F2007E7C87 /* ProgressHUD.swift */; };
 		183F93591EC9829300B11BEB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183F93581EC9829300B11BEB /* AppDelegate.swift */; };
 		183F935B1EC9829300B11BEB /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183F935A1EC9829300B11BEB /* FirstViewController.swift */; };
 		183F935D1EC9829300B11BEB /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183F935C1EC9829300B11BEB /* SecondViewController.swift */; };
@@ -48,6 +49,7 @@
 		181E64791EC9CB88007E7C87 /* CommonService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommonService.swift; sourceTree = "<group>"; };
 		181E647B1EC9CB92007E7C87 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		181E647D1EC9CBA2007E7C87 /* UIFont-Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIFont-Config.swift"; sourceTree = "<group>"; };
+		181E64811ECAD7F2007E7C87 /* ProgressHUD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressHUD.swift; sourceTree = "<group>"; };
 		183F93551EC9829300B11BEB /* Talkative Parents.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Talkative Parents.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		183F93581EC9829300B11BEB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		183F935A1EC9829300B11BEB /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -112,6 +114,7 @@
 		181E64741EC9CA84007E7C87 /* COMMONS */ = {
 			isa = PBXGroup;
 			children = (
+				181E64811ECAD7F2007E7C87 /* ProgressHUD.swift */,
 				181E647D1EC9CBA2007E7C87 /* UIFont-Config.swift */,
 				181E647B1EC9CB92007E7C87 /* Constants.swift */,
 				181E64771EC9CB7D007E7C87 /* Commons.swift */,
@@ -482,6 +485,7 @@
 			files = (
 				183F935D1EC9829300B11BEB /* SecondViewController.swift in Sources */,
 				183F93591EC9829300B11BEB /* AppDelegate.swift in Sources */,
+				181E64821ECAD7F2007E7C87 /* ProgressHUD.swift in Sources */,
 				181E647A1EC9CB88007E7C87 /* CommonService.swift in Sources */,
 				181E64781EC9CB7D007E7C87 /* Commons.swift in Sources */,
 				181E647C1EC9CB92007E7C87 /* Constants.swift in Sources */,

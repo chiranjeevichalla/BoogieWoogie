@@ -9,6 +9,8 @@ target 'Talkative Parents' do
   pod 'ObjectMapper', '~> 2.2'
   pod 'AsyncSwift'
   pod 'ChameleonFramework/Swift', :git => 'https://github.com/ViccAlexander/Chameleon.git'
+  pod 'RKDropdownAlert'
+  pod 'Eureka'
 
   # Pods for Talkative Parents
 

@@ -19,6 +19,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Eureka.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>ObjectMapper.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -39,6 +44,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>RKDropdownAlert.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>SwiftyJSON.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -47,7 +57,7 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>1CB48FD694FEDE4BDEDC82CBC1783122</key>
+		<key>0E8D0A7103FDD3D7029CAB6CC7235DD6</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -57,7 +67,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>6D039956D20C2E6F538A049A3463917E</key>
+		<key>675A114988AE198732ED4AD726408964</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -72,12 +82,22 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>8291E01114C9C540843188E291129785</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>88E9EC28B8B46C3631E6B242B50F4442</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>97DD79A24D531FE709F0939CAC51C30B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>A1BEFF23AE3D54161C5082C00BBB4B29</key>
 		<dict>
 			<key>primary</key>
 			<true/>
