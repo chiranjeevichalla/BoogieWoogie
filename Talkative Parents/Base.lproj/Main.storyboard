@@ -48,7 +48,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="750" y="-320"/>
+            <point key="canvasLocation" x="1688.8" y="-320.68965517241384"/>
         </scene>
         <!--Second-->
         <scene sceneID="wg7-f3-ORb">
@@ -88,7 +88,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="750" y="360"/>
+            <point key="canvasLocation" x="1688.8" y="359.37031484257875"/>
         </scene>
         <!--Help Screen View Controller-->
         <scene sceneID="BEH-iK-Khs">
@@ -147,21 +147,30 @@
                                 <state key="normal" title="SKIP">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="onTapSkip:" destination="6CW-cO-vSn" eventType="touchUpInside" id="0Hp-Mj-T5U"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Stn-WG-eZ1">
-                                <rect key="frame" x="20" y="547" width="335" height="33"/>
+                                <rect key="frame" x="46" y="538" width="283" height="42"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="42" id="dLK-WC-do7"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
                                 <state key="normal" title="CONTINUE">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="onTapContinue:" destination="6CW-cO-vSn" eventType="touchUpInside" id="gK7-7B-Ydw"/>
+                                </connections>
                             </button>
                             <pageControl opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="5" translatesAutoresizingMaskIntoConstraints="NO" id="iKM-vK-hqF" customClass="CustomImagePageControl" customModule="Talkative_Parents" customModuleProvider="target">
-                                <rect key="frame" x="74" y="500" width="227" height="37"/>
+                                <rect key="frame" x="74" y="491" width="227" height="37"/>
                             </pageControl>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="Stn-WG-eZ1" secondAttribute="trailing" constant="4" id="2Nj-rj-R00"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Stn-WG-eZ1" secondAttribute="trailing" constant="30" id="2Nj-rj-R00"/>
                             <constraint firstItem="aHZ-ip-7ss" firstAttribute="leading" secondItem="cAw-Kk-LCO" secondAttribute="leadingMargin" constant="4" id="AUB-y5-jab"/>
                             <constraint firstItem="9xN-mV-oH7" firstAttribute="top" secondItem="aHZ-ip-7ss" secondAttribute="bottom" constant="37" id="BLX-zZ-nSR"/>
                             <constraint firstItem="iKM-vK-hqF" firstAttribute="leading" secondItem="cAw-Kk-LCO" secondAttribute="leadingMargin" constant="58" id="FrC-uk-Eee"/>
@@ -169,7 +178,7 @@
                             <constraint firstItem="Stn-WG-eZ1" firstAttribute="top" secondItem="iKM-vK-hqF" secondAttribute="bottom" constant="10" id="W3d-9g-c2E"/>
                             <constraint firstAttribute="trailingMargin" secondItem="aHZ-ip-7ss" secondAttribute="trailing" constant="4" id="an2-ty-Nuz"/>
                             <constraint firstAttribute="trailing" secondItem="Xn7-iX-VWD" secondAttribute="trailing" id="dBg-fF-Hha"/>
-                            <constraint firstItem="Stn-WG-eZ1" firstAttribute="leading" secondItem="cAw-Kk-LCO" secondAttribute="leadingMargin" constant="4" id="fGv-jf-J76"/>
+                            <constraint firstItem="Stn-WG-eZ1" firstAttribute="leading" secondItem="cAw-Kk-LCO" secondAttribute="leadingMargin" constant="30" id="fGv-jf-J76"/>
                             <constraint firstItem="aHZ-ip-7ss" firstAttribute="top" secondItem="Stn-WG-eZ1" secondAttribute="bottom" constant="19" id="iCR-wb-GG1"/>
                             <constraint firstItem="Xn7-iX-VWD" firstAttribute="top" secondItem="cAw-Kk-LCO" secondAttribute="top" id="iab-zS-hxn"/>
                             <constraint firstItem="9xN-mV-oH7" firstAttribute="top" secondItem="Xn7-iX-VWD" secondAttribute="bottom" id="w3A-MW-NNp"/>
@@ -178,12 +187,208 @@
                     </view>
                     <connections>
                         <outlet property="thisUICollectionView" destination="Xn7-iX-VWD" id="glk-zQ-z1s"/>
+                        <outlet property="thisUIContinueButton" destination="Stn-WG-eZ1" id="HC4-13-1oX"/>
                         <outlet property="thisUIPageControl" destination="iKM-vK-hqF" id="6CC-SU-2Ik"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SzE-Nj-VeE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-828" y="-17.541229385307346"/>
+            <point key="canvasLocation" x="-2007" y="-45"/>
+        </scene>
+        <!--Eula Agreement View Controller-->
+        <scene sceneID="Daw-oP-qNb">
+            <objects>
+                <viewController storyboardIdentifier="EulaAgreementPage" id="MZu-Nd-hHh" customClass="EulaAgreementViewController" customModule="Talkative_Parents" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Zrl-Ba-anv"/>
+                        <viewControllerLayoutGuide type="bottom" id="zdp-0r-O4b"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="C7K-dX-knR">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="EULA" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KTR-v1-AAM">
+                                <rect key="frame" x="165.5" y="80" width="45.5" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="OGD-lq-4rU"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.35686274509999999" blue="0.43137254899999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HD2-WQ-Hdd">
+                                <rect key="frame" x="16" y="118" width="343" height="478"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                <string key="text">Attention: this is a license, not a sale. The talkative parents TM software application product is available to download for parents under the following end user license agreement (EULA) and all applicable addenda which define what you may do with the product and contains limitations on warranties andor remedies.
+
+This license is granted by talkative solutions private limited and includes the following: 
+
+This EULA is a legally binding contract that should be read in its entirety. By installing or using this software or any module or portion or feature thereof on clicking accept, you accept all the terms and conditions of this agreement. 
+
+This EULA is a legal agreement between you (the Licensee), and Talkative Solutions Private Limited or his authorized reseller, in respect of Talkative ParentsTM (the Software) which may include associated media and online or electronic documentation (collectively the Product). The Product also includes any updates and supplements to the original Product as may be provided to you from time to time by the Licensor, subject to the Licensors sole and absolute discretion. The Product does not include new releases to Software. You are subject to the terms and conditions of this EULA whether you access or obtain the Product directly from the Licensor, or through any other source or person or through access to a third party application or platform on which the Software is run through the specific permission of the Licensor of a validly procured license. For purposes hereof, you (and all variations thereof, such as your) means the individual person installing or using the Product on his or her own behalf; this Product is not intended for use by or on behalf of an organization. For purposes hereof the term organization, without limitation, includes any partnership, company, corporation, association of persons, limited liability partnership, joint stock company, trust, joint venture, labor organization, unincorporated organization, or governmental authority. 
+
+By accessing, storing, loading, installing, executing, displaying or copying the Product into the Client Device (as defined hereinafter) or otherwise using the functionality of the Product in accordance with its documentation (henceforth Operating), you are deemed to have agreed and to be bound by the terms of this EULA. If you do not agree to the terms and conditions of this EULA, the Licensor is unwilling to license the Product to you. In such event, you may not Operate or use the Product in any way. 
+
+This Product will not install on the Client Device unless or until you accept the terms of this Agreement. Since this EULA is in electronic form and constitutes an electronic record within the meaning of applicable laws, your acceptance of the terms hereof shall be signified by your clicking on the ACCEPT button appearing on the window containing this EULA, whereupon you expressly agree to be bound by the terms and conditions of this EULA. 
+
+The Software integrates certain free open source software which have been modified to function along with the Software. All such modifications have been carried out under the terms of the license agreement pertaining to those software. The open source free software that have been modified and distributed along with the Software have been so made in accordance with the terms of their respective license agreements. 
+
+GRANT OF LICENSE
+
+The Licensor grants you, a perpetual, worldwide, non-exclusive, non-sub-licensable, non-transferable license to store, load, install, execute and access (Use) the specified version of the Software on a single mobile electronic device, or mobile computing platform for which the software was designed (a Client Device) as per this EULA (License).
+
+You are permitted to install and Use this version of the Product on only one (1) Client Device. The Licensor may, subject to his sole and absolute discretion (and without being obligated to), provide you with updates or upgrades to the Software (Updates). Use of any Update is subject to the terms of this EULA. By installing or otherwise using any such Update, you agree to be bound by the terms of this EULA with respect to such Update.
+
+The Licensor may, subject to his sole and absolute discretion (and without being obligated to), provide you with updates or upgrades to the Software (Updates). Use of any Update is subject to the terms of this EULA. By installing or otherwise using any such Update, you agree to be bound by the terms of this EULA with respect to such Update.
+
+The Licensor reserves all rights not expressly granted herein.
+
+PROPRIETARY RIGHTS AND NON-DISCLOSURE.
+
+You agree that the Product (including any copies thereof) and the authorship, systems, ideas, methods of operation, documentation and other information contained in the Product, including but not limited to any images, photograph, animations, video, audio, music, test, applets and APIs incorporated into the Product and the Softwares source code, are proprietary intellectual properties of the Licensor and are protected by civil and criminal law, and by the laws of copyright, trade secret, trademark and patent law of India, other countries and international treaties. The Licensor owns and retains all right, title, and interest in and to the Product including without limitations any error corrections, enhancements, Updates or other modifications to the Software, and all copyrights, patents, trade secret rights, trademarks, and other intellectual property rights therein.
+
+Your possession, installation or Use of the Product does not transfer to you any title to the intellectual property in the Product, and you will not acquire any rights to the Product except as expressly set forth in this Agreement.
+
+RESTRICTIONS
+
+Under no circumstances you shall transfer, rent, lease, lend, copy, modify, translate, adapt, sublicense, sell, publish, display, distribute, time-share or electronically transmit or receive or otherwise transfer to a third party, the Product, any copy or use thereof, in whole or in part, without the Licensors prior written consent; provided that if such non-waivable right is specifically granted to you under applicable law in your jurisdiction, you may transfer your rights under this EULA permanently to another person or entity, subject to a) you also transferring this EULA, the Product, and all other software or hardware bundled or pre-installed with the Product, including all copies, Updates and prior versions, to such person or entity; b) retaining no copies, including backups and copies; and c) the receiving party accepting the terms and conditions of this EULA and any other terms and conditions upon which you legally purchased a license to the Product.
+
+You may not emulate, modify, decompile, disassemble, otherwise reverse engineer, or otherwise reduce any part of the Product to human readable form or transfer the Product, or any subset of the Product, nor permit any third party to do so, except to the extent the foregoing restriction is expressly prohibited by applicable law. Notwithstanding the foregoing sentence, decompiling the Software is permitted to the extent the laws of your jurisdiction give you the non-waivable right to do so to obtain information necessary to render the Software interoperable with other software; provided, however, that you must first request such information from the Licensor and the Licensor may, in its discretion, either provide such information to you (subject to confidentiality terms) or impose reasonable conditions, including a reasonable fee, on such use of the Software to ensure that the Licensors proprietary rights in the Software are protected. You may not modify or create derivative works based upon the Product in whole or in part. Any such unauthorized use shall result in immediate and automatic termination of this EULA and will result in criminal andor civil prosecution. Neither Products binary code nor source code may be used or reverse engineered to re-create the program algorithm, which is proprietary, without written permission of the Licensor.
+
+You may not remove any proprietary notices, trademark notices, copyright notices or labels on the Product.
+
+You may not transfer or assign any of the rights granted to you under this EULA or any of your obligations pursuant here to.
+
+You agree that, the Product, including the specific design and structure of individual modules constitute confidential proprietary information of the Licensor. You agree not to transfer, copy, disclose, publish, provide or otherwise make available such confidential information in any form to any third party.
+
+The Software includes components of open source elements which are provided by third parties for use in the run time environment of the Software (Third Party Software) and you hereby acknowledge and agree that the licensor of any such Third Party Software may have a proprietary or community right, title and interest in such Third Party Software. The Licensor does not provide any warranty in relation to such Third Party Software and is not responsible for the performance of such Third Party 
+
+Nothing in this EULA shall be construed as granting you any rights or licenses with regard to the new releases of the Product or to entitle you to any new release. For the purpose of this EULA, new release(s) means any improved, modified, upgraded or corrected version of the Software or any Module, issued from time to time by or on behalf of the Licensor, as providing substantial new features sufficient to be separately priced and launched as a separate software product or module.
+
+You agree that in Operating the Product and in using any report or information derived as a result of Operating this Product, you will comply with all applicable international, national, state, regional and local laws and regulation, including, without limitation, privacy, copyright, export control and obscenity laws.
+
+LIMITED WARRANTY
+
+The Software generally provides no warranty. However, the functionalities of the software will install and are expected in the normal course to work properly without any errors. Licensor is not responsible for any damage or effect for the external applications that integrate with the software.
+
+NO IMPLIED OR OTHER WARRANTIES
+
+Except for the foregoing limited warranty and for any warranty, condition, representation or term to the extent to which the same cannot or may not be excluded or limited by law applicable to you in india, the product is provided as-is without any warranty whatsoever and the licensor makes no promises, representations or warranties, whether expressed or implied, whether by statute, common law, custom, usage or otherwise, regarding or relating to the product or content therein or to any other material furnished or provided to you pursuant to this eula or otherwise. You assume all risks and responsibilities for selection of the product to achieve your intended results, and for the installation of, use of, and results obtained from the product. The licensor makes no warranty that the product will be error free or free from interruption or failure, or that it is compatible with any particular hardware or software or that the software is inter operable with your existing infrastructure. To the maximum extent permitted by applicable law, licensor disclaims all warranties, either express or implied, including but not limited to implied warranties of merchantability, non-infringement of third party rights, integration with your own products, satisfactory quality or fitness for any particular purpose with respect to the product and the accompanying written materials or the use thereof. You hereby acknowledge that the product may not be or become available due to any number of factors including without limitation periodic system maintenance, scheduled or unscheduled, acts of god, technical failure of the software, telecommunications infrastructure, or delay or disruption attributable to viruses, denial of service, attacks, increased or fluctuating demand, and actions and omissions of third parties. Therefore, the licensor expressly disclaims any express or implied warranty regarding system andor software availability, accessibility, or performance. The licensor disclaims any and all liability for the loss or corruption of data during any installation, execution or communications and any liability arising from or related to any failure by the licensor to transmit accurate or complete information to you.
+
+NO LIABILITY
+
+In no event will the Licensor be liable to you for any loss, damages, claims or costs whatsoever, including any special, consequential, indirect or incidental damages, any lost profits or lost savings, lost or corrupt data, loss of privacy, personal injury or failure to meet any duty of care, or claims by a third party arising out of the use or inability or inappropriate use of the Software, even if you have been advised of the possibility of such loss, damages, claims or costs in advance. In any case, the Licensors entire liability under any provision of this EULA shall be limited to amount actually paid by you, pursuant to purchase of the Licensors Product.
+
+YOUR INFORMATION AND THE LICENSORS PRIVACY POLICY
+
+You hereby expressly consent to the Licensors processing of your personal data (which may be collected by the Licensor or its resellers or distributors). By entering into this Agreement, you agree that the Licensor may collect and retain information about you, including your name, email address and institute organization information. The Licensor may employ other companies and individuals to perform certain services andor functions on its behalf. Examples include selling and marketing the Product, fulfilling orders, delivering packages, sending postal mail and e-mail, removing repetitive information from customer lists, analyzing data, providing marketing assistance and providing customer service. They have access to personal information needed to perform their functions, but may not use it for other purposes.
+
+TERMINATION
+
+The Licensor may terminate this EULA by offering you a superseding agreement for the Product or any replacement or modified version of or upgrade or new release of the Product and conditioning your continued use of the Product or such replacement, modified or upgraded version or new release on your acceptance of such superseding agreement. This EULA may be also terminated by the Licensor immediately and without notice if you fail to comply with any of your obligation or conditions of this EULA. Without prejudice to any other rights, this EULA will terminate automatically if you fail to comply with any of the limitations, restrictions or other requirements described herein. Upon termination of this EULA you will no longer be authorized to operate or use the Product in any way and you must immediately cease use of the Product and destroy all copies of the Product.
+
+INDEMNIFICATION
+
+You agree to indemnify, defend and hold harmless Licensor and its respective officers, directors, employees, agents, successors, and assigns from any and all losses, liabilities, damages and claims, and all related expenses (including reasonable legal fees and disbursements and costs of investigation, litigation, settlement, judgment, interest and penalties) and costs related to, arising from, or in connection with any third-party claim related to, arising from, or in connection with the actual or alleged: (i) infringement by Licensee (except when such breach is exclusively attributable to Product) of any third-party intellectual property andor proprietary right, including, but not limited to, patent, trademark, copyright, trade secret, publicity andor privacy, (ii) personal injury (including death) or property damage due to the gross negligence or intentional misconduct of Licensee, andor (iii) breach by Licensee of any of its representations, warranties, obligations, andor covenants set forth herein.
+
+FEEDBACK
+
+Licensee may from time to time provide suggestions, specifications, comments or other feedback to Licensor with respect to the Software (hereinafter Feedback). You agree that all Feedback is and shall be entirely voluntary and (i) shall be deemed a derivative work based on the Software, (ii) shall be owned by Licensor, and (iii) shall not create any confidentiality obligation for Licensor. However, Licensor shall not disclose the source of any Feedback without Licensees consent. Except as otherwise provided herein, Licensor shall be free to use such Feedback as it sees fit, entirely without obligation of any kind to Licensee.
+
+GOVERNING LAW; JURISDICTION AND VENUE
+
+This EULA shall be governed by and construed and enforced in accordance with the laws of India without reference to any conflict of law, rules or principles. The courts in Bangalore, India will have sole jurisdiction over any disputes arising from this EULA.
+
+ENTIRE AGREEMENT; SEVERABILITY; NO WAIVER
+
+Apart from the term of use provided on the mobile platformapplication domain from which this Software has been downloaded, this EULA is the entire agreement between you and the Licensor and supersedes any other prior agreements, proposals, communications or advertising, oral or written, with respect to the Product or to the subject matter of this EULA provided that the Licensor and you may limit, modify or change the applicability of the terms of this EULA by a prior, contemporaneous or subsequent written agreement and expressly providing for such limitation, modification or changes.
+
+You acknowledge that you have read this Agreement, understand it and agree to be bound by its terms. If any provision of this EULA is found by a court of competent jurisdiction to be invalid, void, or unenforceable for any reason, in whole or in part, such provision will be more narrowly construed so that it becomes legal and enforceable, and the entire EULA will not fail on account thereof and the balance of the EULA will continue in full force and effect to the fullest extent permitted by law. No waiver of any breach of any provisions of this EULA will constitute a waiver of any prior, concurrent or subsequent breach and no waiver will be effective unless made in writing.
+
+CONTACT INFORMATION
+
+Should you have any questions concerning this Agreement, or if you desire to contact the Licensor for any reason, please visit www.talkativeparents.com</string>
+                                <color key="textColor" red="0.2901960784" green="0.2901960784" blue="0.2901960784" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="13"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <dataDetectorType key="dataDetectorTypes" link="YES"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JYd-jx-6OL">
+                                <rect key="frame" x="32" y="623" width="150" height="34"/>
+                                <color key="backgroundColor" red="0.81568627449999997" green="0.0078431372550000003" blue="0.1058823529" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="hSV-lU-mKF"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                <state key="normal" title="Decline">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="onTapDeclineBtn:" destination="MZu-Nd-hHh" eventType="touchUpInside" id="YHW-Oq-KSh"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sbK-zu-TSw">
+                                <rect key="frame" x="195" y="623" width="150" height="34"/>
+                                <color key="backgroundColor" red="0.32549019610000002" green="0.72941176470000002" blue="0.81960784310000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="rTP-Ls-bYo"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                <state key="normal" title="Accept">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="onTapAcceptBtn:" destination="MZu-Nd-hHh" eventType="touchUpInside" id="kpt-uS-oq8"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Owj-K1-OPg">
+                                <rect key="frame" x="0.0" y="611" width="375" height="1"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="iFA-md-4tM"/>
+                                </constraints>
+                            </view>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MDt-MI-Fbs">
+                                <rect key="frame" x="182" y="623" width="11" height="36"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="11" id="OWE-SH-04e"/>
+                                    <constraint firstAttribute="height" constant="36" id="nCu-MD-gfo"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="HD2-WQ-Hdd" firstAttribute="leading" secondItem="C7K-dX-knR" secondAttribute="leadingMargin" id="2ar-20-P00"/>
+                            <constraint firstAttribute="trailing" secondItem="Owj-K1-OPg" secondAttribute="trailing" id="8Vd-Qr-MWr"/>
+                            <constraint firstItem="zdp-0r-O4b" firstAttribute="top" secondItem="MDt-MI-Fbs" secondAttribute="bottom" constant="8" id="9yY-IQ-5O6"/>
+                            <constraint firstItem="KTR-v1-AAM" firstAttribute="centerX" secondItem="C7K-dX-knR" secondAttribute="centerX" id="B75-2U-TBJ"/>
+                            <constraint firstItem="HD2-WQ-Hdd" firstAttribute="trailing" secondItem="C7K-dX-knR" secondAttribute="trailingMargin" id="E6J-WM-NvM"/>
+                            <constraint firstItem="MDt-MI-Fbs" firstAttribute="centerX" secondItem="C7K-dX-knR" secondAttribute="centerX" id="LuI-vP-LGO"/>
+                            <constraint firstItem="JYd-jx-6OL" firstAttribute="leading" secondItem="C7K-dX-knR" secondAttribute="leadingMargin" constant="16" id="OGb-uA-Qfm"/>
+                            <constraint firstItem="HD2-WQ-Hdd" firstAttribute="top" secondItem="KTR-v1-AAM" secondAttribute="bottom" constant="8" id="Xd4-8T-4pK"/>
+                            <constraint firstItem="Owj-K1-OPg" firstAttribute="leading" secondItem="C7K-dX-knR" secondAttribute="leading" id="YYR-nD-MvQ"/>
+                            <constraint firstItem="sbK-zu-TSw" firstAttribute="leading" secondItem="MDt-MI-Fbs" secondAttribute="trailing" constant="2" id="dBJ-Ub-SAo"/>
+                            <constraint firstItem="Owj-K1-OPg" firstAttribute="top" secondItem="HD2-WQ-Hdd" secondAttribute="bottom" constant="15" id="dFt-3A-GIH"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="sbK-zu-TSw" secondAttribute="trailing" constant="14" id="ftN-tY-xOw"/>
+                            <constraint firstItem="KTR-v1-AAM" firstAttribute="top" secondItem="Zrl-Ba-anv" secondAttribute="bottom" constant="16" id="gYC-RE-h6c"/>
+                            <constraint firstItem="zdp-0r-O4b" firstAttribute="top" secondItem="JYd-jx-6OL" secondAttribute="bottom" constant="10" id="jWK-6L-LcF"/>
+                            <constraint firstItem="MDt-MI-Fbs" firstAttribute="leading" secondItem="JYd-jx-6OL" secondAttribute="trailing" id="qTU-gC-X5I"/>
+                            <constraint firstItem="MDt-MI-Fbs" firstAttribute="top" secondItem="Owj-K1-OPg" secondAttribute="bottom" constant="11" id="uKX-4c-chc"/>
+                            <constraint firstItem="zdp-0r-O4b" firstAttribute="top" secondItem="sbK-zu-TSw" secondAttribute="bottom" constant="10" id="xe8-Aq-GXZ"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="55m-FS-DDi"/>
+                    <connections>
+                        <outlet property="thisUIAcceptBtn" destination="sbK-zu-TSw" id="AXF-wJ-1AQ"/>
+                        <outlet property="thisUIDeclineBtn" destination="JYd-jx-6OL" id="1nY-VU-RUD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cZ9-kH-v8R" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-103.2" y="-37.331334332833585"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
@@ -202,7 +407,25 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="0.0" y="0.0"/>
+            <point key="canvasLocation" x="938.39999999999998" y="-0.44977511244377816"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="6wd-kp-yeU">
+            <objects>
+                <navigationController storyboardIdentifier="EulaAgreementNPC" automaticallyAdjustsScrollViewInsets="NO" id="XfW-go-pFF" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="uvf-Bq-flF">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="MZu-Nd-hHh" kind="relationship" relationship="rootViewController" id="24Q-RS-wX3"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sna-hH-rxh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1042.4000000000001" y="-37.331334332833585"/>
         </scene>
     </scenes>
     <resources>

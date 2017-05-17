@@ -291,6 +291,10 @@ class Commons {
         return bIsSameNumber
     }
     
+    class func applyCommonBtnRadius(pBtn : UIButton) {
+        pBtn.layer.cornerRadius = 5
+    }
+    
     
     //    class func ConvertJSONToString(pData : NSDictionary, callback (String) -> Void) -> Void {
     //        let jsonData: NSDate = JSONSerialization.data(withJSONObject: pData, options: .prettyPrinted)

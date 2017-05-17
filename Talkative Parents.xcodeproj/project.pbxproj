@@ -16,6 +16,9 @@
 		181E64861ECB412D007E7C87 /* HelpScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181E64851ECB412D007E7C87 /* HelpScreenViewController.swift */; };
 		181E64881ECB4170007E7C87 /* HelpScreenCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181E64871ECB4170007E7C87 /* HelpScreenCollectionViewCell.swift */; };
 		181E648B1ECB4763007E7C87 /* CustomImagePageControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181E648A1ECB4763007E7C87 /* CustomImagePageControl.swift */; };
+		181E648E1ECC35A2007E7C87 /* EulaAgreementViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181E648D1ECC35A2007E7C87 /* EulaAgreementViewController.swift */; };
+		181E64921ECC5832007E7C87 /* MobileLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181E64901ECC5832007E7C87 /* MobileLoginViewController.swift */; };
+		181E64931ECC5832007E7C87 /* MobileLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 181E64911ECC5832007E7C87 /* MobileLoginViewController.xib */; };
 		183F93591EC9829300B11BEB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183F93581EC9829300B11BEB /* AppDelegate.swift */; };
 		183F935B1EC9829300B11BEB /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183F935A1EC9829300B11BEB /* FirstViewController.swift */; };
 		183F935D1EC9829300B11BEB /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183F935C1EC9829300B11BEB /* SecondViewController.swift */; };
@@ -56,6 +59,9 @@
 		181E64851ECB412D007E7C87 /* HelpScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelpScreenViewController.swift; sourceTree = "<group>"; };
 		181E64871ECB4170007E7C87 /* HelpScreenCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelpScreenCollectionViewCell.swift; sourceTree = "<group>"; };
 		181E648A1ECB4763007E7C87 /* CustomImagePageControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomImagePageControl.swift; sourceTree = "<group>"; };
+		181E648D1ECC35A2007E7C87 /* EulaAgreementViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EulaAgreementViewController.swift; sourceTree = "<group>"; };
+		181E64901ECC5832007E7C87 /* MobileLoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MobileLoginViewController.swift; sourceTree = "<group>"; };
+		181E64911ECC5832007E7C87 /* MobileLoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MobileLoginViewController.xib; sourceTree = "<group>"; };
 		183F93551EC9829300B11BEB /* Talkative Parents.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Talkative Parents.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		183F93581EC9829300B11BEB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		183F935A1EC9829300B11BEB /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -132,6 +138,8 @@
 		181E64831ECB406D007E7C87 /* ViewController Pages */ = {
 			isa = PBXGroup;
 			children = (
+				181E648F1ECC581B007E7C87 /* MobileEnterPage */,
+				181E648C1ECC336C007E7C87 /* agreementPage */,
 				181E64841ECB4078007E7C87 /* HelpScreensPage */,
 			);
 			name = "ViewController Pages";
@@ -152,6 +160,23 @@
 				181E648A1ECB4763007E7C87 /* CustomImagePageControl.swift */,
 			);
 			name = UIModules;
+			sourceTree = "<group>";
+		};
+		181E648C1ECC336C007E7C87 /* agreementPage */ = {
+			isa = PBXGroup;
+			children = (
+				181E648D1ECC35A2007E7C87 /* EulaAgreementViewController.swift */,
+			);
+			name = agreementPage;
+			sourceTree = "<group>";
+		};
+		181E648F1ECC581B007E7C87 /* MobileEnterPage */ = {
+			isa = PBXGroup;
+			children = (
+				181E64901ECC5832007E7C87 /* MobileLoginViewController.swift */,
+				181E64911ECC5832007E7C87 /* MobileLoginViewController.xib */,
+			);
+			name = MobileEnterPage;
 			sourceTree = "<group>";
 		};
 		183F934C1EC9829300B11BEB = {
@@ -354,6 +379,7 @@
 			files = (
 				183F93651EC9829300B11BEB /* LaunchScreen.storyboard in Resources */,
 				183F93621EC9829300B11BEB /* Assets.xcassets in Resources */,
+				181E64931ECC5832007E7C87 /* MobileLoginViewController.xib in Resources */,
 				183F93601EC9829300B11BEB /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -525,10 +551,12 @@
 				181E64861ECB412D007E7C87 /* HelpScreenViewController.swift in Sources */,
 				181E647A1EC9CB88007E7C87 /* CommonService.swift in Sources */,
 				181E64781EC9CB7D007E7C87 /* Commons.swift in Sources */,
+				181E64921ECC5832007E7C87 /* MobileLoginViewController.swift in Sources */,
 				181E647C1EC9CB92007E7C87 /* Constants.swift in Sources */,
 				181E64761EC9CB70007E7C87 /* UserDefaultsConstants.swift in Sources */,
 				181E647E1EC9CBA2007E7C87 /* UIFont-Config.swift in Sources */,
 				183F935B1EC9829300B11BEB /* FirstViewController.swift in Sources */,
+				181E648E1ECC35A2007E7C87 /* EulaAgreementViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

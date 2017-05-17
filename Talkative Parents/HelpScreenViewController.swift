@@ -12,6 +12,7 @@ import UIKit
 class HelpScreenViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
     
     @IBOutlet weak var thisUICollectionView: UICollectionView!
+    @IBOutlet weak var thisUIContinueButton: UIButton!
     
     @IBOutlet weak var thisUIPageControl: CustomImagePageControl!
     private var thisCollectionViewCellSize = CGSize(width: 100, height: 100)
@@ -41,6 +42,18 @@ class HelpScreenViewController: UIViewController, UICollectionViewDataSource, UI
 //        thisCollectionViewCellSize.width = self.view.frame.width
 //        thisCollectionViewCellSize.height = self.view.frame.height
         thisUICollectionView.reloadData()
+        applyContinueButtonStyles()
+        self.navigationController?.navigationBar.isHidden = true
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.navigationBar.isHidden = true
+    }
+    
+    private func applyContinueButtonStyles() {
+        thisUIContinueButton.layer.borderColor = UIColor.white.cgColor
+        thisUIContinueButton.layer.borderWidth = 2
+        thisUIContinueButton.layer.cornerRadius = 5
     }
     
     override func viewDidLayoutSubviews() {
@@ -87,6 +100,19 @@ class HelpScreenViewController: UIViewController, UICollectionViewDataSource, UI
         print("scrollviewdidscroll \(index)")
     }
 
+    @IBAction func onTapContinue(_ sender: Any) {
+        
+    }
+    
+    @IBAction func onTapSkip(_ sender: Any) {
+        let appDelegate = UIApplication.shared.delegate! as! AppDelegate
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let initialViewController = storyboard.instantiateViewController(withIdentifier: "EulaAgreementNPC")
+        appDelegate.window?.rootViewController = initialViewController
+        appDelegate.window?.makeKeyAndVisible()
+    }
+    
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
