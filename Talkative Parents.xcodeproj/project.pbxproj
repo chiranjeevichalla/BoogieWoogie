@@ -13,6 +13,9 @@
 		181E647C1EC9CB92007E7C87 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181E647B1EC9CB92007E7C87 /* Constants.swift */; };
 		181E647E1EC9CBA2007E7C87 /* UIFont-Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181E647D1EC9CBA2007E7C87 /* UIFont-Config.swift */; };
 		181E64821ECAD7F2007E7C87 /* ProgressHUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181E64811ECAD7F2007E7C87 /* ProgressHUD.swift */; };
+		181E64861ECB412D007E7C87 /* HelpScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181E64851ECB412D007E7C87 /* HelpScreenViewController.swift */; };
+		181E64881ECB4170007E7C87 /* HelpScreenCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181E64871ECB4170007E7C87 /* HelpScreenCollectionViewCell.swift */; };
+		181E648B1ECB4763007E7C87 /* CustomImagePageControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181E648A1ECB4763007E7C87 /* CustomImagePageControl.swift */; };
 		183F93591EC9829300B11BEB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183F93581EC9829300B11BEB /* AppDelegate.swift */; };
 		183F935B1EC9829300B11BEB /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183F935A1EC9829300B11BEB /* FirstViewController.swift */; };
 		183F935D1EC9829300B11BEB /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183F935C1EC9829300B11BEB /* SecondViewController.swift */; };
@@ -50,6 +53,9 @@
 		181E647B1EC9CB92007E7C87 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		181E647D1EC9CBA2007E7C87 /* UIFont-Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIFont-Config.swift"; sourceTree = "<group>"; };
 		181E64811ECAD7F2007E7C87 /* ProgressHUD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressHUD.swift; sourceTree = "<group>"; };
+		181E64851ECB412D007E7C87 /* HelpScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelpScreenViewController.swift; sourceTree = "<group>"; };
+		181E64871ECB4170007E7C87 /* HelpScreenCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelpScreenCollectionViewCell.swift; sourceTree = "<group>"; };
+		181E648A1ECB4763007E7C87 /* CustomImagePageControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomImagePageControl.swift; sourceTree = "<group>"; };
 		183F93551EC9829300B11BEB /* Talkative Parents.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Talkative Parents.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		183F93581EC9829300B11BEB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		183F935A1EC9829300B11BEB /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -123,6 +129,31 @@
 			name = COMMONS;
 			sourceTree = "<group>";
 		};
+		181E64831ECB406D007E7C87 /* ViewController Pages */ = {
+			isa = PBXGroup;
+			children = (
+				181E64841ECB4078007E7C87 /* HelpScreensPage */,
+			);
+			name = "ViewController Pages";
+			sourceTree = "<group>";
+		};
+		181E64841ECB4078007E7C87 /* HelpScreensPage */ = {
+			isa = PBXGroup;
+			children = (
+				181E64851ECB412D007E7C87 /* HelpScreenViewController.swift */,
+				181E64871ECB4170007E7C87 /* HelpScreenCollectionViewCell.swift */,
+			);
+			name = HelpScreensPage;
+			sourceTree = "<group>";
+		};
+		181E64891ECB474C007E7C87 /* UIModules */ = {
+			isa = PBXGroup;
+			children = (
+				181E648A1ECB4763007E7C87 /* CustomImagePageControl.swift */,
+			);
+			name = UIModules;
+			sourceTree = "<group>";
+		};
 		183F934C1EC9829300B11BEB = {
 			isa = PBXGroup;
 			children = (
@@ -148,6 +179,8 @@
 		183F93571EC9829300B11BEB /* Talkative Parents */ = {
 			isa = PBXGroup;
 			children = (
+				181E64891ECB474C007E7C87 /* UIModules */,
+				181E64831ECB406D007E7C87 /* ViewController Pages */,
 				181E64741EC9CA84007E7C87 /* COMMONS */,
 				181E64731EC9CA7B007E7C87 /* SERVICES */,
 				183F93581EC9829300B11BEB /* AppDelegate.swift */,
@@ -279,6 +312,7 @@
 				TargetAttributes = {
 					183F93541EC9829300B11BEB = {
 						CreatedOnToolsVersion = 8.3;
+						DevelopmentTeam = K3B6S92EN3;
 						ProvisioningStyle = Automatic;
 					};
 					183F936A1EC9829400B11BEB = {
@@ -484,8 +518,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				183F935D1EC9829300B11BEB /* SecondViewController.swift in Sources */,
+				181E64881ECB4170007E7C87 /* HelpScreenCollectionViewCell.swift in Sources */,
 				183F93591EC9829300B11BEB /* AppDelegate.swift in Sources */,
+				181E648B1ECB4763007E7C87 /* CustomImagePageControl.swift in Sources */,
 				181E64821ECAD7F2007E7C87 /* ProgressHUD.swift in Sources */,
+				181E64861ECB412D007E7C87 /* HelpScreenViewController.swift in Sources */,
 				181E647A1EC9CB88007E7C87 /* CommonService.swift in Sources */,
 				181E64781EC9CB7D007E7C87 /* Commons.swift in Sources */,
 				181E647C1EC9CB92007E7C87 /* Constants.swift in Sources */,
@@ -644,6 +681,7 @@
 			baseConfigurationReference = C1A9C620147BD8FA4BC8437C /* Pods-Talkative Parents.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = K3B6S92EN3;
 				INFOPLIST_FILE = "Talkative Parents/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -658,6 +696,7 @@
 			baseConfigurationReference = 34FB83C7C6BCA64B2D305BAB /* Pods-Talkative Parents.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = K3B6S92EN3;
 				INFOPLIST_FILE = "Talkative Parents/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
