@@ -19,6 +19,8 @@
 		181E648E1ECC35A2007E7C87 /* EulaAgreementViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181E648D1ECC35A2007E7C87 /* EulaAgreementViewController.swift */; };
 		181E64921ECC5832007E7C87 /* MobileLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181E64901ECC5832007E7C87 /* MobileLoginViewController.swift */; };
 		181E64931ECC5832007E7C87 /* MobileLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 181E64911ECC5832007E7C87 /* MobileLoginViewController.xib */; };
+		181E64971ECC65FC007E7C87 /* OTPVerificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181E64951ECC65FC007E7C87 /* OTPVerificationViewController.swift */; };
+		181E64981ECC65FC007E7C87 /* OTPVerificationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 181E64961ECC65FC007E7C87 /* OTPVerificationViewController.xib */; };
 		183F93591EC9829300B11BEB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183F93581EC9829300B11BEB /* AppDelegate.swift */; };
 		183F935B1EC9829300B11BEB /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183F935A1EC9829300B11BEB /* FirstViewController.swift */; };
 		183F935D1EC9829300B11BEB /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183F935C1EC9829300B11BEB /* SecondViewController.swift */; };
@@ -27,6 +29,13 @@
 		183F93651EC9829300B11BEB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 183F93631EC9829300B11BEB /* LaunchScreen.storyboard */; };
 		183F93701EC9829400B11BEB /* Talkative_ParentsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183F936F1EC9829400B11BEB /* Talkative_ParentsTests.swift */; };
 		183F937B1EC9829400B11BEB /* Talkative_ParentsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183F937A1EC9829400B11BEB /* Talkative_ParentsUITests.swift */; };
+		1862EFFF1ECD7DDE0084F704 /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1862EFFE1ECD7DDE0084F704 /* Country.swift */; };
+		1862F0011ECD7F5D0084F704 /* LookUpServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1862F0001ECD7F5D0084F704 /* LookUpServices.swift */; };
+		1862F0071ECD87670084F704 /* SelectCountryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1862F0051ECD87670084F704 /* SelectCountryViewController.swift */; };
+		1862F0081ECD87670084F704 /* SelectCountryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1862F0061ECD87670084F704 /* SelectCountryViewController.xib */; };
+		1862F00B1ECD88300084F704 /* CountrySelectionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1862F0091ECD88300084F704 /* CountrySelectionTableViewCell.swift */; };
+		1862F00C1ECD88300084F704 /* CountrySelectionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1862F00A1ECD88300084F704 /* CountrySelectionTableViewCell.xib */; };
+		1862F00E1ECD8E360084F704 /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1862F00D1ECD8E360084F704 /* LoginService.swift */; };
 		6E91B36D65901A4382092B6A /* Pods_Talkative_ParentsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A55DDBCD178F55B485AC29B /* Pods_Talkative_ParentsTests.framework */; };
 		809F2700F3A6C4483A7F37CD /* Pods_Talkative_Parents.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A819ED0EACF43F78280E979 /* Pods_Talkative_Parents.framework */; };
 		A3D0D6BE9AF322A44030801F /* Pods_Talkative_ParentsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1AA3821C99BBDDBCA5941E8 /* Pods_Talkative_ParentsUITests.framework */; };
@@ -62,6 +71,8 @@
 		181E648D1ECC35A2007E7C87 /* EulaAgreementViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EulaAgreementViewController.swift; sourceTree = "<group>"; };
 		181E64901ECC5832007E7C87 /* MobileLoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MobileLoginViewController.swift; sourceTree = "<group>"; };
 		181E64911ECC5832007E7C87 /* MobileLoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MobileLoginViewController.xib; sourceTree = "<group>"; };
+		181E64951ECC65FC007E7C87 /* OTPVerificationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OTPVerificationViewController.swift; sourceTree = "<group>"; };
+		181E64961ECC65FC007E7C87 /* OTPVerificationViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OTPVerificationViewController.xib; sourceTree = "<group>"; };
 		183F93551EC9829300B11BEB /* Talkative Parents.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Talkative Parents.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		183F93581EC9829300B11BEB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		183F935A1EC9829300B11BEB /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -76,6 +87,13 @@
 		183F93761EC9829400B11BEB /* Talkative ParentsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Talkative ParentsUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		183F937A1EC9829400B11BEB /* Talkative_ParentsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Talkative_ParentsUITests.swift; sourceTree = "<group>"; };
 		183F937C1EC9829400B11BEB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1862EFFE1ECD7DDE0084F704 /* Country.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
+		1862F0001ECD7F5D0084F704 /* LookUpServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LookUpServices.swift; sourceTree = "<group>"; };
+		1862F0051ECD87670084F704 /* SelectCountryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectCountryViewController.swift; sourceTree = "<group>"; };
+		1862F0061ECD87670084F704 /* SelectCountryViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SelectCountryViewController.xib; sourceTree = "<group>"; };
+		1862F0091ECD88300084F704 /* CountrySelectionTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountrySelectionTableViewCell.swift; sourceTree = "<group>"; };
+		1862F00A1ECD88300084F704 /* CountrySelectionTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CountrySelectionTableViewCell.xib; sourceTree = "<group>"; };
+		1862F00D1ECD8E360084F704 /* LoginService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginService.swift; sourceTree = "<group>"; };
 		2AD509CD274D6B8A1C439CF9 /* Pods-Talkative ParentsUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Talkative ParentsUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Talkative ParentsUITests/Pods-Talkative ParentsUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		34FB83C7C6BCA64B2D305BAB /* Pods-Talkative Parents.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Talkative Parents.release.xcconfig"; path = "Pods/Target Support Files/Pods-Talkative Parents/Pods-Talkative Parents.release.xcconfig"; sourceTree = "<group>"; };
 		4B8E0B6B42749C64D03BBBDE /* Pods-Talkative ParentsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Talkative ParentsTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Talkative ParentsTests/Pods-Talkative ParentsTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -119,6 +137,8 @@
 			isa = PBXGroup;
 			children = (
 				181E64791EC9CB88007E7C87 /* CommonService.swift */,
+				1862F0001ECD7F5D0084F704 /* LookUpServices.swift */,
+				1862F00D1ECD8E360084F704 /* LoginService.swift */,
 			);
 			name = SERVICES;
 			sourceTree = "<group>";
@@ -138,6 +158,8 @@
 		181E64831ECB406D007E7C87 /* ViewController Pages */ = {
 			isa = PBXGroup;
 			children = (
+				1862F0041ECD86290084F704 /* CountrySelectionPage */,
+				181E64941ECC65E9007E7C87 /* OTPVerificationPage */,
 				181E648F1ECC581B007E7C87 /* MobileEnterPage */,
 				181E648C1ECC336C007E7C87 /* agreementPage */,
 				181E64841ECB4078007E7C87 /* HelpScreensPage */,
@@ -179,6 +201,15 @@
 			name = MobileEnterPage;
 			sourceTree = "<group>";
 		};
+		181E64941ECC65E9007E7C87 /* OTPVerificationPage */ = {
+			isa = PBXGroup;
+			children = (
+				181E64951ECC65FC007E7C87 /* OTPVerificationViewController.swift */,
+				181E64961ECC65FC007E7C87 /* OTPVerificationViewController.xib */,
+			);
+			name = OTPVerificationPage;
+			sourceTree = "<group>";
+		};
 		183F934C1EC9829300B11BEB = {
 			isa = PBXGroup;
 			children = (
@@ -204,6 +235,7 @@
 		183F93571EC9829300B11BEB /* Talkative Parents */ = {
 			isa = PBXGroup;
 			children = (
+				1862EFFD1ECD7DA30084F704 /* Modules */,
 				181E64891ECB474C007E7C87 /* UIModules */,
 				181E64831ECB406D007E7C87 /* ViewController Pages */,
 				181E64741EC9CA84007E7C87 /* COMMONS */,
@@ -235,6 +267,25 @@
 				183F937C1EC9829400B11BEB /* Info.plist */,
 			);
 			path = "Talkative ParentsUITests";
+			sourceTree = "<group>";
+		};
+		1862EFFD1ECD7DA30084F704 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				1862EFFE1ECD7DDE0084F704 /* Country.swift */,
+			);
+			name = Modules;
+			sourceTree = "<group>";
+		};
+		1862F0041ECD86290084F704 /* CountrySelectionPage */ = {
+			isa = PBXGroup;
+			children = (
+				1862F0051ECD87670084F704 /* SelectCountryViewController.swift */,
+				1862F0061ECD87670084F704 /* SelectCountryViewController.xib */,
+				1862F0091ECD88300084F704 /* CountrySelectionTableViewCell.swift */,
+				1862F00A1ECD88300084F704 /* CountrySelectionTableViewCell.xib */,
+			);
+			name = CountrySelectionPage;
 			sourceTree = "<group>";
 		};
 		431926F8915600DF6F6669B1 /* Pods */ = {
@@ -377,9 +428,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1862F00C1ECD88300084F704 /* CountrySelectionTableViewCell.xib in Resources */,
 				183F93651EC9829300B11BEB /* LaunchScreen.storyboard in Resources */,
 				183F93621EC9829300B11BEB /* Assets.xcassets in Resources */,
 				181E64931ECC5832007E7C87 /* MobileLoginViewController.xib in Resources */,
+				1862F0081ECD87670084F704 /* SelectCountryViewController.xib in Resources */,
+				181E64981ECC65FC007E7C87 /* OTPVerificationViewController.xib in Resources */,
 				183F93601EC9829300B11BEB /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -549,14 +603,20 @@
 				181E648B1ECB4763007E7C87 /* CustomImagePageControl.swift in Sources */,
 				181E64821ECAD7F2007E7C87 /* ProgressHUD.swift in Sources */,
 				181E64861ECB412D007E7C87 /* HelpScreenViewController.swift in Sources */,
+				181E64971ECC65FC007E7C87 /* OTPVerificationViewController.swift in Sources */,
+				1862F00E1ECD8E360084F704 /* LoginService.swift in Sources */,
 				181E647A1EC9CB88007E7C87 /* CommonService.swift in Sources */,
 				181E64781EC9CB7D007E7C87 /* Commons.swift in Sources */,
+				1862F00B1ECD88300084F704 /* CountrySelectionTableViewCell.swift in Sources */,
 				181E64921ECC5832007E7C87 /* MobileLoginViewController.swift in Sources */,
 				181E647C1EC9CB92007E7C87 /* Constants.swift in Sources */,
 				181E64761EC9CB70007E7C87 /* UserDefaultsConstants.swift in Sources */,
+				1862EFFF1ECD7DDE0084F704 /* Country.swift in Sources */,
 				181E647E1EC9CBA2007E7C87 /* UIFont-Config.swift in Sources */,
 				183F935B1EC9829300B11BEB /* FirstViewController.swift in Sources */,
+				1862F0071ECD87670084F704 /* SelectCountryViewController.swift in Sources */,
 				181E648E1ECC35A2007E7C87 /* EulaAgreementViewController.swift in Sources */,
+				1862F0011ECD7F5D0084F704 /* LookUpServices.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

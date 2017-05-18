@@ -98,6 +98,16 @@ class UserDefaultsConstants : NSObject {
         return ""
     }
     
+    func setAuthKey(pPhoneNumber : String) {
+        defaults.set(pPhoneNumber, forKey: "User_Auth_Key")
+    }
+    
+    func getAuthKey() -> String {
+        if let myString = defaults.value(forKey: "User_Auth_Key") as? String {
+            return myString
+        }
+        return ""
+    }
     
     func setUserId(pPhoneNumber : String) {
         defaults.set(pPhoneNumber, forKey: "UserId")

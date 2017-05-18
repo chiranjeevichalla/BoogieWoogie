@@ -380,7 +380,9 @@ Should you have any questions concerning this Agreement, or if you desire to con
                             <constraint firstItem="zdp-0r-O4b" firstAttribute="top" secondItem="sbK-zu-TSw" secondAttribute="bottom" constant="10" id="xe8-Aq-GXZ"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="55m-FS-DDi"/>
+                    <navigationItem key="navigationItem" id="55m-FS-DDi">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="Znc-4n-2B9"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="thisUIAcceptBtn" destination="sbK-zu-TSw" id="AXF-wJ-1AQ"/>
                         <outlet property="thisUIDeclineBtn" destination="JYd-jx-6OL" id="1nY-VU-RUD"/>

@@ -31,8 +31,10 @@ class EulaAgreementViewController: UIViewController {
     
     
     @IBAction func onTapAcceptBtn(_ sender: Any) {
+        var pVC : MobileLoginViewController!
+        pVC = MobileLoginViewController(nibName: "MobileLoginViewController", bundle: nil)
         
-        
+        self.navigationController?.pushViewController(pVC, animated: true)
     }
     
 
