@@ -9,6 +9,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>AnimatedCollectionViewLayout.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>AsyncSwift.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -20,6 +25,11 @@
 			<false/>
 		</dict>
 		<key>Eureka.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Kingfisher.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -57,7 +67,12 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>0E8D0A7103FDD3D7029CAB6CC7235DD6</key>
+		<key>01B5F9358EAD17782FA546BF99060034</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>359086E81F3F58A62B9CFF182015F836</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -82,12 +97,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>8291E01114C9C540843188E291129785</key>
+		<key>88E9EC28B8B46C3631E6B242B50F4442</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>88E9EC28B8B46C3631E6B242B50F4442</key>
+		<key>89D6BAC60E03DB7767F4D13735C86BB4</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -97,17 +112,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>A1BEFF23AE3D54161C5082C00BBB4B29</key>
+		<key>B2F94D1510049565A9173EEE12E46A42</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>C4944FEC314D1A66588651D006273ADE</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>CD6C9FB6B052E1CF663F8A56041EA163</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>E1C0780BC685F86256B485672F3D619B</key>
 		<dict>
 			<key>primary</key>
 			<true/>

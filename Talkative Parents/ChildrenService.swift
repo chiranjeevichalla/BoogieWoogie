@@ -1,5 +1,5 @@
 //
-//  LoginService.swift
+//  ChildService.swift
 //  Talkative Parents
 //
 //  Created by Basavaraj Kalaghatagi on 18/05/17.
@@ -12,9 +12,9 @@ import ObjectMapper
 import SwiftyJSON
 
 
-class LoginService {
+class ChildrenService {
     
-    class func Login(pPhoneNumber: String, pCountryCode : String, callback:@escaping (Bool) -> Void) -> Void {
+    class func GetChildren(callback:@escaping (Bool) -> Void) -> Void {
         
         Commons.showIndicator()
         
@@ -26,31 +26,15 @@ class LoginService {
             return
         }
         
-        if (pPhoneNumber == "") {
-            Commons.hideIndicator()
-            Commons.showErrorMessage(pMessage: "Please enter the valid phone number")
-            return
-        }
         
-        let bPhoneNumber = "\(pCountryCode)\(pPhoneNumber)"
-        
-        let parameters: Parameters = [
-            "UserName":bPhoneNumber,
-            "SpouseInvite":Constants.sharedInstance._UserDefaults.getUserId(),
-            "Password" : "",
-            "Salutation" : "",
-            "FirstName" : "",
-            "LastName" : "",
-            "Gender" : 0,
-            "EmailAddress" : ""
-        ]
-        
-        
-        let url = Constants.sharedInstance.getLoginUrl()
+        let url = Constants.sharedInstance.getChildren()
         print("url \(url)")
         
+        let bHeaders : HTTPHeaders = [
+            "authToken" : Constants.sharedInstance._UserDefaults.getAuthKey()
+        ]
         
-        Alamofire.request(url, method:.post, parameters:parameters )
+        Alamofire.request(url, method:.get, headers: bHeaders)
             .validate(contentType: ["application/json"])
             .responseData { response in
                 Commons.hideIndicator()
@@ -60,12 +44,24 @@ class LoginService {
                         //let bResponse = ServiceResponse(JSONString: utf8Text)
                         let json = JSON(data:data)
                         print(json)
+                        print("count or length \(json.count)")
                         
+                        
+                        /*var bCountries : [Country] = []
+                        for  i in (0..<json.count)
+                        {
+                            let bContent = json[i].rawString()
+                            if let bCountry = Country(JSONString: bContent!) {
+                                bCountries.append(bCountry)
+                            }
+                        }
+                        bCountries.sort{ $0._showSequence < $1._showSequence }
+ */
                         callback(true)
                         
                         
                     } else {
-                        callback( true)
+                        callback(true)
                     }
                 } else {
                     Commons.showNoNetwork()
@@ -75,9 +71,9 @@ class LoginService {
         }
         
     }
-
     
-    class func Validate(pPhoneNumber:String, pOTPCode: String, callback:@escaping (Bool) -> Void) -> Void {
+    
+    class func GetChildrenWithChannels(callback:@escaping ([Child], Bool) -> Void) -> Void {
         
         Commons.showIndicator()
         
@@ -89,23 +85,15 @@ class LoginService {
             return
         }
         
-        let parameters: Parameters = [
-            "UserName":pPhoneNumber,
-            "SpouseInvite":"",
-            "Password" : pOTPCode,
-            "Salutation" : "",
-            "FirstName" : "",
-            "LastName" : "",
-            "Gender" : 0,
-            "EmailAddress" : ""
-        ]
         
-        
-        let url = Constants.sharedInstance.getValidateUrl()
+        let url = Constants.sharedInstance.getChildrenWithChannels()
         print("url \(url)")
         
-        
-        Alamofire.request(url, method:.post, parameters:parameters )
+        let bHeaders : HTTPHeaders = [
+            "authToken" : Constants.sharedInstance._UserDefaults.getAuthKey()
+        ]
+        print("AuthToken \(Constants.sharedInstance._UserDefaults.getAuthKey())")
+        Alamofire.request(url, method:.get, headers: bHeaders)
             .validate(contentType: ["application/json"])
             .responseData { response in
                 Commons.hideIndicator()
@@ -115,25 +103,32 @@ class LoginService {
                         //let bResponse = ServiceResponse(JSONString: utf8Text)
                         let json = JSON(data:data)
                         print(json)
-                        let bContent = json.rawString()!
-                        print("bContent \(bContent)")
-                        Constants.sharedInstance._UserDefaults.setPhoneNumber(pPhoneNumber: pPhoneNumber)
-                        Constants.sharedInstance._UserDefaults.setAuthKey(pPhoneNumber: bContent)
-                        Constants.sharedInstance._UserDefaults.setRegistered()
-                        Constants.sharedInstance._UserDefaults.setLogginned()
-                        callback(true)
+                        print("count or length \(json.count)")
+                        
+                        var bChildrens : [Child] = []
+                        
+                         for  i in (0..<json.count)
+                         {
+                         let bContent = json[i].rawString()
+                         if let bChild = Child(JSONString: bContent!) {
+                         bChildrens.append(bChild)
+                         }
+                         }
+                        
+                        
+                        callback(bChildrens, true)
                         
                         
                     } else {
-                        callback( true)
+                        callback([], true)
                     }
                 } else {
                     Commons.showNoNetwork()
-                    callback(false)
+                    callback([], false)
                 }
                 
         }
         
     }
-
+    
 }

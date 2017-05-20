@@ -14,6 +14,7 @@ import UIKit
 //import SwiftyDrop
 import RKDropdownAlert
 import ChameleonFramework
+import Kingfisher
 //import Eureka
 
 //public final class LocationRow : SelectorRow<PushSelectorCell<Address1>, LocationMapViewController>, RowType {
@@ -291,10 +292,23 @@ class Commons {
         return bIsSameNumber
     }
     
-    class func applyCommonBtnRadius(pBtn : UIButton) {
+    class func applyCommonBtnRadius(pBtn : UIButton) {6
         pBtn.layer.cornerRadius = 5
     }
     
+    class func setImage(pImage: UIImageView, pUrl : String) {
+        if pImage != nil {
+            if let url = URL(string: "\(Constants.sharedInstance.getImageBasePath())\(pUrl)") {
+                pImage.kf.setImage(with: url)
+            }
+        }
+    }
+    
+    
+    class func splitString(pString : String, pSplitBy : String) -> [String] {
+        let words = pString.components(separatedBy: pSplitBy)
+        return words
+    }
     
     //    class func ConvertJSONToString(pData : NSDictionary, callback (String) -> Void) -> Void {
     //        let jsonData: NSDate = JSONSerialization.data(withJSONObject: pData, options: .prettyPrinted)

@@ -46,7 +46,7 @@ class MobileLoginViewController: UIViewController, updateSelectedCountry {
         thisSelectedCountry._name = "India"
         thisSelectedCountry._prefix = "91"
         thisSelectedCountry._showSequence = 1
-        
+        thisUIMobileEntryTF.becomeFirstResponder()
         self._updateCountryDelegate = self
         // Do any additional setup after loading the view.
         
@@ -79,6 +79,10 @@ class MobileLoginViewController: UIViewController, updateSelectedCountry {
     // MARK : navigate Functions
     
     private func gotoOTPPage() {
+        
+        let backItem = UIBarButtonItem()
+        backItem.title = "Back"
+        navigationItem.backBarButtonItem = backItem
         var pVC : OTPVerificationViewController!
         pVC = OTPVerificationViewController(nibName: "OTPVerificationViewController", bundle: nil)
         pVC.thisPhoneNumber = "\(thisSelectedCountry.getPrefix())\(thisUIMobileEntryTF.text!)"
@@ -91,6 +95,9 @@ class MobileLoginViewController: UIViewController, updateSelectedCountry {
         pVC.thisSelectedCountries = self.thisCountries
         pVC.thisSelectedCountry = self.thisSelectedCountry
         pVC.thisCountrySelectionDelegate = self._updateCountryDelegate
+        let backItem = UIBarButtonItem()
+        backItem.title = "Back"
+        navigationItem.backBarButtonItem = backItem
         self.navigationController?.pushViewController(pVC, animated: true)
     }
     

@@ -11,6 +11,9 @@ target 'Talkative Parents' do
   pod 'ChameleonFramework/Swift', :git => 'https://github.com/ViccAlexander/Chameleon.git'
   pod 'RKDropdownAlert'
   pod 'Eureka'
+  pod 'AnimatedCollectionViewLayout'
+  pod 'Kingfisher', '~> 3.0'
+
 
   # Pods for Talkative Parents
 

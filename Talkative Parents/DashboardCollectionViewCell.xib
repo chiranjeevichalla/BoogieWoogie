@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="DashboardCollectionViewCell" id="gTV-IL-0wX" customClass="DashboardCollectionViewCell" customModule="Talkative_Parents" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="350" height="180"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="350" height="180"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Jna-mT-yCV" userLabel="schoolBg">
+                        <rect key="frame" x="0.0" y="0.0" width="350" height="180"/>
+                    </imageView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bx6-sI-xqx" userLabel="childImagecontainer">
+                        <rect key="frame" x="20" y="29" width="68" height="68"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PFU-hx-Ke4">
+                                <rect key="frame" x="0.0" y="0.0" width="68" height="68"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="68" id="7n4-fa-138"/>
+                            <constraint firstAttribute="height" constant="68" id="GaD-eW-qKF"/>
+                        </constraints>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="C2J-27-sSk">
+                        <rect key="frame" x="0.0" y="118" width="350" height="62"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rituparna Banerjee" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mIM-iE-kyA">
+                                <rect key="frame" x="20" y="11" width="310" height="20"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rituparna Banerjee" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ACO-UD-MdP">
+                                <rect key="frame" x="20" y="34" width="310" height="19"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0078431372550000003" green="0.58823529409999997" blue="0.60392156860000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="ACO-UD-MdP" firstAttribute="top" secondItem="mIM-iE-kyA" secondAttribute="bottom" constant="3" id="3Cl-dV-qa4"/>
+                            <constraint firstAttribute="trailing" secondItem="mIM-iE-kyA" secondAttribute="trailing" constant="20" id="3iv-8r-uUR"/>
+                            <constraint firstAttribute="trailing" secondItem="ACO-UD-MdP" secondAttribute="trailing" constant="20" id="4cP-55-Nst"/>
+                            <constraint firstItem="ACO-UD-MdP" firstAttribute="leading" secondItem="C2J-27-sSk" secondAttribute="leading" constant="20" id="CIV-zR-X6c"/>
+                            <constraint firstAttribute="bottom" secondItem="ACO-UD-MdP" secondAttribute="bottom" constant="9" id="CYa-yz-u5S"/>
+                            <constraint firstAttribute="height" constant="62" id="D4W-kU-8jb"/>
+                            <constraint firstItem="mIM-iE-kyA" firstAttribute="top" secondItem="C2J-27-sSk" secondAttribute="top" constant="11" id="Kn1-ov-qHy"/>
+                            <constraint firstItem="ACO-UD-MdP" firstAttribute="top" secondItem="mIM-iE-kyA" secondAttribute="bottom" constant="3" id="Nik-hX-0Ab"/>
+                            <constraint firstItem="mIM-iE-kyA" firstAttribute="leading" secondItem="C2J-27-sSk" secondAttribute="leading" constant="20" id="YVV-iV-4W5"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <color key="backgroundColor" red="0.99923557039999999" green="0.15775153040000001" blue="0.29596820470000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="C2J-27-sSk" secondAttribute="bottom" id="9NK-el-Ogb"/>
+                <constraint firstAttribute="bottom" secondItem="Jna-mT-yCV" secondAttribute="bottom" id="BAJ-Lw-2te"/>
+                <constraint firstItem="bx6-sI-xqx" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="20" id="Fjf-Eh-E34"/>
+                <constraint firstAttribute="trailing" secondItem="C2J-27-sSk" secondAttribute="trailing" id="NrX-NY-6bh"/>
+                <constraint firstAttribute="trailing" secondItem="Jna-mT-yCV" secondAttribute="trailing" id="b58-le-kxJ"/>
+                <constraint firstItem="C2J-27-sSk" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="cn8-7A-ZJ1"/>
+                <constraint firstItem="Jna-mT-yCV" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="rN2-HY-Od9"/>
+                <constraint firstItem="bx6-sI-xqx" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="29" id="ucn-eF-qdx"/>
+                <constraint firstItem="Jna-mT-yCV" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="upo-bs-eIH"/>
+            </constraints>
+            <connections>
+                <outlet property="thisUIChildImage" destination="PFU-hx-Ke4" id="Y2s-dT-v34"/>
+                <outlet property="thisUIChildImageContainer" destination="bx6-sI-xqx" id="wcZ-mn-Mmt"/>
+                <outlet property="thisUIChildName" destination="mIM-iE-kyA" id="9d6-aG-8Xi"/>
+                <outlet property="thisUISchoolImage" destination="Jna-mT-yCV" id="iEP-ne-Lay"/>
+                <outlet property="thisUISchoolName" destination="ACO-UD-MdP" id="Ma5-42-4kx"/>
+            </connections>
+        </collectionViewCell>
+    </objects>
+</document>

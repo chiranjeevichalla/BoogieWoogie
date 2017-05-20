@@ -38,6 +38,9 @@ class Constants: NSObject {
     private let _digitsConsumerKey = "X8wEQ7h2Re89eOcKVNMxizS1w"
     private let _digitsConsumerSecretKey = "lLmmTQo4gc6q3Ks1PIVaBOlyjq7OXYSlcaSoos0mq3BOxPgHHq"
     
+    
+    private let _imageBasePath = "https://tpupload.blob.core.windows.net/upload/"
+    
     //Prod details
     private let _BaseUrlProd = "http://tpappapi.azurewebsites.net:80/"
     
@@ -53,15 +56,24 @@ class Constants: NSObject {
     //Alamofire manager
     var manager = Alamofire.SessionManager.default
     
-    var homeNVC : UIViewController?
+    var _child = Child()
     
     let firstColor : UIColor = UIColor(hexString: "4DE4B4")!
     let secondColor : UIColor = UIColor(hexString: "38B7DE")!
     
     
     //Services api urls
+    //services api auth
     private let _loginUrl = "api/Account/Prelogin"
     private let _otpUrl = "api/Account/Validate"
+    
+    
+    //services api children
+    private let _getChildren = "api/Child/GetChildren"
+    private let _getChildrenWithChannels = "api/Child/GetChildrenWithChannels"
+    private let _getSchoolNotifications = "api/AppUser/GetSchoolNotifications"
+    
+    //services api lookups
     private let _getCountries = "api/Lookups/GetCountries"
     
     
@@ -147,7 +159,7 @@ class Constants: NSObject {
             return _digitsConsumerSecretKey
         }
     }
-    
+    //MARK: api/Auth services
     func getLoginUrl() -> String {
         if isDev {
             return "\(self._BaseAuthUrlDev)\(self._loginUrl)"
@@ -164,13 +176,45 @@ class Constants: NSObject {
         }
     }
     
-    //api/Lookups/GetCountries
+    //MARK: api/Children services
+    func getChildren() -> String {
+        if isDev {
+            return "\(self._BaseUrlDev)\(self._getChildren)"
+        } else {
+            return "\(self._BaseUrlProd)\(self._getChildren)"
+        }
+    }
+    
+    func getChildrenWithChannels() -> String {
+        if isDev {
+            return "\(self._BaseUrlDev)\(self._getChildrenWithChannels)"
+        } else {
+            return "\(self._BaseUrlProd)\(self._getChildrenWithChannels)"
+        }
+    }
+    
+    //MARK: App Services
+    func getSchoolNotifications() -> String {
+        if isDev {
+            return "\(self._BaseUrlDev)\(self._getSchoolNotifications)"
+        } else {
+            return "\(self._BaseUrlProd)\(self._getSchoolNotifications)"
+        }
+    }
+    
+    //MARK: //api/Lookups services
     func getLookUpsCountryesUrl() -> String {
         if isDev {
             return "\(self._BaseUrlDev)\(self._getCountries)"
         } else {
             return "\(self._BaseUrlProd)\(self._getCountries)"
         }
+    }
+    
+    
+    //MARK: GetImage BAse Path
+    func getImageBasePath() ->String {
+        return _imageBasePath
     }
 }
 
