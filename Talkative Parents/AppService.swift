@@ -14,7 +14,7 @@ import SwiftyJSON
 
 class AppService {
     
-    class func GetSchoolNotifications(pSchoolId : String, pPageSize: Int, callback:@escaping (Bool) -> Void) -> Void {
+    class func GetSchoolNotifications(pSchoolId : String, pPageSize: Int, callback:@escaping ([Notification],Bool) -> Void) -> Void {
         
         Commons.showIndicator()
         
@@ -55,25 +55,25 @@ class AppService {
                         print("count or length \(json.count)")
                         
                         
-                        /*var bCountries : [Country] = []
+                         var bNotifications : [Notification] = []
                          for  i in (0..<json.count)
                          {
-                         let bContent = json[i].rawString()
-                         if let bCountry = Country(JSONString: bContent!) {
-                         bCountries.append(bCountry)
+                             let bContent = json[i].rawString()
+                             if let bNotification = Notification(JSONString: bContent!) {
+                             bNotifications.append(bNotification)
                          }
                          }
-                         bCountries.sort{ $0._showSequence < $1._showSequence }
-                         */
-                        callback(true)
+//                         bCountries.sort{ $0._showSequence < $1._showSequence }
+                        
+                        callback(bNotifications, true)
                         
                         
                     } else {
-                        callback(true)
+                        callback([],true)
                     }
                 } else {
                     Commons.showNoNetwork()
-                    callback(false)
+                    callback([], false)
                 }
                 
         }

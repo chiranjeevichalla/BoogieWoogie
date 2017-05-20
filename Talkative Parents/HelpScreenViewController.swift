@@ -23,6 +23,14 @@ class HelpScreenViewController: UIViewController, UICollectionViewDataSource, UI
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        for name in UIFont.familyNames {
+            print(name)
+            if let nameString = name as? String
+            {
+                print(UIFont.fontNames(forFamilyName: nameString))
+            }
+        }
+        
         if Constants.sharedInstance._UserDefaults.isLoggedIn() {
             let appDelegate = UIApplication.shared.delegate! as! AppDelegate
             let storyboard = UIStoryboard(name: "Main", bundle: nil)

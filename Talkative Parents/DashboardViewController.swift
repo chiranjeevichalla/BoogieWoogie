@@ -115,9 +115,6 @@ class DashboardViewController: UIViewController, UICollectionViewDelegate, UICol
         appDelegate.window?.rootViewController = initialViewController
         appDelegate.window?.makeKeyAndVisible()
         
-        /*AppService.GetSchoolNotifications(pSchoolId: self.thisChildrens[indexPath.item].getSchoolId(), pPageSize: 300) { (result) in
-            
-        }*/
     }
 
     /*

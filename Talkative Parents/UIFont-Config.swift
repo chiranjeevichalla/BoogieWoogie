@@ -11,15 +11,19 @@ import UIKit
 extension UIFont {
     
     class func regular(ofSize size: CGFloat) -> UIFont {
-        return UIFont(name: "WorkSans-Regular", size: size)!
+        return UIFont(name: "OpenSans", size: size)!
     }
     
     class func Bold(ofSize size: CGFloat) -> UIFont {
-        return UIFont(name: "WorkSans-Bold", size: size)!
+        return UIFont(name: "OpenSans-Bold", size: size)!
     }
     
     class func Light(ofSize size: CGFloat) -> UIFont {
         return UIFont(name: "WorkSans-Light", size: size)!
+    }
+    
+    class func SemiBold(ofSize size: CGFloat) -> UIFont {
+        return UIFont(name: "OpenSans-Semibold", size: size)!
     }
     
     

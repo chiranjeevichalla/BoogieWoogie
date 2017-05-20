@@ -15,6 +15,7 @@ import UIKit
 import RKDropdownAlert
 import ChameleonFramework
 import Kingfisher
+
 //import Eureka
 
 //public final class LocationRow : SelectorRow<PushSelectorCell<Address1>, LocationMapViewController>, RowType {
@@ -93,7 +94,7 @@ class Commons {
         return bValue
     }
     
-    class func convertStringToDateFormat(pDate: String) -> (String, String) {
+    class func convertStringToDateFormat(pDate: String) -> String {
         let words = pDate.components(separatedBy: ".")
         let dateFormatter = DateFormatter()
         //        2017-02-07T00:00:00.000Z
@@ -104,7 +105,7 @@ class Commons {
         //
         //
         let calendar = Calendar.autoupdatingCurrent
-        let components = calendar.dateComponents([.day, .month], from: date!)
+        let components = calendar.dateComponents([.day, .month, .year, .hour, .minute], from: date!)
         
         let df = DateFormatter()
         df.dateFormat="MMM"
@@ -114,8 +115,11 @@ class Commons {
         if day! < 10 {
             bDay = "0\(day!)"
         }
+        let year = components.year
+        let hour = components.hour
+        let minute = components.minute
+        return "\(bDay) \(month) \(year!) \(hour!):\(minute!)"
         
-        return (bDay, "\(month)")
     }
     
    
@@ -309,6 +313,7 @@ class Commons {
         let words = pString.components(separatedBy: pSplitBy)
         return words
     }
+    
     
     //    class func ConvertJSONToString(pData : NSDictionary, callback (String) -> Void) -> Void {
     //        let jsonData: NSDate = JSONSerialization.data(withJSONObject: pData, options: .prettyPrinted)

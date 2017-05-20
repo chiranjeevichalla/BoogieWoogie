@@ -22,9 +22,20 @@
 		181E64971ECC65FC007E7C87 /* OTPVerificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181E64951ECC65FC007E7C87 /* OTPVerificationViewController.swift */; };
 		181E64981ECC65FC007E7C87 /* OTPVerificationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 181E64961ECC65FC007E7C87 /* OTPVerificationViewController.xib */; };
 		181ED2F21ED012EB00759FA3 /* AppService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181ED2F11ED012EB00759FA3 /* AppService.swift */; };
+		181ED2F41ED0552C00759FA3 /* NotificationDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181ED2F31ED0552C00759FA3 /* NotificationDB.swift */; };
+		18379EFB1ED0578700F75C31 /* NotificationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18379EF91ED0578700F75C31 /* NotificationTableViewCell.swift */; };
+		18379EFC1ED0578700F75C31 /* NotificationTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18379EFA1ED0578700F75C31 /* NotificationTableViewCell.xib */; };
+		18379F011ED0597900F75C31 /* RegularLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18379F001ED0597900F75C31 /* RegularLabel.swift */; };
+		18379F031ED0599900F75C31 /* BoldLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18379F021ED0599900F75C31 /* BoldLabel.swift */; };
+		18379F051ED059AF00F75C31 /* SemiBoldLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18379F041ED059AF00F75C31 /* SemiBoldLabel.swift */; };
+		18379F091ED05B7600F75C31 /* Basic.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 18379F071ED05B7600F75C31 /* Basic.xcdatamodeld */; };
+		18379F0A1ED0603500F75C31 /* OpenSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 18379F061ED059E700F75C31 /* OpenSans-Bold.ttf */; };
+		18379F0B1ED0603700F75C31 /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 18379EFE1ED0590C00F75C31 /* OpenSans-Regular.ttf */; };
+		18379F0C1ED0603900F75C31 /* OpenSans-Semibold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 18379EFF1ED0590C00F75C31 /* OpenSans-Semibold.ttf */; };
+		18379F0E1ED0731E00F75C31 /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18379F0D1ED0731E00F75C31 /* Notification.swift */; };
 		183F93591EC9829300B11BEB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183F93581EC9829300B11BEB /* AppDelegate.swift */; };
-		183F935B1EC9829300B11BEB /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183F935A1EC9829300B11BEB /* FirstViewController.swift */; };
-		183F935D1EC9829300B11BEB /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183F935C1EC9829300B11BEB /* SecondViewController.swift */; };
+		183F935B1EC9829300B11BEB /* NotificationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183F935A1EC9829300B11BEB /* NotificationsViewController.swift */; };
+		183F935D1EC9829300B11BEB /* SoundingboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183F935C1EC9829300B11BEB /* SoundingboardViewController.swift */; };
 		183F93601EC9829300B11BEB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 183F935E1EC9829300B11BEB /* Main.storyboard */; };
 		183F93621EC9829300B11BEB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 183F93611EC9829300B11BEB /* Assets.xcassets */; };
 		183F93651EC9829300B11BEB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 183F93631EC9829300B11BEB /* LaunchScreen.storyboard */; };
@@ -80,10 +91,21 @@
 		181E64951ECC65FC007E7C87 /* OTPVerificationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OTPVerificationViewController.swift; sourceTree = "<group>"; };
 		181E64961ECC65FC007E7C87 /* OTPVerificationViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OTPVerificationViewController.xib; sourceTree = "<group>"; };
 		181ED2F11ED012EB00759FA3 /* AppService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppService.swift; sourceTree = "<group>"; };
+		181ED2F31ED0552C00759FA3 /* NotificationDB.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationDB.swift; sourceTree = "<group>"; };
+		18379EF91ED0578700F75C31 /* NotificationTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationTableViewCell.swift; sourceTree = "<group>"; };
+		18379EFA1ED0578700F75C31 /* NotificationTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NotificationTableViewCell.xib; sourceTree = "<group>"; };
+		18379EFE1ED0590C00F75C31 /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Regular.ttf"; sourceTree = "<group>"; };
+		18379EFF1ED0590C00F75C31 /* OpenSans-Semibold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Semibold.ttf"; sourceTree = "<group>"; };
+		18379F001ED0597900F75C31 /* RegularLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegularLabel.swift; sourceTree = "<group>"; };
+		18379F021ED0599900F75C31 /* BoldLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoldLabel.swift; sourceTree = "<group>"; };
+		18379F041ED059AF00F75C31 /* SemiBoldLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SemiBoldLabel.swift; sourceTree = "<group>"; };
+		18379F061ED059E700F75C31 /* OpenSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Bold.ttf"; sourceTree = "<group>"; };
+		18379F081ED05B7600F75C31 /* Basic.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Basic.xcdatamodel; sourceTree = "<group>"; };
+		18379F0D1ED0731E00F75C31 /* Notification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Notification.swift; sourceTree = "<group>"; };
 		183F93551EC9829300B11BEB /* Talkative Parents.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Talkative Parents.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		183F93581EC9829300B11BEB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		183F935A1EC9829300B11BEB /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
-		183F935C1EC9829300B11BEB /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		183F935A1EC9829300B11BEB /* NotificationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsViewController.swift; sourceTree = "<group>"; };
+		183F935C1EC9829300B11BEB /* SoundingboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundingboardViewController.swift; sourceTree = "<group>"; };
 		183F935F1EC9829300B11BEB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		183F93611EC9829300B11BEB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		183F93641EC9829300B11BEB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -172,6 +194,8 @@
 		181E64831ECB406D007E7C87 /* ViewController Pages */ = {
 			isa = PBXGroup;
 			children = (
+				18379EF81ED056FA00F75C31 /* SoundingBoardPage */,
+				18379EF71ED056EF00F75C31 /* NotificationPage */,
 				1862F0111ECDC80E0084F704 /* Dashboard */,
 				1862F0041ECD86290084F704 /* CountrySelectionPage */,
 				181E64941ECC65E9007E7C87 /* OTPVerificationPage */,
@@ -225,6 +249,37 @@
 			name = OTPVerificationPage;
 			sourceTree = "<group>";
 		};
+		18379EF71ED056EF00F75C31 /* NotificationPage */ = {
+			isa = PBXGroup;
+			children = (
+				183F935A1EC9829300B11BEB /* NotificationsViewController.swift */,
+				18379EF91ED0578700F75C31 /* NotificationTableViewCell.swift */,
+				18379EFA1ED0578700F75C31 /* NotificationTableViewCell.xib */,
+			);
+			name = NotificationPage;
+			sourceTree = "<group>";
+		};
+		18379EF81ED056FA00F75C31 /* SoundingBoardPage */ = {
+			isa = PBXGroup;
+			children = (
+				183F935C1EC9829300B11BEB /* SoundingboardViewController.swift */,
+			);
+			name = SoundingBoardPage;
+			sourceTree = "<group>";
+		};
+		18379EFD1ED0589900F75C31 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				18379F061ED059E700F75C31 /* OpenSans-Bold.ttf */,
+				18379EFE1ED0590C00F75C31 /* OpenSans-Regular.ttf */,
+				18379EFF1ED0590C00F75C31 /* OpenSans-Semibold.ttf */,
+				18379F001ED0597900F75C31 /* RegularLabel.swift */,
+				18379F021ED0599900F75C31 /* BoldLabel.swift */,
+				18379F041ED059AF00F75C31 /* SemiBoldLabel.swift */,
+			);
+			name = Fonts;
+			sourceTree = "<group>";
+		};
 		183F934C1EC9829300B11BEB = {
 			isa = PBXGroup;
 			children = (
@@ -250,18 +305,18 @@
 		183F93571EC9829300B11BEB /* Talkative Parents */ = {
 			isa = PBXGroup;
 			children = (
+				18379EFD1ED0589900F75C31 /* Fonts */,
 				181E64731EC9CA7B007E7C87 /* SERVICES */,
 				181E64741EC9CA84007E7C87 /* COMMONS */,
 				1862EFFD1ECD7DA30084F704 /* Modules */,
 				181E64891ECB474C007E7C87 /* UIModules */,
 				181E64831ECB406D007E7C87 /* ViewController Pages */,
 				183F93581EC9829300B11BEB /* AppDelegate.swift */,
-				183F935A1EC9829300B11BEB /* FirstViewController.swift */,
-				183F935C1EC9829300B11BEB /* SecondViewController.swift */,
 				183F935E1EC9829300B11BEB /* Main.storyboard */,
 				183F93611EC9829300B11BEB /* Assets.xcassets */,
 				183F93631EC9829300B11BEB /* LaunchScreen.storyboard */,
 				183F93661EC9829300B11BEB /* Info.plist */,
+				18379F071ED05B7600F75C31 /* Basic.xcdatamodeld */,
 			);
 			path = "Talkative Parents";
 			sourceTree = "<group>";
@@ -289,6 +344,8 @@
 			children = (
 				1862EFFE1ECD7DDE0084F704 /* Country.swift */,
 				1862F01C1ECF0B170084F704 /* Child.swift */,
+				181ED2F31ED0552C00759FA3 /* NotificationDB.swift */,
+				18379F0D1ED0731E00F75C31 /* Notification.swift */,
 			);
 			name = Modules;
 			sourceTree = "<group>";
@@ -455,6 +512,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				1862F00C1ECD88300084F704 /* CountrySelectionTableViewCell.xib in Resources */,
+				18379F0B1ED0603700F75C31 /* OpenSans-Regular.ttf in Resources */,
+				18379F0A1ED0603500F75C31 /* OpenSans-Bold.ttf in Resources */,
+				18379F0C1ED0603900F75C31 /* OpenSans-Semibold.ttf in Resources */,
 				183F93651EC9829300B11BEB /* LaunchScreen.storyboard in Resources */,
 				183F93621EC9829300B11BEB /* Assets.xcassets in Resources */,
 				181E64931ECC5832007E7C87 /* MobileLoginViewController.xib in Resources */,
@@ -462,6 +522,7 @@
 				181E64981ECC65FC007E7C87 /* OTPVerificationViewController.xib in Resources */,
 				183F93601EC9829300B11BEB /* Main.storyboard in Resources */,
 				1862F01B1ECDD89E0084F704 /* DashboardCollectionViewCell.xib in Resources */,
+				18379EFC1ED0578700F75C31 /* NotificationTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -624,10 +685,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18379EFB1ED0578700F75C31 /* NotificationTableViewCell.swift in Sources */,
+				181ED2F41ED0552C00759FA3 /* NotificationDB.swift in Sources */,
 				1862F0101ECDBE000084F704 /* ChildrenService.swift in Sources */,
-				183F935D1EC9829300B11BEB /* SecondViewController.swift in Sources */,
+				18379F011ED0597900F75C31 /* RegularLabel.swift in Sources */,
+				183F935D1EC9829300B11BEB /* SoundingboardViewController.swift in Sources */,
 				1862F01D1ECF0B170084F704 /* Child.swift in Sources */,
 				181E64881ECB4170007E7C87 /* HelpScreenCollectionViewCell.swift in Sources */,
+				18379F051ED059AF00F75C31 /* SemiBoldLabel.swift in Sources */,
 				183F93591EC9829300B11BEB /* AppDelegate.swift in Sources */,
 				181ED2F21ED012EB00759FA3 /* AppService.swift in Sources */,
 				181E648B1ECB4763007E7C87 /* CustomImagePageControl.swift in Sources */,
@@ -639,11 +704,14 @@
 				181E64781EC9CB7D007E7C87 /* Commons.swift in Sources */,
 				1862F00B1ECD88300084F704 /* CountrySelectionTableViewCell.swift in Sources */,
 				181E64921ECC5832007E7C87 /* MobileLoginViewController.swift in Sources */,
+				18379F091ED05B7600F75C31 /* Basic.xcdatamodeld in Sources */,
+				18379F0E1ED0731E00F75C31 /* Notification.swift in Sources */,
+				18379F031ED0599900F75C31 /* BoldLabel.swift in Sources */,
 				181E647C1EC9CB92007E7C87 /* Constants.swift in Sources */,
 				181E64761EC9CB70007E7C87 /* UserDefaultsConstants.swift in Sources */,
 				1862EFFF1ECD7DDE0084F704 /* Country.swift in Sources */,
 				181E647E1EC9CBA2007E7C87 /* UIFont-Config.swift in Sources */,
-				183F935B1EC9829300B11BEB /* FirstViewController.swift in Sources */,
+				183F935B1EC9829300B11BEB /* NotificationsViewController.swift in Sources */,
 				1862F01A1ECDD89E0084F704 /* DashboardCollectionViewCell.swift in Sources */,
 				1862F0071ECD87670084F704 /* SelectCountryViewController.swift in Sources */,
 				1862F0171ECDD8860084F704 /* DashboardViewController.swift in Sources */,
@@ -924,6 +992,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		18379F071ED05B7600F75C31 /* Basic.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				18379F081ED05B7600F75C31 /* Basic.xcdatamodel */,
+			);
+			currentVersion = 18379F081ED05B7600F75C31 /* Basic.xcdatamodel */;
+			path = Basic.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 183F934D1EC9829300B11BEB /* Project object */;
 }

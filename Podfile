@@ -13,7 +13,7 @@ target 'Talkative Parents' do
   pod 'Eureka'
   pod 'AnimatedCollectionViewLayout'
   pod 'Kingfisher', '~> 3.0'
-
+  pod 'SugarRecord/CoreData'
 
   # Pods for Talkative Parents
 
