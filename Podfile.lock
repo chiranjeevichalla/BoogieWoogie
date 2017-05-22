@@ -8,10 +8,7 @@ PODS:
   - Eureka (3.0.0)
   - Kingfisher (3.6.2)
   - ObjectMapper (2.2.6)
-  - Result (3.2.1)
   - RKDropdownAlert (0.3.0)
-  - SugarRecord/CoreData (3.1.2):
-    - Result (~> 3.0)
   - SwiftyJSON (3.1.4)
 
 DEPENDENCIES:
@@ -23,7 +20,6 @@ DEPENDENCIES:
   - Kingfisher (~> 3.0)
   - ObjectMapper (~> 2.2)
   - RKDropdownAlert
-  - SugarRecord/CoreData
   - SwiftyJSON
 
 EXTERNAL SOURCES:
@@ -43,11 +39,9 @@ SPEC CHECKSUMS:
   Eureka: f36fd440c3ebb7bfea0a4fbe6f16a05f1cb35906
   Kingfisher: 2c94e72c6830622c71d06adf4ea024c37d316830
   ObjectMapper: 042708195cc46c20871cbcbec0453826398273fd
-  Result: 2453a22e5c5b11c0c3a478736e82cd02f763b781
   RKDropdownAlert: f4b3364c251829ad439dc666836a1f2dad26f4c7
-  SugarRecord: be6aa5c18b4a4dec0de4c1f49fc61c85eabb5328
   SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
 
-PODFILE CHECKSUM: dc4e1b4e6c38625f9da0cfe7f27c9b2f18b4fa91
+PODFILE CHECKSUM: c8206e04f1e64160ff581ee4876638b71a52df62
 
 COCOAPODS: 1.1.1

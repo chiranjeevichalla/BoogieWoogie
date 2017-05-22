@@ -72,6 +72,7 @@ class Constants: NSObject {
     private let _getChildren = "api/Child/GetChildren"
     private let _getChildrenWithChannels = "api/Child/GetChildrenWithChannels"
     private let _getSchoolNotifications = "api/AppUser/GetSchoolNotifications"
+    private let _getNotificationDetails = "api/AppUser/GetNotificationDetails"
     
     //services api lookups
     private let _getCountries = "api/Lookups/GetCountries"
@@ -199,6 +200,14 @@ class Constants: NSObject {
             return "\(self._BaseUrlDev)\(self._getSchoolNotifications)"
         } else {
             return "\(self._BaseUrlProd)\(self._getSchoolNotifications)"
+        }
+    }
+    
+    func getNotificationDetail() -> String {
+        if isDev {
+            return "\(self._BaseUrlDev)\(self._getNotificationDetails)"
+        } else {
+            return "\(self._BaseUrlProd)\(self._getNotificationDetails)"
         }
     }
     

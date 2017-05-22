@@ -8,21 +8,12 @@
 
 import UIKit
 import CoreData
-import SugarRecord
+
 
 class NotificationsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     
     @IBOutlet weak var thisUINotificationsTV: UITableView!
-    
-    
-    lazy var db: CoreDataDefaultStorage = {
-        let store = CoreDataStore.named("Basic")
-        let bundle = Bundle(for: NotificationsViewController.classForCoder())
-        let model = CoreDataObjectModel.merged([bundle])
-        let defaultStorage = try! CoreDataDefaultStorage(store: store, model: model)
-        return defaultStorage
-    }()
     
     private var thisNotifications : [Notification] = []
 
@@ -57,6 +48,12 @@ class NotificationsViewController: UIViewController, UITableViewDelegate, UITabl
             cell.thisUINotificationImage.image = UIImage(named: "notificationUnread")
         }
         
+        if self.thisNotifications[indexPath.row].hasAttachment() {
+            cell.thisUIAttachmentImage.isHidden = false
+        } else {
+            cell.thisUIAttachmentImage.isHidden = true
+        }
+        
         return cell
     }
     
@@ -66,6 +63,20 @@ class NotificationsViewController: UIViewController, UITableViewDelegate, UITabl
         self.thisNotifications[indexPath.row]._didRead = true
         self.thisUINotificationsTV.reloadRows(at: [indexPath], with: .fade)
         self.thisUINotificationsTV.deselectRow(at: indexPath, animated: true)
+        
+        let bNotification = self.thisNotifications[indexPath.row]
+        
+        gotoNoticeBoardDetailPage(pNotification: bNotification)
+    }
+    
+    fileprivate func gotoNoticeBoardDetailPage(pNotification : Notification) {
+        var pVC : NotificeBoardDetailViewController!
+        pVC = NotificeBoardDetailViewController(nibName: "NotificeBoardDetailViewController", bundle: nil)
+        pVC.thisNotification = pNotification
+        let backItem = UIBarButtonItem()
+        backItem.title = "Back"
+        navigationItem.backBarButtonItem = backItem
+        self.navigationController?.pushViewController(pVC, animated: true)
     }
 
     
@@ -89,57 +100,44 @@ class NotificationsViewController: UIViewController, UITableViewDelegate, UITabl
     }
     
     fileprivate func didRead(pId: String) -> Bool {
-        let predicate: NSPredicate = NSPredicate(format: "id == %@", pId)
-        if let bNotification: NotificationDB? = try! db.fetch(FetchRequest<NotificationDB>().filtered(with: predicate)).first {
-            if bNotification != nil {
-                print("DidREad notification \(bNotification?.didRead)")
-                if bNotification?.didRead == "0" {
-                    return false
-                } else {
-                    return true
-                }
-            } else {
-                return false
-            }
-            
-        }
-        
-        return false
+        return CoreDataManager.didRead(pId:pId)
+//        let predicate: NSPredicate = NSPredicate(format: "id == %@", pId)
+//        if let bNotification: NotificationDB? = try! db.fetch(FetchRequest<NotificationDB>().filtered(with: predicate)).first {
+//            if bNotification != nil {
+//                print("DidREad notification \(bNotification?.didRead)")
+//                if bNotification?.didRead == "0" {
+//                    return false
+//                } else {
+//                    return true
+//                }
+//            } else {
+//                return false
+//            }
+//            
+//        }
+//        
+//        return false
     }
     
     fileprivate func updateNotification(pId: String, pStatus : String) {
+        CoreDataManager.setRead(pId: pId, pDidRead: true)
         
-        do {
-            
-            try! db.operation { (context, save) throws -> Void in
-                let newTask: NotificationDB = try! context.create()
-                newTask.id = pId
-                newTask.didRead = pStatus
-                                    try! context.insert(newTask)
-                save()
-            }
-        }
-        catch {
-            // There was an error in the operation
-            print("Not saved update Notification")
-        }
-        
-//        let predicate: NSPredicate = NSPredicate(format: "id == %@", pId)
-//        if let bNotification: NotificationDB? = try! db.fetch(FetchRequest<NotificationDB>().filtered(with: predicate)).first {
-//            do {
-//                
-//                try! db.operation { (context, save) throws -> Void in
-////                    let newTask: NotificationDB = try! context.create()
-////                    newTask.id = pId
-//                    bNotification?.didRead = pStatus
-////                    try! context.insert(newTask)
-//                    save()
-//                }
-//            }
-//            catch {
-//                // There was an error in the operation
+//        do {
+//            
+//            try! db.operation { (context, save) throws -> Void in
+//                let newTask: NotificationDB = try! context.create()
+//                newTask.id = pId
+//                newTask.didRead = pStatus
+//                                    try! context.insert(newTask)
+//                save()
 //            }
 //        }
+//        catch {
+//            // There was an error in the operation
+//            print("Not saved update Notification")
+//        }
+        
+//
         
     }
 

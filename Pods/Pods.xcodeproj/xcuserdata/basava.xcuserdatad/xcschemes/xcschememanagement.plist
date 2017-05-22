@@ -59,16 +59,6 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Result.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>SugarRecord.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 		<key>SwiftyJSON.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -82,22 +72,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>0B275646A3161BEC9C710135E6F4D614</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>27719C752585A97EE6C6D90C83F5EEDB</key>
+		<key>359086E81F3F58A62B9CFF182015F836</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>55D9785C23C9C7C4CAB91112E33F6422</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>5E514F353B942ACCBEA8C306B99763D8</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -122,7 +102,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>89D6BAC60E03DB7767F4D13735C86BB4</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>97DD79A24D531FE709F0939CAC51C30B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>B2F94D1510049565A9173EEE12E46A42</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -133,16 +123,6 @@
 			<true/>
 		</dict>
 		<key>CD6C9FB6B052E1CF663F8A56041EA163</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>FC225E627D0BBE906F618A71D0E2AC64</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>FDA490CE393F6A8F2AB8C4B71852B8E9</key>
 		<dict>
 			<key>primary</key>
 			<true/>
