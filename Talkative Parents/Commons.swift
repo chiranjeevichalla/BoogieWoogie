@@ -116,9 +116,22 @@ class Commons {
             bDay = "0\(day!)"
         }
         let year = components.year
-        let hour = components.hour
+        var hour = components.hour
         let minute = components.minute
-        return "\(bDay) \(month) \(year!) \(hour!):\(minute!)"
+        var bTimeDay = "AM"
+        if hour! > 12 {
+            bTimeDay = "PM"
+            hour = hour! - 12
+        }
+        var hourString = "\(hour!)"
+        if hour! < 10 {
+            hourString = "0\(hour!)"
+        }
+        var minuteString = "\(minute!)"
+        if minute! < 10 {
+            minuteString = "0\(minute!)"
+        }
+        return "\(bDay) \(month) \(year!) \(hourString):\(minuteString) \(bTimeDay)"
         
     }
     
@@ -312,6 +325,22 @@ class Commons {
     class func splitString(pString : String, pSplitBy : String) -> [String] {
         let words = pString.components(separatedBy: pSplitBy)
         return words
+    }
+    
+    class func convertStringToAttachments (pString : String, pSplitBy : String) -> [Attachment] {
+        var bAttachments : [Attachment] = []
+        let words = Commons.splitString(pString: pString, pSplitBy: pSplitBy)
+        for bWord in words {
+            let bAttachment = Attachment()
+            bAttachment._url = bWord
+            let bWords = Commons.splitString(pString: bWord, pSplitBy: "-")
+            let bName = bWords[bWords.count-1]
+            let bNameWords = Commons.splitString(pString: bName, pSplitBy: ".")
+            bAttachment._type = bNameWords[bNameWords.count-1]
+            bAttachment._name = bNameWords[0]
+            bAttachments.append(bAttachment)
+        }
+        return bAttachments
     }
     
     

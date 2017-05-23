@@ -29,6 +29,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>KILabel.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Kingfisher.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -72,7 +77,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>359086E81F3F58A62B9CFF182015F836</key>
+		<key>05292A32E75D819971568178BCA67FBC</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -92,6 +97,11 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>7A0563F4B5AA5BF59BAB9E9C34535C5B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>7F45F2F21482C3777494ACE42307212D</key>
 		<dict>
 			<key>primary</key>
@@ -102,17 +112,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>89D6BAC60E03DB7767F4D13735C86BB4</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>97DD79A24D531FE709F0939CAC51C30B</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>B2F94D1510049565A9173EEE12E46A42</key>
+		<key>9A6C240C834373B342DF8217E9E0658C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>A5D82373166B88054A7C35508BCD2838</key>
 		<dict>
 			<key>primary</key>
 			<true/>

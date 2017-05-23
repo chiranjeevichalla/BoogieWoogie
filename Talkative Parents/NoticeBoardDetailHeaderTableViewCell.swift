@@ -10,6 +10,10 @@ import UIKit
 
 class NoticeBoardDetailHeaderTableViewCell: UITableViewCell {
 
+    
+    @IBOutlet weak var thisUILabelSubject: SemiBoldLabel!
+    @IBOutlet weak var thisUILabelDate: RegularLabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

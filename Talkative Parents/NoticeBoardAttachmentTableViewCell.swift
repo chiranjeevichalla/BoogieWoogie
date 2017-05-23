@@ -1,18 +1,16 @@
 //
-//  NoticeBoardWebViewTableViewCell.swift
+//  NoticeBoardAttachmentTableViewCell.swift
 //  Talkative Parents
 //
-//  Created by Basavaraj Kalaghatagi on 22/05/17.
+//  Created by Basavaraj Kalaghatagi on 23/05/17.
 //  Copyright © 2017 SGS. All rights reserved.
 //
 
 import UIKit
-import KILabel
 
-class NoticeBoardWebViewTableViewCell: UITableViewCell {
+class NoticeBoardAttachmentTableViewCell: UITableViewCell {
 
-    
-    @IBOutlet weak var thisUILabelWebcontent: KILabel!
+    @IBOutlet weak var thisUIAttachmentCV: UICollectionView!
     
     override func awakeFromNib() {
         super.awakeFromNib()

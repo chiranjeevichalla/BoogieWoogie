@@ -60,6 +60,13 @@
 		1862F01B1ECDD89E0084F704 /* DashboardCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1862F0191ECDD89E0084F704 /* DashboardCollectionViewCell.xib */; };
 		1862F01D1ECF0B170084F704 /* Child.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1862F01C1ECF0B170084F704 /* Child.swift */; };
 		186E490E1ED2F3D900FD81E2 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186E490D1ED2F3D900FD81E2 /* CoreDataManager.swift */; };
+		187435EA1ED43E4B00150ACD /* NWebViewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187435E81ED43E4B00150ACD /* NWebViewTableViewCell.swift */; };
+		187435EB1ED43E4B00150ACD /* NWebViewTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 187435E91ED43E4B00150ACD /* NWebViewTableViewCell.xib */; };
+		187435ED1ED4545700150ACD /* Attachment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187435EC1ED4545700150ACD /* Attachment.swift */; };
+		187435F01ED45F3400150ACD /* NoticeBoardAttachmentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187435EE1ED45F3400150ACD /* NoticeBoardAttachmentTableViewCell.swift */; };
+		187435F11ED45F3400150ACD /* NoticeBoardAttachmentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 187435EF1ED45F3400150ACD /* NoticeBoardAttachmentTableViewCell.xib */; };
+		187435F41ED468F400150ACD /* AttachmentCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187435F21ED468F400150ACD /* AttachmentCollectionViewCell.swift */; };
+		187435F51ED468F400150ACD /* AttachmentCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 187435F31ED468F400150ACD /* AttachmentCollectionViewCell.xib */; };
 		6E91B36D65901A4382092B6A /* Pods_Talkative_ParentsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A55DDBCD178F55B485AC29B /* Pods_Talkative_ParentsTests.framework */; };
 		809F2700F3A6C4483A7F37CD /* Pods_Talkative_Parents.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A819ED0EACF43F78280E979 /* Pods_Talkative_Parents.framework */; };
 		A3D0D6BE9AF322A44030801F /* Pods_Talkative_ParentsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1AA3821C99BBDDBCA5941E8 /* Pods_Talkative_ParentsUITests.framework */; };
@@ -143,6 +150,13 @@
 		1862F01C1ECF0B170084F704 /* Child.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Child.swift; sourceTree = "<group>"; };
 		186E490D1ED2F3D900FD81E2 /* CoreDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		186E490F1ED2F5EA00FD81E2 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		187435E81ED43E4B00150ACD /* NWebViewTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NWebViewTableViewCell.swift; sourceTree = "<group>"; };
+		187435E91ED43E4B00150ACD /* NWebViewTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NWebViewTableViewCell.xib; sourceTree = "<group>"; };
+		187435EC1ED4545700150ACD /* Attachment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Attachment.swift; sourceTree = "<group>"; };
+		187435EE1ED45F3400150ACD /* NoticeBoardAttachmentTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoticeBoardAttachmentTableViewCell.swift; sourceTree = "<group>"; };
+		187435EF1ED45F3400150ACD /* NoticeBoardAttachmentTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NoticeBoardAttachmentTableViewCell.xib; sourceTree = "<group>"; };
+		187435F21ED468F400150ACD /* AttachmentCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AttachmentCollectionViewCell.swift; sourceTree = "<group>"; };
+		187435F31ED468F400150ACD /* AttachmentCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AttachmentCollectionViewCell.xib; sourceTree = "<group>"; };
 		2AD509CD274D6B8A1C439CF9 /* Pods-Talkative ParentsUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Talkative ParentsUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Talkative ParentsUITests/Pods-Talkative ParentsUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		34FB83C7C6BCA64B2D305BAB /* Pods-Talkative Parents.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Talkative Parents.release.xcconfig"; path = "Pods/Target Support Files/Pods-Talkative Parents/Pods-Talkative Parents.release.xcconfig"; sourceTree = "<group>"; };
 		4B8E0B6B42749C64D03BBBDE /* Pods-Talkative ParentsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Talkative ParentsTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Talkative ParentsTests/Pods-Talkative ParentsTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -275,6 +289,12 @@
 				182EA8E91ED32C0300589E8C /* NoticeBoardDetailHeaderTableViewCell.xib */,
 				182EA8EC1ED32EAE00589E8C /* NoticeBoardWebViewTableViewCell.swift */,
 				182EA8ED1ED32EAE00589E8C /* NoticeBoardWebViewTableViewCell.xib */,
+				187435E81ED43E4B00150ACD /* NWebViewTableViewCell.swift */,
+				187435E91ED43E4B00150ACD /* NWebViewTableViewCell.xib */,
+				187435EE1ED45F3400150ACD /* NoticeBoardAttachmentTableViewCell.swift */,
+				187435EF1ED45F3400150ACD /* NoticeBoardAttachmentTableViewCell.xib */,
+				187435F21ED468F400150ACD /* AttachmentCollectionViewCell.swift */,
+				187435F31ED468F400150ACD /* AttachmentCollectionViewCell.xib */,
 			);
 			name = NotificationDetailPage;
 			sourceTree = "<group>";
@@ -376,6 +396,7 @@
 				1862F01C1ECF0B170084F704 /* Child.swift */,
 				18379F0D1ED0731E00F75C31 /* Notification.swift */,
 				182EA8F01ED330BC00589E8C /* NotificationDetail.swift */,
+				187435EC1ED4545700150ACD /* Attachment.swift */,
 			);
 			name = Modules;
 			sourceTree = "<group>";
@@ -546,15 +567,18 @@
 				18379F0B1ED0603700F75C31 /* OpenSans-Regular.ttf in Resources */,
 				182EA8EB1ED32C0300589E8C /* NoticeBoardDetailHeaderTableViewCell.xib in Resources */,
 				182EA8E71ED31FDD00589E8C /* NotificeBoardDetailViewController.xib in Resources */,
+				187435EB1ED43E4B00150ACD /* NWebViewTableViewCell.xib in Resources */,
 				18379F0A1ED0603500F75C31 /* OpenSans-Bold.ttf in Resources */,
 				18379F0C1ED0603900F75C31 /* OpenSans-Semibold.ttf in Resources */,
 				183F93651EC9829300B11BEB /* LaunchScreen.storyboard in Resources */,
 				183F93621EC9829300B11BEB /* Assets.xcassets in Resources */,
 				181E64931ECC5832007E7C87 /* MobileLoginViewController.xib in Resources */,
+				187435F51ED468F400150ACD /* AttachmentCollectionViewCell.xib in Resources */,
 				1862F0081ECD87670084F704 /* SelectCountryViewController.xib in Resources */,
 				181E64981ECC65FC007E7C87 /* OTPVerificationViewController.xib in Resources */,
 				183F93601EC9829300B11BEB /* Main.storyboard in Resources */,
 				1862F01B1ECDD89E0084F704 /* DashboardCollectionViewCell.xib in Resources */,
+				187435F11ED45F3400150ACD /* NoticeBoardAttachmentTableViewCell.xib in Resources */,
 				182EA8EF1ED32EAE00589E8C /* NoticeBoardWebViewTableViewCell.xib in Resources */,
 				18379EFC1ED0578700F75C31 /* NotificationTableViewCell.xib in Resources */,
 			);
@@ -720,11 +744,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				18379EFB1ED0578700F75C31 /* NotificationTableViewCell.swift in Sources */,
+				187435F41ED468F400150ACD /* AttachmentCollectionViewCell.swift in Sources */,
 				1862F0101ECDBE000084F704 /* ChildrenService.swift in Sources */,
 				18379F011ED0597900F75C31 /* RegularLabel.swift in Sources */,
 				183F935D1EC9829300B11BEB /* SoundingboardViewController.swift in Sources */,
 				1862F01D1ECF0B170084F704 /* Child.swift in Sources */,
 				181E64881ECB4170007E7C87 /* HelpScreenCollectionViewCell.swift in Sources */,
+				187435F01ED45F3400150ACD /* NoticeBoardAttachmentTableViewCell.swift in Sources */,
 				18379F051ED059AF00F75C31 /* SemiBoldLabel.swift in Sources */,
 				183F93591EC9829300B11BEB /* AppDelegate.swift in Sources */,
 				181ED2F21ED012EB00759FA3 /* AppService.swift in Sources */,
@@ -737,11 +763,13 @@
 				181E64781EC9CB7D007E7C87 /* Commons.swift in Sources */,
 				1862F00B1ECD88300084F704 /* CountrySelectionTableViewCell.swift in Sources */,
 				181E64921ECC5832007E7C87 /* MobileLoginViewController.swift in Sources */,
+				187435ED1ED4545700150ACD /* Attachment.swift in Sources */,
 				18379F091ED05B7600F75C31 /* Basic.xcdatamodeld in Sources */,
 				18379F0E1ED0731E00F75C31 /* Notification.swift in Sources */,
 				182EA8EE1ED32EAE00589E8C /* NoticeBoardWebViewTableViewCell.swift in Sources */,
 				186E490E1ED2F3D900FD81E2 /* CoreDataManager.swift in Sources */,
 				18379F031ED0599900F75C31 /* BoldLabel.swift in Sources */,
+				187435EA1ED43E4B00150ACD /* NWebViewTableViewCell.swift in Sources */,
 				181E647C1EC9CB92007E7C87 /* Constants.swift in Sources */,
 				181E64761EC9CB70007E7C87 /* UserDefaultsConstants.swift in Sources */,
 				182EA8F11ED330BC00589E8C /* NotificationDetail.swift in Sources */,

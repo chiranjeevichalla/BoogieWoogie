@@ -14,6 +14,7 @@ target 'Talkative Parents' do
   pod 'AnimatedCollectionViewLayout'
   pod 'Kingfisher', '~> 3.0'
 #  pod 'SugarRecord/CoreData'
+  pod 'KILabel', '1.0.0'
 
   # Pods for Talkative Parents
 

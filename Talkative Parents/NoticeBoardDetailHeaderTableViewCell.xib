@@ -10,6 +10,9 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
+        <array key="OpenSans-Regular.ttf">
+            <string>OpenSans</string>
+        </array>
         <array key="OpenSans-Semibold.ttf">
             <string>OpenSans-Semibold</string>
         </array>
@@ -35,15 +38,45 @@
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
                     </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="calendarTiny" translatesAutoresizingMaskIntoConstraints="NO" id="90b-0S-kLH">
+                        <rect key="frame" x="18" y="82" width="20" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="0GR-Lu-DMi"/>
+                            <constraint firstAttribute="width" constant="20" id="Co1-qf-hjt"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yny-d6-EIq" customClass="RegularLabel" customModule="Talkative_Parents" customModuleProvider="target">
+                        <rect key="frame" x="52" y="82" width="304" height="19.5"/>
+                        <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="14"/>
+                        <color key="textColor" red="0.0" green="0.35686274509999999" blue="0.43137254899999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="fontSize">
+                                <real key="value" value="14"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </label>
                 </subviews>
                 <constraints>
                     <constraint firstItem="QZv-Ov-FZ2" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="10" id="E0G-M8-oOR"/>
                     <constraint firstAttribute="bottomMargin" secondItem="QZv-Ov-FZ2" secondAttribute="bottom" constant="41.5" id="OR8-UO-Bff"/>
+                    <constraint firstItem="90b-0S-kLH" firstAttribute="top" secondItem="QZv-Ov-FZ2" secondAttribute="bottom" constant="14" id="TTX-gD-eOY"/>
+                    <constraint firstItem="yny-d6-EIq" firstAttribute="leading" secondItem="90b-0S-kLH" secondAttribute="trailing" constant="14" id="UUe-IA-RmM"/>
                     <constraint firstAttribute="trailingMargin" secondItem="QZv-Ov-FZ2" secondAttribute="trailing" constant="12" id="UfS-Cx-hqU"/>
+                    <constraint firstItem="yny-d6-EIq" firstAttribute="top" secondItem="QZv-Ov-FZ2" secondAttribute="bottom" constant="14" id="dLy-YA-s76"/>
                     <constraint firstItem="QZv-Ov-FZ2" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="9" id="dn2-Uh-9DE"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="yny-d6-EIq" secondAttribute="trailing" constant="12" id="vSC-xv-YrD"/>
+                    <constraint firstItem="90b-0S-kLH" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="10" id="zCX-rP-oAe"/>
                 </constraints>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="thisUILabelDate" destination="yny-d6-EIq" id="ypg-lc-TPe"/>
+                <outlet property="thisUILabelSubject" destination="QZv-Ov-FZ2" id="4OU-py-Pil"/>
+            </connections>
             <point key="canvasLocation" x="-18" y="-39"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="calendarTiny" width="28" height="30"/>
+    </resources>
 </document>

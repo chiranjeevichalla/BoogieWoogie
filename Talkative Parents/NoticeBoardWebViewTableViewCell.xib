@@ -9,28 +9,49 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="OpenSans-Regular.ttf">
+            <string>OpenSans</string>
+        </array>
+    </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="NoticeBoardWebViewTableViewCell" id="KGk-i7-Jjw" customClass="NoticeBoardWebViewTableViewCell" customModule="Talkative_Parents" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+            <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                <rect key="frame" x="0.0" y="0.0" width="375" height="59.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ztC-JM-Qj4">
-                        <rect key="frame" x="18" y="11" width="340" height="21"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <nil key="textColor"/>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jQa-sj-XQA">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="60" id="D4T-9s-WWX"/>
+                        </constraints>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ztC-JM-Qj4" customClass="KILabel">
+                        <rect key="frame" x="18" y="11" width="340" height="37"/>
+                        <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="14"/>
+                        <color key="textColor" red="0.0" green="0.35686274509999999" blue="0.43137254899999999" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="fontSize">
+                                <real key="value" value="14"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                     </label>
                 </subviews>
                 <constraints>
                     <constraint firstItem="ztC-JM-Qj4" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="3" id="6y9-Ma-1mI"/>
+                    <constraint firstItem="jQa-sj-XQA" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="83y-dU-3bb"/>
                     <constraint firstAttribute="trailingMargin" secondItem="ztC-JM-Qj4" secondAttribute="trailing" constant="9" id="Jho-f5-HVG"/>
+                    <constraint firstAttribute="bottom" secondItem="jQa-sj-XQA" secondAttribute="bottom" constant="-0.5" id="bJJ-fE-lvh"/>
+                    <constraint firstAttribute="trailing" secondItem="jQa-sj-XQA" secondAttribute="trailing" id="e60-cu-7JN"/>
                     <constraint firstAttribute="bottomMargin" secondItem="ztC-JM-Qj4" secondAttribute="bottom" constant="3.5" id="rwp-sd-lB3"/>
                     <constraint firstItem="ztC-JM-Qj4" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="10" id="uKp-dn-9DM"/>
+                    <constraint firstItem="jQa-sj-XQA" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="wUu-tO-PyY"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>

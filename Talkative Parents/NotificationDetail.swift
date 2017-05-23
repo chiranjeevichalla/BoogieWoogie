@@ -18,9 +18,12 @@ class NotificationDetail : Mappable {
     var _messageAttributed : NSAttributedString?
     var _name : String?
     var _date : String?
-    var _attachments : String?
+    var _attachmentsString : String?
     var _icon : String?
     var _id : String?
+    
+    var _hasAttachment : Bool = false
+    var _attachments : [Attachment] = []
     
     
     required init?(map: Map) {
@@ -36,13 +39,42 @@ class NotificationDetail : Mappable {
         _message        <- map ["Message"]
         _name           <- map ["Name"]
         _date           <- map ["DateTime"]
-        _attachments    <- map ["Attachments"]
+        _attachmentsString    <- map ["Attachments"]
         _icon           <- map ["Icon"]
         _id             <- map ["Id"]
         if _message != nil {
-            _messageAttributed = _message!.html2AttributedString
+//            _message = "<p>I am travelling to this and that and this and that </p> <p><a href>https://paynetzuat.atomtech.in/InvoicePayment/MailServlet?data=SUklYNUOCfcDGWYAJF76lA==</a></p>"
+            _messageAttributed = try! NSAttributedString(
+                data: (_message!.data(using: String.Encoding.unicode, allowLossyConversion: true)!),
+                options: [NSDocumentTypeDocumentAttribute: NSHTMLTextDocumentType],
+                documentAttributes: nil)
+//            _messageAttributed = _message!.html2AttributedString
         }
         
+        if _attachmentsString != nil {
+            _hasAttachment = true
+            _attachments = Commons.convertStringToAttachments(pString: _attachmentsString!, pSplitBy: ";")
+        }
+        
+        if _date != nil {
+            _date = Commons.convertStringToDateFormat(pDate: _date!)
+        }
+
+        
+    }
+    
+    func getSubject() -> String {
+        if _subject != nil {
+            return _subject!
+        }
+        return ""
+    }
+    
+    func getDisplayDate() -> String {
+        if _date != nil {
+            return _date!
+        }
+        return ""
     }
     
 }

@@ -6,6 +6,7 @@ PODS:
   - ChameleonFramework/Swift (2.1.0):
     - ChameleonFramework/Default
   - Eureka (3.0.0)
+  - KILabel (1.0.0)
   - Kingfisher (3.6.2)
   - ObjectMapper (2.2.6)
   - RKDropdownAlert (0.3.0)
@@ -17,6 +18,7 @@ DEPENDENCIES:
   - AsyncSwift
   - ChameleonFramework/Swift (from `https://github.com/ViccAlexander/Chameleon.git`)
   - Eureka
+  - KILabel (= 1.0.0)
   - Kingfisher (~> 3.0)
   - ObjectMapper (~> 2.2)
   - RKDropdownAlert
@@ -37,11 +39,12 @@ SPEC CHECKSUMS:
   AsyncSwift: 632138e42ead868b53c745fcde9bf733ce1527ad
   ChameleonFramework: d21a3cc247abfe5e37609a283a8238b03575cf64
   Eureka: f36fd440c3ebb7bfea0a4fbe6f16a05f1cb35906
+  KILabel: 84049969642d4ac1061ebe38ad4c0da37fed108b
   Kingfisher: 2c94e72c6830622c71d06adf4ea024c37d316830
   ObjectMapper: 042708195cc46c20871cbcbec0453826398273fd
   RKDropdownAlert: f4b3364c251829ad439dc666836a1f2dad26f4c7
   SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
 
-PODFILE CHECKSUM: c8206e04f1e64160ff581ee4876638b71a52df62
+PODFILE CHECKSUM: f696f86e05d3bbb6c048f2dc77f3141a1c3a79d3
 
 COCOAPODS: 1.1.1
