@@ -8,6 +8,13 @@
 
 import Foundation
 
+enum Doctype: String {
+    case doc = "doc"
+    case pdf = "pdf"
+    case image = "image"
+    case excel = "excel"
+}
+
 class Attachment : NSObject {
     
     
@@ -15,6 +22,7 @@ class Attachment : NSObject {
     var _type : String?
     var _url : String?
     var _icon : String = "doc"
+    var _docType : Doctype?
     
     override init() {
         

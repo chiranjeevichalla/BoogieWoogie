@@ -42,6 +42,7 @@ class NotificationDetail : Mappable {
         _attachmentsString    <- map ["Attachments"]
         _icon           <- map ["Icon"]
         _id             <- map ["Id"]
+        
         if _message != nil {
 //            _message = "<p>I am travelling to this and that and this and that </p> <p><a href>https://paynetzuat.atomtech.in/InvoicePayment/MailServlet?data=SUklYNUOCfcDGWYAJF76lA==</a></p>"
             _messageAttributed = try! NSAttributedString(
@@ -49,6 +50,12 @@ class NotificationDetail : Mappable {
                 options: [NSDocumentTypeDocumentAttribute: NSHTMLTextDocumentType],
                 documentAttributes: nil)
 //            _messageAttributed = _message!.html2AttributedString
+        } else {
+            _message = "No Message Found"
+            _messageAttributed = try! NSAttributedString(
+                data: (_message!.data(using: String.Encoding.unicode, allowLossyConversion: true)!),
+                options: [NSDocumentTypeDocumentAttribute: NSHTMLTextDocumentType],
+                documentAttributes: nil)
         }
         
         if _attachmentsString != nil {

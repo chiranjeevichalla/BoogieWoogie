@@ -178,10 +178,23 @@ extension NotificeBoardDetailViewController : UICollectionViewDelegate, UICollec
         let bAttachment = self.thisNotificationDetail._attachments[indexPath.item]
         
         cell.thisAttachmentName.text = bAttachment.getName()
+        cell.thisUIImageView.image = UIImage(named: (bAttachment._docType?.rawValue)!)
         
         return cell
     }
     
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        collectionView.deselectItem(at: indexPath, animated: false)
+     
+        var pVC : DocumentViewerViewController!
+        pVC = DocumentViewerViewController(nibName: "DocumentViewerViewController", bundle: nil)
+        pVC.thisAttachment = self.thisNotificationDetail._attachments[indexPath.item]
+        let backItem = UIBarButtonItem()
+        backItem.title = "Back"
+        navigationItem.backBarButtonItem = backItem
+        self.navigationController?.pushViewController(pVC, animated: true)
+
+    }
     
     
     

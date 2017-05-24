@@ -67,6 +67,8 @@
 		187435F11ED45F3400150ACD /* NoticeBoardAttachmentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 187435EF1ED45F3400150ACD /* NoticeBoardAttachmentTableViewCell.xib */; };
 		187435F41ED468F400150ACD /* AttachmentCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187435F21ED468F400150ACD /* AttachmentCollectionViewCell.swift */; };
 		187435F51ED468F400150ACD /* AttachmentCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 187435F31ED468F400150ACD /* AttachmentCollectionViewCell.xib */; };
+		187FAC2C1ED568BE00A9A15E /* DocumentViewerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187FAC2A1ED568BE00A9A15E /* DocumentViewerViewController.swift */; };
+		187FAC2D1ED568BE00A9A15E /* DocumentViewerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 187FAC2B1ED568BE00A9A15E /* DocumentViewerViewController.xib */; };
 		6E91B36D65901A4382092B6A /* Pods_Talkative_ParentsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A55DDBCD178F55B485AC29B /* Pods_Talkative_ParentsTests.framework */; };
 		809F2700F3A6C4483A7F37CD /* Pods_Talkative_Parents.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A819ED0EACF43F78280E979 /* Pods_Talkative_Parents.framework */; };
 		A3D0D6BE9AF322A44030801F /* Pods_Talkative_ParentsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1AA3821C99BBDDBCA5941E8 /* Pods_Talkative_ParentsUITests.framework */; };
@@ -157,6 +159,8 @@
 		187435EF1ED45F3400150ACD /* NoticeBoardAttachmentTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NoticeBoardAttachmentTableViewCell.xib; sourceTree = "<group>"; };
 		187435F21ED468F400150ACD /* AttachmentCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AttachmentCollectionViewCell.swift; sourceTree = "<group>"; };
 		187435F31ED468F400150ACD /* AttachmentCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AttachmentCollectionViewCell.xib; sourceTree = "<group>"; };
+		187FAC2A1ED568BE00A9A15E /* DocumentViewerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DocumentViewerViewController.swift; sourceTree = "<group>"; };
+		187FAC2B1ED568BE00A9A15E /* DocumentViewerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DocumentViewerViewController.xib; sourceTree = "<group>"; };
 		2AD509CD274D6B8A1C439CF9 /* Pods-Talkative ParentsUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Talkative ParentsUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Talkative ParentsUITests/Pods-Talkative ParentsUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		34FB83C7C6BCA64B2D305BAB /* Pods-Talkative Parents.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Talkative Parents.release.xcconfig"; path = "Pods/Target Support Files/Pods-Talkative Parents/Pods-Talkative Parents.release.xcconfig"; sourceTree = "<group>"; };
 		4B8E0B6B42749C64D03BBBDE /* Pods-Talkative ParentsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Talkative ParentsTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Talkative ParentsTests/Pods-Talkative ParentsTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -224,6 +228,7 @@
 		181E64831ECB406D007E7C87 /* ViewController Pages */ = {
 			isa = PBXGroup;
 			children = (
+				187FAC291ED5689200A9A15E /* DocumentViewerPage */,
 				182EA8E31ED31FBB00589E8C /* NotificationDetailPage */,
 				18379EF81ED056FA00F75C31 /* SoundingBoardPage */,
 				18379EF71ED056EF00F75C31 /* NotificationPage */,
@@ -422,6 +427,15 @@
 			name = Dashboard;
 			sourceTree = "<group>";
 		};
+		187FAC291ED5689200A9A15E /* DocumentViewerPage */ = {
+			isa = PBXGroup;
+			children = (
+				187FAC2A1ED568BE00A9A15E /* DocumentViewerViewController.swift */,
+				187FAC2B1ED568BE00A9A15E /* DocumentViewerViewController.xib */,
+			);
+			name = DocumentViewerPage;
+			sourceTree = "<group>";
+		};
 		431926F8915600DF6F6669B1 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -572,6 +586,7 @@
 				18379F0C1ED0603900F75C31 /* OpenSans-Semibold.ttf in Resources */,
 				183F93651EC9829300B11BEB /* LaunchScreen.storyboard in Resources */,
 				183F93621EC9829300B11BEB /* Assets.xcassets in Resources */,
+				187FAC2D1ED568BE00A9A15E /* DocumentViewerViewController.xib in Resources */,
 				181E64931ECC5832007E7C87 /* MobileLoginViewController.xib in Resources */,
 				187435F51ED468F400150ACD /* AttachmentCollectionViewCell.xib in Resources */,
 				1862F0081ECD87670084F704 /* SelectCountryViewController.xib in Resources */,
@@ -771,6 +786,7 @@
 				18379F031ED0599900F75C31 /* BoldLabel.swift in Sources */,
 				187435EA1ED43E4B00150ACD /* NWebViewTableViewCell.swift in Sources */,
 				181E647C1EC9CB92007E7C87 /* Constants.swift in Sources */,
+				187FAC2C1ED568BE00A9A15E /* DocumentViewerViewController.swift in Sources */,
 				181E64761EC9CB70007E7C87 /* UserDefaultsConstants.swift in Sources */,
 				182EA8F11ED330BC00589E8C /* NotificationDetail.swift in Sources */,
 				1862EFFF1ECD7DDE0084F704 /* Country.swift in Sources */,

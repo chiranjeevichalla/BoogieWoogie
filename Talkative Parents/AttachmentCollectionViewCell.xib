@@ -30,8 +30,8 @@
                             <constraint firstAttribute="width" secondItem="pFx-xh-f2G" secondAttribute="height" multiplier="1:1" id="Yry-XT-w0D"/>
                         </constraints>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label label albel albel albel" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WvT-be-tiv" customClass="RegularLabel" customModule="Talkative_Parents" customModuleProvider="target">
-                        <rect key="frame" x="0.0" y="53" width="100" height="37"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label label albel albel albel" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WvT-be-tiv" customClass="RegularLabel" customModule="Talkative_Parents" customModuleProvider="target">
+                        <rect key="frame" x="3" y="53" width="94" height="37"/>
                         <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="11"/>
                         <color key="textColor" red="0.0" green="0.35686274509999999" blue="0.43137254899999999" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
@@ -44,13 +44,13 @@
                 </subviews>
             </view>
             <constraints>
-                <constraint firstItem="WvT-be-tiv" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="BhL-EV-7gq"/>
+                <constraint firstItem="WvT-be-tiv" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="3" id="BhL-EV-7gq"/>
                 <constraint firstItem="pFx-xh-f2G" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="OVZ-DK-2rP"/>
                 <constraint firstItem="WvT-be-tiv" firstAttribute="top" secondItem="pFx-xh-f2G" secondAttribute="bottom" constant="3" id="cBX-wG-ZTl"/>
                 <constraint firstItem="pFx-xh-f2G" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="25" id="cOa-2p-JPS"/>
                 <constraint firstAttribute="bottom" secondItem="WvT-be-tiv" secondAttribute="bottom" id="gM7-uM-JBl"/>
                 <constraint firstAttribute="trailing" secondItem="pFx-xh-f2G" secondAttribute="trailing" constant="25" id="hW2-rb-UbE"/>
-                <constraint firstAttribute="trailing" secondItem="WvT-be-tiv" secondAttribute="trailing" id="xwd-WI-gLR"/>
+                <constraint firstAttribute="trailing" secondItem="WvT-be-tiv" secondAttribute="trailing" constant="3" id="xwd-WI-gLR"/>
             </constraints>
             <size key="customSize" width="100" height="90"/>
             <connections>
@@ -61,6 +61,6 @@
         </collectionViewCell>
     </objects>
     <resources>
-        <image name="doc" width="38" height="38"/>
+        <image name="doc" width="32" height="32"/>
     </resources>
 </document>

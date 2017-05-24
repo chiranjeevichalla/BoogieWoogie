@@ -309,7 +309,7 @@ class Commons {
         return bIsSameNumber
     }
     
-    class func applyCommonBtnRadius(pBtn : UIButton) {6
+    class func applyCommonBtnRadius(pBtn : UIButton) {
         pBtn.layer.cornerRadius = 5
     }
     
@@ -321,6 +321,11 @@ class Commons {
         }
     }
     
+    class func constructUrl(pUrl: String) -> URL? {
+        let urlString = pUrl.replacingOccurrences(of: " ", with: "%20")
+        
+        return URL(string: "\(Constants.sharedInstance.getImageBasePath())\(urlString)")
+    }
     
     class func splitString(pString : String, pSplitBy : String) -> [String] {
         let words = pString.components(separatedBy: pSplitBy)
@@ -338,9 +343,22 @@ class Commons {
             let bNameWords = Commons.splitString(pString: bName, pSplitBy: ".")
             bAttachment._type = bNameWords[bNameWords.count-1]
             bAttachment._name = bNameWords[0]
+            bAttachment._docType = Commons.getDocType(pType: bAttachment._type!.lowercased())
             bAttachments.append(bAttachment)
         }
         return bAttachments
+    }
+    
+    class func getDocType(pType : String) -> Doctype {
+        if pType == "jpg" || pType == "png" || pType == "jpeg" || pType == "gif" {
+            return .image
+        }
+        else if pType == "pdf" {
+            return .pdf
+        }
+        else {
+            return .doc
+        }
     }
     
     
