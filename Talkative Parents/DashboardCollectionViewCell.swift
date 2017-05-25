@@ -20,6 +20,9 @@ class DashboardCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var thisUIChildImage: UIImageView!
     
+    @IBOutlet weak var thisUIChildButton: UIButton!
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

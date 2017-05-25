@@ -404,7 +404,37 @@ class Commons {
         return destination
     }
     
+    class func saveProfileImage(pFileName : String, pImage : UIImage) {
+        Commons.showIndicator()
+        let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
+        let documentsDirectory = paths[0]
+        
+        let bImage = Commons.ResizeImage(image: pImage, targetSize: CGSize(width: 200, height: 200))
+        
+        if let data = UIImageJPEGRepresentation(bImage, 0.8) {
+            let filename = documentsDirectory.appendingPathComponent(pFileName+".jpg")
+            try? data.write(to: filename)
+            print("profile image saved")
+        }
+        
+        Commons.hideIndicator()
+        
+    }
     
+    class func setProfileImage(pImageView : UIImageView, pFileName : String) {
+        if Commons.isFileExist(pFileName: pFileName+".jpg") {
+            let nsDocumentDirectory = FileManager.SearchPathDirectory.documentDirectory
+            let nsUserDomainMask    = FileManager.SearchPathDomainMask.userDomainMask
+            let paths               = NSSearchPathForDirectoriesInDomains(nsDocumentDirectory, nsUserDomainMask, true)
+            if let dirPath          = paths.first
+            {
+                let imageURL = URL(fileURLWithPath: dirPath).appendingPathComponent(pFileName+".jpg")
+                let image    = UIImage(contentsOfFile: imageURL.path)
+                pImageView.image = image
+                // Do whatever you want with the image
+            }
+        }
+    }
     
     
     //    class func ConvertJSONToString(pData : NSDictionary, callback (String) -> Void) -> Void {

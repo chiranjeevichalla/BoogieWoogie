@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -24,15 +24,22 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bx6-sI-xqx" userLabel="childImagecontainer">
                         <rect key="frame" x="20" y="29" width="68" height="68"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PFU-hx-Ke4">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="defaultChildProfile" translatesAutoresizingMaskIntoConstraints="NO" id="PFU-hx-Ke4">
                                 <rect key="frame" x="0.0" y="0.0" width="68" height="68"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="syX-Jw-jYl">
+                                <rect key="frame" x="0.0" y="0.0" width="68" height="68"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="68" id="7n4-fa-138"/>
                             <constraint firstAttribute="height" constant="68" id="GaD-eW-qKF"/>
+                            <constraint firstItem="syX-Jw-jYl" firstAttribute="leading" secondItem="bx6-sI-xqx" secondAttribute="leading" id="Vdh-AL-IoY"/>
+                            <constraint firstItem="syX-Jw-jYl" firstAttribute="top" secondItem="bx6-sI-xqx" secondAttribute="top" id="c93-d4-eUO"/>
+                            <constraint firstAttribute="trailing" secondItem="syX-Jw-jYl" secondAttribute="trailing" id="emx-BM-EeI"/>
+                            <constraint firstAttribute="bottom" secondItem="syX-Jw-jYl" secondAttribute="bottom" id="q7B-so-cQX"/>
                         </constraints>
                     </view>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="C2J-27-sSk">
@@ -79,6 +86,7 @@
                 <constraint firstItem="Jna-mT-yCV" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="upo-bs-eIH"/>
             </constraints>
             <connections>
+                <outlet property="thisUIChildButton" destination="syX-Jw-jYl" id="2op-st-Ct1"/>
                 <outlet property="thisUIChildImage" destination="PFU-hx-Ke4" id="Y2s-dT-v34"/>
                 <outlet property="thisUIChildImageContainer" destination="bx6-sI-xqx" id="wcZ-mn-Mmt"/>
                 <outlet property="thisUIChildName" destination="mIM-iE-kyA" id="9d6-aG-8Xi"/>
@@ -87,4 +95,7 @@
             </connections>
         </collectionViewCell>
     </objects>
+    <resources>
+        <image name="defaultChildProfile" width="64" height="64"/>
+    </resources>
 </document>

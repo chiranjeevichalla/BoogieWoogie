@@ -23,13 +23,13 @@ class HelpScreenViewController: UIViewController, UICollectionViewDataSource, UI
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        for name in UIFont.familyNames {
-            print(name)
-            if let nameString = name as? String
-            {
-                print(UIFont.fontNames(forFamilyName: nameString))
-            }
-        }
+//        for name in UIFont.familyNames {
+//            print(name)
+//            if let nameString = name as? String
+//            {
+//                print(UIFont.fontNames(forFamilyName: nameString))
+//            }
+//        }
         
         if Constants.sharedInstance._UserDefaults.isLoggedIn() {
             let appDelegate = UIApplication.shared.delegate! as! AppDelegate
@@ -39,9 +39,13 @@ class HelpScreenViewController: UIViewController, UICollectionViewDataSource, UI
             appDelegate.window?.makeKeyAndVisible()
             return
         }
+        
 
 //        thisUICollectionView.reloadData()
-        thisUIPageControl.currentPage = 0
+        self.thisUIPageControl.currentPage = 0
+       
+//        thisUIPageControl1.set(progress: 0, animated: true)
+        
 //        thisUIPageControl.transform = CGAffineTransform(scaleX: 1.3, y: 1)
         thisUIPageControl.setUp()
 //        thisUIPageControl.updateDots()

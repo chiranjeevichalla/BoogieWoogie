@@ -102,4 +102,11 @@ class Child : Mappable {
         return ""
     }
     
+    func getChildId() -> String {
+        if _childId != nil {
+            return _childId!
+        }
+        return ""
+    }
+    
 }

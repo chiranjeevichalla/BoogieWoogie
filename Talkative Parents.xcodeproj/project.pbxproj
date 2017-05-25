@@ -70,6 +70,8 @@
 		187FAC2C1ED568BE00A9A15E /* DocumentViewerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187FAC2A1ED568BE00A9A15E /* DocumentViewerViewController.swift */; };
 		187FAC2D1ED568BE00A9A15E /* DocumentViewerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 187FAC2B1ED568BE00A9A15E /* DocumentViewerViewController.xib */; };
 		187FAC2F1ED6B4F000A9A15E /* BetterSegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187FAC2E1ED6B4F000A9A15E /* BetterSegmentedControl.swift */; };
+		187FAC321ED70E6A00A9A15E /* DashboardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187FAC301ED70E6A00A9A15E /* DashboardTableViewCell.swift */; };
+		187FAC331ED70E6A00A9A15E /* DashboardTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 187FAC311ED70E6A00A9A15E /* DashboardTableViewCell.xib */; };
 		6E91B36D65901A4382092B6A /* Pods_Talkative_ParentsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A55DDBCD178F55B485AC29B /* Pods_Talkative_ParentsTests.framework */; };
 		809F2700F3A6C4483A7F37CD /* Pods_Talkative_Parents.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A819ED0EACF43F78280E979 /* Pods_Talkative_Parents.framework */; };
 		A3D0D6BE9AF322A44030801F /* Pods_Talkative_ParentsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1AA3821C99BBDDBCA5941E8 /* Pods_Talkative_ParentsUITests.framework */; };
@@ -163,6 +165,8 @@
 		187FAC2A1ED568BE00A9A15E /* DocumentViewerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DocumentViewerViewController.swift; sourceTree = "<group>"; };
 		187FAC2B1ED568BE00A9A15E /* DocumentViewerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DocumentViewerViewController.xib; sourceTree = "<group>"; };
 		187FAC2E1ED6B4F000A9A15E /* BetterSegmentedControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BetterSegmentedControl.swift; sourceTree = "<group>"; };
+		187FAC301ED70E6A00A9A15E /* DashboardTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashboardTableViewCell.swift; sourceTree = "<group>"; };
+		187FAC311ED70E6A00A9A15E /* DashboardTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DashboardTableViewCell.xib; sourceTree = "<group>"; };
 		2AD509CD274D6B8A1C439CF9 /* Pods-Talkative ParentsUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Talkative ParentsUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Talkative ParentsUITests/Pods-Talkative ParentsUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		34FB83C7C6BCA64B2D305BAB /* Pods-Talkative Parents.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Talkative Parents.release.xcconfig"; path = "Pods/Target Support Files/Pods-Talkative Parents/Pods-Talkative Parents.release.xcconfig"; sourceTree = "<group>"; };
 		4B8E0B6B42749C64D03BBBDE /* Pods-Talkative ParentsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Talkative ParentsTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Talkative ParentsTests/Pods-Talkative ParentsTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -426,6 +430,8 @@
 				1862F0161ECDD8860084F704 /* DashboardViewController.swift */,
 				1862F0181ECDD89E0084F704 /* DashboardCollectionViewCell.swift */,
 				1862F0191ECDD89E0084F704 /* DashboardCollectionViewCell.xib */,
+				187FAC301ED70E6A00A9A15E /* DashboardTableViewCell.swift */,
+				187FAC311ED70E6A00A9A15E /* DashboardTableViewCell.xib */,
 			);
 			name = Dashboard;
 			sourceTree = "<group>";
@@ -590,6 +596,7 @@
 				183F93651EC9829300B11BEB /* LaunchScreen.storyboard in Resources */,
 				183F93621EC9829300B11BEB /* Assets.xcassets in Resources */,
 				187FAC2D1ED568BE00A9A15E /* DocumentViewerViewController.xib in Resources */,
+				187FAC331ED70E6A00A9A15E /* DashboardTableViewCell.xib in Resources */,
 				181E64931ECC5832007E7C87 /* MobileLoginViewController.xib in Resources */,
 				187435F51ED468F400150ACD /* AttachmentCollectionViewCell.xib in Resources */,
 				1862F0081ECD87670084F704 /* SelectCountryViewController.xib in Resources */,
@@ -785,6 +792,7 @@
 				18379F091ED05B7600F75C31 /* Basic.xcdatamodeld in Sources */,
 				18379F0E1ED0731E00F75C31 /* Notification.swift in Sources */,
 				182EA8EE1ED32EAE00589E8C /* NoticeBoardWebViewTableViewCell.swift in Sources */,
+				187FAC321ED70E6A00A9A15E /* DashboardTableViewCell.swift in Sources */,
 				186E490E1ED2F3D900FD81E2 /* CoreDataManager.swift in Sources */,
 				18379F031ED0599900F75C31 /* BoldLabel.swift in Sources */,
 				187435EA1ED43E4B00150ACD /* NWebViewTableViewCell.swift in Sources */,
