@@ -2,9 +2,11 @@ PODS:
   - Alamofire (4.4.0)
   - AnimatedCollectionViewLayout (0.2.0)
   - AsyncSwift (2.0.1)
+  - CCBottomRefreshControl (0.5.2)
   - ChameleonFramework/Default (2.1.0)
   - ChameleonFramework/Swift (2.1.0):
     - ChameleonFramework/Default
+  - DZNEmptyDataSet (1.8.1)
   - Eureka (3.0.0)
   - KILabel (1.0.0)
   - Kingfisher (3.6.2)
@@ -16,7 +18,9 @@ DEPENDENCIES:
   - Alamofire (~> 4.0)
   - AnimatedCollectionViewLayout
   - AsyncSwift
+  - CCBottomRefreshControl
   - ChameleonFramework/Swift (from `https://github.com/ViccAlexander/Chameleon.git`)
+  - DZNEmptyDataSet
   - Eureka
   - KILabel (= 1.0.0)
   - Kingfisher (~> 3.0)
@@ -37,7 +41,9 @@ SPEC CHECKSUMS:
   Alamofire: dc44b1600b800eb63da6a19039a0083d62a6a62d
   AnimatedCollectionViewLayout: 6f385ed7deb673af8989f5240c4b0c32c9d25276
   AsyncSwift: 632138e42ead868b53c745fcde9bf733ce1527ad
+  CCBottomRefreshControl: 389780b4488321c91d18f66a6da5ef9606df6de5
   ChameleonFramework: d21a3cc247abfe5e37609a283a8238b03575cf64
+  DZNEmptyDataSet: 9525833b9e68ac21c30253e1d3d7076cc828eaa7
   Eureka: f36fd440c3ebb7bfea0a4fbe6f16a05f1cb35906
   KILabel: 84049969642d4ac1061ebe38ad4c0da37fed108b
   Kingfisher: 2c94e72c6830622c71d06adf4ea024c37d316830
@@ -45,6 +51,6 @@ SPEC CHECKSUMS:
   RKDropdownAlert: f4b3364c251829ad439dc666836a1f2dad26f4c7
   SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
 
-PODFILE CHECKSUM: 75771bb14e731b6c3ca2e57d88875f9b28253c40
+PODFILE CHECKSUM: 0bffa7768b133bf4d5b347ee13b67b8e262b5c36
 
 COCOAPODS: 1.1.1

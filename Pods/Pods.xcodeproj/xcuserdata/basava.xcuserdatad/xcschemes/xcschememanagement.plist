@@ -19,7 +19,17 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>CCBottomRefreshControl.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>ChameleonFramework.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>DZNEmptyDataSet.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -77,11 +87,6 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>05292A32E75D819971568178BCA67FBC</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>55D9785C23C9C7C4CAB91112E33F6422</key>
 		<dict>
 			<key>primary</key>
@@ -97,12 +102,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>7A0563F4B5AA5BF59BAB9E9C34535C5B</key>
+		<key>7C16A95454B5198F0D14923374C025F8</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>7F45F2F21482C3777494ACE42307212D</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>7FCC1BB77F4B6DF06A42AC7A9DD2611E</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -117,7 +127,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>9A6C240C834373B342DF8217E9E0658C</key>
+		<key>9ED8D77D08AF67132E11B2E1ADECF54A</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -133,6 +143,16 @@
 			<true/>
 		</dict>
 		<key>CD6C9FB6B052E1CF663F8A56041EA163</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>D386C75EFD4F03725E4EFB866B600B9A</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>EC7D579E7989FA448B54D29105C43109</key>
 		<dict>
 			<key>primary</key>
 			<true/>

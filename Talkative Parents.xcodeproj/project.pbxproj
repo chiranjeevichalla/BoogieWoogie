@@ -234,7 +234,7 @@
 				187FAC291ED5689200A9A15E /* DocumentViewerPage */,
 				182EA8E31ED31FBB00589E8C /* NotificationDetailPage */,
 				18379EF81ED056FA00F75C31 /* SoundingBoardPage */,
-				18379EF71ED056EF00F75C31 /* NotificationPage */,
+				18379EF71ED056EF00F75C31 /* NoticeboardPage */,
 				1862F0111ECDC80E0084F704 /* Dashboard */,
 				1862F0041ECD86290084F704 /* CountrySelectionPage */,
 				181E64941ECC65E9007E7C87 /* OTPVerificationPage */,
@@ -307,14 +307,14 @@
 			name = NotificationDetailPage;
 			sourceTree = "<group>";
 		};
-		18379EF71ED056EF00F75C31 /* NotificationPage */ = {
+		18379EF71ED056EF00F75C31 /* NoticeboardPage */ = {
 			isa = PBXGroup;
 			children = (
 				183F935A1EC9829300B11BEB /* NotificationsViewController.swift */,
 				18379EF91ED0578700F75C31 /* NotificationTableViewCell.swift */,
 				18379EFA1ED0578700F75C31 /* NotificationTableViewCell.xib */,
 			);
-			name = NotificationPage;
+			name = NoticeboardPage;
 			sourceTree = "<group>";
 		};
 		18379EF81ED056FA00F75C31 /* SoundingBoardPage */ = {

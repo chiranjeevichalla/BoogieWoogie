@@ -17,6 +17,8 @@ target 'Talkative Parents' do
   pod 'KILabel', '1.0.0'
 #  pod 'AMPPreviewController'
 #  pod 'BetterSegmentedControl', '~> 0.8'
+  pod 'DZNEmptyDataSet'
+  pod 'CCBottomRefreshControl'
 
   # Pods for Talkative Parents
 

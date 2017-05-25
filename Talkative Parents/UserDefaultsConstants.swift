@@ -54,6 +54,23 @@ class UserDefaultsConstants : NSObject {
         defaults.set(true, forKey: "IsLoggedIn")
     }
     
+    func isAdminNotificationEnabled()-> Bool {
+        
+        if let IsRegistered: Bool = defaults.bool(forKey: "IsAdminNotificationEnabled") as Bool?
+        {
+            return IsRegistered
+        }
+        else {
+            defaults.set(false, forKey: "IsLoggedIn")
+            return false
+            
+        }
+    }
+    
+    func setAdminNotificationEnabled() {
+        defaults.set(true, forKey: "IsAdminNotificationEnabled")
+    }
+    
     func isProfileCreated()-> Bool {
         
         if let IsRegistered: Bool = defaults.bool(forKey: "IssProfileCreated") as Bool?

@@ -14,7 +14,7 @@ import SwiftyJSON
 
 class AppService {
     
-    class func GetSchoolNotifications(pSchoolId : String, pFromPageNumber: Int, callback:@escaping ([Notification],Bool) -> Void) -> Void {
+    class func GetSchoolNotifications(pSchoolId : String, pPageNumber: Int, callback:@escaping ([Notification],Bool) -> Void) -> Void {
         
         Commons.showIndicator()
         
@@ -36,7 +36,7 @@ class AppService {
         
         let bParameters: Parameters = [
             "schoolId":pSchoolId,
-            "page": pFromPageNumber,
+            "page": pPageNumber,
             "pageSize":20
             
         ]
@@ -82,7 +82,7 @@ class AppService {
         
     }
     
-    class func GetAdminNotifications(pSchoolId : String, pFromPageNumber: Int, callback:@escaping ([Notification],Bool) -> Void) -> Void {
+    class func GetAdminNotifications(pSchoolId : String, pPageNumber: Int, callback:@escaping ([Notification],Bool) -> Void) -> Void {
         
         Commons.showIndicator()
         
@@ -104,7 +104,7 @@ class AppService {
         
         let bParameters: Parameters = [
 //            "schoolId":pSchoolId,
-            "page": pFromPageNumber,
+            "page": pPageNumber,
             "pageSize":20
             
         ]
