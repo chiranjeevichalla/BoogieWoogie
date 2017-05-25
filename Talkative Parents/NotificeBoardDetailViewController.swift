@@ -10,7 +10,7 @@ import UIKit
 import KILabel
 import QuickLook
 //import AMPPreviewController
-import Watchtower
+
 import Alamofire
 
 class NotificeBoardDetailViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, QLPreviewControllerDelegate {
@@ -54,12 +54,13 @@ class NotificeBoardDetailViewController: UIViewController, UITableViewDelegate, 
         
         
         self.thisUINoticeBoardTV.tableFooterView = UIView(frame: .zero)
-
         getNotificationDetail()
         quickLookController.dataSource = self
         quickLookController.delegate = self as! QLPreviewControllerDelegate
         // Do any additional setup after loading the view.
     }
+    
+    
     
     fileprivate func getNotificationDetail() {
         AppService.GetNotificationDetail(pNotificationId: thisNotification.getId(), pMessageType: thisNotification.getMessageType()) { (pNotification, result) in
@@ -255,11 +256,11 @@ extension NotificeBoardDetailViewController : UICollectionViewDelegate, UICollec
     
 }
 
-extension NotificeBoardDetailViewController : AZAPreviewControllerDelegate {
-    func aza_previewController(_ controller: AZAPreviewController!, failedToLoadRemotePreviewItem previewItem: QLPreviewItem!, withError error: Error!) {
-        print("failed to load item \(QLPreviewItem.self)")
-    }
-}
+//extension NotificeBoardDetailViewController : AZAPreviewControllerDelegate {
+//    func aza_previewController(_ controller: AZAPreviewController!, failedToLoadRemotePreviewItem previewItem: QLPreviewItem!, withError error: Error!) {
+//        print("failed to load item \(QLPreviewItem.self)")
+//    }
+//}
 
 extension NotificeBoardDetailViewController : QLPreviewControllerDataSource {
     

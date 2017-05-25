@@ -34,6 +34,7 @@ class DashboardViewController: UIViewController, UICollectionViewDelegate, UICol
     
     func ButtonTapped() {
         print("Button Tapped")
+        getChildrenWithChannels()
     }
     
     private func getChildrenWithChannels() {

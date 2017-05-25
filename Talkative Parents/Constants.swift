@@ -61,6 +61,7 @@ class Constants: NSObject {
     let firstColor : UIColor = UIColor(hexString: "4DE4B4")!
     let secondColor : UIColor = UIColor(hexString: "38B7DE")!
     
+    let barColor : UIColor = UIColor(red: 2/255, green: 150/255, blue: 154/255, alpha: 1.0)
     
     //Services api urls
     //services api auth
@@ -72,6 +73,7 @@ class Constants: NSObject {
     private let _getChildren = "api/Child/GetChildren"
     private let _getChildrenWithChannels = "api/Child/GetChildrenWithChannels"
     private let _getSchoolNotifications = "api/AppUser/GetSchoolNotifications"
+    private let _getAdminNotifications = "api/AppUser/GetAdminNotifications"
     private let _getNotificationDetails = "api/AppUser/GetNotificationDetails"
     
     //services api lookups
@@ -202,6 +204,15 @@ class Constants: NSObject {
             return "\(self._BaseUrlProd)\(self._getSchoolNotifications)"
         }
     }
+
+    func getAdminNotificationUrl() -> String {
+        if isDev {
+            return "\(self._BaseUrlDev)\(self._getAdminNotifications)"
+        } else {
+            return "\(self._BaseUrlProd)\(self._getAdminNotifications)"
+        }
+    }
+
     
     func getNotificationDetail() -> String {
         if isDev {

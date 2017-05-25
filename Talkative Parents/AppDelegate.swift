@@ -21,7 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let navigationBarAppearace = UINavigationBar.appearance()
         //        navigationBarAppearnce.barTintColor = UIColor(gradientStyle: UIGradientStyle.leftToRight, withFrame: (navigationController?.navigationBar.frame)!, andColors: [firstColor, secondColor])
         navigationBarAppearace.tintColor = UIColor.white
-                navigationBarAppearace.barTintColor = UIColor(red: 2/255, green: 150/255, blue: 154/255, alpha: 1.0)
+                navigationBarAppearace.barTintColor = Constants.sharedInstance.barColor
         //        navigationBarAppearace.barTintColor = uicolorFromHex(0x034517)
         
         // change navigation item title color

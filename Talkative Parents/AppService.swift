@@ -14,7 +14,7 @@ import SwiftyJSON
 
 class AppService {
     
-    class func GetSchoolNotifications(pSchoolId : String, pPageSize: Int, callback:@escaping ([Notification],Bool) -> Void) -> Void {
+    class func GetSchoolNotifications(pSchoolId : String, pFromPageNumber: Int, callback:@escaping ([Notification],Bool) -> Void) -> Void {
         
         Commons.showIndicator()
         
@@ -36,7 +36,8 @@ class AppService {
         
         let bParameters: Parameters = [
             "schoolId":pSchoolId,
-            "pageSize":pPageSize
+            "page": pFromPageNumber,
+            "pageSize":20
             
         ]
 
@@ -65,6 +66,74 @@ class AppService {
                          }
                          }
 //                         bCountries.sort{ $0._showSequence < $1._showSequence }
+                        
+                        callback(bNotifications, true)
+                        
+                        
+                    } else {
+                        callback([],true)
+                    }
+                } else {
+                    Commons.showNoNetwork()
+                    callback([], false)
+                }
+                
+        }
+        
+    }
+    
+    class func GetAdminNotifications(pSchoolId : String, pFromPageNumber: Int, callback:@escaping ([Notification],Bool) -> Void) -> Void {
+        
+        Commons.showIndicator()
+        
+        
+        if !IsConnectedToNetwork() {
+            Commons.hideIndicator()
+            Commons.showNoNetwork()
+            
+            return
+        }
+        
+        
+        let url = Constants.sharedInstance.getAdminNotificationUrl()
+        print("url \(url)")
+        
+        let bHeaders : HTTPHeaders = [
+            "authToken" : Constants.sharedInstance._UserDefaults.getAuthKey()
+        ]
+        
+        let bParameters: Parameters = [
+//            "schoolId":pSchoolId,
+            "page": pFromPageNumber,
+            "pageSize":20
+            
+        ]
+        
+        
+        
+        Alamofire.request(url, method:.get, parameters: bParameters, headers: bHeaders)
+            .validate(contentType: ["application/json"])
+            .responseData { response in
+                Commons.hideIndicator()
+                
+                if response.result.isSuccess {
+                    if let data = response.data {
+                        //let bResponse = ServiceResponse(JSONString: utf8Text)
+                        let json = JSON(data:data)
+                        print(json)
+                        print("count or length \(json.count)")
+                        
+                        
+                        var bNotifications : [Notification] = []
+                        for  i in (0..<json.count)
+                        {
+                            let bContent = json[i].rawString()
+                            if let bNotification = Notification(JSONString: bContent!) {
+                                bNotification._messageType = 1
+                                bNotifications.append(bNotification)
+                            }
+                        }
+                        //                         bCountries.sort{ $0._showSequence < $1._showSequence }
                         
                         callback(bNotifications, true)
                         

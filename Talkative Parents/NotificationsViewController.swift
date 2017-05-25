@@ -9,13 +9,22 @@
 import UIKit
 import CoreData
 
+extension UIApplication {
+    var statusBarView: UIView? {
+        return value(forKey: "statusBar") as? UIView
+    }
+}
 
 class NotificationsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     
+    @IBOutlet weak var thisUISegmentController: BetterSegmentedControl!
+    
+    @IBOutlet weak var thisUISegmentView: UIView!
     @IBOutlet weak var thisUINotificationsTV: UITableView!
     
     private var thisNotifications : [Notification] = []
+    private var thisAdminNotifications : [Notification] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,14 +34,44 @@ class NotificationsViewController: UIViewController, UITableViewDelegate, UITabl
         
         self.thisUINotificationsTV.register(UINib(nibName: "NotificationTableViewCell", bundle: nil), forCellReuseIdentifier: "NotificationTableViewCell")
         self.thisUINotificationsTV.tableFooterView = UIView(frame: .zero)
-        
-        getNotifications()
+        setUpSegmentControl()
+        getSchoolNotifications(pFromPage: 0)
+        thisUISegmentView.backgroundColor = Constants.sharedInstance.barColor
+        thisUISegmentView.layer.shadowColor = UIColor.gray.cgColor
+        thisUISegmentView.layer.shadowOffset = CGSize(width: 0, height: 1.0)
+        thisUISegmentView.layer.shadowOpacity = 1.0
+        thisUISegmentView.layer.shadowRadius = 0.0
+        UIApplication.shared.statusBarView?.backgroundColor = Constants.sharedInstance.barColor
+        thisUISegmentController.addTarget(self, action: #selector(self.navigationSegmentedControlValueChanged(_:)), for: .valueChanged)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        navigationController?.navigationBar.backgroundColor = Constants.sharedInstance.barColor
+        navigationController?.navigationBar.shadowImage = UIImage()
+        navigationController?.navigationBar.barTintColor = Constants.sharedInstance.barColor
+        UIApplication.shared.statusBarView?.backgroundColor = Constants.sharedInstance.barColor
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        navigationController?.navigationBar.setBackgroundImage(nil, for: .default)
+        navigationController?.navigationBar.shadowImage =  nil
+        UIApplication.shared.statusBarView?.backgroundColor = nil
+    }
+    
+    fileprivate func setUpSegmentControl() {
+        thisUISegmentController.titles = ["School", "Admin"]
     }
     
     //MARK: TableView Delegates and functions
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return thisNotifications.count
+        if thisUISegmentController.index == 0 {
+            return thisNotifications.count
+        }
+        else {
+            return thisAdminNotifications.count
+        }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -82,13 +121,38 @@ class NotificationsViewController: UIViewController, UITableViewDelegate, UITabl
     
     //MARK: private functions
     
-    fileprivate func getNotifications() {
-        AppService.GetSchoolNotifications(pSchoolId: Constants.sharedInstance._child.getSchoolId(), pPageSize: 300) { (pNotifications, result) in
+    fileprivate func getNotifications(pIndex : Int) {
+        if pIndex == 0 {
+            if self.thisNotifications.count == 0 {
+                getSchoolNotifications(pFromPage: self.thisNotifications.count)
+            }
+        } else {
+            getAdminNotifications(pFromPage: 0)
+        }
+        
+        self.thisUINotificationsTV.reloadData()
+    }
+    
+    fileprivate func getSchoolNotifications(pFromPage : Int) {
+        AppService.GetSchoolNotifications(pSchoolId: Constants.sharedInstance._child.getSchoolId(), pFromPageNumber: pFromPage) { (pNotifications, result) in
             if result {
                 self.thisNotifications = pNotifications
                 for bNotification in self.thisNotifications {
                     bNotification._didRead = self.didRead(pId: bNotification.getId())
                 }
+                self.thisUINotificationsTV.reloadData()
+            }
+        }
+    }
+
+    
+    fileprivate func getAdminNotifications(pFromPage : Int) {
+        AppService.GetAdminNotifications(pSchoolId: Constants.sharedInstance._child.getSchoolId(), pFromPageNumber: pFromPage) { (pNotifications, result) in
+            if result {
+//                self.thisNotifications = pNotifications
+//                for bNotification in self.thisNotifications {
+//                    bNotification._didRead = self.didRead(pId: bNotification.getId())
+//                }
                 self.thisUINotificationsTV.reloadData()
             }
         }
@@ -101,44 +165,22 @@ class NotificationsViewController: UIViewController, UITableViewDelegate, UITabl
     
     fileprivate func didRead(pId: String) -> Bool {
         return CoreDataManager.didRead(pId:pId)
-//        let predicate: NSPredicate = NSPredicate(format: "id == %@", pId)
-//        if let bNotification: NotificationDB? = try! db.fetch(FetchRequest<NotificationDB>().filtered(with: predicate)).first {
-//            if bNotification != nil {
-//                print("DidREad notification \(bNotification?.didRead)")
-//                if bNotification?.didRead == "0" {
-//                    return false
-//                } else {
-//                    return true
-//                }
-//            } else {
-//                return false
-//            }
-//            
-//        }
-//        
-//        return false
+    }
+    
+    func navigationSegmentedControlValueChanged(_ sender: BetterSegmentedControl) {
+        self.getNotifications(pIndex: Int(sender.index))
+        if sender.index == 0 {
+            print("Turning lights on.")
+            
+        }
+        else {
+            print("Turning lights off.")
+            
+        }
     }
     
     fileprivate func updateNotification(pId: String, pStatus : String) {
         CoreDataManager.setRead(pId: pId, pDidRead: true)
-        
-//        do {
-//            
-//            try! db.operation { (context, save) throws -> Void in
-//                let newTask: NotificationDB = try! context.create()
-//                newTask.id = pId
-//                newTask.didRead = pStatus
-//                                    try! context.insert(newTask)
-//                save()
-//            }
-//        }
-//        catch {
-//            // There was an error in the operation
-//            print("Not saved update Notification")
-//        }
-        
-//
-        
     }
 
 

@@ -24,7 +24,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="72" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="TaV-XN-RgB">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="55" width="375" height="612"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <connections>
@@ -32,18 +32,57 @@
                                     <outlet property="delegate" destination="9pv-A4-QxB" id="lXh-Co-HRh"/>
                                 </connections>
                             </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="A5V-Bs-L6X">
+                                <rect key="frame" x="0.0" y="63" width="375" height="62"/>
+                                <color key="backgroundColor" red="0.0078431372550000003" green="0.58823529409999997" blue="0.60392156860000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="62" id="Q0t-K8-QU2"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="u8n-ev-7os" customClass="BetterSegmentedControl" customModule="Talkative_Parents" customModuleProvider="target">
+                                <rect key="frame" x="67" y="73" width="240" height="44"/>
+                                <color key="backgroundColor" red="0.96470588239999999" green="0.96470588239999999" blue="0.96470588239999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="JGK-9R-l23"/>
+                                    <constraint firstAttribute="width" constant="240" id="zNZ-ch-T5P"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="titleColor">
+                                        <color key="value" red="0.0" green="0.35686274509999999" blue="0.43137254899999999" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="selectedTitleColor">
+                                        <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="indicatorViewBackgroundColor">
+                                        <color key="value" red="0.0078431372550000003" green="0.58823529409999997" blue="0.60392156860000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="22"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="indicatorViewInset">
+                                        <real key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="TaV-XN-RgB" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leading" id="Fi4-gL-iP7"/>
-                            <constraint firstAttribute="trailing" secondItem="TaV-XN-RgB" secondAttribute="trailing" id="UYd-Ld-X1n"/>
-                            <constraint firstItem="4ug-Mw-9AY" firstAttribute="top" secondItem="TaV-XN-RgB" secondAttribute="bottom" constant="-49" id="aNw-qF-WHN"/>
-                            <constraint firstItem="TaV-XN-RgB" firstAttribute="top" secondItem="tsR-hK-woN" secondAttribute="top" id="zBg-nH-SXq"/>
+                            <constraint firstAttribute="trailing" secondItem="A5V-Bs-L6X" secondAttribute="trailing" id="1h1-zg-lEr"/>
+                            <constraint firstItem="TaV-XN-RgB" firstAttribute="top" secondItem="tsR-hK-woN" secondAttribute="top" constant="55" id="75r-6b-baH"/>
+                            <constraint firstItem="u8n-ev-7os" firstAttribute="top" secondItem="Ia1-K6-d13" secondAttribute="bottom" constant="9" id="7pT-Fq-gM8"/>
+                            <constraint firstItem="TaV-XN-RgB" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leading" id="AjO-wv-Kxy"/>
+                            <constraint firstItem="A5V-Bs-L6X" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leading" id="HxA-cz-V92"/>
+                            <constraint firstAttribute="bottom" secondItem="TaV-XN-RgB" secondAttribute="bottom" id="faX-fZ-BK4"/>
+                            <constraint firstAttribute="trailing" secondItem="TaV-XN-RgB" secondAttribute="trailing" id="g1w-e8-v76"/>
+                            <constraint firstItem="A5V-Bs-L6X" firstAttribute="top" secondItem="tsR-hK-woN" secondAttribute="top" constant="63" id="tZE-Xf-ALW"/>
+                            <constraint firstItem="u8n-ev-7os" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="ycc-Hk-3jk"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="YLB-Tw-wPM"/>
                     <connections>
                         <outlet property="thisUINotificationsTV" destination="TaV-XN-RgB" id="hev-is-1sc"/>
+                        <outlet property="thisUISegmentController" destination="u8n-ev-7os" id="4la-aL-Y0v"/>
+                        <outlet property="thisUISegmentView" destination="A5V-Bs-L6X" id="V1H-Z9-mgX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
@@ -478,7 +517,7 @@ Should you have any questions concerning this Agreement, or if you desire to con
             <objects>
                 <navigationController storyboardIdentifier="EulaAgreementNPC" automaticallyAdjustsScrollViewInsets="NO" id="XfW-go-pFF" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="uvf-Bq-flF">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="uvf-Bq-flF">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -496,7 +535,7 @@ Should you have any questions concerning this Agreement, or if you desire to con
             <objects>
                 <navigationController storyboardIdentifier="DashboardNVC" automaticallyAdjustsScrollViewInsets="NO" id="AoO-l7-Bp3" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="kGz-Pt-zCA">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="kGz-Pt-zCA">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" red="0.0078431372550000003" green="0.58823529409999997" blue="0.60392156860000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -535,9 +574,10 @@ Should you have any questions concerning this Agreement, or if you desire to con
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="fbg-4d-l5K" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Notice Board" image="tabNotificationUnselected" selectedImage="tabNotificationSelected" id="acW-dT-cKf"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Rlo-Xh-SHm">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="Rlo-Xh-SHm">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.0078431372550000003" green="0.58823529409999997" blue="0.60392156860000001" alpha="1" colorSpace="calibratedRGB"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -573,7 +613,7 @@ Should you have any questions concerning this Agreement, or if you desire to con
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="8Kh-ik-E8J" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Sounding Board" image="tabSoundingBoardUnselected" selectedImage="tabSoundingBoardSelected" id="cPa-gy-q4n"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="CjQ-yr-zRK">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="CjQ-yr-zRK">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -592,7 +632,7 @@ Should you have any questions concerning this Agreement, or if you desire to con
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="A9O-EK-TOh" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Calendar" image="tabCalendarUnselected" selectedImage="tabCalendarSelected" id="f2H-7z-KOm"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="FDf-jP-3S7">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="FDf-jP-3S7">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -611,7 +651,7 @@ Should you have any questions concerning this Agreement, or if you desire to con
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="GEv-kq-uqc" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="More..." image="tabMoreUnselected" selectedImage="tabMoreSelected" id="Y7w-Ia-Etj"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="tZR-VE-whX">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="tZR-VE-whX">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
