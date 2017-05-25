@@ -15,6 +15,7 @@ import UIKit
 import RKDropdownAlert
 import ChameleonFramework
 import Kingfisher
+import Alamofire
 
 //import Eureka
 
@@ -327,6 +328,13 @@ class Commons {
         return URL(string: "\(Constants.sharedInstance.getImageBasePath())\(urlString)")
     }
     
+    class func constructNSUrl(pUrl: String) -> NSURL? {
+        let urlString = pUrl.replacingOccurrences(of: " ", with: "%20")
+        let bPath = "\(Constants.sharedInstance.getImageBasePath())\(urlString)"
+        print(bPath)
+        return NSURL(string: bPath)
+    }
+    
     class func splitString(pString : String, pSplitBy : String) -> [String] {
         let words = pString.components(separatedBy: pSplitBy)
         return words
@@ -360,6 +368,43 @@ class Commons {
             return .doc
         }
     }
+    
+    class func isFileExist(pFileName : String) -> Bool {
+        let paths = NSSearchPathForDirectoriesInDomains( .documentDirectory, .userDomainMask, true)[0] as String
+        let path = paths.appending("/\(pFileName)")
+        if FileManager.default.fileExists(atPath: path) {
+            return true
+        }
+        return false
+    }
+    
+    class func getFileUrlFromDocDirectory(pFileName : String) -> NSURL {
+        let fileParts = pFileName.components(separatedBy: ".")
+//        if let bPath = Bundle.main.url(forResource: fileParts[0], withExtension: fileParts[1]) {
+//            if FileManager.default.fileExists(atPath: bPath.path) {
+//                return bPath as NSURL
+//            }
+//        }
+//        return Bundle.main.url(forResource: fileParts[0], withExtension: fileParts[1])! as NSURL
+        
+        
+        let bUrl = try! FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: false)
+        let bUrl1 = bUrl.appendingPathComponent(pFileName)
+        return bUrl1 as NSURL
+        
+    }
+    
+    class func getDestination(pFileName : String) -> DownloadRequest.DownloadFileDestination {
+        let destination: DownloadRequest.DownloadFileDestination = { _, _ in
+            let documentsURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
+            let fileURL = documentsURL.appendingPathComponent(pFileName)
+            
+            return (fileURL, [.removePreviousFile, .createIntermediateDirectories])
+        }
+        return destination
+    }
+    
+    
     
     
     //    class func ConvertJSONToString(pData : NSDictionary, callback (String) -> Void) -> Void {

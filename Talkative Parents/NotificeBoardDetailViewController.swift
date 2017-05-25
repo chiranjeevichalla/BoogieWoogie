@@ -8,8 +8,12 @@
 
 import UIKit
 import KILabel
+import QuickLook
+//import AMPPreviewController
+import Watchtower
+import Alamofire
 
-class NotificeBoardDetailViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class NotificeBoardDetailViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, QLPreviewControllerDelegate {
     
     
     
@@ -18,6 +22,9 @@ class NotificeBoardDetailViewController: UIViewController, UITableViewDelegate, 
     var thisNotification : Notification!
     
     var thisNotificationDetail : NotificationDetail!
+    
+    
+    let quickLookController = QLPreviewController()
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
@@ -49,6 +56,8 @@ class NotificeBoardDetailViewController: UIViewController, UITableViewDelegate, 
         self.thisUINoticeBoardTV.tableFooterView = UIView(frame: .zero)
 
         getNotificationDetail()
+        quickLookController.dataSource = self
+        quickLookController.delegate = self as! QLPreviewControllerDelegate
         // Do any additional setup after loading the view.
     }
     
@@ -185,17 +194,130 @@ extension NotificeBoardDetailViewController : UICollectionViewDelegate, UICollec
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         collectionView.deselectItem(at: indexPath, animated: false)
-     
-        var pVC : DocumentViewerViewController!
-        pVC = DocumentViewerViewController(nibName: "DocumentViewerViewController", bundle: nil)
-        pVC.thisAttachment = self.thisNotificationDetail._attachments[indexPath.item]
-        let backItem = UIBarButtonItem()
-        backItem.title = "Back"
-        navigationItem.backBarButtonItem = backItem
-        self.navigationController?.pushViewController(pVC, animated: true)
 
+        let bAttachment = self.thisNotificationDetail._attachments[indexPath.item]
+        if !Commons.isFileExist(pFileName: bAttachment.getUrl()) {
+            Commons.showIndicator()
+            let bUrl = Commons.constructUrl(pUrl: bAttachment.getUrl())
+            Alamofire.download(bUrl!, to: Commons.getDestination(pFileName: bAttachment.getUrl()))
+                .downloadProgress { progress in
+                    print("Download Progress: \(progress.fractionCompleted)")
+                }
+                .response { response in
+                print(response)
+                Commons.hideIndicator()
+                if response.error == nil, let imagePath = response.destinationURL?.path {
+                    print("response path is \(response.destinationURL)")
+                    self.quickLookController.currentPreviewItemIndex = indexPath.row
+                    self.navigationController?.pushViewController(self.quickLookController, animated: true)
+                }
+            }
+        } else {
+            quickLookController.currentPreviewItemIndex = indexPath.row
+            navigationController?.pushViewController(quickLookController, animated: true)
+        }
+        //QLPreview Controller
+//        if QLPreviewController.canPreview(Commons.constructNSUrl(pUrl: self.thisNotificationDetail._attachments[indexPath.item].getUrl())! as QLPreviewItem) {
+//            quickLookController.currentPreviewItemIndex = indexPath.row
+//            navigationController?.pushViewController(quickLookController, animated: true)
+//        }
+     
+        
+        
+        //custom view
+//        var pVC : DocumentViewerViewController!
+//        pVC = DocumentViewerViewController(nibName: "DocumentViewerViewController", bundle: nil)
+//        pVC.thisAttachment = self.thisNotificationDetail._attachments[indexPath.item]
+//        let backItem = UIBarButtonItem()
+//        backItem.title = "Back"
+//        navigationItem.backBarButtonItem = backItem
+//        self.navigationController?.pushViewController(pVC, animated: true)
+        
+        //amppreview controller
+        
+//        let bVC = AMPPreviewController(remoteFile: Commons.constructNSUrl(pUrl: self.thisNotificationDetail._attachments[indexPath.item].getUrl())! as URL!, title: thisNotificationDetail._attachments[indexPath.item].getName())
+//        bVC?.startDownloadBlock
+//        bVC?.finishDownloadBlock
+////        bVC?.finishDownloadBlock{
+////            
+////        }
+//        self.navigationController?.pushViewController(bVC!, animated: true)
+        
+        //watchtimer
+        
+//        let bVC = AZAPreviewController()
+//        bVC.delegate = self
+//        bVC.dataSource = self
+//        self.navigationController?.pushViewController(bVC, animated: true)
     }
     
     
+    
+}
+
+extension NotificeBoardDetailViewController : AZAPreviewControllerDelegate {
+    func aza_previewController(_ controller: AZAPreviewController!, failedToLoadRemotePreviewItem previewItem: QLPreviewItem!, withError error: Error!) {
+        print("failed to load item \(QLPreviewItem.self)")
+    }
+}
+
+extension NotificeBoardDetailViewController : QLPreviewControllerDataSource {
+    
+    func numberOfPreviewItems(in controller: QLPreviewController) -> Int {
+        if self.thisNotificationDetail != nil {
+            return self.thisNotificationDetail._attachments.count
+        }
+        return 0
+    }
+    
+//    func previewController(controller: QLPreviewController, shouldOpenURL url: NSURL, forPreviewItem item: QLPreviewItem) -> Bool {
+//        let bUrl = Commons.constructUrl(pUrl: self.thisNotificationDetail._attachments[index].getUrl())!
+//        if bUrl != nil {
+//            return true
+//        }
+//        else {
+//            print("Will not open URL \(url.absoluteString)")
+//        }
+//        
+//        return false
+//    }
+    
+    
+    
+    func previewController(_ controller: QLPreviewController, previewItemAt index: Int) -> QLPreviewItem {
+        let bAttachment = self.thisNotificationDetail._attachments[index]
+//        let bUrl = Commons.constructNSUrl(pUrl: self.thisNotificationDetail._attachments[index].getUrl())!
+//        
+//        let bAZAPreviewItem = AZAPreviewItem(url: bUrl as URL!, title: "title")
+//        return bAZAPreviewItem!
+        if Commons.isFileExist(pFileName: self.thisNotificationDetail._attachments[index].getUrl()) {
+            return Commons.getFileUrlFromDocDirectory(pFileName: self.thisNotificationDetail._attachments[index].getUrl())
+        } else {
+//            Commons.showIndicator()
+            let bUrl = Commons.constructUrl(pUrl: bAttachment.getUrl())
+            Alamofire.download(bUrl!, to: Commons.getDestination(pFileName: bAttachment.getUrl()))
+                .downloadProgress { progress in
+                    print("Download Progress: \(progress.fractionCompleted)")
+                }
+                .response { response in
+                    print(response)
+//                    Commons.hideIndicator()
+                    if response.error == nil, let imagePath = response.destinationURL?.path {
+                        print("response path is \(response.destinationURL)")
+                        
+//                        self.quickLookController.currentPreviewItemIndex = index
+                        self.quickLookController.refreshCurrentPreviewItem()
+//                        self.quickLookController.reloadData()
+                        
+                        
+                    }
+            }
+        }
+        return Commons.constructNSUrl(pUrl: self.thisNotificationDetail._attachments[index].getUrl())! as QLPreviewItem
+    }
+    
+    private func openPreviewController() {
+        
+    }
     
 }

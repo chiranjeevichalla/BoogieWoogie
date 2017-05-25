@@ -15,6 +15,8 @@ target 'Talkative Parents' do
   pod 'Kingfisher', '~> 3.0'
 #  pod 'SugarRecord/CoreData'
   pod 'KILabel', '1.0.0'
+#  pod 'AMPPreviewController'
+  pod 'Watchtower'
 
   # Pods for Talkative Parents
 
