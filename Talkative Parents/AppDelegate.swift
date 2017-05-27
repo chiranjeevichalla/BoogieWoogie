@@ -8,6 +8,7 @@
 
 import UIKit
 import CoreData
+import Firebase
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -17,7 +18,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        
+        let bTabBarAppearnce = UITabBar.appearance()
+        bTabBarAppearnce.tintColor = Constants.sharedInstance.barColor
         let navigationBarAppearace = UINavigationBar.appearance()
         //        navigationBarAppearnce.barTintColor = UIColor(gradientStyle: UIGradientStyle.leftToRight, withFrame: (navigationController?.navigationBar.frame)!, andColors: [firstColor, secondColor])
         navigationBarAppearace.tintColor = UIColor.white
@@ -26,6 +28,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         // change navigation item title color
         navigationBarAppearace.titleTextAttributes = [NSForegroundColorAttributeName:UIColor.white]
+        
+        
+        //Configure Firebase
+        FIRApp.configure()
+        
         return true
     }
 

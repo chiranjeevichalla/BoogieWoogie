@@ -19,6 +19,9 @@ target 'Talkative Parents' do
 #  pod 'BetterSegmentedControl', '~> 0.8'
   pod 'DZNEmptyDataSet'
   pod 'CCBottomRefreshControl'
+  pod 'Firebase/Core'
+  pod 'Firebase/Database'
+  pod 'FSCalendar'
 
   # Pods for Talkative Parents
 

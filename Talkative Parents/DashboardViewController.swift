@@ -156,7 +156,7 @@ class DashboardViewController: UIViewController, UICollectionViewDelegate, UICol
     func getChildImage(sender: UIButton) {
         print("tag is \(sender.tag)")
         self.thisSelectedProfileImageIndex = sender.tag
-        let alert = UIAlertController(title: nil, message: "Choose your source", preferredStyle: UIAlertControllerStyle.actionSheet)
+        let alert = UIAlertController(title: nil, message: "Choose the source", preferredStyle: UIAlertControllerStyle.actionSheet)
         alert.addAction(UIAlertAction(title: "Camera", style: UIAlertActionStyle.default) { (result : UIAlertAction) -> Void in
             print("Camera selected")
             //Code for Camera
@@ -168,13 +168,14 @@ class DashboardViewController: UIViewController, UICollectionViewDelegate, UICol
                 self.imagePicker.modalPresentationStyle = .fullScreen
                 self.present(self.imagePicker,animated: true,completion: nil)
             } else {
-                Commons.showErrorMessage(pMessage: "Camera not available")
+                Commons.showErrorMessage(pMessage: "Camera not available/Permission not granted")
             }
         })
         alert.addAction(UIAlertAction(title: "Photo library", style: UIAlertActionStyle.default) { (result : UIAlertAction) -> Void in
             print("Photo selected")
             //Code for Photo library
             //photolibaryss
+            self.imagePicker.sourceType = UIImagePickerControllerSourceType.photoLibrary
             self.present(self.imagePicker, animated: true, completion: nil)
             
         })

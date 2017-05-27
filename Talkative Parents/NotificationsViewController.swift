@@ -36,7 +36,9 @@ class NotificationsViewController: UIViewController, UITableViewDelegate, UITabl
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = Constants.sharedInstance._child.getName()
+        
+//        self.title = Constants.sharedInstance._child.getName()
+        self.navigationItem.title = Constants.sharedInstance._child.getName()
         // Do any additional setup after loading the view, typically from a nib.
         
         self.thisUINotificationsTV.emptyDataSetSource = self

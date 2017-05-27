@@ -72,6 +72,8 @@
 		187FAC2F1ED6B4F000A9A15E /* BetterSegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187FAC2E1ED6B4F000A9A15E /* BetterSegmentedControl.swift */; };
 		187FAC321ED70E6A00A9A15E /* DashboardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187FAC301ED70E6A00A9A15E /* DashboardTableViewCell.swift */; };
 		187FAC331ED70E6A00A9A15E /* DashboardTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 187FAC311ED70E6A00A9A15E /* DashboardTableViewCell.xib */; };
+		188829461ED9C3C500C51AC4 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188829451ED9C3C500C51AC4 /* CalendarViewController.swift */; };
+		18F691E61ED8701B00FA80AC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 18F691E51ED8701B00FA80AC /* GoogleService-Info.plist */; };
 		6E91B36D65901A4382092B6A /* Pods_Talkative_ParentsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A55DDBCD178F55B485AC29B /* Pods_Talkative_ParentsTests.framework */; };
 		809F2700F3A6C4483A7F37CD /* Pods_Talkative_Parents.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A819ED0EACF43F78280E979 /* Pods_Talkative_Parents.framework */; };
 		A3D0D6BE9AF322A44030801F /* Pods_Talkative_ParentsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1AA3821C99BBDDBCA5941E8 /* Pods_Talkative_ParentsUITests.framework */; };
@@ -167,6 +169,8 @@
 		187FAC2E1ED6B4F000A9A15E /* BetterSegmentedControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BetterSegmentedControl.swift; sourceTree = "<group>"; };
 		187FAC301ED70E6A00A9A15E /* DashboardTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashboardTableViewCell.swift; sourceTree = "<group>"; };
 		187FAC311ED70E6A00A9A15E /* DashboardTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DashboardTableViewCell.xib; sourceTree = "<group>"; };
+		188829451ED9C3C500C51AC4 /* CalendarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
+		18F691E51ED8701B00FA80AC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		2AD509CD274D6B8A1C439CF9 /* Pods-Talkative ParentsUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Talkative ParentsUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Talkative ParentsUITests/Pods-Talkative ParentsUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		34FB83C7C6BCA64B2D305BAB /* Pods-Talkative Parents.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Talkative Parents.release.xcconfig"; path = "Pods/Target Support Files/Pods-Talkative Parents/Pods-Talkative Parents.release.xcconfig"; sourceTree = "<group>"; };
 		4B8E0B6B42749C64D03BBBDE /* Pods-Talkative ParentsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Talkative ParentsTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Talkative ParentsTests/Pods-Talkative ParentsTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -235,6 +239,7 @@
 		181E64831ECB406D007E7C87 /* ViewController Pages */ = {
 			isa = PBXGroup;
 			children = (
+				188829441ED9C3B300C51AC4 /* CalendarPage */,
 				187FAC291ED5689200A9A15E /* DocumentViewerPage */,
 				182EA8E31ED31FBB00589E8C /* NotificationDetailPage */,
 				18379EF81ED056FA00F75C31 /* SoundingBoardPage */,
@@ -374,6 +379,7 @@
 				181E64891ECB474C007E7C87 /* UIModules */,
 				181E64831ECB406D007E7C87 /* ViewController Pages */,
 				183F93581EC9829300B11BEB /* AppDelegate.swift */,
+				18F691E51ED8701B00FA80AC /* GoogleService-Info.plist */,
 				183F935E1EC9829300B11BEB /* Main.storyboard */,
 				183F93611EC9829300B11BEB /* Assets.xcassets */,
 				183F93631EC9829300B11BEB /* LaunchScreen.storyboard */,
@@ -443,6 +449,14 @@
 				187FAC2B1ED568BE00A9A15E /* DocumentViewerViewController.xib */,
 			);
 			name = DocumentViewerPage;
+			sourceTree = "<group>";
+		};
+		188829441ED9C3B300C51AC4 /* CalendarPage */ = {
+			isa = PBXGroup;
+			children = (
+				188829451ED9C3C500C51AC4 /* CalendarViewController.swift */,
+			);
+			name = CalendarPage;
 			sourceTree = "<group>";
 		};
 		431926F8915600DF6F6669B1 /* Pods */ = {
@@ -603,6 +617,7 @@
 				181E64981ECC65FC007E7C87 /* OTPVerificationViewController.xib in Resources */,
 				183F93601EC9829300B11BEB /* Main.storyboard in Resources */,
 				1862F01B1ECDD89E0084F704 /* DashboardCollectionViewCell.xib in Resources */,
+				18F691E61ED8701B00FA80AC /* GoogleService-Info.plist in Resources */,
 				187435F11ED45F3400150ACD /* NoticeBoardAttachmentTableViewCell.xib in Resources */,
 				182EA8EF1ED32EAE00589E8C /* NoticeBoardWebViewTableViewCell.xib in Resources */,
 				18379EFC1ED0578700F75C31 /* NotificationTableViewCell.xib in Resources */,
@@ -804,6 +819,7 @@
 				182EA8E61ED31FDD00589E8C /* NotificeBoardDetailViewController.swift in Sources */,
 				182EA8EA1ED32C0300589E8C /* NoticeBoardDetailHeaderTableViewCell.swift in Sources */,
 				187FAC2F1ED6B4F000A9A15E /* BetterSegmentedControl.swift in Sources */,
+				188829461ED9C3C500C51AC4 /* CalendarViewController.swift in Sources */,
 				181E647E1EC9CBA2007E7C87 /* UIFont-Config.swift in Sources */,
 				183F935B1EC9829300B11BEB /* NotificationsViewController.swift in Sources */,
 				1862F01A1ECDD89E0084F704 /* DashboardCollectionViewCell.swift in Sources */,
