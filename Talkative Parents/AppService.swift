@@ -52,8 +52,8 @@ class AppService {
                     if let data = response.data {
                         //let bResponse = ServiceResponse(JSONString: utf8Text)
                         let json = JSON(data:data)
-                        print(json)
-                        print("count or length \(json.count)")
+//                        print(json)
+                        print("school notifications count or length \(json.count)")
                         
                         
                          var bNotifications : [Notification] = []

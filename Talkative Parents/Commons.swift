@@ -136,6 +136,51 @@ class Commons {
         
     }
     
+    class func convertStringToDateFormat2(pDate: String) -> String {
+        let words = pDate.components(separatedBy: ".")
+        let dateFormatter = DateFormatter()
+        //        2017-02-07T00:00:00.000Z
+        //        print(words[0])
+        
+        dateFormatter.dateFormat = "yyyy-MM-dd"  //  "dd-mm-yyyy" //Your date format
+        let date = dateFormatter.date(from: words[0])
+        //
+        //
+        let calendar = Calendar.autoupdatingCurrent
+        let components = calendar.dateComponents([.day, .month, .year], from: date!)
+        
+        let df = DateFormatter()
+        df.dateFormat="MMM"
+        let month = df.string(from: date!)
+        
+        let df1 = DateFormatter()
+        df1.dateFormat="EEEE"
+        let dayString = df1.string(from: date!)
+        
+        let day = components.day
+        var bDay = "\(day!)"
+        if day! < 10 {
+            bDay = "0\(day!)"
+        }
+        let year = components.year
+        var hour = components.hour
+        let minute = components.minute
+        
+        return "\(dayString), \(bDay) \(month) \(year!)"
+        
+    }
+    
+    class func convertStringToDateFormat1(pDate: String) -> Date {
+//        let words = pDate.components(separatedBy: ".")
+        let dateFormatter = DateFormatter()
+        //        2017-02-07T00:00:00.000Z
+        //        print(words[0])
+        
+        dateFormatter.dateFormat = "yyyy-MM-dd"  //  "dd-mm-yyyy" //Your date format
+        let date = dateFormatter.date(from: pDate)
+        return date!
+        
+    }
    
     
     class func convertDateToString(pDate: Date) -> (String) {
@@ -168,6 +213,7 @@ class Commons {
         //        return (bDay, "\(month)", "\(year)")
         return "\(year!)-\(bMonth)-\(bDay)"
     }
+    
     
     class func openURL(scheme: String) {
         if let url = URL(string: scheme) {
