@@ -403,6 +403,21 @@ class Commons {
         return bAttachments
     }
     
+    class func convertStringToAttachment (pString : String) -> Attachment {
+        
+            var bString = pString
+            bString = bString.replacingOccurrences(of: Constants.sharedInstance.getImageBasePath(), with: "")
+            let bAttachment = Attachment()
+            bAttachment._url = bString
+            let bWords = Commons.splitString(pString: bString, pSplitBy: "-")
+            let bName = bWords[bWords.count-1]
+            let bNameWords = Commons.splitString(pString: bName, pSplitBy: ".")
+            bAttachment._type = bNameWords[bNameWords.count-1]
+            bAttachment._name = bNameWords[0]
+            bAttachment._docType = Commons.getDocType(pType: bAttachment._type!.lowercased())
+            return bAttachment
+    }
+    
     class func getDocType(pType : String) -> Doctype {
         if pType == "jpg" || pType == "png" || pType == "jpeg" || pType == "gif" {
             return .image

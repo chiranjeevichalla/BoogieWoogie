@@ -22,6 +22,7 @@ target 'Talkative Parents' do
   pod 'Firebase/Core'
   pod 'Firebase/Database'
   pod 'FSCalendar'
+  pod 'MRProgress'
 
   # Pods for Talkative Parents
 

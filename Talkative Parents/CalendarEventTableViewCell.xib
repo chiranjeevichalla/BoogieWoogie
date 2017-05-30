@@ -56,11 +56,16 @@
                             <constraint firstAttribute="height" constant="24" id="tJl-Rc-BE7"/>
                         </constraints>
                     </imageView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H5X-Tl-7AA">
+                        <rect key="frame" x="308" y="19" width="30" height="30"/>
+                    </button>
                 </subviews>
                 <constraints>
                     <constraint firstItem="Mch-Wt-gup" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="4l9-WU-6DX"/>
                     <constraint firstAttribute="trailingMargin" secondItem="H5c-85-nqB" secondAttribute="trailing" constant="9" id="HTH-zJ-M6y"/>
+                    <constraint firstItem="H5X-Tl-7AA" firstAttribute="centerX" secondItem="H5c-85-nqB" secondAttribute="centerX" id="JFc-vq-Koi"/>
                     <constraint firstItem="Mch-Wt-gup" firstAttribute="top" secondItem="Ixr-tr-XBk" secondAttribute="bottom" constant="6" id="JVq-zx-2Vr"/>
+                    <constraint firstItem="H5X-Tl-7AA" firstAttribute="centerY" secondItem="H5c-85-nqB" secondAttribute="centerY" id="KDf-4V-Yw9"/>
                     <constraint firstItem="H5c-85-nqB" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="14" id="NLP-6L-ZXA"/>
                     <constraint firstItem="Ixr-tr-XBk" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="aT4-be-rzt"/>
                     <constraint firstAttribute="bottomMargin" secondItem="Mch-Wt-gup" secondAttribute="bottom" constant="2.5" id="oIq-xW-Dv0"/>
@@ -70,6 +75,7 @@
                 </constraints>
             </tableViewCellContentView>
             <connections>
+                <outlet property="thisUIPinButton" destination="H5X-Tl-7AA" id="gEa-gC-9es"/>
                 <outlet property="thisUITimeLabel" destination="Mch-Wt-gup" id="FuP-as-Apf"/>
                 <outlet property="thisUITitleLabel" destination="Ixr-tr-XBk" id="sYX-FP-XGD"/>
             </connections>

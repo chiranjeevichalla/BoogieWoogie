@@ -7,12 +7,16 @@
 //
 
 import UIKit
+import MRProgress
 
 class AttachmentCollectionViewCell: UICollectionViewCell {
 
     @IBOutlet weak var thisUIImageView: UIImageView!
     
     @IBOutlet weak var thisAttachmentName: RegularLabel!
+    
+    @IBOutlet weak var thisCircularView: MRCircularProgressView!
+    
     
     override func awakeFromNib() {
         super.awakeFromNib()

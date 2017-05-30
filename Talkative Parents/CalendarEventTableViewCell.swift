@@ -15,6 +15,9 @@ class CalendarEventTableViewCell: UITableViewCell {
     
     @IBOutlet weak var thisUITimeLabel: RegularLabel!
     
+    @IBOutlet weak var thisUIPinButton: UIButton!
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

@@ -12,21 +12,27 @@ import ObjectMapper
 
 class FireBaseHelper {
     
+    
+    
     class func SetCalendarFirebaseEventObserver(pSchoolId : String, callback:@escaping (CalendarEvent,Bool) -> Void, callback1:@escaping ([CalendarEvent],Bool) -> Void) -> FIRDatabaseReference {
         
         Commons.showIndicator()
+        
 //
 //        
-//        if !IsConnectedToNetwork() {
-//            Commons.hideIndicator()
-//            Commons.showNoNetwork()
-//            
-//            return
-//        }
-        var bSchoolId = "21ae64c2-f0f1-44d8-a1d2-606b09b32e75"
+//
+        let bSchoolId = "21ae64c2-f0f1-44d8-a1d2-606b09b32e75"
         var bRef : FIRDatabaseReference!
         bRef = FIRDatabase.database().reference(withPath: "\(bSchoolId)/calender")
         
+        if !IsConnectedToNetwork() {
+                        Commons.hideIndicator()
+                        Commons.showNoNetwork()
+            
+                        return bRef
+                    }
+        
+        let bDate = Date()
         
         
         bRef.observe(.childAdded, with: { (snapshot) in
@@ -36,7 +42,15 @@ class FireBaseHelper {
 //                let user = Mapper<User>().map(JSONString: JSONString)
                 let bCalendarEvent = Mapper<CalendarEvent>().map(JSON: postDict)
                 if bCalendarEvent != nil {
-                    callback(bCalendarEvent!, true)
+                    if (bCalendarEvent?.getStartDate())! >= bDate {
+                        let bStandardId = bCalendarEvent?.getStandardId()
+                        if bStandardId == "" || bStandardId?.lowercased() == "all" || bStandardId == Constants.sharedInstance._child.getStandardId() {
+                                let bSectionId = bCalendarEvent?.getSectionId()
+                                if bSectionId == "" || bSectionId == Constants.sharedInstance._child.getSectionId() || bSectionId?.lowercased() == "all" {
+                                    callback(bCalendarEvent!, true)
+                                }
+                        }
+                    }
                 }
                 
             }

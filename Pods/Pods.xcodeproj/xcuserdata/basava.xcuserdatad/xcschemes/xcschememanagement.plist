@@ -59,6 +59,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>MRProgress.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>ObjectMapper.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -102,7 +107,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>47723C0C4503D0C27265035F5AC91701</key>
+		<key>26A8ACAF801CA17A9B1E86A665B39A31</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>513256999C2FC4D603421544825A6E52</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -132,12 +142,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>86A1B1CBD89377DFEDCCF338EFD1326F</key>
+		<key>88E9EC28B8B46C3631E6B242B50F4442</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>88E9EC28B8B46C3631E6B242B50F4442</key>
+		<key>94EC81728850806373C28A3AAE05EABB</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -147,12 +157,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>9C7726F3DD5A6543320044F31ED5E431</key>
+		<key>A5D82373166B88054A7C35508BCD2838</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>A5D82373166B88054A7C35508BCD2838</key>
+		<key>B704C937ADC58247D11B7A066FDC43D8</key>
 		<dict>
 			<key>primary</key>
 			<true/>

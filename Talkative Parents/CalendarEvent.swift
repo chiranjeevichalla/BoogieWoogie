@@ -23,9 +23,9 @@ class CalendarEvent : Mappable {
     var _sectionName : String?
     var _standardId : String?
     var _standardName : String?
-    
-    
-    
+    var _imgeSrc : String?
+    var _hasAttachment : Bool = false
+    var _attachment : Attachment?
     
     required init?(map: Map) {
         
@@ -41,6 +41,7 @@ class CalendarEvent : Mappable {
         _sectionName    <- map ["sectionName"]
         _standardId     <- map ["standardId"]
         _standardName   <- map ["standardName"]
+        _imgeSrc        <- map ["image_src"]
         
         if _startDateStr != nil && _startDateStr != "" {
             _startDate = Commons.convertStringToDateFormat1(pDate: _startDateStr!)
@@ -49,6 +50,12 @@ class CalendarEvent : Mappable {
         
         if _endDateStr != nil && _endDateStr != "" {
             _endDate = Commons.convertStringToDateFormat1(pDate: _endDateStr!)
+        }
+//        _imgeSrc = "https://tpupload.blob.core.windows.net/upload/8372ef82-67a6-4e77-afe8-9c329c58fa9b_IMG_3132.JPG"
+        
+        if _imgeSrc != nil {
+            _attachment = Commons.convertStringToAttachment(pString: _imgeSrc!)
+            _hasAttachment = true
         }
     }
     
@@ -69,8 +76,32 @@ class CalendarEvent : Mappable {
         return _endDate!
     }
     
+    func getDescription() -> String {
+        return _desc ?? ""
+    }
+    
     func getDisplayDate() -> String {
         return _startDateStr ?? ""
+    }
+    
+    func getAttachmentSource() -> String {
+        return _imgeSrc ?? ""
+    }
+    
+    func getHasAttachment() -> Bool {
+        return _hasAttachment
+    }
+    
+    func getAttachment() -> Attachment {
+        return _attachment!
+    }
+    
+    func getSectionId() -> String {
+        return _sectionId ?? ""
+    }
+    
+    func getStandardId() -> String {
+        return _standardId ?? ""
     }
  
 }

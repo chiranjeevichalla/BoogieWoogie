@@ -41,26 +41,36 @@
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
                     </label>
+                    <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cxN-Jr-ub8" customClass="MRCircularProgressView">
+                        <rect key="frame" x="25" y="0.0" width="50" height="50"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="tintColor" red="0.0078431372550000003" green="0.58823529409999997" blue="0.60392156860000001" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
                 </subviews>
             </view>
             <constraints>
+                <constraint firstItem="cxN-Jr-ub8" firstAttribute="width" secondItem="pFx-xh-f2G" secondAttribute="width" id="4A1-9F-UCP"/>
                 <constraint firstItem="WvT-be-tiv" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="3" id="BhL-EV-7gq"/>
+                <constraint firstItem="cxN-Jr-ub8" firstAttribute="height" secondItem="pFx-xh-f2G" secondAttribute="height" id="F0b-Mt-p4r"/>
                 <constraint firstItem="pFx-xh-f2G" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="OVZ-DK-2rP"/>
                 <constraint firstItem="WvT-be-tiv" firstAttribute="top" secondItem="pFx-xh-f2G" secondAttribute="bottom" constant="3" id="cBX-wG-ZTl"/>
                 <constraint firstItem="pFx-xh-f2G" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="25" id="cOa-2p-JPS"/>
                 <constraint firstAttribute="bottom" secondItem="WvT-be-tiv" secondAttribute="bottom" id="gM7-uM-JBl"/>
                 <constraint firstAttribute="trailing" secondItem="pFx-xh-f2G" secondAttribute="trailing" constant="25" id="hW2-rb-UbE"/>
+                <constraint firstItem="cxN-Jr-ub8" firstAttribute="centerX" secondItem="pFx-xh-f2G" secondAttribute="centerX" id="tSy-ec-sTN"/>
+                <constraint firstItem="cxN-Jr-ub8" firstAttribute="centerY" secondItem="pFx-xh-f2G" secondAttribute="centerY" id="va3-YS-Bpr"/>
                 <constraint firstAttribute="trailing" secondItem="WvT-be-tiv" secondAttribute="trailing" constant="3" id="xwd-WI-gLR"/>
             </constraints>
             <size key="customSize" width="100" height="90"/>
             <connections>
                 <outlet property="thisAttachmentName" destination="WvT-be-tiv" id="GNY-5o-f97"/>
+                <outlet property="thisCircularView" destination="cxN-Jr-ub8" id="fiE-vE-2fE"/>
                 <outlet property="thisUIImageView" destination="pFx-xh-f2G" id="zQK-lF-wpN"/>
             </connections>
             <point key="canvasLocation" x="34" y="59"/>
         </collectionViewCell>
     </objects>
     <resources>
-        <image name="doc" width="32" height="32"/>
+        <image name="doc" width="94" height="122"/>
     </resources>
 </document>

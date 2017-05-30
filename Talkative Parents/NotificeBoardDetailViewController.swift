@@ -201,15 +201,21 @@ extension NotificeBoardDetailViewController : UICollectionViewDelegate, UICollec
         let bAttachment = self.thisNotificationDetail._attachments[indexPath.item]
         print("didselect item url \(bAttachment.getUrl())")
         if !Commons.isFileExist(pFileName: bAttachment.getUrl()) {
-            Commons.showIndicator()
+//            Commons.showIndicator()
+            let bCell = collectionView.cellForItem(at: indexPath) as! AttachmentCollectionViewCell
+            bCell.thisCircularView.isHidden = false
+            bCell.thisUIImageView.isHidden = true
             let bUrl = Commons.constructUrl(pUrl: bAttachment.getUrl())
             Alamofire.download(bUrl!, to: Commons.getDestination(pFileName: bAttachment.getUrl()))
                 .downloadProgress { progress in
                     print("Download Progress: \(progress.fractionCompleted)")
+                    bCell.thisCircularView.setProgress(Float(progress.fractionCompleted), animated: true)
                 }
                 .response { response in
                 print(response)
-                Commons.hideIndicator()
+                    bCell.thisCircularView.isHidden = true
+                    bCell.thisUIImageView.isHidden = false
+//                Commons.hideIndicator()
                 if response.error == nil, let imagePath = response.destinationURL?.path {
                     print("response path is \(response.destinationURL)")
 //                    self.quickLookController.currentPreviewItemIndex = indexPath.row

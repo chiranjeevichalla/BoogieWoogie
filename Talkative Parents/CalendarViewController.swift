@@ -147,7 +147,21 @@ extension CalendarViewController: UITableViewDelegate, UITableViewDataSource {
         
         cell.thisUITitleLabel.text = self.thisSelectedCalendarEvents[indexPath.row].getTitle()
         cell.thisUITimeLabel.text = self.thisSelectedCalendarEvents[indexPath.row].getDisplayDate()
+        cell.thisUIPinButton.tag = indexPath.row
+        cell.thisUIPinButton.addTarget(self, action: #selector(self.tapOnPinBtn), for: .touchUpInside)
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        let bVC = CalendarDetailViewController()
+        bVC.thisCalendarEvent = self.thisSelectedCalendarEvents[indexPath.row]
+        self.navigationController?.pushViewController(bVC, animated: true)
+        
+    }
+    
+    func tapOnPinBtn(sender: UIButton!) {
+        print("pin or unpin the events")
     }
     
 }

@@ -109,4 +109,12 @@ class Child : Mappable {
         return ""
     }
     
+    func getSectionId() -> String {
+        return _sectionId ?? ""
+    }
+    
+    func getStandardId() -> String {
+        return _standardId ?? ""
+    }
+    
 }
