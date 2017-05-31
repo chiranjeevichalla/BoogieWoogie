@@ -30,7 +30,7 @@ class CalendarViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.navigationItem.title = Constants.sharedInstance._child.getName()
         // Do any additional setup after loading the view.
         self.setCalendarBaseColor()
         self.setUpEvents()

@@ -79,6 +79,12 @@
 		1888294F1EDC614E00C51AC4 /* CalendarEventTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1888294D1EDC614E00C51AC4 /* CalendarEventTableViewCell.xib */; };
 		188829531EDD5E3D00C51AC4 /* CalendarDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188829511EDD5E3D00C51AC4 /* CalendarDetailViewController.swift */; };
 		188829541EDD5E3D00C51AC4 /* CalendarDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 188829521EDD5E3D00C51AC4 /* CalendarDetailViewController.xib */; };
+		188829571EDDBEA400C51AC4 /* MoreTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188829561EDDBEA400C51AC4 /* MoreTabViewController.swift */; };
+		188829591EDDBF1E00C51AC4 /* OtherObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188829581EDDBF1E00C51AC4 /* OtherObject.swift */; };
+		1888295C1EDDC08A00C51AC4 /* MoreTabTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1888295A1EDDC08A00C51AC4 /* MoreTabTableViewCell.swift */; };
+		1888295D1EDDC08A00C51AC4 /* MoreTabTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1888295B1EDDC08A00C51AC4 /* MoreTabTableViewCell.xib */; };
+		18B30B001EDEA3D500D5B9F7 /* SocialSharingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B30AFE1EDEA3D500D5B9F7 /* SocialSharingViewController.swift */; };
+		18B30B011EDEA3D500D5B9F7 /* SocialSharingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18B30AFF1EDEA3D500D5B9F7 /* SocialSharingViewController.xib */; };
 		18F691E61ED8701B00FA80AC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 18F691E51ED8701B00FA80AC /* GoogleService-Info.plist */; };
 		6E91B36D65901A4382092B6A /* Pods_Talkative_ParentsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A55DDBCD178F55B485AC29B /* Pods_Talkative_ParentsTests.framework */; };
 		809F2700F3A6C4483A7F37CD /* Pods_Talkative_Parents.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A819ED0EACF43F78280E979 /* Pods_Talkative_Parents.framework */; };
@@ -182,6 +188,12 @@
 		1888294D1EDC614E00C51AC4 /* CalendarEventTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CalendarEventTableViewCell.xib; sourceTree = "<group>"; };
 		188829511EDD5E3D00C51AC4 /* CalendarDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarDetailViewController.swift; sourceTree = "<group>"; };
 		188829521EDD5E3D00C51AC4 /* CalendarDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CalendarDetailViewController.xib; sourceTree = "<group>"; };
+		188829561EDDBEA400C51AC4 /* MoreTabViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoreTabViewController.swift; sourceTree = "<group>"; };
+		188829581EDDBF1E00C51AC4 /* OtherObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OtherObject.swift; sourceTree = "<group>"; };
+		1888295A1EDDC08A00C51AC4 /* MoreTabTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoreTabTableViewCell.swift; sourceTree = "<group>"; };
+		1888295B1EDDC08A00C51AC4 /* MoreTabTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MoreTabTableViewCell.xib; sourceTree = "<group>"; };
+		18B30AFE1EDEA3D500D5B9F7 /* SocialSharingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocialSharingViewController.swift; sourceTree = "<group>"; };
+		18B30AFF1EDEA3D500D5B9F7 /* SocialSharingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SocialSharingViewController.xib; sourceTree = "<group>"; };
 		18F691E51ED8701B00FA80AC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		2AD509CD274D6B8A1C439CF9 /* Pods-Talkative ParentsUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Talkative ParentsUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Talkative ParentsUITests/Pods-Talkative ParentsUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		34FB83C7C6BCA64B2D305BAB /* Pods-Talkative Parents.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Talkative Parents.release.xcconfig"; path = "Pods/Target Support Files/Pods-Talkative Parents/Pods-Talkative Parents.release.xcconfig"; sourceTree = "<group>"; };
@@ -251,6 +263,8 @@
 		181E64831ECB406D007E7C87 /* ViewController Pages */ = {
 			isa = PBXGroup;
 			children = (
+				18B30AFD1EDEA3BB00D5B9F7 /* SocialSharingPage */,
+				188829551EDDBE9000C51AC4 /* MoreTabPage */,
 				188829501EDD5E1B00C51AC4 /* CalendarDetailPage */,
 				188829441ED9C3B300C51AC4 /* CalendarPage */,
 				187FAC291ED5689200A9A15E /* DocumentViewerPage */,
@@ -430,6 +444,7 @@
 				182EA8F01ED330BC00589E8C /* NotificationDetail.swift */,
 				187435EC1ED4545700150ACD /* Attachment.swift */,
 				1888294A1EDC444E00C51AC4 /* CalendarEvent.swift */,
+				188829581EDDBF1E00C51AC4 /* OtherObject.swift */,
 			);
 			name = Modules;
 			sourceTree = "<group>";
@@ -491,6 +506,25 @@
 				188829521EDD5E3D00C51AC4 /* CalendarDetailViewController.xib */,
 			);
 			name = CalendarDetailPage;
+			sourceTree = "<group>";
+		};
+		188829551EDDBE9000C51AC4 /* MoreTabPage */ = {
+			isa = PBXGroup;
+			children = (
+				188829561EDDBEA400C51AC4 /* MoreTabViewController.swift */,
+				1888295A1EDDC08A00C51AC4 /* MoreTabTableViewCell.swift */,
+				1888295B1EDDC08A00C51AC4 /* MoreTabTableViewCell.xib */,
+			);
+			name = MoreTabPage;
+			sourceTree = "<group>";
+		};
+		18B30AFD1EDEA3BB00D5B9F7 /* SocialSharingPage */ = {
+			isa = PBXGroup;
+			children = (
+				18B30AFE1EDEA3D500D5B9F7 /* SocialSharingViewController.swift */,
+				18B30AFF1EDEA3D500D5B9F7 /* SocialSharingViewController.xib */,
+			);
+			name = SocialSharingPage;
 			sourceTree = "<group>";
 		};
 		431926F8915600DF6F6669B1 /* Pods */ = {
@@ -636,6 +670,7 @@
 			files = (
 				1862F00C1ECD88300084F704 /* CountrySelectionTableViewCell.xib in Resources */,
 				18379F0B1ED0603700F75C31 /* OpenSans-Regular.ttf in Resources */,
+				18B30B011EDEA3D500D5B9F7 /* SocialSharingViewController.xib in Resources */,
 				182EA8EB1ED32C0300589E8C /* NoticeBoardDetailHeaderTableViewCell.xib in Resources */,
 				182EA8E71ED31FDD00589E8C /* NotificeBoardDetailViewController.xib in Resources */,
 				187435EB1ED43E4B00150ACD /* NWebViewTableViewCell.xib in Resources */,
@@ -656,6 +691,7 @@
 				187435F11ED45F3400150ACD /* NoticeBoardAttachmentTableViewCell.xib in Resources */,
 				182EA8EF1ED32EAE00589E8C /* NoticeBoardWebViewTableViewCell.xib in Resources */,
 				18379EFC1ED0578700F75C31 /* NotificationTableViewCell.xib in Resources */,
+				1888295D1EDDC08A00C51AC4 /* MoreTabTableViewCell.xib in Resources */,
 				188829541EDD5E3D00C51AC4 /* CalendarDetailViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -829,6 +865,7 @@
 				187435F01ED45F3400150ACD /* NoticeBoardAttachmentTableViewCell.swift in Sources */,
 				18379F051ED059AF00F75C31 /* SemiBoldLabel.swift in Sources */,
 				183F93591EC9829300B11BEB /* AppDelegate.swift in Sources */,
+				18B30B001EDEA3D500D5B9F7 /* SocialSharingViewController.swift in Sources */,
 				181ED2F21ED012EB00759FA3 /* AppService.swift in Sources */,
 				181E648B1ECB4763007E7C87 /* CustomImagePageControl.swift in Sources */,
 				181E64821ECAD7F2007E7C87 /* ProgressHUD.swift in Sources */,
@@ -841,6 +878,7 @@
 				1862F00B1ECD88300084F704 /* CountrySelectionTableViewCell.swift in Sources */,
 				181E64921ECC5832007E7C87 /* MobileLoginViewController.swift in Sources */,
 				187435ED1ED4545700150ACD /* Attachment.swift in Sources */,
+				1888295C1EDDC08A00C51AC4 /* MoreTabTableViewCell.swift in Sources */,
 				18379F091ED05B7600F75C31 /* Basic.xcdatamodeld in Sources */,
 				188829491EDC30D700C51AC4 /* FireBaseHelper.swift in Sources */,
 				18379F0E1ED0731E00F75C31 /* Notification.swift in Sources */,
@@ -852,9 +890,11 @@
 				187435EA1ED43E4B00150ACD /* NWebViewTableViewCell.swift in Sources */,
 				181E647C1EC9CB92007E7C87 /* Constants.swift in Sources */,
 				187FAC2C1ED568BE00A9A15E /* DocumentViewerViewController.swift in Sources */,
+				188829591EDDBF1E00C51AC4 /* OtherObject.swift in Sources */,
 				181E64761EC9CB70007E7C87 /* UserDefaultsConstants.swift in Sources */,
 				1888294E1EDC614E00C51AC4 /* CalendarEventTableViewCell.swift in Sources */,
 				182EA8F11ED330BC00589E8C /* NotificationDetail.swift in Sources */,
+				188829571EDDBEA400C51AC4 /* MoreTabViewController.swift in Sources */,
 				1862EFFF1ECD7DDE0084F704 /* Country.swift in Sources */,
 				182EA8E61ED31FDD00589E8C /* NotificeBoardDetailViewController.swift in Sources */,
 				182EA8EA1ED32C0300589E8C /* NoticeBoardDetailHeaderTableViewCell.swift in Sources */,
