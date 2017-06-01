@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="OpenSans-Regular.ttf">
+            <string>OpenSans</string>
+        </array>
+        <array key="OpenSans-Semibold.ttf">
+            <string>OpenSans-Semibold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="checkmark" indentationWidth="10" reuseIdentifier="AttendanceTableViewCell" id="KGk-i7-Jjw" customClass="AttendanceTableViewCell" customModule="Talkative_Parents" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="90"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="281" height="89.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="csa-hU-33r">
+                        <rect key="frame" x="0.0" y="0.0" width="280" height="89"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="89" id="tTv-yS-fOQ"/>
+                        </constraints>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uQ1-a8-SO3" customClass="SemiBoldLabel" customModule="Talkative_Parents" customModuleProvider="target">
+                        <rect key="frame" x="8" y="8" width="270" height="23.5"/>
+                        <fontDescription key="fontDescription" name="OpenSans-Semibold" family="Open Sans" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="fontSize">
+                                <real key="value" value="17"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hkb-yE-VN8" customClass="RegularLabel" customModule="Talkative_Parents" customModuleProvider="target">
+                        <rect key="frame" x="8" y="36" width="264" height="21"/>
+                        <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="15"/>
+                        <color key="textColor" red="0.2901960784" green="0.2901960784" blue="0.2901960784" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="fontSize">
+                                <real key="value" value="15"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xb2-BT-UjW" customClass="RegularLabel" customModule="Talkative_Parents" customModuleProvider="target">
+                        <rect key="frame" x="8" y="64" width="264" height="19.5"/>
+                        <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="14"/>
+                        <color key="textColor" red="0.41960784309999999" green="0.47058823529999999" blue="0.59215686270000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="fontSize">
+                                <real key="value" value="14"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="csa-hU-33r" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="MCd-Sn-wSc"/>
+                    <constraint firstItem="csa-hU-33r" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="PXk-VN-Gb0"/>
+                    <constraint firstItem="uQ1-a8-SO3" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="Q2a-6Q-W4O"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="hkb-yE-VN8" secondAttribute="trailing" constant="1" id="RXi-cB-uKB"/>
+                    <constraint firstItem="xb2-BT-UjW" firstAttribute="top" secondItem="hkb-yE-VN8" secondAttribute="bottom" constant="7" id="RaZ-OG-OcZ"/>
+                    <constraint firstItem="xb2-BT-UjW" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="TwW-EX-Vdc"/>
+                    <constraint firstItem="hkb-yE-VN8" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="bhx-xi-Hy1"/>
+                    <constraint firstAttribute="bottom" secondItem="csa-hU-33r" secondAttribute="bottom" constant="0.5" id="cVD-0N-1Yd"/>
+                    <constraint firstAttribute="trailing" secondItem="csa-hU-33r" secondAttribute="trailing" constant="1" id="jCn-J3-4hp"/>
+                    <constraint firstItem="hkb-yE-VN8" firstAttribute="top" secondItem="uQ1-a8-SO3" secondAttribute="bottom" constant="4.5" id="jtm-hD-0Cp"/>
+                    <constraint firstItem="uQ1-a8-SO3" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="kGB-tY-QOJ"/>
+                    <constraint firstAttribute="trailing" secondItem="uQ1-a8-SO3" secondAttribute="trailing" constant="3" id="l8k-0i-5ms"/>
+                    <constraint firstAttribute="trailing" secondItem="xb2-BT-UjW" secondAttribute="trailing" constant="9" id="zH3-9B-DpU"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="tintColor" red="0.0" green="0.35686274509999999" blue="0.43137254899999999" alpha="1" colorSpace="calibratedRGB"/>
+            <connections>
+                <outlet property="thisUIHeaderLabel" destination="uQ1-a8-SO3" id="dXA-Kb-1e9"/>
+                <outlet property="thisUIMessageLabel" destination="hkb-yE-VN8" id="D3X-j1-kAP"/>
+                <outlet property="thisUITimeLabel" destination="xb2-BT-UjW" id="gUR-bD-7b2"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+</document>

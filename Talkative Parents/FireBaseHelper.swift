@@ -21,9 +21,9 @@ class FireBaseHelper {
 //
 //        
 //
-        let bSchoolId = "21ae64c2-f0f1-44d8-a1d2-606b09b32e75"
+//        let bSchoolId = "21ae64c2-f0f1-44d8-a1d2-606b09b32e75"
         var bRef : FIRDatabaseReference!
-        bRef = FIRDatabase.database().reference(withPath: "\(bSchoolId)/calender")
+        bRef = FIRDatabase.database().reference(withPath: "\(pSchoolId)/calender")
         
         if !IsConnectedToNetwork() {
                         Commons.hideIndicator()
@@ -73,8 +73,10 @@ class FireBaseHelper {
         
         bRef.observe(.value, with: { (snapshot) in
             Commons.hideIndicator()
+//            bRef.re
         }) { (error) in
             Commons.hideIndicator()
+//            bRef.removeObserver(withHandle: bObserver)
             Commons.showErrorMessage(pMessage: "\(error.localizedDescription)")
         }
         
@@ -85,6 +87,44 @@ class FireBaseHelper {
 //                Commons.showErrorMessage(pMessage: "\(error?.localizedDescription)")
 //            }
 //        }
+        
+        return bRef
+        
+    }
+    
+    
+    class func GetAttendanceList(callback:@escaping (Attendance,Bool) -> Void, callback1:@escaping ([Attendance],Bool) -> Void) -> FIRDatabaseReference {
+        
+        
+        var bRef : FIRDatabaseReference!
+        bRef = FIRDatabase.database().reference(withPath: "\(Constants.sharedInstance._child.getSchoolId())/\(Constants.sharedInstance._child.getParentId())/\(Constants.sharedInstance._child.getChildId())/\(Constants.sharedInstance._child.getStandardId())||\(Constants.sharedInstance._child.getStandardId())/attendance_msgs")
+        
+//        if !IsConnectedToNetwork() {
+//            Commons.hideIndicator()
+//            Commons.showNoNetwork()
+//            
+//            return bRef
+//        }
+        
+        bRef.removeAllObservers()
+        
+        bRef.observe(.childAdded, with: { (snapshot) in
+            let postDict = snapshot.value as? [String : AnyObject] ?? [:]
+            if postDict != nil {
+                let bAttendance = Mapper<Attendance>().map(JSON: postDict)
+                if bAttendance != nil {
+                    if callback != nil {
+                        callback(bAttendance!, true)
+                    } else {
+                        bRef.removeAllObservers()
+                    }
+                }
+                
+            }
+            //            let value = snapshot.value as? NSDictionary
+            //            let username = value?["username"] as? String ?? ""
+            
+        })
         
         return bRef
         

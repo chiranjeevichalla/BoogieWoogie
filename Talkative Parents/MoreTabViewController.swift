@@ -73,7 +73,11 @@ class MoreTabViewController: UIViewController, UITableViewDelegate, UITableViewD
         }
         
         else if indexPath.row == 3 {
-            
+            let bVC : AttendanceViewController = AttendanceViewController(nibName: "AttendanceViewController", bundle: nil)
+            let backItem = UIBarButtonItem()
+            backItem.title = "Back"
+            navigationItem.backBarButtonItem = backItem
+            self.navigationController?.pushViewController(bVC, animated: true)
         }
     }
     

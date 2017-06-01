@@ -85,6 +85,11 @@
 		1888295D1EDDC08A00C51AC4 /* MoreTabTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1888295B1EDDC08A00C51AC4 /* MoreTabTableViewCell.xib */; };
 		18B30B001EDEA3D500D5B9F7 /* SocialSharingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B30AFE1EDEA3D500D5B9F7 /* SocialSharingViewController.swift */; };
 		18B30B011EDEA3D500D5B9F7 /* SocialSharingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18B30AFF1EDEA3D500D5B9F7 /* SocialSharingViewController.xib */; };
+		18F58ECD1EE027CA0092B7C2 /* Attendance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F58ECC1EE027CA0092B7C2 /* Attendance.swift */; };
+		18F58ED11EE02D710092B7C2 /* AttendanceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F58ECF1EE02D710092B7C2 /* AttendanceViewController.swift */; };
+		18F58ED21EE02D710092B7C2 /* AttendanceViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18F58ED01EE02D710092B7C2 /* AttendanceViewController.xib */; };
+		18F58ED51EE0347C0092B7C2 /* AttendanceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F58ED31EE0347C0092B7C2 /* AttendanceTableViewCell.swift */; };
+		18F58ED61EE0347C0092B7C2 /* AttendanceTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18F58ED41EE0347C0092B7C2 /* AttendanceTableViewCell.xib */; };
 		18F691E61ED8701B00FA80AC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 18F691E51ED8701B00FA80AC /* GoogleService-Info.plist */; };
 		6E91B36D65901A4382092B6A /* Pods_Talkative_ParentsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A55DDBCD178F55B485AC29B /* Pods_Talkative_ParentsTests.framework */; };
 		809F2700F3A6C4483A7F37CD /* Pods_Talkative_Parents.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A819ED0EACF43F78280E979 /* Pods_Talkative_Parents.framework */; };
@@ -194,6 +199,11 @@
 		1888295B1EDDC08A00C51AC4 /* MoreTabTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MoreTabTableViewCell.xib; sourceTree = "<group>"; };
 		18B30AFE1EDEA3D500D5B9F7 /* SocialSharingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocialSharingViewController.swift; sourceTree = "<group>"; };
 		18B30AFF1EDEA3D500D5B9F7 /* SocialSharingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SocialSharingViewController.xib; sourceTree = "<group>"; };
+		18F58ECC1EE027CA0092B7C2 /* Attendance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Attendance.swift; sourceTree = "<group>"; };
+		18F58ECF1EE02D710092B7C2 /* AttendanceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AttendanceViewController.swift; sourceTree = "<group>"; };
+		18F58ED01EE02D710092B7C2 /* AttendanceViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AttendanceViewController.xib; sourceTree = "<group>"; };
+		18F58ED31EE0347C0092B7C2 /* AttendanceTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AttendanceTableViewCell.swift; sourceTree = "<group>"; };
+		18F58ED41EE0347C0092B7C2 /* AttendanceTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AttendanceTableViewCell.xib; sourceTree = "<group>"; };
 		18F691E51ED8701B00FA80AC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		2AD509CD274D6B8A1C439CF9 /* Pods-Talkative ParentsUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Talkative ParentsUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Talkative ParentsUITests/Pods-Talkative ParentsUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		34FB83C7C6BCA64B2D305BAB /* Pods-Talkative Parents.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Talkative Parents.release.xcconfig"; path = "Pods/Target Support Files/Pods-Talkative Parents/Pods-Talkative Parents.release.xcconfig"; sourceTree = "<group>"; };
@@ -263,6 +273,7 @@
 		181E64831ECB406D007E7C87 /* ViewController Pages */ = {
 			isa = PBXGroup;
 			children = (
+				18F58ECE1EE02D600092B7C2 /* AttendancePage */,
 				18B30AFD1EDEA3BB00D5B9F7 /* SocialSharingPage */,
 				188829551EDDBE9000C51AC4 /* MoreTabPage */,
 				188829501EDD5E1B00C51AC4 /* CalendarDetailPage */,
@@ -445,6 +456,7 @@
 				187435EC1ED4545700150ACD /* Attachment.swift */,
 				1888294A1EDC444E00C51AC4 /* CalendarEvent.swift */,
 				188829581EDDBF1E00C51AC4 /* OtherObject.swift */,
+				18F58ECC1EE027CA0092B7C2 /* Attendance.swift */,
 			);
 			name = Modules;
 			sourceTree = "<group>";
@@ -525,6 +537,17 @@
 				18B30AFF1EDEA3D500D5B9F7 /* SocialSharingViewController.xib */,
 			);
 			name = SocialSharingPage;
+			sourceTree = "<group>";
+		};
+		18F58ECE1EE02D600092B7C2 /* AttendancePage */ = {
+			isa = PBXGroup;
+			children = (
+				18F58ECF1EE02D710092B7C2 /* AttendanceViewController.swift */,
+				18F58ED01EE02D710092B7C2 /* AttendanceViewController.xib */,
+				18F58ED31EE0347C0092B7C2 /* AttendanceTableViewCell.swift */,
+				18F58ED41EE0347C0092B7C2 /* AttendanceTableViewCell.xib */,
+			);
+			name = AttendancePage;
 			sourceTree = "<group>";
 		};
 		431926F8915600DF6F6669B1 /* Pods */ = {
@@ -680,6 +703,7 @@
 				1888294F1EDC614E00C51AC4 /* CalendarEventTableViewCell.xib in Resources */,
 				183F93621EC9829300B11BEB /* Assets.xcassets in Resources */,
 				187FAC2D1ED568BE00A9A15E /* DocumentViewerViewController.xib in Resources */,
+				18F58ED61EE0347C0092B7C2 /* AttendanceTableViewCell.xib in Resources */,
 				187FAC331ED70E6A00A9A15E /* DashboardTableViewCell.xib in Resources */,
 				181E64931ECC5832007E7C87 /* MobileLoginViewController.xib in Resources */,
 				187435F51ED468F400150ACD /* AttachmentCollectionViewCell.xib in Resources */,
@@ -687,6 +711,7 @@
 				181E64981ECC65FC007E7C87 /* OTPVerificationViewController.xib in Resources */,
 				183F93601EC9829300B11BEB /* Main.storyboard in Resources */,
 				1862F01B1ECDD89E0084F704 /* DashboardCollectionViewCell.xib in Resources */,
+				18F58ED21EE02D710092B7C2 /* AttendanceViewController.xib in Resources */,
 				18F691E61ED8701B00FA80AC /* GoogleService-Info.plist in Resources */,
 				187435F11ED45F3400150ACD /* NoticeBoardAttachmentTableViewCell.xib in Resources */,
 				182EA8EF1ED32EAE00589E8C /* NoticeBoardWebViewTableViewCell.xib in Resources */,
@@ -878,6 +903,7 @@
 				1862F00B1ECD88300084F704 /* CountrySelectionTableViewCell.swift in Sources */,
 				181E64921ECC5832007E7C87 /* MobileLoginViewController.swift in Sources */,
 				187435ED1ED4545700150ACD /* Attachment.swift in Sources */,
+				18F58ED11EE02D710092B7C2 /* AttendanceViewController.swift in Sources */,
 				1888295C1EDDC08A00C51AC4 /* MoreTabTableViewCell.swift in Sources */,
 				18379F091ED05B7600F75C31 /* Basic.xcdatamodeld in Sources */,
 				188829491EDC30D700C51AC4 /* FireBaseHelper.swift in Sources */,
@@ -899,6 +925,7 @@
 				182EA8E61ED31FDD00589E8C /* NotificeBoardDetailViewController.swift in Sources */,
 				182EA8EA1ED32C0300589E8C /* NoticeBoardDetailHeaderTableViewCell.swift in Sources */,
 				187FAC2F1ED6B4F000A9A15E /* BetterSegmentedControl.swift in Sources */,
+				18F58ECD1EE027CA0092B7C2 /* Attendance.swift in Sources */,
 				188829461ED9C3C500C51AC4 /* CalendarViewController.swift in Sources */,
 				181E647E1EC9CBA2007E7C87 /* UIFont-Config.swift in Sources */,
 				183F935B1EC9829300B11BEB /* NotificationsViewController.swift in Sources */,
@@ -906,6 +933,7 @@
 				1862F0071ECD87670084F704 /* SelectCountryViewController.swift in Sources */,
 				1862F0171ECDD8860084F704 /* DashboardViewController.swift in Sources */,
 				181E648E1ECC35A2007E7C87 /* EulaAgreementViewController.swift in Sources */,
+				18F58ED51EE0347C0092B7C2 /* AttendanceTableViewCell.swift in Sources */,
 				1862F0011ECD7F5D0084F704 /* LookUpServices.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -31,6 +31,7 @@ class Child : Mappable {
     
     var _schoolName : String = ""
     var _batchName : String = ""
+    var _parentId : String?
     
     required init?(map: Map) {
             }
@@ -64,6 +65,17 @@ class Child : Mappable {
             if words.count >= 2 {
                 _schoolName = words[0]
                 _batchName = words[1]
+            }
+        }
+        
+        if _channels != nil && (_channels?.count)! > 0 && _schoolId != nil{
+            for bChannel in _channels! {
+                if bChannel.range(of: _schoolId!) != nil {
+                    if bChannel.range(of: "P-") != nil {
+                        let bParentId = bChannel.replacingOccurrences(of: "-"+_schoolId!, with: "")
+                        _parentId = bParentId.replacingOccurrences(of: "P-", with: "")
+                    }
+                }
             }
         }
 
@@ -117,4 +129,8 @@ class Child : Mappable {
         return _standardId ?? ""
     }
     
+    
+    func getParentId() -> String {
+        return _parentId ?? ""
+    }
 }
