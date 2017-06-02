@@ -13,6 +13,7 @@ enum Doctype: String {
     case pdf = "pdf"
     case image = "image"
     case excel = "excel"
+    case media = "media"
 }
 
 class Attachment : NSObject {

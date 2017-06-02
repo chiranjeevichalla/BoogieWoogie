@@ -101,21 +101,27 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="coming soon" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="zEq-FU-wV5">
-                                <rect key="frame" x="85.5" y="313" width="204.5" height="41.5"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="36"/>
-                                <color key="textColor" red="0.60784313729999995" green="0.60784313729999995" blue="0.60784313729999995" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="L7W-Zu-6By">
+                                <rect key="frame" x="0.0" y="1" width="375" height="610"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="8rJ-Kc-sve" id="9VO-YU-SeC"/>
+                                    <outlet property="delegate" destination="8rJ-Kc-sve" id="Tkp-F7-dws"/>
+                                </connections>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstAttribute="centerX" secondItem="zEq-FU-wV5" secondAttribute="centerX" id="qqM-NS-xev"/>
-                            <constraint firstAttribute="centerY" secondItem="zEq-FU-wV5" secondAttribute="centerY" id="qzY-Ky-pLD"/>
+                            <constraint firstItem="Djb-ko-YwX" firstAttribute="top" secondItem="L7W-Zu-6By" secondAttribute="bottom" constant="7" id="1Cj-Kv-epp"/>
+                            <constraint firstItem="L7W-Zu-6By" firstAttribute="top" secondItem="QS5-Rx-YEW" secondAttribute="top" constant="1" id="DDs-Tc-lxo"/>
+                            <constraint firstAttribute="trailing" secondItem="L7W-Zu-6By" secondAttribute="trailing" id="PuE-0A-9ro"/>
+                            <constraint firstItem="L7W-Zu-6By" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leading" id="vFB-VL-eif"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="3qp-CT-Y5a"/>
+                    <connections>
+                        <outlet property="thisUISBTV" destination="L7W-Zu-6By" id="GRY-cC-eBr"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>

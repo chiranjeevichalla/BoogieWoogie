@@ -33,8 +33,8 @@ class CalendarViewController: UIViewController {
         self.navigationItem.title = Constants.sharedInstance._child.getName()
         // Do any additional setup after loading the view.
         self.setCalendarBaseColor()
-        self.setUpEvents()
-        getFirebaseCalendarEvents()
+//        self.setUpEvents()
+//        getFirebaseCalendarEvents()
         
         self.thisUIEventsTableView.register(UINib(nibName: "CalendarEventTableViewCell", bundle: nil), forCellReuseIdentifier: "CalendarEventTableViewCell")
         self.thisUIEventsTableView.tableFooterView = UIView(frame: .zero)

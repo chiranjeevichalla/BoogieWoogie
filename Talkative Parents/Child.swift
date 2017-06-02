@@ -32,6 +32,7 @@ class Child : Mappable {
     var _schoolName : String = ""
     var _batchName : String = ""
     var _parentId : String?
+    var _schoolToParentChannelId : String?
     
     required init?(map: Map) {
             }
@@ -77,6 +78,10 @@ class Child : Mappable {
                     }
                 }
             }
+        }
+        
+        if _schoolId != nil && _parentId != nil {
+            _schoolToParentChannelId = "S-\(_schoolId!)-\(_parentId!)"
         }
 
     }
@@ -132,5 +137,9 @@ class Child : Mappable {
     
     func getParentId() -> String {
         return _parentId ?? ""
+    }
+    
+    func getSchoolToParentChannelId() -> String {
+        return _schoolToParentChannelId ?? ""
     }
 }

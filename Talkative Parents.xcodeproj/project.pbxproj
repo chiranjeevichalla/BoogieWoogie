@@ -90,6 +90,9 @@
 		18F58ED21EE02D710092B7C2 /* AttendanceViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18F58ED01EE02D710092B7C2 /* AttendanceViewController.xib */; };
 		18F58ED51EE0347C0092B7C2 /* AttendanceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F58ED31EE0347C0092B7C2 /* AttendanceTableViewCell.swift */; };
 		18F58ED61EE0347C0092B7C2 /* AttendanceTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18F58ED41EE0347C0092B7C2 /* AttendanceTableViewCell.xib */; };
+		18F58ED81EE1931A0092B7C2 /* SoundingBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F58ED71EE1931A0092B7C2 /* SoundingBoard.swift */; };
+		18F58EDB1EE196DF0092B7C2 /* SoundingBoardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F58ED91EE196DF0092B7C2 /* SoundingBoardTableViewCell.swift */; };
+		18F58EDC1EE196DF0092B7C2 /* SoundingBoardTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18F58EDA1EE196DF0092B7C2 /* SoundingBoardTableViewCell.xib */; };
 		18F691E61ED8701B00FA80AC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 18F691E51ED8701B00FA80AC /* GoogleService-Info.plist */; };
 		6E91B36D65901A4382092B6A /* Pods_Talkative_ParentsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A55DDBCD178F55B485AC29B /* Pods_Talkative_ParentsTests.framework */; };
 		809F2700F3A6C4483A7F37CD /* Pods_Talkative_Parents.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A819ED0EACF43F78280E979 /* Pods_Talkative_Parents.framework */; };
@@ -204,6 +207,9 @@
 		18F58ED01EE02D710092B7C2 /* AttendanceViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AttendanceViewController.xib; sourceTree = "<group>"; };
 		18F58ED31EE0347C0092B7C2 /* AttendanceTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AttendanceTableViewCell.swift; sourceTree = "<group>"; };
 		18F58ED41EE0347C0092B7C2 /* AttendanceTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AttendanceTableViewCell.xib; sourceTree = "<group>"; };
+		18F58ED71EE1931A0092B7C2 /* SoundingBoard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoundingBoard.swift; sourceTree = "<group>"; };
+		18F58ED91EE196DF0092B7C2 /* SoundingBoardTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoundingBoardTableViewCell.swift; sourceTree = "<group>"; };
+		18F58EDA1EE196DF0092B7C2 /* SoundingBoardTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SoundingBoardTableViewCell.xib; sourceTree = "<group>"; };
 		18F691E51ED8701B00FA80AC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		2AD509CD274D6B8A1C439CF9 /* Pods-Talkative ParentsUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Talkative ParentsUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Talkative ParentsUITests/Pods-Talkative ParentsUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		34FB83C7C6BCA64B2D305BAB /* Pods-Talkative Parents.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Talkative Parents.release.xcconfig"; path = "Pods/Target Support Files/Pods-Talkative Parents/Pods-Talkative Parents.release.xcconfig"; sourceTree = "<group>"; };
@@ -368,6 +374,8 @@
 			isa = PBXGroup;
 			children = (
 				183F935C1EC9829300B11BEB /* SoundingboardViewController.swift */,
+				18F58ED91EE196DF0092B7C2 /* SoundingBoardTableViewCell.swift */,
+				18F58EDA1EE196DF0092B7C2 /* SoundingBoardTableViewCell.xib */,
 			);
 			name = SoundingBoardPage;
 			sourceTree = "<group>";
@@ -457,6 +465,7 @@
 				1888294A1EDC444E00C51AC4 /* CalendarEvent.swift */,
 				188829581EDDBF1E00C51AC4 /* OtherObject.swift */,
 				18F58ECC1EE027CA0092B7C2 /* Attendance.swift */,
+				18F58ED71EE1931A0092B7C2 /* SoundingBoard.swift */,
 			);
 			name = Modules;
 			sourceTree = "<group>";
@@ -700,6 +709,7 @@
 				18379F0A1ED0603500F75C31 /* OpenSans-Bold.ttf in Resources */,
 				18379F0C1ED0603900F75C31 /* OpenSans-Semibold.ttf in Resources */,
 				183F93651EC9829300B11BEB /* LaunchScreen.storyboard in Resources */,
+				18F58EDC1EE196DF0092B7C2 /* SoundingBoardTableViewCell.xib in Resources */,
 				1888294F1EDC614E00C51AC4 /* CalendarEventTableViewCell.xib in Resources */,
 				183F93621EC9829300B11BEB /* Assets.xcassets in Resources */,
 				187FAC2D1ED568BE00A9A15E /* DocumentViewerViewController.xib in Resources */,
@@ -917,6 +927,7 @@
 				181E647C1EC9CB92007E7C87 /* Constants.swift in Sources */,
 				187FAC2C1ED568BE00A9A15E /* DocumentViewerViewController.swift in Sources */,
 				188829591EDDBF1E00C51AC4 /* OtherObject.swift in Sources */,
+				18F58ED81EE1931A0092B7C2 /* SoundingBoard.swift in Sources */,
 				181E64761EC9CB70007E7C87 /* UserDefaultsConstants.swift in Sources */,
 				1888294E1EDC614E00C51AC4 /* CalendarEventTableViewCell.swift in Sources */,
 				182EA8F11ED330BC00589E8C /* NotificationDetail.swift in Sources */,
@@ -933,6 +944,7 @@
 				1862F0071ECD87670084F704 /* SelectCountryViewController.swift in Sources */,
 				1862F0171ECDD8860084F704 /* DashboardViewController.swift in Sources */,
 				181E648E1ECC35A2007E7C87 /* EulaAgreementViewController.swift in Sources */,
+				18F58EDB1EE196DF0092B7C2 /* SoundingBoardTableViewCell.swift in Sources */,
 				18F58ED51EE0347C0092B7C2 /* AttendanceTableViewCell.swift in Sources */,
 				1862F0011ECD7F5D0084F704 /* LookUpServices.swift in Sources */,
 			);

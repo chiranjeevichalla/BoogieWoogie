@@ -121,6 +121,9 @@ class NotificeBoardDetailViewController: UIViewController, UITableViewDelegate, 
         
         cell.thisUILabelWebcontent.urlLinkTapHandler = { label, url, range in
             NSLog("URL \(url) tapped")
+            if let bUrl = URL(string: url) {
+                UIApplication.shared.openURL(bUrl)
+            }
         }
         
         return cell
@@ -229,47 +232,12 @@ extension NotificeBoardDetailViewController : UICollectionViewDelegate, UICollec
                 }
             }
         } else {
-//            quickLookController.currentPreviewItemIndex = indexPath.row
             let quickLookController = QLPreviewController()
             quickLookController.delegate = self
             quickLookController.dataSource = self
             quickLookController.currentPreviewItemIndex = 0
-//            navigationController?.pushViewController(quickLookController, animated: true)
             self.present(quickLookController, animated: true, completion: nil)
         }
-        //QLPreview Controller
-//        if QLPreviewController.canPreview(Commons.constructNSUrl(pUrl: self.thisNotificationDetail._attachments[indexPath.item].getUrl())! as QLPreviewItem) {
-//            quickLookController.currentPreviewItemIndex = indexPath.row
-//            navigationController?.pushViewController(quickLookController, animated: true)
-//        }
-     
-        
-        
-        //custom view
-//        var pVC : DocumentViewerViewController!
-//        pVC = DocumentViewerViewController(nibName: "DocumentViewerViewController", bundle: nil)
-//        pVC.thisAttachment = self.thisNotificationDetail._attachments[indexPath.item]
-//        let backItem = UIBarButtonItem()
-//        backItem.title = "Back"
-//        navigationItem.backBarButtonItem = backItem
-//        self.navigationController?.pushViewController(pVC, animated: true)
-        
-        //amppreview controller
-        
-//        let bVC = AMPPreviewController(remoteFile: Commons.constructNSUrl(pUrl: self.thisNotificationDetail._attachments[indexPath.item].getUrl())! as URL!, title: thisNotificationDetail._attachments[indexPath.item].getName())
-//        bVC?.startDownloadBlock
-//        bVC?.finishDownloadBlock
-////        bVC?.finishDownloadBlock{
-////            
-////        }
-//        self.navigationController?.pushViewController(bVC!, animated: true)
-        
-        //watchtimer
-        
-//        let bVC = AZAPreviewController()
-//        bVC.delegate = self
-//        bVC.dataSource = self
-//        self.navigationController?.pushViewController(bVC, animated: true)
     }
     
     

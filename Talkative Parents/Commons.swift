@@ -418,16 +418,25 @@ class Commons {
             return bAttachment
     }
     
+    
     class func getDocType(pType : String) -> Doctype {
-        if pType == "jpg" || pType == "png" || pType == "jpeg" || pType == "gif" {
-            return .image
+        var bReturnType : Doctype = .image
+        switch pType {
+            case "jpg", "png", "jpeg", "gif" :
+                bReturnType = .image
+            case "pdf" :
+                bReturnType = .pdf
+            case "flv", "mp4", "mov", "m4v", "wmv", "avi", "mpeg":
+                bReturnType = .media
+            case "doc", "docx", "txt", "rtf" :
+                bReturnType = .doc
+            case "pptx", "ppt", "csv", "pps", "xls", "xlsx" :
+                bReturnType = .excel
+            default:
+                bReturnType = .doc
         }
-        else if pType == "pdf" {
-            return .pdf
-        }
-        else {
-            return .doc
-        }
+                
+        return bReturnType
     }
     
     class func isFileExist(pFileName : String) -> Bool {
