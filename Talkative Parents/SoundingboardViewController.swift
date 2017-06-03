@@ -21,7 +21,7 @@ class SoundingboardViewController: UIViewController, UITableViewDelegate, UITabl
         self.thisUISBTV.emptyDataSetSource = self
         self.thisUISBTV.emptyDataSetDelegate = self
         // Do any additional setup after loading the view, typically from a nib.
-        setUpTableView()
+//        setUpTableView()
         
         let btn1 = UIButton(type: .custom)
         btn1.setImage(UIImage(named: "addSoundingBoard"), for: .normal)

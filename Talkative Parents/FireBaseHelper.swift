@@ -130,4 +130,58 @@ class FireBaseHelper {
         
     }
     
+    class func GetCategories(callback:@escaping (Category,Bool) -> Void, callback1:@escaping ([Category],Bool) -> Void) -> FIRDatabaseReference {
+        
+        Commons.showIndicator()
+        var bRef : FIRDatabaseReference!
+        let bPath = "19107ff1-ea59-43c0-83a2-9962df79dfae/addCategories"
+//        let bPath = "\(Constants.sharedInstance._child.getSchoolId())/addCategories"
+        bRef = FIRDatabase.database().reference(withPath: bPath)
+        
+        
+        bRef.removeAllObservers()
+        
+//        bRef.observe(.childAdded, with: { (snapshot) in
+//            let postDict = snapshot.value as? [String : AnyObject] ?? [:]
+//            if postDict != nil {
+//                let bCategory = Mapper<Category>().map(JSON: postDict)
+//                bCategory?._key = snapshot.key
+//                if bCategory != nil {
+//                    if callback != nil {
+//                        callback(bCategory!, true)
+//                    } else {
+//                        bRef.removeAllObservers()
+//                    }
+//                }
+//                
+//            }
+//            //            let value = snapshot.value as? NSDictionary
+//            //            let username = value?["username"] as? String ?? ""
+//            
+//        })
+        
+        bRef.observeSingleEvent(of: .value, with: { (snapshot) in
+            var bCategories : [Category] = []
+            if let snapshots = snapshot.children.allObjects as? [FIRDataSnapshot] {
+                for snap in snapshots {
+                    if let postDict = snap.value as? [String : AnyObject] {
+                        let bCategory = Mapper<Category>().map(JSON: postDict)
+                        bCategory?._key = snap.key
+                        if bCategory != nil {
+                            bCategories.append(bCategory!)
+                        }
+                    }
+                }
+            }
+            callback1(bCategories, true)
+            Commons.hideIndicator()
+        }) { (error) in
+            callback1([], false)
+            Commons.hideIndicator()
+        }
+        
+        return bRef
+        
+    }
+    
 }

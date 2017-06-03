@@ -19,7 +19,7 @@ class MoreTabViewController: UIViewController, UITableViewDelegate, UITableViewD
         super.viewDidLoad()
         self.navigationItem.title = Constants.sharedInstance._child.getName()
         // Do any additional setup after loading the view.
-        setUpTableView()
+//        setUpTableView()
     }
 
     private func setUpTableView() {

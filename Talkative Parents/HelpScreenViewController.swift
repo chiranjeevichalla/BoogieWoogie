@@ -31,6 +31,14 @@ class HelpScreenViewController: UIViewController, UICollectionViewDataSource, UI
 //            }
 //        }
         
+//        let bVC = CreateSoundingBoardMessageViewController(nibName: "CreateSoundingBoardMessageViewController", bundle: nil)
+//        let bNVC = UINavigationController()
+//        let appDelegate = UIApplication.shared.delegate! as! AppDelegate
+//        appDelegate.window?.rootViewController = bNVC
+//        appDelegate.window?.makeKeyAndVisible()
+//        bNVC.pushViewController(bVC, animated: true)
+//        return
+        
         if Constants.sharedInstance._UserDefaults.isLoggedIn() {
             let appDelegate = UIApplication.shared.delegate! as! AppDelegate
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
