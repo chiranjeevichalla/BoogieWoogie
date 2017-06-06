@@ -21,7 +21,7 @@ class SoundingboardViewController: UIViewController, UITableViewDelegate, UITabl
         self.thisUISBTV.emptyDataSetSource = self
         self.thisUISBTV.emptyDataSetDelegate = self
         // Do any additional setup after loading the view, typically from a nib.
-//        setUpTableView()
+        setUpTableView()
         
         let btn1 = UIButton(type: .custom)
         btn1.setImage(UIImage(named: "addSoundingBoard"), for: .normal)
@@ -33,15 +33,26 @@ class SoundingboardViewController: UIViewController, UITableViewDelegate, UITabl
     
     func addSoundingBoardMessage() {
         print("add new sounding board message")
+        createNewMessage()
     }
 
+    private func setSoundingFireBase() {
+        FireBaseHelper.GetSoundingBoard(pType: "private", callback: { (pSoundingBoard, result) in
+            if result {
+                self.thisMessages.append(pSoundingBoard)
+                self.thisUISBTV.reloadData()
+            }
+        }) { (pSoundingBoards, result) in
+            
+        }
+    }
     
     private func setUpTableView() {
         self.thisUISBTV.register(UINib(nibName: "SoundingBoardTableViewCell", bundle: nil), forCellReuseIdentifier: "SoundingBoardTableViewCell")
         
         self.thisUISBTV.tableFooterView = UIView(frame: .zero)
         
-        
+        setSoundingFireBase()
         
     }
     
@@ -51,8 +62,24 @@ class SoundingboardViewController: UIViewController, UITableViewDelegate, UITabl
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell : SoundingBoardTableViewCell = tableView.dequeueReusableCell(withIdentifier: "SoundingBoardTableViewCell", for: indexPath) as! SoundingBoardTableViewCell
+        let bMessage =  self.thisMessages[indexPath.row]
+        cell.thisUISubjectLabel.text = bMessage.getSubject()
         
+        if bMessage.getCommentsCount() == 0 {
+            cell.thisUICommentsLabel.text = "No comments "
+        } else {
+            cell.thisUICommentsLabel.text = "\(bMessage.getCommentsCount() )comments "
+        }
         
+        if bMessage.getAttachmentCount() == 0 {
+            cell.thisUIAttachmentLabel.text = "No Attachments"
+        } else {
+            cell.thisUIAttachmentLabel.text = "\(bMessage.getAttachmentCount()) Attachments"
+        }
+        
+        cell.thisUISubTitleLabel.text = "\(bMessage.getCategoryName()) - \(bMessage.getDate())"
+        
+        cell.thisUIDescriptionLabel.text = bMessage.getDescription()
         
         return cell
     }
@@ -60,6 +87,22 @@ class SoundingboardViewController: UIViewController, UITableViewDelegate, UITabl
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         
+        
+    }
+    
+    private func createNewMessage() {
+        let bVC = CreateSoundingBoardMessageViewController()
+        self.navigationController?.pushViewController(bVC, animated: true)
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        //        return 100
+        
+        return UITableViewAutomaticDimension
+    }
+    //
+    func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
+        return UITableViewAutomaticDimension
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

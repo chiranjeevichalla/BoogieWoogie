@@ -57,6 +57,7 @@ class Constants: NSObject {
     var manager = Alamofire.SessionManager.default
     
     var _child = Child()
+    var _parent = ParentProfile()
     
     let firstColor : UIColor = UIColor(hexString: "4DE4B4")!
     let secondColor : UIColor = UIColor(hexString: "38B7DE")!
@@ -75,9 +76,13 @@ class Constants: NSObject {
     private let _getSchoolNotifications = "api/AppUser/GetSchoolNotifications"
     private let _getAdminNotifications = "api/AppUser/GetAdminNotifications"
     private let _getNotificationDetails = "api/AppUser/GetNotificationDetails"
+    private let _getProfile = "api/AppUser/GetProfile"
     
     //services api lookups
     private let _getCountries = "api/Lookups/GetCountries"
+    
+    //services api storage
+    private let _getUploadFile = "api/Storage/UploadFile"
     
     
     //messages
@@ -222,6 +227,15 @@ class Constants: NSObject {
         }
     }
     
+    func getProfile() -> String {
+        if isDev {
+            return "\(self._BaseUrlDev)\(self._getProfile)"
+        } else {
+            return "\(self._BaseUrlProd)\(self._getProfile)"
+        }
+
+    }
+    
     //MARK: //api/Lookups services
     func getLookUpsCountryesUrl() -> String {
         if isDev {
@@ -235,6 +249,15 @@ class Constants: NSObject {
     //MARK: GetImage BAse Path
     func getImageBasePath() ->String {
         return _imageBasePath
+    }
+    
+    //MARK: STORAGE api
+    func getUploadFileUrl() -> String {
+        if isDev {
+            return "\(self._BaseUrlDev)\(self._getUploadFile)"
+        } else {
+            return "\(self._BaseUrlProd)\(self._getUploadFile)"
+        }
     }
 }
 

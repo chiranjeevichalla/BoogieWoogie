@@ -31,6 +31,11 @@ class HelpScreenViewController: UIViewController, UICollectionViewDataSource, UI
 //            }
 //        }
         
+//        AppService.GetProfile { (result) in
+//            
+//        }
+        
+        
 //        let bVC = CreateSoundingBoardMessageViewController(nibName: "CreateSoundingBoardMessageViewController", bundle: nil)
 //        let bNVC = UINavigationController()
 //        let appDelegate = UIApplication.shared.delegate! as! AppDelegate

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="OpenSans-Regular.ttf">
+            <string>OpenSans</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ProgressCellTableViewCell" id="KGk-i7-Jjw" customClass="ProgressCellTableViewCell" customModule="Talkative_Parents" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jBJ-o7-sHC" customClass="MRCircularProgressView">
+                        <rect key="frame" x="270" y="1" width="40" height="40"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="tintColor" red="0.0078431372550000003" green="0.58823529409999997" blue="0.60392156860000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y0C-gV-qQv">
+                        <rect key="frame" x="270" y="1" width="40" height="40"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="40" id="jpK-wH-Gcw"/>
+                            <constraint firstAttribute="height" constant="40" id="sW6-Lf-0Cx"/>
+                        </constraints>
+                        <state key="normal" image="delete"/>
+                    </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Fl-sA-Pvg" customClass="RegularLabel" customModule="Talkative_Parents" customModuleProvider="target">
+                        <rect key="frame" x="57" y="11" width="205" height="21"/>
+                        <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="15"/>
+                        <color key="textColor" red="0.0" green="0.35686274509999999" blue="0.43137254899999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="fontSize">
+                                <real key="value" value="15"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dtw-ae-8RM">
+                        <rect key="frame" x="8" y="1" width="41" height="43"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="41" id="Ie5-ea-f6a"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="dtw-ae-8RM" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="-7" id="EFU-lS-adf"/>
+                    <constraint firstItem="jBJ-o7-sHC" firstAttribute="centerY" secondItem="y0C-gV-qQv" secondAttribute="centerY" id="EOa-BO-oJb"/>
+                    <constraint firstItem="jBJ-o7-sHC" firstAttribute="height" secondItem="y0C-gV-qQv" secondAttribute="height" id="H29-SN-91W"/>
+                    <constraint firstAttribute="trailing" secondItem="y0C-gV-qQv" secondAttribute="trailing" constant="10" id="KNp-mY-ciU"/>
+                    <constraint firstItem="dtw-ae-8RM" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="XjH-oa-3ge"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="0Fl-sA-Pvg" secondAttribute="bottom" constant="3.5" id="ZAG-Ci-Lwm"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="dtw-ae-8RM" secondAttribute="bottom" constant="-8.5" id="aZi-ZD-sFd"/>
+                    <constraint firstItem="jBJ-o7-sHC" firstAttribute="centerX" secondItem="y0C-gV-qQv" secondAttribute="centerX" id="brE-iE-NFl"/>
+                    <constraint firstItem="0Fl-sA-Pvg" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="3" id="iak-c2-zm8"/>
+                    <constraint firstItem="y0C-gV-qQv" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="io9-gq-Em6"/>
+                    <constraint firstItem="0Fl-sA-Pvg" firstAttribute="leading" secondItem="dtw-ae-8RM" secondAttribute="trailing" constant="8" id="keM-8P-2MH"/>
+                    <constraint firstItem="y0C-gV-qQv" firstAttribute="leading" secondItem="0Fl-sA-Pvg" secondAttribute="trailing" constant="8" id="nir-mb-LMC"/>
+                    <constraint firstItem="jBJ-o7-sHC" firstAttribute="width" secondItem="y0C-gV-qQv" secondAttribute="width" id="rnM-T3-4yw"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="thisImageWidthConstraint" destination="Ie5-ea-f6a" id="P7o-Rh-ay0"/>
+                <outlet property="thisUIAttachmentName" destination="0Fl-sA-Pvg" id="I0x-6X-9nk"/>
+                <outlet property="thisUIButton" destination="y0C-gV-qQv" id="sAY-A7-YgB"/>
+                <outlet property="thisUIImage" destination="dtw-ae-8RM" id="kvB-Ht-UYu"/>
+                <outlet property="thisUIProgressView" destination="jBJ-o7-sHC" id="pjg-9d-LfM"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="delete" width="48" height="48"/>
+    </resources>
+</document>

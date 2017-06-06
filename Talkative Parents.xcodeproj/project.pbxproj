@@ -47,6 +47,9 @@
 		183F93651EC9829300B11BEB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 183F93631EC9829300B11BEB /* LaunchScreen.storyboard */; };
 		183F93701EC9829400B11BEB /* Talkative_ParentsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183F936F1EC9829400B11BEB /* Talkative_ParentsTests.swift */; };
 		183F937B1EC9829400B11BEB /* Talkative_ParentsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183F937A1EC9829400B11BEB /* Talkative_ParentsUITests.swift */; };
+		185983B91EE52FC9008E6CEC /* ProgressCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185983B71EE52FC9008E6CEC /* ProgressCellTableViewCell.swift */; };
+		185983BA1EE52FC9008E6CEC /* ProgressCellTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 185983B81EE52FC9008E6CEC /* ProgressCellTableViewCell.xib */; };
+		185983BC1EE545D4008E6CEC /* ParentProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185983BB1EE545D4008E6CEC /* ParentProfile.swift */; };
 		1862EFFF1ECD7DDE0084F704 /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1862EFFE1ECD7DDE0084F704 /* Country.swift */; };
 		1862F0011ECD7F5D0084F704 /* LookUpServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1862F0001ECD7F5D0084F704 /* LookUpServices.swift */; };
 		1862F0071ECD87670084F704 /* SelectCountryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1862F0051ECD87670084F704 /* SelectCountryViewController.swift */; };
@@ -168,6 +171,9 @@
 		183F93761EC9829400B11BEB /* Talkative ParentsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Talkative ParentsUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		183F937A1EC9829400B11BEB /* Talkative_ParentsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Talkative_ParentsUITests.swift; sourceTree = "<group>"; };
 		183F937C1EC9829400B11BEB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		185983B71EE52FC9008E6CEC /* ProgressCellTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressCellTableViewCell.swift; sourceTree = "<group>"; };
+		185983B81EE52FC9008E6CEC /* ProgressCellTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProgressCellTableViewCell.xib; sourceTree = "<group>"; };
+		185983BB1EE545D4008E6CEC /* ParentProfile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParentProfile.swift; sourceTree = "<group>"; };
 		1862EFFE1ECD7DDE0084F704 /* Country.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
 		1862F0001ECD7F5D0084F704 /* LookUpServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LookUpServices.swift; sourceTree = "<group>"; };
 		1862F0051ECD87670084F704 /* SelectCountryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectCountryViewController.swift; sourceTree = "<group>"; };
@@ -478,6 +484,7 @@
 				18F58ECC1EE027CA0092B7C2 /* Attendance.swift */,
 				18F58ED71EE1931A0092B7C2 /* SoundingBoard.swift */,
 				18F58EE21EE29B660092B7C2 /* Category.swift */,
+				185983BB1EE545D4008E6CEC /* ParentProfile.swift */,
 			);
 			name = Modules;
 			sourceTree = "<group>";
@@ -577,6 +584,8 @@
 				18F58EE41EE2A5DC0092B7C2 /* categorySelectionPage */,
 				18F58EDD1EE281B90092B7C2 /* CreateSoundingBoardMessageViewController.swift */,
 				18F58EDE1EE281B90092B7C2 /* CreateSoundingBoardMessageViewController.xib */,
+				185983B71EE52FC9008E6CEC /* ProgressCellTableViewCell.swift */,
+				185983B81EE52FC9008E6CEC /* ProgressCellTableViewCell.xib */,
 			);
 			name = CreateSoundingBoardPage;
 			sourceTree = "<group>";
@@ -742,6 +751,7 @@
 				18379F0C1ED0603900F75C31 /* OpenSans-Semibold.ttf in Resources */,
 				183F93651EC9829300B11BEB /* LaunchScreen.storyboard in Resources */,
 				18F58EDC1EE196DF0092B7C2 /* SoundingBoardTableViewCell.xib in Resources */,
+				185983BA1EE52FC9008E6CEC /* ProgressCellTableViewCell.xib in Resources */,
 				1888294F1EDC614E00C51AC4 /* CalendarEventTableViewCell.xib in Resources */,
 				183F93621EC9829300B11BEB /* Assets.xcassets in Resources */,
 				187FAC2D1ED568BE00A9A15E /* DocumentViewerViewController.xib in Resources */,
@@ -948,6 +958,7 @@
 				187435ED1ED4545700150ACD /* Attachment.swift in Sources */,
 				18F58ED11EE02D710092B7C2 /* AttendanceViewController.swift in Sources */,
 				1888295C1EDDC08A00C51AC4 /* MoreTabTableViewCell.swift in Sources */,
+				185983BC1EE545D4008E6CEC /* ParentProfile.swift in Sources */,
 				18379F091ED05B7600F75C31 /* Basic.xcdatamodeld in Sources */,
 				188829491EDC30D700C51AC4 /* FireBaseHelper.swift in Sources */,
 				18379F0E1ED0731E00F75C31 /* Notification.swift in Sources */,
@@ -972,6 +983,7 @@
 				182EA8EA1ED32C0300589E8C /* NoticeBoardDetailHeaderTableViewCell.swift in Sources */,
 				187FAC2F1ED6B4F000A9A15E /* BetterSegmentedControl.swift in Sources */,
 				18F58EDF1EE281B90092B7C2 /* CreateSoundingBoardMessageViewController.swift in Sources */,
+				185983B91EE52FC9008E6CEC /* ProgressCellTableViewCell.swift in Sources */,
 				18F58ECD1EE027CA0092B7C2 /* Attendance.swift in Sources */,
 				188829461ED9C3C500C51AC4 /* CalendarViewController.swift in Sources */,
 				181E647E1EC9CBA2007E7C87 /* UIFont-Config.swift in Sources */,

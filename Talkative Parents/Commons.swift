@@ -95,6 +95,14 @@ class Commons {
         return bValue
     }
     
+    class func getCurrentDateToString() -> String {
+        let date = NSDate()
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+        let dateString = dateFormatter.string(from:date as Date)
+        return dateString
+    }
+    
     class func convertStringToDateFormat(pDate: String) -> String {
         let words = pDate.components(separatedBy: ".")
         let dateFormatter = DateFormatter()
@@ -504,6 +512,10 @@ class Commons {
                 // Do whatever you want with the image
             }
         }
+    }
+    
+    class func getUniqueStringId() -> String {
+        return ProcessInfo.processInfo.globallyUniqueString
     }
     
     

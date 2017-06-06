@@ -8,6 +8,15 @@
 
 import UIKit
 import Eureka
+import Async
+
+final class ProgressRow: Row<ProgressCellTableViewCell>, RowType {
+    required public init(tag: String?) {
+        super.init(tag: tag)
+        // We set the cellProvider to load the .xib corresponding to our cell
+        cellProvider = CellProvider<ProgressCellTableViewCell>(nibName: "ProgressCellTableViewCell")
+    }
+}
 
 final class CategorySelectionRow : SelectorRow<PushSelectorCell<Category1>, CategorySelectionViewController>, RowType {
     public required init(tag: String?) {
@@ -33,8 +42,14 @@ class CreateSoundingBoardMessageViewController: FormViewController, UIImagePicke
     
     let imagePicker = UIImagePickerController()
     
+    var thisSelectedAttachment : UIImage?
+    var thisFileName : String = ""
+    
+    let thisSoundingBoardMessage = SoundingBoard()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = "New Message"
 
         // Do any additional setup after loading the view.
         setUPForm()
@@ -44,6 +59,8 @@ class CreateSoundingBoardMessageViewController: FormViewController, UIImagePicke
         btn1.addTarget(self, action: #selector(self.attachFile), for: .touchUpInside)
         let item1 = UIBarButtonItem(customView: btn1)
         self.navigationItem.setRightBarButtonItems([item1], animated: true)
+        
+        imagePicker.delegate = self
 
     }
     
@@ -54,15 +71,38 @@ class CreateSoundingBoardMessageViewController: FormViewController, UIImagePicke
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         self.dismiss(animated: true, completion: nil)
+        
         if let image = info[UIImagePickerControllerOriginalImage] as? UIImage {
             print("got the image")
+            if let row = form.rowBy(tag: "ProgressRow") as? ProgressRow {
+                self.thisSelectedAttachment = image
+                self.thisFileName = Commons.getUniqueStringId()
+                row.cell.thisIsAttached = true
+                row.cell.thisUIAttachmentName.text =  "Attached"
+                row.cell.updateStatus()
+                row.cell.thisUIImage.image = image
+//                row.hidden = Condition.function(["ProgressRow"], { form in
+//                    return !row.cell.thisIsAttached
+//                })
+            }
+        }
+    }
+    
+    private func AttachAttachment(pFileName : String, pImage : UIImage) {
+        AppService.UploadFile(pFileName: pFileName, pImage: pImage, pIsProfile: false) { (pImageName, result) in
             
         }
     }
     
-    
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         self.dismiss(animated: true, completion: nil)
+        if let row = form.rowBy(tag: "ProgressRow") as? ProgressRow {
+            
+            row.cell.thisUIAttachmentName.text =  "No Attachment"
+            row.cell.thisIsAttached = false
+            row.cell.updateStatus()
+            
+        }
     }
     
     func getAttachmentImage() {
@@ -76,7 +116,7 @@ class CreateSoundingBoardMessageViewController: FormViewController, UIImagePicke
             if UIImagePickerController.isSourceTypeAvailable(.camera) {
                 self.imagePicker.allowsEditing = false
                 self.imagePicker.sourceType = UIImagePickerControllerSourceType.camera
-                self.imagePicker.cameraCaptureMode = .photo
+//                self.imagePicker.cameraCaptureMode = .photo
                 self.imagePicker.modalPresentationStyle = .fullScreen
                 self.present(self.imagePicker,animated: true,completion: nil)
             } else {
@@ -93,6 +133,13 @@ class CreateSoundingBoardMessageViewController: FormViewController, UIImagePicke
         })
         
         alert.addAction(UIAlertAction(title: "Cancel", style: UIAlertActionStyle.cancel) { (result : UIAlertAction) -> Void in
+            if let row = self.form.rowBy(tag: "ProgressRow") as? ProgressRow {
+                
+                row.cell.thisUIAttachmentName.text =  "No Attachment"
+                row.cell.thisIsAttached = false
+                row.cell.updateStatus()
+            }
+
         })
         
         self.present(alert, animated: true, completion: nil)
@@ -128,10 +175,12 @@ class CreateSoundingBoardMessageViewController: FormViewController, UIImagePicke
                 }.cellUpdate({ (cell, row) in
                     
                     if !row.isValid {
+//                        cell.titleLabel?.textColor = UIColor.red
                         
                     }else {
                         if let bCategory = row.value as? Category1 {
-                            
+                            self.thisSoundingBoardMessage.setCategoryName(pValue: bCategory.getName())
+                            self.thisSoundingBoardMessage.setCategoryKey(pValue: bCategory.getKey())
                         }
                     }
                     
@@ -154,7 +203,9 @@ class CreateSoundingBoardMessageViewController: FormViewController, UIImagePicke
                     if !row.isValid {
                         cell.titleLabel?.textColor = .red
                     }else {
-                        
+                        if let bValue = row.value {
+                            self.thisSoundingBoardMessage.setSubject(pValue: bValue)
+                        }
                         
                     }
                 }).cellSetup({ (cell, row) in
@@ -172,8 +223,11 @@ class CreateSoundingBoardMessageViewController: FormViewController, UIImagePicke
                     if !row.isValid {
                         print("max length reached")
                         cell.textView.textColor = UIColor.red
+                        cell.placeholderLabel?.textColor = UIColor.red
                     }else {
-                        
+                        if let bValue = row.value {
+                            self.thisSoundingBoardMessage.setDescription(pValue: bValue)
+                        }
                         cell.textView.textColor = Constants.sharedInstance.barColor
                     }
                     
@@ -183,6 +237,60 @@ class CreateSoundingBoardMessageViewController: FormViewController, UIImagePicke
                     cell.textView.textColor = Constants.sharedInstance.barColor
                     
                 }
+        
+            <<< ProgressRow() { row in
+                row.tag = "ProgressRow"
+                row.value?._isAttached = false
+                row.cell.height =  {100}
+//                row.hidden = Condition.function(["ProgressRow"], { form in
+//                    return !row.cell.thisIsAttached
+//                })
+                }.cellUpdate({ (cell, row) in
+                    print("on change called ")
+                    if cell.thisIsAttached {
+                        self.getAttachmentImage()
+                    } else {
+                        
+                    }
+                    if let bAttachment = row.value {
+                        if bAttachment._isAttached {
+                            print("attached")
+//                            self.getAttachmentImage()
+                        } else {
+                            print("not attached")
+                        }
+                    }
+                    
+                    
+                })
+        
+            <<< ButtonRow() { row in
+                row.title = "Send Message"
+//                row.cell.height =  {100}
+                row.cell.tintColor = UIColor.white
+                row.cell.backgroundColor = UIColor(red: 83/255, green: 186/255, blue: 209/255, alpha: 1.0)
+                }.onCellSelection({ (cell, row) in
+                    print("On button selection")
+                    let errors = self.form.validate()
+                    
+                    print("errors count \(errors.count)")
+                    if errors.count == 0 {
+                        FireBaseHelper.AddSoundingBoardMessage(pMessage: self.thisSoundingBoardMessage, pType: "private", callback: { (result) in
+                            if result {
+                                self.navigationController?.popViewController(animated: true)
+                            }
+                        })
+                    }
+                    
+                })
+    
+//        Async.main(after: 5.0) {
+//            if let progressrow = self.form.rowBy(tag: "ProgressRow") as? ProgressRow {
+//                progressrow.value?._isAttached = true
+//            }
+//        }
+        
+        
     
         
         

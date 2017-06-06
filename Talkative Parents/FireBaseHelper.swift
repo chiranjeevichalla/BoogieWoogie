@@ -9,6 +9,7 @@
 import Foundation
 import Firebase
 import ObjectMapper
+//import SwiftyJSON
 
 class FireBaseHelper {
     
@@ -134,8 +135,8 @@ class FireBaseHelper {
         
         Commons.showIndicator()
         var bRef : FIRDatabaseReference!
-        let bPath = "19107ff1-ea59-43c0-83a2-9962df79dfae/addCategories"
-//        let bPath = "\(Constants.sharedInstance._child.getSchoolId())/addCategories"
+//        let bPath = "19107ff1-ea59-43c0-83a2-9962df79dfae/addCategories"
+        let bPath = "\(Constants.sharedInstance._child.getSchoolId())/addCategories"
         bRef = FIRDatabase.database().reference(withPath: bPath)
         
         
@@ -179,6 +180,60 @@ class FireBaseHelper {
             callback1([], false)
             Commons.hideIndicator()
         }
+        
+        return bRef
+        
+    }
+    
+    class func AddSoundingBoardMessage(pMessage : SoundingBoard, pType : String, callback:@escaping (Bool) -> Void) {
+        
+        //pType is private or public
+        var bRef : FIRDatabaseReference!
+//        let bPath = "sb-2/\(pType)/S-19107ff1-ea59-43c0-83a2-9962df79dfae-d3aaa86a-4c61-4c60-91dd-9201faa71baa"
+      let bPath = "sb-2/\(pType)/\(Constants.sharedInstance._child.getSchoolToParentChannelId())"
+        bRef = FIRDatabase.database().reference(withPath: bPath)
+        pMessage.setDate(pValue: Commons.getCurrentDateToString())
+        
+//        bRef.removeAllObservers()
+
+        bRef.childByAutoId().setValue(pMessage.toJSON())
+        callback(true)
+
+    }
+    
+    class func GetSoundingBoard(pType : String, callback:@escaping (SoundingBoard,Bool) -> Void, callback1:@escaping ([SoundingBoard],Bool) -> Void) -> FIRDatabaseReference {
+        
+        
+        var bRef : FIRDatabaseReference!
+        let bPath = "sb-2/\(pType)/\(Constants.sharedInstance._child.getSchoolToParentChannelId())"
+        bRef = FIRDatabase.database().reference(withPath: bPath)
+        
+        //        if !IsConnectedToNetwork() {
+        //            Commons.hideIndicator()
+        //            Commons.showNoNetwork()
+        //
+        //            return bRef
+        //        }
+        
+        bRef.removeAllObservers()
+        
+        bRef.observe(.childAdded, with: { (snapshot) in
+            let postDict = snapshot.value as? [String : AnyObject] ?? [:]
+            if postDict != nil {
+                let bSoundingBoard = Mapper<SoundingBoard>().map(JSON: postDict)
+                if bSoundingBoard != nil {
+                    if callback != nil {
+                        callback(bSoundingBoard!, true)
+                    } else {
+//                        bRef.removeAllObservers()
+                    }
+                }
+                
+            }
+            //            let value = snapshot.value as? NSDictionary
+            //            let username = value?["username"] as? String ?? ""
+            
+        })
         
         return bRef
         

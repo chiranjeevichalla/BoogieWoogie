@@ -2,7 +2,7 @@
 //  File.swift
 //  Talkative Parents
 //
-//  Created by Basaprivate varaj Kalaghatagi on 02/06/17.
+//  Created by Basavaraj Kalaghatagi on 02/06/17.
 //  Copyright © 2017 SGS. All rights reserved.
 //
 
@@ -58,16 +58,48 @@ class SoundingBoard : Mappable {
         return _subject ?? ""
     }
     
+    func setSubject(pValue : String) {
+        _subject = pValue
+    }
+    
     func getCategoryName() -> String {
         return _categoryName ?? ""
+    }
+    
+    func setCategoryName(pValue : String) {
+        _categoryName = pValue
+    }
+    
+    func getCategoryKey() -> String {
+        return _categoryKey ?? ""
+    }
+    
+    func setCategoryKey(pValue : String) {
+        _categoryKey = pValue
+    }
+
+    func setParentName(pValue : String) {
+        _parentName = pValue
+    }
+    
+    func setChildName(pValue : String) {
+        _childName = pValue
     }
     
     func getDate() -> String {
         return _createdDate ?? ""
     }
     
+    func setDate(pValue : String) {
+        _createdDate = pValue
+    }
+    
     func getDescription() -> String {
         return _description ?? ""
+    }
+    
+    func setDescription(pValue : String) {
+        _description = pValue
     }
     
     func getCommentsCount() -> Int {
@@ -80,6 +112,10 @@ class SoundingBoard : Mappable {
     
     func getAttachmentCount() -> Int {
         return _attachmentCount
+    }
+    
+    func setAttachmentCount(pValue : Int) {
+        _attachmentCount = pValue
     }
     
 }
