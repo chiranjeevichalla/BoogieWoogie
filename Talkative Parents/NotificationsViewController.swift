@@ -25,8 +25,8 @@ class NotificationsViewController: UIViewController, UITableViewDelegate, UITabl
     @IBOutlet weak var thisUISegmentView: UIView!
     @IBOutlet weak var thisUINotificationsTV: UITableView!
     
-    private var thisNotifications : [Notification] = []
-    private var thisAdminNotifications : [Notification] = []
+    private var thisNotifications : [TPNotification] = []
+    private var thisAdminNotifications : [TPNotification] = []
     //0-loading, 1-loaded, 2-error
      var isSchoolNotificationsLoaded = 0
      var isAdminNotificationsLoaded = 0
@@ -99,7 +99,7 @@ class NotificationsViewController: UIViewController, UITableViewDelegate, UITabl
         thisUISegmentController.titles = ["School", "TP Admin"]
     }
     
-    fileprivate func getNotificationByType(pRow : Int) -> Notification {
+    fileprivate func getNotificationByType(pRow : Int) -> TPNotification {
         if thisUISegmentController.index == 0 {
             return self.thisNotifications[pRow]
         } else {
@@ -157,7 +157,7 @@ class NotificationsViewController: UIViewController, UITableViewDelegate, UITabl
         gotoNoticeBoardDetailPage(pNotification: bNotification)
     }
     
-    fileprivate func gotoNoticeBoardDetailPage(pNotification : Notification) {
+    fileprivate func gotoNoticeBoardDetailPage(pNotification : TPNotification) {
         var pVC : NotificeBoardDetailViewController!
         pVC = NotificeBoardDetailViewController(nibName: "NotificeBoardDetailViewController", bundle: nil)
         pVC.thisNotification = pNotification

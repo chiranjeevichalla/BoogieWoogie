@@ -14,7 +14,7 @@ import SwiftyJSON
 
 class AppService {
     
-    class func GetSchoolNotifications(pSchoolId : String, pPageNumber: Int, callback:@escaping ([Notification],Bool) -> Void) -> Void {
+    class func GetSchoolNotifications(pSchoolId : String, pPageNumber: Int, callback:@escaping ([TPNotification],Bool) -> Void) -> Void {
         
         Commons.showIndicator()
         
@@ -56,11 +56,11 @@ class AppService {
                         print("school notifications count or length \(json.count)")
                         
                         
-                         var bNotifications : [Notification] = []
+                         var bNotifications : [TPNotification] = []
                          for  i in (0..<json.count)
                          {
                              let bContent = json[i].rawString()
-                             if let bNotification = Notification(JSONString: bContent!) {
+                             if let bNotification = TPNotification(JSONString: bContent!) {
                                 bNotification._messageType = 2
                              bNotifications.append(bNotification)
                          }
@@ -82,7 +82,7 @@ class AppService {
         
     }
     
-    class func GetAdminNotifications(pSchoolId : String, pPageNumber: Int, callback:@escaping ([Notification],Bool) -> Void) -> Void {
+    class func GetAdminNotifications(pSchoolId : String, pPageNumber: Int, callback:@escaping ([TPNotification],Bool) -> Void) -> Void {
         
         Commons.showIndicator()
         
@@ -124,11 +124,11 @@ class AppService {
                         print("count or length \(json.count)")
                         
                         
-                        var bNotifications : [Notification] = []
+                        var bNotifications : [TPNotification] = []
                         for  i in (0..<json.count)
                         {
                             let bContent = json[i].rawString()
-                            if let bNotification = Notification(JSONString: bContent!) {
+                            if let bNotification = TPNotification(JSONString: bContent!) {
                                 bNotification._messageType = 1
                                 bNotifications.append(bNotification)
                             }

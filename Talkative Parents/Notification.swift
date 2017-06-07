@@ -15,7 +15,7 @@ import ObjectMapper
 
 
 
-class Notification : Mappable {
+class TPNotification : Mappable {
     
     
     var _subject : String?

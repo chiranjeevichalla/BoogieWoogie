@@ -19,7 +19,7 @@ class NotificeBoardDetailViewController: UIViewController, UITableViewDelegate, 
     
     @IBOutlet weak var thisUINoticeBoardTV: UITableView!
     
-    var thisNotification : Notification!
+    var thisNotification : TPNotification!
     
     var thisNotificationDetail : NotificationDetail!
     

@@ -50,6 +50,9 @@
 		185983B91EE52FC9008E6CEC /* ProgressCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185983B71EE52FC9008E6CEC /* ProgressCellTableViewCell.swift */; };
 		185983BA1EE52FC9008E6CEC /* ProgressCellTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 185983B81EE52FC9008E6CEC /* ProgressCellTableViewCell.xib */; };
 		185983BC1EE545D4008E6CEC /* ParentProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185983BB1EE545D4008E6CEC /* ParentProfile.swift */; };
+		185983C01EE81410008E6CEC /* SoundingBoardDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185983BE1EE81410008E6CEC /* SoundingBoardDetailViewController.swift */; };
+		185983C11EE81410008E6CEC /* SoundingBoardDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 185983BF1EE81410008E6CEC /* SoundingBoardDetailViewController.xib */; };
+		185983C31EE81F89008E6CEC /* GrowingTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185983C21EE81F89008E6CEC /* GrowingTextView.swift */; };
 		1862EFFF1ECD7DDE0084F704 /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1862EFFE1ECD7DDE0084F704 /* Country.swift */; };
 		1862F0011ECD7F5D0084F704 /* LookUpServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1862F0001ECD7F5D0084F704 /* LookUpServices.swift */; };
 		1862F0071ECD87670084F704 /* SelectCountryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1862F0051ECD87670084F704 /* SelectCountryViewController.swift */; };
@@ -174,6 +177,9 @@
 		185983B71EE52FC9008E6CEC /* ProgressCellTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressCellTableViewCell.swift; sourceTree = "<group>"; };
 		185983B81EE52FC9008E6CEC /* ProgressCellTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProgressCellTableViewCell.xib; sourceTree = "<group>"; };
 		185983BB1EE545D4008E6CEC /* ParentProfile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParentProfile.swift; sourceTree = "<group>"; };
+		185983BE1EE81410008E6CEC /* SoundingBoardDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoundingBoardDetailViewController.swift; sourceTree = "<group>"; };
+		185983BF1EE81410008E6CEC /* SoundingBoardDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SoundingBoardDetailViewController.xib; sourceTree = "<group>"; };
+		185983C21EE81F89008E6CEC /* GrowingTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GrowingTextView.swift; sourceTree = "<group>"; };
 		1862EFFE1ECD7DDE0084F704 /* Country.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
 		1862F0001ECD7F5D0084F704 /* LookUpServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LookUpServices.swift; sourceTree = "<group>"; };
 		1862F0051ECD87670084F704 /* SelectCountryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectCountryViewController.swift; sourceTree = "<group>"; };
@@ -281,6 +287,7 @@
 		181E64741EC9CA84007E7C87 /* COMMONS */ = {
 			isa = PBXGroup;
 			children = (
+				185983C21EE81F89008E6CEC /* GrowingTextView.swift */,
 				187FAC2E1ED6B4F000A9A15E /* BetterSegmentedControl.swift */,
 				181E64811ECAD7F2007E7C87 /* ProgressHUD.swift */,
 				181E647D1EC9CBA2007E7C87 /* UIFont-Config.swift */,
@@ -302,6 +309,7 @@
 				188829441ED9C3B300C51AC4 /* CalendarPage */,
 				187FAC291ED5689200A9A15E /* DocumentViewerPage */,
 				182EA8E31ED31FBB00589E8C /* NotificationDetailPage */,
+				185983BD1EE813E9008E6CEC /* SoundingBoardDetailPage */,
 				18F58EE11EE281C30092B7C2 /* CreateSoundingBoardPage */,
 				18379EF81ED056FA00F75C31 /* SoundingBoardPage */,
 				18379EF71ED056EF00F75C31 /* NoticeboardPage */,
@@ -469,6 +477,15 @@
 				183F937C1EC9829400B11BEB /* Info.plist */,
 			);
 			path = "Talkative ParentsUITests";
+			sourceTree = "<group>";
+		};
+		185983BD1EE813E9008E6CEC /* SoundingBoardDetailPage */ = {
+			isa = PBXGroup;
+			children = (
+				185983BE1EE81410008E6CEC /* SoundingBoardDetailViewController.swift */,
+				185983BF1EE81410008E6CEC /* SoundingBoardDetailViewController.xib */,
+			);
+			name = SoundingBoardDetailPage;
 			sourceTree = "<group>";
 		};
 		1862EFFD1ECD7DA30084F704 /* Modules */ = {
@@ -763,6 +780,7 @@
 				181E64981ECC65FC007E7C87 /* OTPVerificationViewController.xib in Resources */,
 				183F93601EC9829300B11BEB /* Main.storyboard in Resources */,
 				1862F01B1ECDD89E0084F704 /* DashboardCollectionViewCell.xib in Resources */,
+				185983C11EE81410008E6CEC /* SoundingBoardDetailViewController.xib in Resources */,
 				18F58EE01EE281B90092B7C2 /* CreateSoundingBoardMessageViewController.xib in Resources */,
 				18F58ED21EE02D710092B7C2 /* AttendanceViewController.xib in Resources */,
 				18F691E61ED8701B00FA80AC /* GoogleService-Info.plist in Resources */,
@@ -946,6 +964,7 @@
 				18B30B001EDEA3D500D5B9F7 /* SocialSharingViewController.swift in Sources */,
 				181ED2F21ED012EB00759FA3 /* AppService.swift in Sources */,
 				181E648B1ECB4763007E7C87 /* CustomImagePageControl.swift in Sources */,
+				185983C31EE81F89008E6CEC /* GrowingTextView.swift in Sources */,
 				181E64821ECAD7F2007E7C87 /* ProgressHUD.swift in Sources */,
 				188829531EDD5E3D00C51AC4 /* CalendarDetailViewController.swift in Sources */,
 				181E64861ECB412D007E7C87 /* HelpScreenViewController.swift in Sources */,
@@ -974,6 +993,7 @@
 				18F58ED81EE1931A0092B7C2 /* SoundingBoard.swift in Sources */,
 				181E64761EC9CB70007E7C87 /* UserDefaultsConstants.swift in Sources */,
 				1888294E1EDC614E00C51AC4 /* CalendarEventTableViewCell.swift in Sources */,
+				185983C01EE81410008E6CEC /* SoundingBoardDetailViewController.swift in Sources */,
 				18F58EE31EE29B660092B7C2 /* Category.swift in Sources */,
 				182EA8F11ED330BC00589E8C /* NotificationDetail.swift in Sources */,
 				188829571EDDBEA400C51AC4 /* MoreTabViewController.swift in Sources */,
