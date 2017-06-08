@@ -189,8 +189,8 @@ class FireBaseHelper {
         
         //pType is private or public
         var bRef : FIRDatabaseReference!
-//        let bPath = "sb-2/\(pType)/S-19107ff1-ea59-43c0-83a2-9962df79dfae-d3aaa86a-4c61-4c60-91dd-9201faa71baa"
-      let bPath = "sb-2/\(pType)/\(Constants.sharedInstance._child.getSchoolToParentChannelId())"
+//        let bPath = "sb-2/\(pType)/S-19107ff1-ea59-43c0-83a2-9962df79dfae-d3aaa86a-4c61-4c60-91dd-9201faa71baa/chat"
+      let bPath = "sb-2/\(pType)/\(Constants.sharedInstance._child.getSchoolToParentChannelId())/chat"
         bRef = FIRDatabase.database().reference(withPath: bPath)
         pMessage.setDate(pValue: Commons.getCurrentDateToString())
         
@@ -201,11 +201,32 @@ class FireBaseHelper {
 
     }
     
+    class func AddCommentToSoundingBoardMessage(pComment : Comment, pType : String, pSoundingBoard : SoundingBoard, callback:@escaping (Bool) -> Void) {
+        Commons.showIndicator()
+        //pType is private or public
+        var bRef : FIRDatabaseReference!
+//        -KlxJRcspKKlyL0830Za
+        //        let bPath = "sb-2/\(pType)/S-19107ff1-ea59-43c0-83a2-9962df79dfae-d3aaa86a-4c61-4c60-91dd-9201faa71baa/comments/-KlxJRcspKKlyL0830Za"
+        let bPath = "sb-2/\(pType)/\(Constants.sharedInstance._child.getSchoolToParentChannelId())/comments/\(pSoundingBoard.getFirebaseKey())"
+        bRef = FIRDatabase.database().reference(withPath: bPath)
+        pComment.setPostedDate(pValue: Commons.getCurrentDateToString())
+        pComment.setPostedBy(pValue: Constants.sharedInstance._parent.getName())
+        pComment.setPostedById(pValue: Constants.sharedInstance._parent.getId())
+        //        bRef.removeAllObservers()
+        
+        bRef.childByAutoId().setValue(pComment.toJSON())
+        callback(true)
+        Commons.hideIndicator()
+        
+    }
+    
+    
+    
     class func GetSoundingBoard(pType : String, callback:@escaping (SoundingBoard,Bool) -> Void, callback1:@escaping ([SoundingBoard],Bool) -> Void) -> FIRDatabaseReference {
         
         
         var bRef : FIRDatabaseReference!
-        let bPath = "sb-2/\(pType)/\(Constants.sharedInstance._child.getSchoolToParentChannelId())"
+        let bPath = "sb-2/\(pType)/\(Constants.sharedInstance._child.getSchoolToParentChannelId())/chat"
         bRef = FIRDatabase.database().reference(withPath: bPath)
         
         //        if !IsConnectedToNetwork() {
@@ -222,6 +243,7 @@ class FireBaseHelper {
             if postDict != nil {
                 let bSoundingBoard = Mapper<SoundingBoard>().map(JSON: postDict)
                 if bSoundingBoard != nil {
+                    bSoundingBoard?.setFirebaseKey(pKey: snapshot.key)
                     if callback != nil {
                         callback(bSoundingBoard!, true)
                     } else {
@@ -230,8 +252,44 @@ class FireBaseHelper {
                 }
                 
             }
-            //            let value = snapshot.value as? NSDictionary
-            //            let username = value?["username"] as? String ?? ""
+            
+        })
+        
+        return bRef
+        
+    }
+    
+    
+    class func GetSoundingBoardComments(pType : String, pSoundingBoard : SoundingBoard, callback:@escaping (Comment,Bool) -> Void, callback1:@escaping ([Comment],Bool) -> Void) -> FIRDatabaseReference {
+        
+        
+        var bRef : FIRDatabaseReference!
+        let bPath = "sb-2/\(pType)/\(Constants.sharedInstance._child.getSchoolToParentChannelId())/comments/\(pSoundingBoard.getFirebaseKey())"
+        bRef = FIRDatabase.database().reference(withPath: bPath)
+        
+        //        if !IsConnectedToNetwork() {
+        //            Commons.hideIndicator()
+        //            Commons.showNoNetwork()
+        //
+        //            return bRef
+        //        }
+        
+        bRef.removeAllObservers()
+        
+        bRef.observe(.childAdded, with: { (snapshot) in
+            let postDict = snapshot.value as? [String : AnyObject] ?? [:]
+            if postDict != nil {
+                let bSoundingBoardComment = Mapper<Comment>().map(JSON: postDict)
+                if bSoundingBoardComment != nil {
+                    bSoundingBoardComment?.setFirebaseKey(pKey: snapshot.key)
+                    if callback != nil {
+                        callback(bSoundingBoardComment!, true)
+                    } else {
+                        //                        bRef.removeAllObservers()
+                    }
+                }
+                
+            }
             
         })
         

@@ -89,6 +89,13 @@
 		188829591EDDBF1E00C51AC4 /* OtherObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188829581EDDBF1E00C51AC4 /* OtherObject.swift */; };
 		1888295C1EDDC08A00C51AC4 /* MoreTabTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1888295A1EDDC08A00C51AC4 /* MoreTabTableViewCell.swift */; };
 		1888295D1EDDC08A00C51AC4 /* MoreTabTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1888295B1EDDC08A00C51AC4 /* MoreTabTableViewCell.xib */; };
+		189F90361EE923F3000C4802 /* SBDHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189F90341EE923F3000C4802 /* SBDHeaderTableViewCell.swift */; };
+		189F90371EE923F3000C4802 /* SBDHeaderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 189F90351EE923F3000C4802 /* SBDHeaderTableViewCell.xib */; };
+		189F903A1EE9250D000C4802 /* SBDDescriptionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189F90381EE9250D000C4802 /* SBDDescriptionTableViewCell.swift */; };
+		189F903B1EE9250D000C4802 /* SBDDescriptionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 189F90391EE9250D000C4802 /* SBDDescriptionTableViewCell.xib */; };
+		189F903E1EE925A6000C4802 /* SDBCommentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189F903C1EE925A6000C4802 /* SDBCommentTableViewCell.swift */; };
+		189F903F1EE925A6000C4802 /* SDBCommentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 189F903D1EE925A6000C4802 /* SDBCommentTableViewCell.xib */; };
+		189F90411EE97098000C4802 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189F90401EE97098000C4802 /* Comment.swift */; };
 		18B30B001EDEA3D500D5B9F7 /* SocialSharingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B30AFE1EDEA3D500D5B9F7 /* SocialSharingViewController.swift */; };
 		18B30B011EDEA3D500D5B9F7 /* SocialSharingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18B30AFF1EDEA3D500D5B9F7 /* SocialSharingViewController.xib */; };
 		18F58ECD1EE027CA0092B7C2 /* Attendance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F58ECC1EE027CA0092B7C2 /* Attendance.swift */; };
@@ -217,6 +224,13 @@
 		188829581EDDBF1E00C51AC4 /* OtherObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OtherObject.swift; sourceTree = "<group>"; };
 		1888295A1EDDC08A00C51AC4 /* MoreTabTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoreTabTableViewCell.swift; sourceTree = "<group>"; };
 		1888295B1EDDC08A00C51AC4 /* MoreTabTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MoreTabTableViewCell.xib; sourceTree = "<group>"; };
+		189F90341EE923F3000C4802 /* SBDHeaderTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SBDHeaderTableViewCell.swift; sourceTree = "<group>"; };
+		189F90351EE923F3000C4802 /* SBDHeaderTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SBDHeaderTableViewCell.xib; sourceTree = "<group>"; };
+		189F90381EE9250D000C4802 /* SBDDescriptionTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SBDDescriptionTableViewCell.swift; sourceTree = "<group>"; };
+		189F90391EE9250D000C4802 /* SBDDescriptionTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SBDDescriptionTableViewCell.xib; sourceTree = "<group>"; };
+		189F903C1EE925A6000C4802 /* SDBCommentTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDBCommentTableViewCell.swift; sourceTree = "<group>"; };
+		189F903D1EE925A6000C4802 /* SDBCommentTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SDBCommentTableViewCell.xib; sourceTree = "<group>"; };
+		189F90401EE97098000C4802 /* Comment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
 		18B30AFE1EDEA3D500D5B9F7 /* SocialSharingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocialSharingViewController.swift; sourceTree = "<group>"; };
 		18B30AFF1EDEA3D500D5B9F7 /* SocialSharingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SocialSharingViewController.xib; sourceTree = "<group>"; };
 		18F58ECC1EE027CA0092B7C2 /* Attendance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Attendance.swift; sourceTree = "<group>"; };
@@ -482,6 +496,7 @@
 		185983BD1EE813E9008E6CEC /* SoundingBoardDetailPage */ = {
 			isa = PBXGroup;
 			children = (
+				189F90331EE923DA000C4802 /* cells */,
 				185983BE1EE81410008E6CEC /* SoundingBoardDetailViewController.swift */,
 				185983BF1EE81410008E6CEC /* SoundingBoardDetailViewController.xib */,
 			);
@@ -502,6 +517,7 @@
 				18F58ED71EE1931A0092B7C2 /* SoundingBoard.swift */,
 				18F58EE21EE29B660092B7C2 /* Category.swift */,
 				185983BB1EE545D4008E6CEC /* ParentProfile.swift */,
+				189F90401EE97098000C4802 /* Comment.swift */,
 			);
 			name = Modules;
 			sourceTree = "<group>";
@@ -573,6 +589,19 @@
 				1888295B1EDDC08A00C51AC4 /* MoreTabTableViewCell.xib */,
 			);
 			name = MoreTabPage;
+			sourceTree = "<group>";
+		};
+		189F90331EE923DA000C4802 /* cells */ = {
+			isa = PBXGroup;
+			children = (
+				189F90341EE923F3000C4802 /* SBDHeaderTableViewCell.swift */,
+				189F90351EE923F3000C4802 /* SBDHeaderTableViewCell.xib */,
+				189F90381EE9250D000C4802 /* SBDDescriptionTableViewCell.swift */,
+				189F90391EE9250D000C4802 /* SBDDescriptionTableViewCell.xib */,
+				189F903C1EE925A6000C4802 /* SDBCommentTableViewCell.swift */,
+				189F903D1EE925A6000C4802 /* SDBCommentTableViewCell.xib */,
+			);
+			name = cells;
 			sourceTree = "<group>";
 		};
 		18B30AFD1EDEA3BB00D5B9F7 /* SocialSharingPage */ = {
@@ -761,6 +790,7 @@
 				18379F0B1ED0603700F75C31 /* OpenSans-Regular.ttf in Resources */,
 				18B30B011EDEA3D500D5B9F7 /* SocialSharingViewController.xib in Resources */,
 				182EA8EB1ED32C0300589E8C /* NoticeBoardDetailHeaderTableViewCell.xib in Resources */,
+				189F90371EE923F3000C4802 /* SBDHeaderTableViewCell.xib in Resources */,
 				182EA8E71ED31FDD00589E8C /* NotificeBoardDetailViewController.xib in Resources */,
 				187435EB1ED43E4B00150ACD /* NWebViewTableViewCell.xib in Resources */,
 				18379F0A1ED0603500F75C31 /* OpenSans-Bold.ttf in Resources */,
@@ -786,7 +816,9 @@
 				18F691E61ED8701B00FA80AC /* GoogleService-Info.plist in Resources */,
 				187435F11ED45F3400150ACD /* NoticeBoardAttachmentTableViewCell.xib in Resources */,
 				182EA8EF1ED32EAE00589E8C /* NoticeBoardWebViewTableViewCell.xib in Resources */,
+				189F903B1EE9250D000C4802 /* SBDDescriptionTableViewCell.xib in Resources */,
 				18379EFC1ED0578700F75C31 /* NotificationTableViewCell.xib in Resources */,
+				189F903F1EE925A6000C4802 /* SDBCommentTableViewCell.xib in Resources */,
 				1888295D1EDDC08A00C51AC4 /* MoreTabTableViewCell.xib in Resources */,
 				188829541EDD5E3D00C51AC4 /* CalendarDetailViewController.xib in Resources */,
 			);
@@ -968,6 +1000,8 @@
 				181E64821ECAD7F2007E7C87 /* ProgressHUD.swift in Sources */,
 				188829531EDD5E3D00C51AC4 /* CalendarDetailViewController.swift in Sources */,
 				181E64861ECB412D007E7C87 /* HelpScreenViewController.swift in Sources */,
+				189F90361EE923F3000C4802 /* SBDHeaderTableViewCell.swift in Sources */,
+				189F903A1EE9250D000C4802 /* SBDDescriptionTableViewCell.swift in Sources */,
 				181E64971ECC65FC007E7C87 /* OTPVerificationViewController.swift in Sources */,
 				1862F00E1ECD8E360084F704 /* LoginService.swift in Sources */,
 				181E647A1EC9CB88007E7C87 /* CommonService.swift in Sources */,
@@ -988,10 +1022,12 @@
 				18379F031ED0599900F75C31 /* BoldLabel.swift in Sources */,
 				187435EA1ED43E4B00150ACD /* NWebViewTableViewCell.swift in Sources */,
 				181E647C1EC9CB92007E7C87 /* Constants.swift in Sources */,
+				189F90411EE97098000C4802 /* Comment.swift in Sources */,
 				187FAC2C1ED568BE00A9A15E /* DocumentViewerViewController.swift in Sources */,
 				188829591EDDBF1E00C51AC4 /* OtherObject.swift in Sources */,
 				18F58ED81EE1931A0092B7C2 /* SoundingBoard.swift in Sources */,
 				181E64761EC9CB70007E7C87 /* UserDefaultsConstants.swift in Sources */,
+				189F903E1EE925A6000C4802 /* SDBCommentTableViewCell.swift in Sources */,
 				1888294E1EDC614E00C51AC4 /* CalendarEventTableViewCell.swift in Sources */,
 				185983C01EE81410008E6CEC /* SoundingBoardDetailViewController.swift in Sources */,
 				18F58EE31EE29B660092B7C2 /* Category.swift in Sources */,

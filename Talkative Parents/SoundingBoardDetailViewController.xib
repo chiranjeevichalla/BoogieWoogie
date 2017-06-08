@@ -13,8 +13,14 @@
             <connections>
                 <outlet property="bottomConstraint" destination="W74-yb-h7h" id="2O8-xw-5Es"/>
                 <outlet property="inputToolbar" destination="xPC-aW-uZ0" id="swn-ND-TqJ"/>
+                <outlet property="navigationBar" destination="e0c-mc-AdX" id="y7v-PF-3Wf"/>
                 <outlet property="textView" destination="a0V-Px-0r8" id="X4P-BU-plC"/>
                 <outlet property="thisUIAttachBtn" destination="jGR-1E-qZT" id="Bl4-du-XgM"/>
+                <outlet property="thisUIAttachedConstraint" destination="YsR-WT-rHv" id="joB-Za-VNf"/>
+                <outlet property="thisUIAttachedImage" destination="hym-bm-zUk" id="Via-t5-o65"/>
+                <outlet property="thisUIAttachedImageLeading" destination="lha-Ba-ZEC" id="iJf-Ws-9v8"/>
+                <outlet property="thisUISubmitBtn" destination="6YV-D0-81w" id="iid-08-ntJ"/>
+                <outlet property="thisUITV" destination="O43-cK-Ygn" id="L7H-kc-4xh"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -27,7 +33,7 @@
                     <rect key="frame" x="0.0" y="618" width="375" height="49"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jGR-1E-qZT">
-                            <rect key="frame" x="9" y="9" width="32" height="32"/>
+                            <rect key="frame" x="45" y="9" width="32" height="32"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="32" id="ft1-2O-8fn"/>
                                 <constraint firstAttribute="width" constant="32" id="yaM-JF-fmc"/>
@@ -38,7 +44,7 @@
                             </connections>
                         </button>
                         <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="a0V-Px-0r8" customClass="GrowingTextView" customModule="Talkative_Parents" customModuleProvider="target">
-                            <rect key="frame" x="50" y="8" width="264" height="33"/>
+                            <rect key="frame" x="86" y="8" width="228" height="33"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="33" id="xFC-3H-AFX"/>
@@ -59,39 +65,84 @@
                             </connections>
                         </textView>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6YV-D0-81w">
-                            <rect key="frame" x="324" y="7.5" width="35" height="35"/>
+                            <rect key="frame" x="324" y="7" width="35" height="35"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="35" id="KJF-q5-VGn"/>
                                 <constraint firstAttribute="height" constant="35" id="Qjl-1u-xfc"/>
                             </constraints>
-                            <state key="normal" title="Button" image="textFieldSubmitBtn"/>
+                            <state key="normal" title="Button" image="textFieldSubmitBtn1"/>
+                            <connections>
+                                <action selector="onTapOfSubmitBtn:" destination="-1" eventType="touchUpInside" id="EVB-Uv-Os5"/>
+                            </connections>
                         </button>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hym-bm-zUk">
+                            <rect key="frame" x="10" y="9" width="30" height="30"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="30" id="YsR-WT-rHv"/>
+                                <constraint firstAttribute="height" constant="30" id="wR2-NN-IAS"/>
+                            </constraints>
+                        </imageView>
                     </subviews>
                     <color key="backgroundColor" white="0.92000000000000004" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
                         <constraint firstItem="6YV-D0-81w" firstAttribute="leading" secondItem="a0V-Px-0r8" secondAttribute="trailing" constant="10" id="Hfy-gk-PcS"/>
                         <constraint firstItem="a0V-Px-0r8" firstAttribute="top" secondItem="xPC-aW-uZ0" secondAttribute="top" constant="8" id="JSQ-jl-YJJ"/>
                         <constraint firstItem="6YV-D0-81w" firstAttribute="centerY" secondItem="xPC-aW-uZ0" secondAttribute="centerY" id="KLI-nX-8a1"/>
+                        <constraint firstItem="hym-bm-zUk" firstAttribute="centerY" secondItem="xPC-aW-uZ0" secondAttribute="centerY" id="KQ6-Gg-2RP"/>
                         <constraint firstItem="jGR-1E-qZT" firstAttribute="centerY" secondItem="xPC-aW-uZ0" secondAttribute="centerY" id="VJ5-9K-JZ9"/>
                         <constraint firstItem="a0V-Px-0r8" firstAttribute="leading" secondItem="jGR-1E-qZT" secondAttribute="trailing" constant="9" id="ad3-Ps-583"/>
                         <constraint firstItem="jGR-1E-qZT" firstAttribute="top" secondItem="xPC-aW-uZ0" secondAttribute="top" constant="9" id="awu-uU-r3F"/>
                         <constraint firstAttribute="bottom" secondItem="a0V-Px-0r8" secondAttribute="bottom" constant="8" id="e1B-b2-ahU"/>
                         <constraint firstAttribute="trailing" secondItem="6YV-D0-81w" secondAttribute="trailing" constant="16" id="e6s-Y3-faC"/>
-                        <constraint firstItem="jGR-1E-qZT" firstAttribute="leading" secondItem="xPC-aW-uZ0" secondAttribute="leading" constant="9" id="noL-P9-iUj"/>
+                        <constraint firstItem="hym-bm-zUk" firstAttribute="leading" secondItem="xPC-aW-uZ0" secondAttribute="leading" constant="10" id="lha-Ba-ZEC"/>
+                        <constraint firstItem="jGR-1E-qZT" firstAttribute="leading" secondItem="hym-bm-zUk" secondAttribute="trailing" constant="5" id="wPJ-cU-snq"/>
                     </constraints>
                 </view>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="O43-cK-Ygn">
+                    <rect key="frame" x="0.0" y="64" width="375" height="546"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="Ib5-Gh-VEg"/>
+                        <outlet property="delegate" destination="-1" id="oc0-9k-PvL"/>
+                    </connections>
+                </tableView>
+                <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e0c-mc-AdX">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="64"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="64" id="bN6-Wk-d6g"/>
+                    </constraints>
+                    <color key="barTintColor" red="0.0078431372550000003" green="0.58823529409999997" blue="0.60392156860000001" alpha="1" colorSpace="calibratedRGB"/>
+                    <items>
+                        <navigationItem title="Sounding Board Detail" id="K9E-QR-vpt">
+                            <barButtonItem key="leftBarButtonItem" image="navigationBarBackBtn" id="DHm-dn-v8i">
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <action selector="onTapOfBackBtn:" destination="-1" id="TTR-5s-TkK"/>
+                                </connections>
+                            </barButtonItem>
+                        </navigationItem>
+                    </items>
+                </navigationBar>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
+                <constraint firstItem="e0c-mc-AdX" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="3c2-4g-1Mt"/>
+                <constraint firstAttribute="trailing" secondItem="e0c-mc-AdX" secondAttribute="trailing" id="MR2-Ah-k4p"/>
                 <constraint firstAttribute="trailing" secondItem="xPC-aW-uZ0" secondAttribute="trailing" id="Oce-KK-isG"/>
                 <constraint firstAttribute="bottom" secondItem="xPC-aW-uZ0" secondAttribute="bottom" id="W74-yb-h7h"/>
+                <constraint firstAttribute="trailing" secondItem="O43-cK-Ygn" secondAttribute="trailing" id="Y2A-jS-eDY"/>
+                <constraint firstItem="e0c-mc-AdX" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Z6s-Qy-xRe"/>
+                <constraint firstItem="O43-cK-Ygn" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="hXM-GS-HLw"/>
                 <constraint firstItem="xPC-aW-uZ0" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="iUc-Kx-iej"/>
+                <constraint firstItem="xPC-aW-uZ0" firstAttribute="top" secondItem="O43-cK-Ygn" secondAttribute="bottom" constant="8" id="sgu-6a-9fK"/>
+                <constraint firstItem="O43-cK-Ygn" firstAttribute="top" secondItem="e0c-mc-AdX" secondAttribute="bottom" id="wYi-1c-rxO"/>
             </constraints>
             <point key="canvasLocation" x="54.5" y="53.5"/>
         </view>
     </objects>
     <resources>
+        <image name="navigationBarBackBtn" width="25" height="25"/>
         <image name="plusBtn" width="38" height="38"/>
-        <image name="textFieldSubmitBtn" width="50" height="50"/>
+        <image name="textFieldSubmitBtn1" width="50" height="50"/>
     </resources>
 </document>

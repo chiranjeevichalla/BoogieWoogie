@@ -11,6 +11,7 @@ import UIKit
 
 @objc public protocol GrowingTextViewDelegate: UITextViewDelegate {
     @objc optional func textViewDidChangeHeight(_ textView: GrowingTextView, height: CGFloat)
+    @objc optional func textDidChange(_ textView: GrowingTextView)
 }
 
 @IBDesignable @objc
@@ -75,7 +76,7 @@ open class GrowingTextView: UITextView {
     }
 
     // Listen to UITextView notification to handle trimming, placeholder and maximum length
-    func commonInit() {
+    private func commonInit() {
         self.contentMode = .redraw
         associateConstraints()
         
@@ -173,6 +174,9 @@ open class GrowingTextView: UITextView {
                     undoManager?.removeAllActions()
                 }
                 setNeedsDisplay()
+                if let delegate = delegate as? GrowingTextViewDelegate {
+                    delegate.textDidChange?(self)
+                }
             }
         }
     }

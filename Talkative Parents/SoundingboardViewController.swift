@@ -86,8 +86,10 @@ class SoundingboardViewController: UIViewController, UITableViewDelegate, UITabl
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        
-        
+        let bVC = SoundingBoardDetailViewController()
+        bVC.thisSoundingBoard = self.thisMessages[indexPath.row]
+//        self.navigationController?.pushViewController(bVC, animated: true)
+        self.present(bVC, animated: true, completion: nil)
     }
     
     private func createNewMessage() {

@@ -121,6 +121,9 @@ class LoginService {
                         Constants.sharedInstance._UserDefaults.setAuthKey(pPhoneNumber: bContent)
                         Constants.sharedInstance._UserDefaults.setRegistered()
                         Constants.sharedInstance._UserDefaults.setLogginned()
+                        AppService.GetProfile(callback: { (result) in
+                            
+                        })
                         callback(true)
                         
                         

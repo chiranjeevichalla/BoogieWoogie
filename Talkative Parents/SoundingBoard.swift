@@ -26,6 +26,7 @@ class SoundingBoard : Mappable {
     private var _isParentReplied : Bool = false
     private var _standardId : String?
     private var _sectionId : String?
+    private var _firebaseKey: String = ""
     
     required init?(map: Map) {
         
@@ -116,6 +117,14 @@ class SoundingBoard : Mappable {
     
     func setAttachmentCount(pValue : Int) {
         _attachmentCount = pValue
+    }
+    
+    func setFirebaseKey(pKey : String) {
+        _firebaseKey = pKey
+    }
+    
+    func getFirebaseKey() -> String {
+        return _firebaseKey
     }
     
 }

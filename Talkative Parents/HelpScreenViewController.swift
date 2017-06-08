@@ -36,15 +36,18 @@ class HelpScreenViewController: UIViewController, UICollectionViewDataSource, UI
 //        }
         
         
-        let bVC = SoundingBoardDetailViewController(nibName: "SoundingBoardDetailViewController", bundle: nil)
-        let bNVC = UINavigationController()
-        let appDelegate = UIApplication.shared.delegate! as! AppDelegate
-        appDelegate.window?.rootViewController = bNVC
-        appDelegate.window?.makeKeyAndVisible()
-        bNVC.pushViewController(bVC, animated: true)
-        return
+//        let bVC = SoundingBoardDetailViewController(nibName: "SoundingBoardDetailViewController", bundle: nil)
+//        let bNVC = UINavigationController()
+//        let appDelegate = UIApplication.shared.delegate! as! AppDelegate
+//        appDelegate.window?.rootViewController = bNVC
+//        appDelegate.window?.makeKeyAndVisible()
+//        bNVC.pushViewController(bVC, animated: true)
+//        return
         
         if Constants.sharedInstance._UserDefaults.isLoggedIn() {
+            AppService.GetProfile(callback: { (result) in
+                
+            })
             let appDelegate = UIApplication.shared.delegate! as! AppDelegate
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             let initialViewController = storyboard.instantiateViewController(withIdentifier: "DashboardNVC")
