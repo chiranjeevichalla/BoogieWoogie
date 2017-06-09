@@ -13,7 +13,7 @@ import UIKit
 
 class CoreDataManager {
     
-    class func didRead(pId: String) -> Bool {
+    class func didRead(pId: String, pEntityName : String) -> Bool {
         guard let appDelegate =
             UIApplication.shared.delegate as? AppDelegate else {
                 return false
@@ -25,7 +25,7 @@ class CoreDataManager {
         let fetchRequest = NSFetchRequest<NSFetchRequestResult>()
         
         // Create Entity Description
-        let entityDescription = NSEntityDescription.entity(forEntityName: "NotificationDB1", in: managedContext)
+        let entityDescription = NSEntityDescription.entity(forEntityName: pEntityName, in: managedContext)
         
         // Configure Fetch Request
         fetchRequest.entity = entityDescription
@@ -45,13 +45,9 @@ class CoreDataManager {
             // Handle error
         }
         return false
-        
-//        let entity = NSEntityDescription.entity(
-//            forName: "Contacts", in: context)
-        
     }
     
-    class func setRead(pId: String, pDidRead : Bool) {
+    class func setRead(pId: String, pDidRead : Bool, pEntityName : String) {
         guard let appDelegate =
             UIApplication.shared.delegate as? AppDelegate else {
                 return
@@ -63,7 +59,7 @@ class CoreDataManager {
         
         // 2
         let entity =
-            NSEntityDescription.entity(forEntityName: "NotificationDB1",
+            NSEntityDescription.entity(forEntityName: pEntityName,
                                        in: managedContext)!
         
         let bNotification = NSManagedObject(entity: entity,
@@ -81,5 +77,65 @@ class CoreDataManager {
             print("Could not save setRead. \(error), \(error.userInfo)")
         }
     }
+    
+    class func deleteObject(pId: String, pEntityName : String) {
+        guard let appDelegate =
+            UIApplication.shared.delegate as? AppDelegate else {
+                return
+        }
+        
+        
+        let managedContext =
+            appDelegate.databaseContext
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>()
+        
+        // Create Entity Description
+        let entityDescription = NSEntityDescription.entity(forEntityName: pEntityName, in: managedContext)
+        
+        // Configure Fetch Request
+        fetchRequest.entity = entityDescription
+        
+        let pred = NSPredicate(format: "(id = %@)", pId)
+        fetchRequest.predicate = pred
+        
+        do {
+            let results =
+                try managedContext.fetch(fetchRequest)
+            if results.count > 0 {
+                do {
+                    for object in results {
+                        try managedContext.delete(object as! NSManagedObject)
+                    }
+                    try managedContext.save()
+                } catch let _ {
+                    
+                }
+            }
+        } catch let _ {
+            // Handle error
+        }
+        
+    }
+    
+    class func noticeBoardDidRead(pId : String) -> Bool {
+        return CoreDataManager.didRead(pId:pId, pEntityName: "NotificationDB1")
+    }
+    
+    class func noticeBoardSetRead(pId: String, pDidRead : Bool) {
+        CoreDataManager.setRead(pId: pId, pDidRead: pDidRead, pEntityName: "NotificationDB1")
+    }
+    
+    class func calendarEventDidRead(pId: String) -> Bool {
+        return CoreDataManager.didRead(pId: pId, pEntityName: "CalendarEventDB")
+    }
+    
+    class func calendarEventSetRead(pId: String, pDidRead : Bool) {
+        CoreDataManager.setRead(pId: pId, pDidRead: pDidRead, pEntityName: "CalendarEventDB")
+    }
+    
+    class func calendarEventDeleteObject(pId: String) {
+        CoreDataManager.deleteObject(pId: pId, pEntityName: "CalendarEventDB")
+    }
+
     
 }

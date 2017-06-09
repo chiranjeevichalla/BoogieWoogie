@@ -37,14 +37,31 @@ class SoundingboardViewController: UIViewController, UITableViewDelegate, UITabl
     }
 
     private func setSoundingFireBase() {
+        
         FireBaseHelper.GetSoundingBoard(pType: "private", callback: { (pSoundingBoard, result) in
             if result {
                 self.thisMessages.append(pSoundingBoard)
                 self.thisUISBTV.reloadData()
             }
-        }) { (pSoundingBoards, result) in
+        }, callback1: { (_, _) in
             
+        }) { (pSoundingBoard, result) in
+            if result {
+                //check psoundingboard key with other
+                var bRow = 0
+                for row in self.thisMessages {
+                    if row.getFirebaseKey() == pSoundingBoard.getFirebaseKey() {
+                        self.thisMessages[bRow] = pSoundingBoard
+                        let indexPath = IndexPath(item: bRow, section: 0)
+                        self.thisUISBTV.reloadRows(at: [indexPath], with: .fade)
+                        break;
+                    }
+                    bRow = bRow + 1
+                }
+                // if exist replace with this soundingboard and reload the row
+            }
         }
+
     }
     
     private func setUpTableView() {
@@ -68,7 +85,7 @@ class SoundingboardViewController: UIViewController, UITableViewDelegate, UITabl
         if bMessage.getCommentsCount() == 0 {
             cell.thisUICommentsLabel.text = "No comments "
         } else {
-            cell.thisUICommentsLabel.text = "\(bMessage.getCommentsCount() )comments "
+            cell.thisUICommentsLabel.text = "\(bMessage.getCommentsCount()) comments "
         }
         
         if bMessage.getAttachmentCount() == 0 {

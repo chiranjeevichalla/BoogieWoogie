@@ -27,6 +27,7 @@ class SoundingBoard : Mappable {
     private var _standardId : String?
     private var _sectionId : String?
     private var _firebaseKey: String = ""
+    private var _attachment : String?
     
     required init?(map: Map) {
         
@@ -53,6 +54,7 @@ class SoundingBoard : Mappable {
         _isParentReplied                     <- map["isParentReplied"]
         _standardId                     <- map["standardId"]
         _sectionId                     <- map["sectionId"]
+        _attachment                     <- map ["attachment"]
     }
     
     func getSubject() -> String {
@@ -125,6 +127,14 @@ class SoundingBoard : Mappable {
     
     func getFirebaseKey() -> String {
         return _firebaseKey
+    }
+    
+    func setAttachment(pValue : String) {
+        _attachment = pValue
+    }
+    
+    func getAttachment() -> String {
+        return _attachment ?? ""
     }
     
 }

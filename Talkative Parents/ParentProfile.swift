@@ -62,7 +62,7 @@ class ParentProfile : Mappable {
     }
     
     func getName() -> String {
-        return "\(getFirstName()) \(getMiddleName) \(getLastName)"
+        return "\(getFirstName()) \(getMiddleName()) \(getLastName())"
     }
     
     

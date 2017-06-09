@@ -244,7 +244,7 @@ class NotificationsViewController: UIViewController, UITableViewDelegate, UITabl
     }
     
     fileprivate func didRead(pId: String) -> Bool {
-        return CoreDataManager.didRead(pId:pId)
+        return CoreDataManager.noticeBoardDidRead(pId:pId)
     }
     
     func navigationSegmentedControlValueChanged(_ sender: BetterSegmentedControl) {
@@ -260,7 +260,7 @@ class NotificationsViewController: UIViewController, UITableViewDelegate, UITabl
     }
     
     fileprivate func updateNotification(pId: String, pStatus : String) {
-        CoreDataManager.setRead(pId: pId, pDidRead: true)
+        CoreDataManager.noticeBoardSetRead(pId: pId, pDidRead: true)
     }
 //    
 //    func scrollViewDidScroll(_ scrollView: UIScrollView) {

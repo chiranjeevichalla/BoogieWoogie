@@ -275,12 +275,27 @@ class CreateSoundingBoardMessageViewController: FormViewController, UIImagePicke
                     
                     print("errors count \(errors.count)")
                     if errors.count == 0 {
-                        FireBaseHelper.AddSoundingBoardMessage(pMessage: self.thisSoundingBoardMessage, pType: "private", callback: { (result) in
-                            if result {
-                                self.navigationController?.popViewController(animated: true)
+                        
+                        if let row1 = self.form.rowBy(tag: "ProgressRow") as? ProgressRow {
+                            
+//                            row.cell.thisIsAttached = true
+//                            row.cell.thisUIImage.image = image
+                            //                row.hidden = Condition.function(["ProgressRow"], { form in
+                            //                    return !row.cell.thisIsAttached
+                            //                })
+                            var bImage : UIImage?
+                            if row1.cell.thisIsAttached {
+                                bImage = row1.cell.thisUIImage.image
                             }
-                        })
-                    }
+                            FireBaseHelper.AddSoundingBoardMessage(pAttachment: bImage, pMessage: self.thisSoundingBoardMessage, pType: "private", callback: { (result) in
+                                if result {
+                                    self.navigationController?.popViewController(animated: true)
+                                }
+                            })
+
+                        }
+                        
+                   }
                     
                 })
     

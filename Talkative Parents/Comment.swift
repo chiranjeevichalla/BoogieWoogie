@@ -92,5 +92,13 @@ class Comment : Mappable {
     func hasAttachment() -> Bool {
         return _hasAttachment ?? false
     }
+    
+    func getAttachment() -> String {
+        return _attachment ?? ""
+    }
+    
+    func setAttachment(pValue : String) {
+        _attachment = pValue
+    }
 }
 

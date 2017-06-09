@@ -185,7 +185,7 @@ class FireBaseHelper {
         
     }
     
-    class func AddSoundingBoardMessage(pMessage : SoundingBoard, pType : String, callback:@escaping (Bool) -> Void) {
+    class func AddSoundingBoardMessage(pAttachment : UIImage?, pMessage : SoundingBoard, pType : String, callback:@escaping (Bool) -> Void) {
         
         //pType is private or public
         var bRef : FIRDatabaseReference!
@@ -195,14 +195,23 @@ class FireBaseHelper {
         pMessage.setDate(pValue: Commons.getCurrentDateToString())
         
 //        bRef.removeAllObservers()
-
-        bRef.childByAutoId().setValue(pMessage.toJSON())
-        callback(true)
+        if pAttachment != nil {
+            AppService.UploadFile(pFileName: Commons.getUniqueStringId(), pImage: pAttachment!, pIsProfile: false, callback: { (pAttachmentLink, result) in
+                if result {
+                    pMessage.setAttachment(pValue: pAttachmentLink)
+                    bRef.childByAutoId().setValue(pMessage.toJSON())
+                }
+                callback(result)
+            })
+        } else {
+            bRef.childByAutoId().setValue(pMessage.toJSON())
+            callback(true)
+        }
 
     }
     
-    class func AddCommentToSoundingBoardMessage(pComment : Comment, pType : String, pSoundingBoard : SoundingBoard, callback:@escaping (Bool) -> Void) {
-        Commons.showIndicator()
+    class func AddCommentToSoundingBoardMessage(pAttachment: UIImage? ,pComment : Comment, pType : String, pSoundingBoard : SoundingBoard, callback:@escaping (Bool) -> Void) {
+//        Commons.showIndicator()
         //pType is private or public
         var bRef : FIRDatabaseReference!
 //        -KlxJRcspKKlyL0830Za
@@ -213,16 +222,40 @@ class FireBaseHelper {
         pComment.setPostedBy(pValue: Constants.sharedInstance._parent.getName())
         pComment.setPostedById(pValue: Constants.sharedInstance._parent.getId())
         //        bRef.removeAllObservers()
-        
-        bRef.childByAutoId().setValue(pComment.toJSON())
-        callback(true)
-        Commons.hideIndicator()
+//        Commons.showIndicator()
+        if pAttachment != nil {
+            let bFileName = Commons.getUniqueStringId()
+            AppService.UploadFile(pFileName: bFileName, pImage: pAttachment!, pIsProfile: false, callback: { (pAttachmentLink, result) in
+                
+                if result {
+                    pComment.setAttachment(pValue: pAttachmentLink)
+                    bRef.childByAutoId().setValue(pComment.toJSON())
+                } else {
+//                    bRef.childByAutoId().setValue(pComment.toJSON())
+                }
+                callback(result)
+            })
+        }
+        else {
+            bRef.childByAutoId().setValue(pComment.toJSON())
+            callback(true)
+//            Commons.hideIndicator()
+        }
         
     }
     
+    class func UpdateSoundingBoardCommentsCount(pType: String, pCount : Int, pSoundingBoard : SoundingBoard) {
+        var bRef : FIRDatabaseReference!
+        //        -KlxJRcspKKlyL0830Za
+        //        let bPath = "sb-2/\(pType)/S-19107ff1-ea59-43c0-83a2-9962df79dfae-d3aaa86a-4c61-4c60-91dd-9201faa71baa/comments/-KlxJRcspKKlyL0830Za"
+        let bPath = "sb-2/\(pType)/\(Constants.sharedInstance._child.getSchoolToParentChannelId())/chat/\(pSoundingBoard.getFirebaseKey())/commentsCount"
+        bRef = FIRDatabase.database().reference(withPath: bPath)
+
+        bRef.setValue(pCount)
+        
+    }
     
-    
-    class func GetSoundingBoard(pType : String, callback:@escaping (SoundingBoard,Bool) -> Void, callback1:@escaping ([SoundingBoard],Bool) -> Void) -> FIRDatabaseReference {
+    class func GetSoundingBoard(pType : String, callback:@escaping (SoundingBoard,Bool) -> Void, callback1:@escaping ([SoundingBoard],Bool) -> Void, onChildChanged:@escaping (SoundingBoard,Bool) -> Void) -> FIRDatabaseReference {
         
         
         var bRef : FIRDatabaseReference!
@@ -255,6 +288,19 @@ class FireBaseHelper {
             
         })
         
+        bRef.observe(.childChanged, with: { (snapshot) in
+            let postDict = snapshot.value as? [String : AnyObject] ?? [:]
+            if postDict != nil {
+                let bSoundingBoard = Mapper<SoundingBoard>().map(JSON: postDict)
+                if bSoundingBoard != nil {
+                    bSoundingBoard?.setFirebaseKey(pKey: snapshot.key)
+                    onChildChanged(bSoundingBoard!, true)
+                }
+                
+            }
+            
+        })
+        
         return bRef
         
     }
@@ -278,19 +324,27 @@ class FireBaseHelper {
         
         bRef.observe(.childAdded, with: { (snapshot) in
             let postDict = snapshot.value as? [String : AnyObject] ?? [:]
-            if postDict != nil {
+//            if postDict != nil {
                 let bSoundingBoardComment = Mapper<Comment>().map(JSON: postDict)
                 if bSoundingBoardComment != nil {
                     bSoundingBoardComment?.setFirebaseKey(pKey: snapshot.key)
-                    if callback != nil {
+//                    if callback != nil {
                         callback(bSoundingBoardComment!, true)
-                    } else {
+//                    } else {
                         //                        bRef.removeAllObservers()
-                    }
+//                    }
                 }
                 
-            }
+//            }
             
+        })
+        
+        bRef.observe(.value, with: { (snapshot) in
+//            if snapshot != nil {
+                if snapshot.hasChildren() {
+                    FireBaseHelper.UpdateSoundingBoardCommentsCount(pType: pType, pCount: Int(snapshot.childrenCount), pSoundingBoard: pSoundingBoard)
+                }
+//            }
         })
         
         return bRef

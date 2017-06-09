@@ -43,7 +43,12 @@ class SoundingBoardDetailViewController: UIViewController, UIImagePickerControll
 
         // Do any additional setup after loading the view.
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillChangeFrame), name: NSNotification.Name.UIKeyboardWillChangeFrame, object: nil)
-        
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(keyboardWillShow),
+                                               name: NSNotification.Name.UIKeyboardWillShow, object: nil)
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(keyboardWillHide),
+                                               name: NSNotification.Name.UIKeyboardWillHide, object: nil)
         // *** Hide keyboard when tapping outside ***
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(tapGestureHandler))
         view.addGestureRecognizer(tapGesture)
@@ -103,6 +108,31 @@ class SoundingBoardDetailViewController: UIViewController, UIImagePickerControll
   //          bottomConstraint.constant = 44
     //    }
         self.view.layoutIfNeeded()
+    }
+    
+    func keyboardWillShow(notification: NSNotification) {
+        if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
+            print("Show")
+            let bVisibleRows = self.thisUITV.indexPathsForVisibleRows
+            if bVisibleRows != nil && (bVisibleRows?.count)! > 0 {
+                let bLastRow = bVisibleRows?.last
+                if bLastRow != nil {
+                    self.thisUITV.scrollToRow(at: bLastRow!, at: .middle, animated: true)
+                }
+            }
+        }
+    }
+    func keyboardWillHide(notification: NSNotification) {
+        if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
+            print("Hide")
+            let bVisibleRows = self.thisUITV.indexPathsForVisibleRows
+            if bVisibleRows != nil && (bVisibleRows?.count)! > 0 {
+                let bLastRow = bVisibleRows?.last
+                if bLastRow != nil {
+                    self.thisUITV.scrollToRow(at: bLastRow!, at: .middle, animated: true)
+                }
+            }
+        }
     }
     
     //MARK: gesture
@@ -216,6 +246,11 @@ class SoundingBoardDetailViewController: UIViewController, UIImagePickerControll
     }
 
     @IBAction func onTapOfBackBtn(_ sender: Any) {
+        NotificationCenter.default.removeObserver(self)
+        print("DEINIT of SoundingBoarDetailviewcontroller Page")
+        if thisFIRDBRef != nil {
+            thisFIRDBRef.removeAllObservers()
+        }
         self.dismiss(animated: true)
     }
     
@@ -224,10 +259,16 @@ class SoundingBoardDetailViewController: UIViewController, UIImagePickerControll
         if bText != "" {
             let bComment = Comment()
             bComment.setMessage(pValue: bText)
-            FireBaseHelper.AddCommentToSoundingBoardMessage(pComment: bComment, pType: "private", pSoundingBoard: self.thisSoundingBoard, callback: { (result) in
+            var bImage : UIImage?
+            if self.thisIsAttached {
+                bImage = thisUIAttachedImage.image
+            }
+            FireBaseHelper.AddCommentToSoundingBoardMessage(pAttachment: bImage, pComment: bComment, pType: "private", pSoundingBoard: self.thisSoundingBoard, callback: { (result) in
                 if result {
                     self.textView.text = ""
                     self.setAttachmentStatus(pStatus: false)
+                } else {
+                    Commons.showErrorMessage(pMessage: "Something went wrong, Please check internet connection")
                 }
             })
             
