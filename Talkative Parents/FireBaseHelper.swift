@@ -190,7 +190,7 @@ class FireBaseHelper {
         //pType is private or public
         var bRef : FIRDatabaseReference!
 //        let bPath = "sb-2/\(pType)/S-19107ff1-ea59-43c0-83a2-9962df79dfae-d3aaa86a-4c61-4c60-91dd-9201faa71baa/chat"
-      let bPath = "sb-2/\(pType)/\(Constants.sharedInstance._child.getSchoolToParentChannelId())/chat"
+      let bPath = "sb-2/\(pType)/\(Constants.sharedInstance._child.getSchoolId())/\(Constants.sharedInstance._child.getSchoolToParentChannelId())/chat"
         bRef = FIRDatabase.database().reference(withPath: bPath)
         pMessage.setDate(pValue: Commons.getCurrentDateToString())
         
@@ -216,7 +216,7 @@ class FireBaseHelper {
         var bRef : FIRDatabaseReference!
 //        -KlxJRcspKKlyL0830Za
         //        let bPath = "sb-2/\(pType)/S-19107ff1-ea59-43c0-83a2-9962df79dfae-d3aaa86a-4c61-4c60-91dd-9201faa71baa/comments/-KlxJRcspKKlyL0830Za"
-        let bPath = "sb-2/\(pType)/\(Constants.sharedInstance._child.getSchoolToParentChannelId())/comments/\(pSoundingBoard.getFirebaseKey())"
+        let bPath = "sb-2/\(pType)/\(Constants.sharedInstance._child.getSchoolId())/\(Constants.sharedInstance._child.getSchoolToParentChannelId())/comments/\(pSoundingBoard.getFirebaseKey())"
         bRef = FIRDatabase.database().reference(withPath: bPath)
         pComment.setPostedDate(pValue: Commons.getCurrentDateToString())
         pComment.setPostedBy(pValue: Constants.sharedInstance._parent.getName())
@@ -248,7 +248,7 @@ class FireBaseHelper {
         var bRef : FIRDatabaseReference!
         //        -KlxJRcspKKlyL0830Za
         //        let bPath = "sb-2/\(pType)/S-19107ff1-ea59-43c0-83a2-9962df79dfae-d3aaa86a-4c61-4c60-91dd-9201faa71baa/comments/-KlxJRcspKKlyL0830Za"
-        let bPath = "sb-2/\(pType)/\(Constants.sharedInstance._child.getSchoolToParentChannelId())/chat/\(pSoundingBoard.getFirebaseKey())/commentsCount"
+        let bPath = "sb-2/\(pType)/\(Constants.sharedInstance._child.getSchoolId())/\(Constants.sharedInstance._child.getSchoolToParentChannelId())/chat/\(pSoundingBoard.getFirebaseKey())/commentsCount"
         bRef = FIRDatabase.database().reference(withPath: bPath)
 
         bRef.setValue(pCount)
@@ -259,7 +259,7 @@ class FireBaseHelper {
         
         
         var bRef : FIRDatabaseReference!
-        let bPath = "sb-2/\(pType)/\(Constants.sharedInstance._child.getSchoolToParentChannelId())/chat"
+        let bPath = "sb-2/\(pType)/\(Constants.sharedInstance._child.getSchoolId())/\(Constants.sharedInstance._child.getSchoolToParentChannelId())/chat"
         bRef = FIRDatabase.database().reference(withPath: bPath)
         
         //        if !IsConnectedToNetwork() {
@@ -310,7 +310,7 @@ class FireBaseHelper {
         
         
         var bRef : FIRDatabaseReference!
-        let bPath = "sb-2/\(pType)/\(Constants.sharedInstance._child.getSchoolToParentChannelId())/comments/\(pSoundingBoard.getFirebaseKey())"
+        let bPath = "sb-2/\(pType)/\(Constants.sharedInstance._child.getSchoolId())/\(Constants.sharedInstance._child.getSchoolToParentChannelId())/comments/\(pSoundingBoard.getFirebaseKey())"
         bRef = FIRDatabase.database().reference(withPath: bPath)
         
         //        if !IsConnectedToNetwork() {

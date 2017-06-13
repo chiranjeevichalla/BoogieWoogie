@@ -96,6 +96,7 @@
 		189F903E1EE925A6000C4802 /* SDBCommentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189F903C1EE925A6000C4802 /* SDBCommentTableViewCell.swift */; };
 		189F903F1EE925A6000C4802 /* SDBCommentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 189F903D1EE925A6000C4802 /* SDBCommentTableViewCell.xib */; };
 		189F90411EE97098000C4802 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189F90401EE97098000C4802 /* Comment.swift */; };
+		18AD626D1EEFBC9D0057B778 /* EventHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18AD626C1EEFBC9D0057B778 /* EventHelper.swift */; };
 		18B30B001EDEA3D500D5B9F7 /* SocialSharingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B30AFE1EDEA3D500D5B9F7 /* SocialSharingViewController.swift */; };
 		18B30B011EDEA3D500D5B9F7 /* SocialSharingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18B30AFF1EDEA3D500D5B9F7 /* SocialSharingViewController.xib */; };
 		18F58ECD1EE027CA0092B7C2 /* Attendance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F58ECC1EE027CA0092B7C2 /* Attendance.swift */; };
@@ -231,6 +232,7 @@
 		189F903C1EE925A6000C4802 /* SDBCommentTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDBCommentTableViewCell.swift; sourceTree = "<group>"; };
 		189F903D1EE925A6000C4802 /* SDBCommentTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SDBCommentTableViewCell.xib; sourceTree = "<group>"; };
 		189F90401EE97098000C4802 /* Comment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
+		18AD626C1EEFBC9D0057B778 /* EventHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventHelper.swift; sourceTree = "<group>"; };
 		18B30AFE1EDEA3D500D5B9F7 /* SocialSharingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocialSharingViewController.swift; sourceTree = "<group>"; };
 		18B30AFF1EDEA3D500D5B9F7 /* SocialSharingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SocialSharingViewController.xib; sourceTree = "<group>"; };
 		18F58ECC1EE027CA0092B7C2 /* Attendance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Attendance.swift; sourceTree = "<group>"; };
@@ -457,6 +459,7 @@
 		183F93571EC9829300B11BEB /* Talkative Parents */ = {
 			isa = PBXGroup;
 			children = (
+				18AD626B1EEFBC8C0057B778 /* CalendarEventHelper */,
 				188829471EDC30C800C51AC4 /* FireBaseHelper */,
 				18379EFD1ED0589900F75C31 /* Fonts */,
 				181E64731EC9CA7B007E7C87 /* SERVICES */,
@@ -602,6 +605,14 @@
 				189F903D1EE925A6000C4802 /* SDBCommentTableViewCell.xib */,
 			);
 			name = cells;
+			sourceTree = "<group>";
+		};
+		18AD626B1EEFBC8C0057B778 /* CalendarEventHelper */ = {
+			isa = PBXGroup;
+			children = (
+				18AD626C1EEFBC9D0057B778 /* EventHelper.swift */,
+			);
+			name = CalendarEventHelper;
 			sourceTree = "<group>";
 		};
 		18B30AFD1EDEA3BB00D5B9F7 /* SocialSharingPage */ = {
@@ -1004,6 +1015,7 @@
 				189F903A1EE9250D000C4802 /* SBDDescriptionTableViewCell.swift in Sources */,
 				181E64971ECC65FC007E7C87 /* OTPVerificationViewController.swift in Sources */,
 				1862F00E1ECD8E360084F704 /* LoginService.swift in Sources */,
+				18AD626D1EEFBC9D0057B778 /* EventHelper.swift in Sources */,
 				181E647A1EC9CB88007E7C87 /* CommonService.swift in Sources */,
 				181E64781EC9CB7D007E7C87 /* Commons.swift in Sources */,
 				1862F00B1ECD88300084F704 /* CountrySelectionTableViewCell.swift in Sources */,
