@@ -519,6 +519,14 @@ class Commons {
     }
     
     
+    class func gotoDashBoard() {
+        let appDelegate = UIApplication.shared.delegate! as! AppDelegate
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let initialViewController = storyboard.instantiateViewController(withIdentifier: "DashboardNVC")
+        appDelegate.window?.rootViewController = initialViewController
+        appDelegate.window?.makeKeyAndVisible()
+    }
+    
     //    class func ConvertJSONToString(pData : NSDictionary, callback (String) -> Void) -> Void {
     //        let jsonData: NSDate = JSONSerialization.data(withJSONObject: pData, options: .prettyPrinted)
     //

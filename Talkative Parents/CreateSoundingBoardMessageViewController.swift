@@ -143,10 +143,21 @@ class CreateSoundingBoardMessageViewController: FormViewController, UIImagePicke
         })
         
         self.present(alert, animated: true, completion: nil)
+        
     }
 
 
-
+    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    
+//    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+//        if (editingStyle == UITableViewCellEditingStyle.delete) {
+//            // handle delete (by removing the data from your array and updating the tableview)
+//        }
+//    }
+    
+    
     
     private func setUPForm() {
         
@@ -168,8 +179,8 @@ class CreateSoundingBoardMessageViewController: FormViewController, UIImagePicke
             
             +++ CategorySelectionRow(){
                 $0.title = "Send Message To"
-                
                 $0.add(rule: RuleRequired())
+                
                 }.cellSetup { cell, row in
                     cell.textLabel?.textColor = Constants.sharedInstance.barColor
                 }.cellUpdate({ (cell, row) in
@@ -218,7 +229,6 @@ class CreateSoundingBoardMessageViewController: FormViewController, UIImagePicke
                 row.placeholder = "Enter the Message (Max 160 characters)"
                 row.add(ruleSet: rules2)
                 row.validationOptions = .validatesOnChange
-                
                 }.cellUpdate({ (cell, row) in
                     if !row.isValid {
                         print("max length reached")
@@ -306,7 +316,7 @@ class CreateSoundingBoardMessageViewController: FormViewController, UIImagePicke
 //        }
         
         
-    
+        
         
         
         

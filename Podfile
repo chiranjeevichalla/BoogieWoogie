@@ -23,6 +23,7 @@ target 'Talkative Parents' do
   pod 'Firebase/Database'
   pod 'FSCalendar'
   pod 'MRProgress'
+  pod 'OneSignal', '>= 2.5.2', '< 3.0'
 
   # Pods for Talkative Parents
 

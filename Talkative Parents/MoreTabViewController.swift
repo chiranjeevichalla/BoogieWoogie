@@ -20,6 +20,20 @@ class MoreTabViewController: UIViewController, UITableViewDelegate, UITableViewD
         self.navigationItem.title = Constants.sharedInstance._child.getName()
         // Do any additional setup after loading the view.
 //        setUpTableView()
+        addDashboardBtn()
+    }
+    
+    private func addDashboardBtn() {
+        let button = UIButton.init(type: .custom)
+        button.setImage(UIImage.init(named: "dashboardIcon"), for: UIControlState.normal)
+        button.addTarget(self, action:#selector(self.gotoDashBoard), for: UIControlEvents.touchUpInside)
+        button.frame = CGRect.init(x: 0, y: 0, width: 30, height: 30) //CGRectMake(0, 0, 30, 30)
+        let barButton = UIBarButtonItem.init(customView: button)
+        self.navigationItem.leftBarButtonItem = barButton
+    }
+    
+    func gotoDashBoard() {
+        Commons.gotoDashBoard()
     }
 
     private func setUpTableView() {

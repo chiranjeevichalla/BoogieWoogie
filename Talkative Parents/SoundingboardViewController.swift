@@ -18,6 +18,7 @@ class SoundingboardViewController: UIViewController, UITableViewDelegate, UITabl
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationItem.title = Constants.sharedInstance._child.getName()
         self.thisUISBTV.emptyDataSetSource = self
         self.thisUISBTV.emptyDataSetDelegate = self
         // Do any additional setup after loading the view, typically from a nib.
@@ -29,6 +30,20 @@ class SoundingboardViewController: UIViewController, UITableViewDelegate, UITabl
         btn1.addTarget(self, action: #selector(self.addSoundingBoardMessage), for: .touchUpInside)
         let item1 = UIBarButtonItem(customView: btn1)
         self.navigationItem.setRightBarButtonItems([item1], animated: true)
+        addDashboardBtn()
+    }
+    
+    private func addDashboardBtn() {
+        let button = UIButton.init(type: .custom)
+        button.setImage(UIImage.init(named: "dashboardIcon"), for: UIControlState.normal)
+        button.addTarget(self, action:#selector(self.gotoDashBoard), for: UIControlEvents.touchUpInside)
+        button.frame = CGRect.init(x: 0, y: 0, width: 30, height: 30) //CGRectMake(0, 0, 30, 30)
+        let barButton = UIBarButtonItem.init(customView: button)
+        self.navigationItem.leftBarButtonItem = barButton
+    }
+    
+    func gotoDashBoard() {
+        Commons.gotoDashBoard()
     }
     
     func addSoundingBoardMessage() {
@@ -103,10 +118,9 @@ class SoundingboardViewController: UIViewController, UITableViewDelegate, UITabl
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        let bVC = SoundingBoardDetailViewController()
-        bVC.thisSoundingBoard = self.thisMessages[indexPath.row]
-//        self.navigationController?.pushViewController(bVC, animated: true)
-        self.present(bVC, animated: true, completion: nil)
+//        let bVC = SoundingBoardDetailViewController()
+//        bVC.thisSoundingBoard = self.thisMessages[indexPath.row]
+//        self.present(bVC, animated: true, completion: nil)
     }
     
     private func createNewMessage() {
