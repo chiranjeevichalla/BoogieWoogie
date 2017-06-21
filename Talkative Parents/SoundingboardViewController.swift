@@ -69,6 +69,7 @@ class SoundingboardViewController: UIViewController, UITableViewDelegate, UITabl
                         self.thisMessages[bRow] = pSoundingBoard
                         let indexPath = IndexPath(item: bRow, section: 0)
                         self.thisUISBTV.reloadRows(at: [indexPath], with: .fade)
+//                        self.thisUISBTV.scrollToRow(at: indexPath, at: .bottom, animated: true)
                         break;
                     }
                     bRow = bRow + 1
@@ -118,9 +119,9 @@ class SoundingboardViewController: UIViewController, UITableViewDelegate, UITabl
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-//        let bVC = SoundingBoardDetailViewController()
-//        bVC.thisSoundingBoard = self.thisMessages[indexPath.row]
-//        self.present(bVC, animated: true, completion: nil)
+        let bVC = SoundingBoardDetailViewController()
+        bVC.thisSoundingBoard = self.thisMessages[indexPath.row]
+        self.present(bVC, animated: true, completion: nil)
     }
     
     private func createNewMessage() {

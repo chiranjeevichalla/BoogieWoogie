@@ -37,6 +37,8 @@ class SoundingBoardDetailViewController: UIViewController, UIImagePickerControll
     var thisSoundingBoard : SoundingBoard!
     var thisFIRDBRef : FIRDatabaseReference!
     
+    private var thisCanScroll = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -80,10 +82,24 @@ class SoundingBoardDetailViewController: UIViewController, UIImagePickerControll
         self.thisFIRDBRef = FireBaseHelper.GetSoundingBoardComments(pType: "private", pSoundingBoard: self.thisSoundingBoard, callback: { (pComment, result) in
             if result {
                 self.thisComments.append(pComment)
-                self.thisUITV.reloadData()
+//                self.thisUITV.reloadData()
+                if self.thisCanScroll {
+                    self.thisUITV.beginUpdates()
+                    
+                    let indexPath = IndexPath(item: self.thisComments.count - 1 + 2, section: 0)
+//                    self.thisUITV.reloadRows(at: [indexPath], with: .fade)
+                    self.thisUITV.insertRows(at: [indexPath], with: .fade)
+                    self.thisUITV.endUpdates()
+                    
+                    self.thisUITV.scrollToRow(at: indexPath, at: .bottom, animated: true)
+                    
+                } else {
+                    self.thisUITV.reloadData()
+                }
+                
             }
         }) { (pComments, result) in
-            
+            self.thisCanScroll = true
         }
     }
     

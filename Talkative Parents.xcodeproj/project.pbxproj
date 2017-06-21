@@ -235,6 +235,7 @@
 		18AD626C1EEFBC9D0057B778 /* EventHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventHelper.swift; sourceTree = "<group>"; };
 		18B30AFE1EDEA3D500D5B9F7 /* SocialSharingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocialSharingViewController.swift; sourceTree = "<group>"; };
 		18B30AFF1EDEA3D500D5B9F7 /* SocialSharingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SocialSharingViewController.xib; sourceTree = "<group>"; };
+		18EBCFAF1EF93D2E007CE6F4 /* Talkative Parents.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Talkative Parents.entitlements"; sourceTree = "<group>"; };
 		18F58ECC1EE027CA0092B7C2 /* Attendance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Attendance.swift; sourceTree = "<group>"; };
 		18F58ECF1EE02D710092B7C2 /* AttendanceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AttendanceViewController.swift; sourceTree = "<group>"; };
 		18F58ED01EE02D710092B7C2 /* AttendanceViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AttendanceViewController.xib; sourceTree = "<group>"; };
@@ -459,6 +460,7 @@
 		183F93571EC9829300B11BEB /* Talkative Parents */ = {
 			isa = PBXGroup;
 			children = (
+				18EBCFAF1EF93D2E007CE6F4 /* Talkative Parents.entitlements */,
 				18AD626B1EEFBC8C0057B778 /* CalendarEventHelper */,
 				188829471EDC30C800C51AC4 /* FireBaseHelper */,
 				18379EFD1ED0589900F75C31 /* Fonts */,
@@ -759,6 +761,11 @@
 						CreatedOnToolsVersion = 8.3;
 						DevelopmentTeam = K3B6S92EN3;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 					183F936A1EC9829400B11BEB = {
 						CreatedOnToolsVersion = 8.3;
@@ -1215,6 +1222,7 @@
 			baseConfigurationReference = C1A9C620147BD8FA4BC8437C /* Pods-Talkative Parents.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Talkative Parents/Talkative Parents.entitlements";
 				DEVELOPMENT_TEAM = K3B6S92EN3;
 				INFOPLIST_FILE = "Talkative Parents/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -1230,6 +1238,7 @@
 			baseConfigurationReference = 34FB83C7C6BCA64B2D305BAB /* Pods-Talkative Parents.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Talkative Parents/Talkative Parents.entitlements";
 				DEVELOPMENT_TEAM = K3B6S92EN3;
 				INFOPLIST_FILE = "Talkative Parents/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;

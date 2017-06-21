@@ -8,6 +8,7 @@
 
 import Foundation
 import ObjectMapper
+import OneSignal
 
 class Child : Mappable {
     
@@ -71,6 +72,7 @@ class Child : Mappable {
         
         if _channels != nil && (_channels?.count)! > 0 && _schoolId != nil{
             for bChannel in _channels! {
+                OneSignal.sendTag(bChannel, value: "1")
                 if bChannel.range(of: _schoolId!) != nil {
                     if bChannel.range(of: "P-") != nil {
                         let bParentId = bChannel.replacingOccurrences(of: "-"+_schoolId!, with: "")

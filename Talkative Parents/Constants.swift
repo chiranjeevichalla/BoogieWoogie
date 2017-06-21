@@ -18,14 +18,9 @@ class Constants: NSObject {
     
     let _UserDefaults = UserDefaultsConstants()
     
-    //Google Map API Key
-    private let _googleMapApiKey = "AIzaSyABc9o4jycAEgfRcbMTLWcteaS_DDDpsZA"
-    
-    //Google Places API Key
-    private let _googlePlacesApiKey = "AIzaSyDOtx3WVSB2LeEBd5enSNwNoy_umTzfX38"
     
     //One Signal details
-    private let _oneSignalAppId = "1f4d35d4-77f2-4103-8fd6-8b7b4169c814"
+    private let _oneSignalAppId = "8c09536b-71d0-4ee5-b085-dfe25387cdb9"
     
     //Dev details   Sample-env-1.kxd3eiwmzj.us-east-1.elasticbeanstalk.com
     //
@@ -35,8 +30,6 @@ class Constants: NSObject {
     
     private let _BaseAuthUrlDev = "http://tpauthapi.azurewebsites.net:80/"
     
-    private let _digitsConsumerKey = "X8wEQ7h2Re89eOcKVNMxizS1w"
-    private let _digitsConsumerSecretKey = "lLmmTQo4gc6q3Ks1PIVaBOlyjq7OXYSlcaSoos0mq3BOxPgHHq"
     
     
     private let _imageBasePath = "https://tpupload.blob.core.windows.net/upload/"
@@ -88,13 +81,7 @@ class Constants: NSObject {
     //messages
     private let _NoNetworkMessage = "Please check your internet connection"
     
-    func getGoogleMapApiKey() -> String {
-        return _googleMapApiKey
-    }
     
-    func getGooglePlacesApiKey() -> String {
-        return _googlePlacesApiKey
-    }
     
     func setAlamofireManager() {
         //        manager = Alamofire.SessionManager.default
@@ -152,21 +139,7 @@ class Constants: NSObject {
         }
     }
     
-    func getDigitsConsumerKey() -> String {
-        if isDev {
-            return _digitsConsumerKey
-        } else {
-            return _digitsConsumerKey
-        }
-    }
     
-    func getDigitsConsumerSecretKey() -> String {
-        if isDev {
-            return _digitsConsumerSecretKey
-        } else {
-            return _digitsConsumerSecretKey
-        }
-    }
     //MARK: api/Auth services
     func getLoginUrl() -> String {
         if isDev {

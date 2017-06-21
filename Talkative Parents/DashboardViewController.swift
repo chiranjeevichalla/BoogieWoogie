@@ -9,7 +9,7 @@
 import UIKit
 import AnimatedCollectionViewLayout
 import DZNEmptyDataSet
-
+import OneSignal
 class DashboardViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     
@@ -43,6 +43,11 @@ class DashboardViewController: UIViewController, UICollectionViewDelegate, UICol
         self.thisUITableView.emptyDataSetSource = self
         self.thisUITableView.emptyDataSetDelegate = self
         imagePicker.delegate = self
+        OneSignal.idsAvailable { (userId, pushToken) in
+            if userId != nil {
+                print("USER ID \(userId)")
+            }
+        }
     }
     
     func ButtonTapped() {

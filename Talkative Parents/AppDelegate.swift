@@ -9,6 +9,7 @@
 import UIKit
 import CoreData
 import Firebase
+import OneSignal
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -33,6 +34,57 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         //Configure Firebase
         FIRApp.configure()
         FIRDatabase.database().persistenceEnabled = true
+        
+        
+        //One signal
+        OneSignal.initWithLaunchOptions(launchOptions, appId: Constants.sharedInstance.getOneSignalAppId(), handleNotificationReceived: { (notification) in
+            print("===============================================================")
+            print("Received Notification - \(notification?.payload.notificationID)")
+            let payload: OSNotificationPayload? = notification?.payload
+            var fullMessage: String? = payload?.body
+            print(fullMessage)
+            print("===============================================================")
+            //            application.applicationIconBadgeNumber = application.applicationIconBadgeNumber + 1;
+        }, handleNotificationAction: { (result) in
+            let payload: OSNotificationPayload? = result?.notification.payload
+            
+            var fullMessage: String? = payload?.body
+            if payload?.additionalData != nil {
+                var additionalData: [AnyHashable: Any]? = payload?.additionalData
+                if additionalData!["actionSelected"] != nil {
+                    fullMessage = fullMessage! + "\nPressed ButtonId:\(additionalData!["actionSelected"])"
+                }
+                if additionalData!["type"] != nil {
+//                    let type = additionalData?["type"] as! Int
+//                    if let bNVC = Constants.sharedInstance.homeNVC {
+//                        
+//                        bNVC.navigationController?.popToRootViewController(animated: false)
+//                        
+//                        //                        if type == 0 {
+//                        //get bill id, and image url
+//                        var billId = ""
+//                        if additionalData!["billId"] != nil {
+//                            billId = additionalData?["billId"] as! String
+//                        }
+//                        var billImageURL = ""
+//                        if additionalData!["billImageUrl"] != nil {
+//                            billImageURL = additionalData?["billImageUrl"] as! String
+//                        }
+// 
+//                        var pVC : PayeeBillViewController!
+//                        pVC = PayeeBillViewController(nibName: "PayeeBillViewController", bundle: nil)
+//                        pVC._billId = billId
+//                        pVC._paymentRequestType = type
+//                        pVC._billImageUrl = billImageURL
+//                        bNVC.navigationController?.pushViewController(pVC, animated: true)
+//                        //                        }
+//                    }
+                }
+                
+            }
+            
+            //            print(fullMessage)
+        }, settings: [kOSSettingsKeyAutoPrompt : true, kOSSettingsKeyInFocusDisplayOption : OSNotificationDisplayType.notification.rawValue])
         
         return true
     }
@@ -138,6 +190,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             
             fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
         }
+    }
+    
+    func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
+        print (deviceToken)
+        var token: String = ""
+        for i in 0..<deviceToken.count {
+            token += String(format: "%02.2hhx", deviceToken[i] as CVarArg)
+        }
+        print("PUSH TOKEN")
+        print(String(data: deviceToken , encoding: .utf8))
+        
+        print(token)
+        Constants.sharedInstance.setPushToken(pToken: token)
+        
     }
 }
 

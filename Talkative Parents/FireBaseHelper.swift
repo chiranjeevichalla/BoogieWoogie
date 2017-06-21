@@ -344,6 +344,7 @@ class FireBaseHelper {
                 if snapshot.hasChildren() {
                     FireBaseHelper.UpdateSoundingBoardCommentsCount(pType: pType, pCount: Int(snapshot.childrenCount), pSoundingBoard: pSoundingBoard)
                 }
+            callback1([], true)
 //            }
         })
         
