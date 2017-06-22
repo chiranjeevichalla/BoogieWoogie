@@ -8,8 +8,13 @@
         <attribute name="didRead" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="id" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
+    <entity name="NotificationTags" representedClassName="NotificationTags" syncable="YES" codeGenerationType="class">
+        <attribute name="didRead" optional="YES" attributeType="Boolean" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="id" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
     <elements>
-        <element name="NotificationDB1" positionX="-63" positionY="0" width="128" height="75"/>
         <element name="CalendarEventDB" positionX="-63" positionY="18" width="128" height="75"/>
+        <element name="NotificationDB1" positionX="-63" positionY="0" width="128" height="75"/>
+        <element name="NotificationTags" positionX="-63" positionY="27" width="128" height="75"/>
     </elements>
 </model>

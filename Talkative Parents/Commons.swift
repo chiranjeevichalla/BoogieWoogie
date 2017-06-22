@@ -16,6 +16,7 @@ import RKDropdownAlert
 import ChameleonFramework
 import Kingfisher
 import Alamofire
+import OneSignal
 
 //import Eureka
 
@@ -525,6 +526,10 @@ class Commons {
         let initialViewController = storyboard.instantiateViewController(withIdentifier: "DashboardNVC")
         appDelegate.window?.rootViewController = initialViewController
         appDelegate.window?.makeKeyAndVisible()
+    }
+    
+    class func clearAllNotificationTags() {
+//        OneSignal.de
     }
     
     //    class func ConvertJSONToString(pData : NSDictionary, callback (String) -> Void) -> Void {

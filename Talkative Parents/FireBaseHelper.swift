@@ -190,7 +190,7 @@ class FireBaseHelper {
         //pType is private or public
         var bRef : FIRDatabaseReference!
 //        let bPath = "sb-2/\(pType)/S-19107ff1-ea59-43c0-83a2-9962df79dfae-d3aaa86a-4c61-4c60-91dd-9201faa71baa/chat"
-      let bPath = "sb-2/\(pType)/\(Constants.sharedInstance._child.getSchoolId())/\(Constants.sharedInstance._child.getSchoolToParentChannelId())/chat"
+      let bPath = "sb-2/\(pType)/\(Constants.sharedInstance._child.getSchoolId())/chat/\(Constants.sharedInstance._child.getSchoolToParentChannelId())"
         bRef = FIRDatabase.database().reference(withPath: bPath)
         pMessage.setDate(pValue: Commons.getCurrentDateToString())
         
@@ -216,7 +216,7 @@ class FireBaseHelper {
         var bRef : FIRDatabaseReference!
 //        -KlxJRcspKKlyL0830Za
         //        let bPath = "sb-2/\(pType)/S-19107ff1-ea59-43c0-83a2-9962df79dfae-d3aaa86a-4c61-4c60-91dd-9201faa71baa/comments/-KlxJRcspKKlyL0830Za"
-        let bPath = "sb-2/\(pType)/\(Constants.sharedInstance._child.getSchoolId())/\(Constants.sharedInstance._child.getSchoolToParentChannelId())/comments/\(pSoundingBoard.getFirebaseKey())"
+        let bPath = "sb-2/\(pType)/\(Constants.sharedInstance._child.getSchoolId())/comments/\(Constants.sharedInstance._child.getSchoolToParentChannelId())/\(pSoundingBoard.getFirebaseKey())"
         bRef = FIRDatabase.database().reference(withPath: bPath)
         pComment.setPostedDate(pValue: Commons.getCurrentDateToString())
         pComment.setPostedBy(pValue: Constants.sharedInstance._parent.getName())
@@ -244,22 +244,24 @@ class FireBaseHelper {
         
     }
     
+    
+    //done
     class func UpdateSoundingBoardCommentsCount(pType: String, pCount : Int, pSoundingBoard : SoundingBoard) {
         var bRef : FIRDatabaseReference!
         //        -KlxJRcspKKlyL0830Za
         //        let bPath = "sb-2/\(pType)/S-19107ff1-ea59-43c0-83a2-9962df79dfae-d3aaa86a-4c61-4c60-91dd-9201faa71baa/comments/-KlxJRcspKKlyL0830Za"
-        let bPath = "sb-2/\(pType)/\(Constants.sharedInstance._child.getSchoolId())/\(Constants.sharedInstance._child.getSchoolToParentChannelId())/chat/\(pSoundingBoard.getFirebaseKey())/commentsCount"
+        let bPath = "sb-2/\(pType)/\(Constants.sharedInstance._child.getSchoolId())/chat/\(Constants.sharedInstance._child.getSchoolToParentChannelId())/\(pSoundingBoard.getFirebaseKey())/commentsCount"
         bRef = FIRDatabase.database().reference(withPath: bPath)
 
         bRef.setValue(pCount)
         
     }
-    
+    //done
     class func GetSoundingBoard(pType : String, callback:@escaping (SoundingBoard,Bool) -> Void, callback1:@escaping ([SoundingBoard],Bool) -> Void, onChildChanged:@escaping (SoundingBoard,Bool) -> Void) -> FIRDatabaseReference {
         
         
         var bRef : FIRDatabaseReference!
-        let bPath = "sb-2/\(pType)/\(Constants.sharedInstance._child.getSchoolId())/\(Constants.sharedInstance._child.getSchoolToParentChannelId())/chat"
+        let bPath = "sb-2/\(pType)/\(Constants.sharedInstance._child.getSchoolId())/chat/\(Constants.sharedInstance._child.getSchoolToParentChannelId())"
         bRef = FIRDatabase.database().reference(withPath: bPath)
         
         //        if !IsConnectedToNetwork() {
@@ -305,12 +307,12 @@ class FireBaseHelper {
         
     }
     
-    
+    //done
     class func GetSoundingBoardComments(pType : String, pSoundingBoard : SoundingBoard, callback:@escaping (Comment,Bool) -> Void, callback1:@escaping ([Comment],Bool) -> Void) -> FIRDatabaseReference {
         
         
         var bRef : FIRDatabaseReference!
-        let bPath = "sb-2/\(pType)/\(Constants.sharedInstance._child.getSchoolId())/\(Constants.sharedInstance._child.getSchoolToParentChannelId())/comments/\(pSoundingBoard.getFirebaseKey())"
+        let bPath = "sb-2/\(pType)/\(Constants.sharedInstance._child.getSchoolId())/comments/\(Constants.sharedInstance._child.getSchoolToParentChannelId())/\(pSoundingBoard.getFirebaseKey())"
         bRef = FIRDatabase.database().reference(withPath: bPath)
         
         //        if !IsConnectedToNetwork() {

@@ -104,18 +104,18 @@ class ChildrenService {
                         let json = JSON(data:data)
                         print(json)
                         print("count or length \(json.count)")
-                        
+                        CoreDataManager.setAllNotificationTagsStatus(pStatus: false)
                         var bChildrens : [Child] = []
                         
                          for  i in (0..<json.count)
                          {
-                         let bContent = json[i].rawString()
-                         if let bChild = Child(JSONString: bContent!) {
-                         bChildrens.append(bChild)
-                         }
+                             let bContent = json[i].rawString()
+                             if let bChild = Child(JSONString: bContent!) {
+                                 bChildrens.append(bChild)
+                             }
                          }
                         
-                        
+                        CoreDataManager.deleteNotificationTags()
                         callback(bChildrens, true)
                         if bChildrens.count == 0 {
                             Commons.showErrorMessage(pMessage: "No Childrens found")

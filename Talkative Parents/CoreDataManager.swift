@@ -9,7 +9,7 @@
 import Foundation
 import CoreData
 import UIKit
-
+import OneSignal
 
 class CoreDataManager {
     
@@ -137,5 +137,104 @@ class CoreDataManager {
         CoreDataManager.deleteObject(pId: pId, pEntityName: "CalendarEventDB")
     }
 
+    class func setAllNotificationTagsStatus(pStatus : Bool) {
+        guard let appDelegate =
+            UIApplication.shared.delegate as? AppDelegate else {
+                return
+        }
+        
+        
+        let managedContext =
+            appDelegate.databaseContext
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>()
+        
+        // Create Entity Description
+        let entityDescription = NSEntityDescription.entity(forEntityName: "NotificationTags", in: managedContext)
+        
+        // Configure Fetch Request
+        fetchRequest.entity = entityDescription
+        
+        do {
+            let results =
+                try managedContext.fetch(fetchRequest)
+            if results.count > 0 {
+                do {
+                    for object in results {
+                        let bObject = object as! NSManagedObject
+                        bObject.setValue(pStatus, forKey: "didRead")
+                        
+                    }
+                    try managedContext.save()
+                } catch let _ {
+                    
+                }
+            }
+        } catch let _ {
+            // Handle error
+        }
+    }
+    
+    class func deleteNotificationTags() {
+        //Fetch all tags and check didRead status as false, if false delete Tag and delete from DB
+        guard let appDelegate =
+            UIApplication.shared.delegate as? AppDelegate else {
+                return
+        }
+        
+        
+        let managedContext =
+            appDelegate.databaseContext
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>()
+        
+        // Create Entity Description
+        let entityDescription = NSEntityDescription.entity(forEntityName: "NotificationTags", in: managedContext)
+        
+        // Configure Fetch Request
+        fetchRequest.entity = entityDescription
+        
+        do {
+            let results =
+                try managedContext.fetch(fetchRequest)
+            if results.count > 0 {
+                do {
+                    for object in results {
+                        let bObject = object as! NSManagedObject
+                        let bKey = bObject.value(forKey: "id") as? String
+                        if let bResult = bObject.value(forKey: "didRead") as? Bool {
+                            if bResult == false {
+                                do {
+                                    try managedContext.delete(bObject)
+                                    if bKey != nil {
+                                        OneSignal.deleteTag(bKey!)
+                                    }
+                                } catch let _ {
+                                    
+                                }
+                                
+                            }
+                        }
+
+                    }
+                    try managedContext.save()
+                } catch let _ {
+                    
+                }
+            }
+        } catch let _ {
+            // Handle error
+        }
+    }
+    
+    class func sendNotificationTag(pKey : String) {
+        //send tag to onesignal
+        OneSignal.sendTag(pKey, value: "1")
+        //check the db if not exist add to db and set status as 1
+        if CoreDataManager.didRead(pId: pKey, pEntityName: "NotificationTags") {
+            
+        } else {
+            CoreDataManager.setRead(pId: pKey, pDidRead: true, pEntityName: "NotificationTags")
+        }
+        
+    }
     
 }
