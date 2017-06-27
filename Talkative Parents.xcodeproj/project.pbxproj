@@ -73,6 +73,8 @@
 		187435F11ED45F3400150ACD /* NoticeBoardAttachmentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 187435EF1ED45F3400150ACD /* NoticeBoardAttachmentTableViewCell.xib */; };
 		187435F41ED468F400150ACD /* AttachmentCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187435F21ED468F400150ACD /* AttachmentCollectionViewCell.swift */; };
 		187435F51ED468F400150ACD /* AttachmentCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 187435F31ED468F400150ACD /* AttachmentCollectionViewCell.xib */; };
+		187A21C81F026B120062BA58 /* NoticeBoardContentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187A21C61F026B120062BA58 /* NoticeBoardContentTableViewCell.swift */; };
+		187A21C91F026B120062BA58 /* NoticeBoardContentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 187A21C71F026B120062BA58 /* NoticeBoardContentTableViewCell.xib */; };
 		187FAC2C1ED568BE00A9A15E /* DocumentViewerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187FAC2A1ED568BE00A9A15E /* DocumentViewerViewController.swift */; };
 		187FAC2D1ED568BE00A9A15E /* DocumentViewerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 187FAC2B1ED568BE00A9A15E /* DocumentViewerViewController.xib */; };
 		187FAC2F1ED6B4F000A9A15E /* BetterSegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187FAC2E1ED6B4F000A9A15E /* BetterSegmentedControl.swift */; };
@@ -209,6 +211,8 @@
 		187435EF1ED45F3400150ACD /* NoticeBoardAttachmentTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NoticeBoardAttachmentTableViewCell.xib; sourceTree = "<group>"; };
 		187435F21ED468F400150ACD /* AttachmentCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AttachmentCollectionViewCell.swift; sourceTree = "<group>"; };
 		187435F31ED468F400150ACD /* AttachmentCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AttachmentCollectionViewCell.xib; sourceTree = "<group>"; };
+		187A21C61F026B120062BA58 /* NoticeBoardContentTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoticeBoardContentTableViewCell.swift; sourceTree = "<group>"; };
+		187A21C71F026B120062BA58 /* NoticeBoardContentTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NoticeBoardContentTableViewCell.xib; sourceTree = "<group>"; };
 		187FAC2A1ED568BE00A9A15E /* DocumentViewerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DocumentViewerViewController.swift; sourceTree = "<group>"; };
 		187FAC2B1ED568BE00A9A15E /* DocumentViewerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DocumentViewerViewController.xib; sourceTree = "<group>"; };
 		187FAC2E1ED6B4F000A9A15E /* BetterSegmentedControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BetterSegmentedControl.swift; sourceTree = "<group>"; };
@@ -398,6 +402,8 @@
 				187435EF1ED45F3400150ACD /* NoticeBoardAttachmentTableViewCell.xib */,
 				187435F21ED468F400150ACD /* AttachmentCollectionViewCell.swift */,
 				187435F31ED468F400150ACD /* AttachmentCollectionViewCell.xib */,
+				187A21C61F026B120062BA58 /* NoticeBoardContentTableViewCell.swift */,
+				187A21C71F026B120062BA58 /* NoticeBoardContentTableViewCell.xib */,
 			);
 			name = NotificationDetailPage;
 			sourceTree = "<group>";
@@ -828,6 +834,7 @@
 				181E64981ECC65FC007E7C87 /* OTPVerificationViewController.xib in Resources */,
 				183F93601EC9829300B11BEB /* Main.storyboard in Resources */,
 				1862F01B1ECDD89E0084F704 /* DashboardCollectionViewCell.xib in Resources */,
+				187A21C91F026B120062BA58 /* NoticeBoardContentTableViewCell.xib in Resources */,
 				185983C11EE81410008E6CEC /* SoundingBoardDetailViewController.xib in Resources */,
 				18F58EE01EE281B90092B7C2 /* CreateSoundingBoardMessageViewController.xib in Resources */,
 				18F58ED21EE02D710092B7C2 /* AttendanceViewController.xib in Resources */,
@@ -1021,6 +1028,7 @@
 				189F90361EE923F3000C4802 /* SBDHeaderTableViewCell.swift in Sources */,
 				189F903A1EE9250D000C4802 /* SBDDescriptionTableViewCell.swift in Sources */,
 				181E64971ECC65FC007E7C87 /* OTPVerificationViewController.swift in Sources */,
+				187A21C81F026B120062BA58 /* NoticeBoardContentTableViewCell.swift in Sources */,
 				1862F00E1ECD8E360084F704 /* LoginService.swift in Sources */,
 				18AD626D1EEFBC9D0057B778 /* EventHelper.swift in Sources */,
 				181E647A1EC9CB88007E7C87 /* CommonService.swift in Sources */,

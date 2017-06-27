@@ -47,6 +47,8 @@ class NotificeBoardDetailViewController: UIViewController, UITableViewDelegate, 
         
         self.thisUINoticeBoardTV.register(UINib(nibName: "NoticeBoardWebViewTableViewCell", bundle: nil), forCellReuseIdentifier: "NoticeBoardWebViewTableViewCell")
         
+        self.thisUINoticeBoardTV.register(UINib(nibName: "NoticeBoardContentTableViewCell", bundle: nil), forCellReuseIdentifier: "NoticeBoardContentTableViewCell")
+        
         
         self.thisUINoticeBoardTV.register(UINib(nibName: "NWebViewTableViewCell", bundle: nil), forCellReuseIdentifier: "NWebViewTableViewCell")
         
@@ -92,7 +94,7 @@ class NotificeBoardDetailViewController: UIViewController, UITableViewDelegate, 
             return getSubjectView(indexPath: indexPath)
         }
         else if indexPath.row == 1 {
-            return getWebView(indexPath: indexPath)
+            return getWebView2(indexPath: indexPath)
         }
         else {
             return getAttachmentCell(indexPath: indexPath)
@@ -106,6 +108,8 @@ class NotificeBoardDetailViewController: UIViewController, UITableViewDelegate, 
         cell.thisUILabelDate.text = thisNotificationDetail.getDisplayDate()
         return cell
     }
+    
+    
     
     private func getWebView1(indexPath: IndexPath) -> UITableViewCell {
         let cell: NWebViewTableViewCell = self.thisUINoticeBoardTV.dequeueReusableCell(withIdentifier: "NWebViewTableViewCell", for: indexPath) as! NWebViewTableViewCell
@@ -126,6 +130,17 @@ class NotificeBoardDetailViewController: UIViewController, UITableViewDelegate, 
             }
         }
         
+        return cell
+    }
+    
+    private func getWebView2(indexPath: IndexPath) -> UITableViewCell {
+        let cell: NoticeBoardContentTableViewCell = self.thisUINoticeBoardTV.dequeueReusableCell(withIdentifier: "NoticeBoardContentTableViewCell", for: indexPath) as! NoticeBoardContentTableViewCell
+        
+//        cell.thisUILabelWebcontent.attributedText =  thisNotificationDetail._messageAttributed!
+        let bAttributedString = thisNotificationDetail.getMessage().data.attributedString
+        print("bAttributed String \(bAttributedString)")
+        cell._UITextView.attributedText = bAttributedString
+    
         return cell
     }
     
@@ -150,12 +165,27 @@ class NotificeBoardDetailViewController: UIViewController, UITableViewDelegate, 
 
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         //        return 100
-        
+        if indexPath.row == 1 {
+            let bCell : NoticeBoardContentTableViewCell = tableView.dequeueReusableCell(withIdentifier: "NoticeBoardContentTableViewCell") as! NoticeBoardContentTableViewCell
+            
+//            let bCell : NoticeBoardContentTableViewCell = tableView.cellForRow(at: indexPath) as! NoticeBoardContentTableViewCell
+            let contentSize = bCell._UITextView.sizeThatFits(bCell._UITextView.bounds.size)
+//            return contentSize.height
+            return getHeightOfWebCell2(pWidth: contentSize.width, pString: thisNotificationDetail.getMessage().data.attributedString!)
+//            return 100
+        }
         return UITableViewAutomaticDimension
     }
     //
     func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
         return UITableViewAutomaticDimension
+    }
+    
+    private func getHeightOfWebCell2(pWidth : CGFloat, pString : NSAttributedString) -> CGFloat {
+        let bTextView = UITextView(frame: CGRect(x: 0, y: 0, width: pWidth, height: 10))
+        bTextView.attributedText = pString
+        let size : CGSize = bTextView.sizeThatFits(CGSize(width: pWidth, height: CGFloat.greatestFiniteMagnitude))
+        return size.height
     }
     
     override func didReceiveMemoryWarning() {

@@ -114,6 +114,26 @@ class Commons {
         return dateString
     }
     
+    class func convertUTCToLocal() -> String {
+        let bGMTTimeZone = NSTimeZone(abbreviation: "GMT")
+        let bCurrentTimeZone = NSTimeZone.system
+        
+        let date = NSDate()
+        
+        let bGMTOffset = bCurrentTimeZone.secondsFromGMT(for: date as Date)
+        //        let bCurrentOffset = bCurrentTimeZone.secondsFromGMT(for: date as Date)
+        
+        //        let interval : NST = bGMTOffset - bCurrentTimeZone
+        let bDestinationDate = NSDate(timeInterval: TimeInterval(bGMTOffset), since: date as Date)
+        
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "wh"
+        let dateString = dateFormatter.string(from:bDestinationDate as Date)
+        return dateString
+    }
+    
+    
+    
     class func convertStringToDateFormat(pDate: String) -> String {
         let words = pDate.components(separatedBy: ".")
         let dateFormatter = DateFormatter()

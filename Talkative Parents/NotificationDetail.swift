@@ -84,6 +84,11 @@ class NotificationDetail : Mappable {
         return ""
     }
     
+    func getMessage() -> String {
+        return _message ?? ""
+        
+    }
+    
 }
 
 extension String {
@@ -102,5 +107,21 @@ extension String {
     }
     var html2String: String {
         return html2AttributedString?.string ?? ""
+    }
+}
+
+extension Data {
+    var attributedString: NSAttributedString? {
+        do {
+            return try NSAttributedString(data: self, options:[NSDocumentTypeDocumentAttribute: NSHTMLTextDocumentType, NSCharacterEncodingDocumentAttribute: String.Encoding.utf8.rawValue], documentAttributes: nil)
+        } catch {
+            print(error)
+        }
+        return nil
+    }
+}
+extension String {
+    var data: Data {
+        return Data(utf8)
     }
 }
