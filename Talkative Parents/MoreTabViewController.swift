@@ -43,7 +43,7 @@ class MoreTabViewController: UIViewController, UITableViewDelegate, UITableViewD
         self.thisTVData.append(OtherObject(pTitle: "Talkative Parents Website", pImageName: "moreWebsite"))
         self.thisTVData.append(OtherObject(pTitle: "Social Media Sharing", pImageName: "moreSocialSharing"))
         self.thisTVData.append(OtherObject(pTitle: "Share this App", pImageName: "moreAppSharing"))
-//        self.thisTVData.append(OtherObject(pTitle: "Attendance", pImageName: "moreAttendance"))
+        self.thisTVData.append(OtherObject(pTitle: "Attendance", pImageName: "moreAttendance"))
         
         
     }

@@ -124,17 +124,33 @@ class OTPVerificationViewController: UIViewController, UITextFieldDelegate {
     @IBAction func onTapVerifyBtn(_ sender: Any) {
         if (validateText()) {
             LoginService.Validate(pPhoneNumber: thisPhoneNumber, pOTPCode: getOTP(), callback: { (result) in
+                if result {
                 let appDelegate = UIApplication.shared.delegate! as! AppDelegate
                 let storyboard = UIStoryboard(name: "Main", bundle: nil)
                 let initialViewController = storyboard.instantiateViewController(withIdentifier: "DashboardNVC")
                 appDelegate.window?.rootViewController = initialViewController
                 appDelegate.window?.makeKeyAndVisible()
+                } else {
+                    self.emptyAllTF()
+                }
             })
         }
     }
     
     
+    
+    
     //MARK: private functions
+    
+    private func emptyAllTF() {
+        thisUITF1.text = ""
+        thisUITF2.text = ""
+        thisUITF3.text = ""
+        thisUITF4.text = ""
+        thisUITF5.text = ""
+        thisUITF6.text = ""
+        thisUITF1.becomeFirstResponder()
+    }
     
     private func getOTP() -> String {
         let bOTP = "\(thisUITF1.text!)\(thisUITF2.text!)\(thisUITF3.text!)\(thisUITF4.text!)\(thisUITF5.text!)\(thisUITF6.text!)"

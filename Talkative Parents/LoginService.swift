@@ -109,12 +109,24 @@ class LoginService {
             .validate(contentType: ["application/json"])
             .responseData { response in
                 Commons.hideIndicator()
-                
+                print(response.result)
+                print(response.result.value)
+                print(response.response?.statusCode)
                 if response.result.isSuccess {
+                    if response.response?.statusCode != 200 {
+                        Commons.showErrorMessage(pMessage: "Please enter the valid OTP")
+                        callback(false)
+                        return
+                    }
                     if let data = response.data {
                         //let bResponse = ServiceResponse(JSONString: utf8Text)
                         let json = JSON(data:data)
                         print(json)
+                        if json == nil {
+                            Commons.showNoNetwork()
+                            callback(false)
+                            return
+                        }
                         let bContent = json.rawString()!
                         print("bContent \(bContent)")
                         Constants.sharedInstance._UserDefaults.setPhoneNumber(pPhoneNumber: pPhoneNumber)
