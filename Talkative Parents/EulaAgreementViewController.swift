@@ -19,7 +19,7 @@ class EulaAgreementViewController: UIViewController {
 
         self.title = "EULA Agreement"
         Commons.applyCommonBtnRadius(pBtn: thisUIAcceptBtn)
-        Commons.applyCommonBtnRadius(pBtn: thisUIDeclineBtn)
+//        Commons.applyCommonBtnRadius(pBtn: thisUIDeclineBtn)
         // Do any additional setup after loading the view.
     }
     

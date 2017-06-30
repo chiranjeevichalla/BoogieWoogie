@@ -13,6 +13,7 @@ class HelpScreenViewController: UIViewController, UICollectionViewDataSource, UI
     
     @IBOutlet weak var thisUICollectionView: UICollectionView!
     @IBOutlet weak var thisUIContinueButton: UIButton!
+    @IBOutlet weak var thisUISkipBtn: UIButton!
     
     @IBOutlet weak var thisUIPageControl: CustomImagePageControl!
     private var thisCollectionViewCellSize = CGSize(width: 100, height: 100)
@@ -44,7 +45,7 @@ class HelpScreenViewController: UIViewController, UICollectionViewDataSource, UI
 //        bNVC.pushViewController(bVC, animated: true)
 //        return
         
-        if Constants.sharedInstance._UserDefaults.isLoggedIn() {
+        if !Constants.sharedInstance._UserDefaults.isLoggedIn() {
             AppService.GetProfile(callback: { (result) in
                 
             })
@@ -135,10 +136,28 @@ class HelpScreenViewController: UIViewController, UICollectionViewDataSource, UI
         thisUIPageControl.currentPage = index
         thisUIPageControl.updateDots()
         print("scrollviewdidscroll \(index)")
+        if index == 4 {
+            DispatchQueue.main.async {
+                self.thisUISkipBtn.isHidden = true
+                self.thisUIContinueButton.isHidden = false
+//            self.thisUISkipBtn.setTitle("Done", for: .normal)
+            }
+            
+        } else {
+            DispatchQueue.main.async {
+                self.thisUISkipBtn.isHidden = false
+                self.thisUIContinueButton.isHidden = true
+//            self.thisUISkipBtn.setTitle("Skip", for: .normal)
+            }
+        }
     }
 
     @IBAction func onTapContinue(_ sender: Any) {
-        
+        let appDelegate = UIApplication.shared.delegate! as! AppDelegate
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let initialViewController = storyboard.instantiateViewController(withIdentifier: "EulaAgreementNPC")
+        appDelegate.window?.rootViewController = initialViewController
+        appDelegate.window?.makeKeyAndVisible()
     }
     
     @IBAction func onTapSkip(_ sender: Any) {

@@ -24,10 +24,10 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="90"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="375" height="89.5"/>
+                <rect key="frame" x="0.0" y="0.0" width="375" height="90"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WVZ-pR-8gS" customClass="SemiBoldLabel" customModule="Talkative_Parents" customModuleProvider="target">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WVZ-pR-8gS" customClass="SemiBoldLabel" customModule="Talkative_Parents" customModuleProvider="target">
                         <rect key="frame" x="17" y="8" width="293" height="22"/>
                         <fontDescription key="fontDescription" name="OpenSans-Semibold" family="Open Sans" pointSize="16"/>
                         <nil key="textColor"/>
@@ -38,7 +38,7 @@
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jda-im-rip" customClass="SemiBoldLabel" customModule="Talkative_Parents" customModuleProvider="target">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jda-im-rip" customClass="SemiBoldLabel" customModule="Talkative_Parents" customModuleProvider="target">
                         <rect key="frame" x="17" y="31" width="293" height="19.5"/>
                         <fontDescription key="fontDescription" name="OpenSans-Semibold" family="Open Sans" pointSize="14"/>
                         <color key="textColor" red="0.60784313725490191" green="0.60784313725490191" blue="0.60784313725490191" alpha="1" colorSpace="calibratedRGB"/>
@@ -49,7 +49,7 @@
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MIx-uw-Jbt" customClass="RegularLabel" customModule="Talkative_Parents" customModuleProvider="target">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MIx-uw-Jbt" customClass="RegularLabel" customModule="Talkative_Parents" customModuleProvider="target">
                         <rect key="frame" x="17" y="60" width="340" height="21"/>
                         <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="15"/>
                         <color key="textColor" red="0.11372549019607843" green="0.11372549019607843" blue="0.10980392156862745" alpha="1" colorSpace="calibratedRGB"/>
@@ -67,6 +67,9 @@
                             <constraint firstAttribute="height" constant="17" id="cmC-w8-QCf"/>
                         </constraints>
                     </imageView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Fa-vi-l6u">
+                        <rect key="frame" x="333" y="4" width="30" height="30"/>
+                    </button>
                 </subviews>
                 <constraints>
                     <constraint firstItem="MIx-uw-Jbt" firstAttribute="top" secondItem="Jda-im-rip" secondAttribute="bottom" constant="9.5" id="7fn-nB-HJh"/>
@@ -74,6 +77,7 @@
                     <constraint firstAttribute="trailingMargin" secondItem="MIx-uw-Jbt" secondAttribute="trailing" constant="10" id="BNk-0T-Z9P"/>
                     <constraint firstAttribute="trailingMargin" secondItem="WVZ-pR-8gS" secondAttribute="trailing" constant="57" id="EEv-ev-l7c"/>
                     <constraint firstItem="WVZ-pR-8gS" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="9" id="I6c-YM-OHF"/>
+                    <constraint firstItem="1Fa-vi-l6u" firstAttribute="centerX" secondItem="Ylg-Go-bpN" secondAttribute="centerX" id="IUc-NB-wBr"/>
                     <constraint firstItem="Jda-im-rip" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="9" id="QiW-MB-Ky4"/>
                     <constraint firstAttribute="bottomMargin" secondItem="MIx-uw-Jbt" secondAttribute="bottom" constant="0.5" id="RPl-3Q-nxx"/>
                     <constraint firstItem="Jda-im-rip" firstAttribute="top" secondItem="WVZ-pR-8gS" secondAttribute="bottom" constant="1" id="VgL-U9-jg4"/>
@@ -81,10 +85,12 @@
                     <constraint firstItem="Ylg-Go-bpN" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="3" id="cX9-Db-Z3E"/>
                     <constraint firstItem="MIx-uw-Jbt" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="9" id="fAh-x2-FpB"/>
                     <constraint firstAttribute="trailingMargin" secondItem="Ylg-Go-bpN" secondAttribute="trailing" constant="10" id="kwT-mi-5QH"/>
+                    <constraint firstItem="1Fa-vi-l6u" firstAttribute="centerY" secondItem="Ylg-Go-bpN" secondAttribute="centerY" id="syT-MY-gWJ"/>
                 </constraints>
             </tableViewCellContentView>
             <color key="backgroundColor" red="0.96470588235294119" green="0.96470588235294119" blue="0.96470588235294119" alpha="1" colorSpace="calibratedRGB"/>
             <connections>
+                <outlet property="thisUIAttachmentBtn" destination="1Fa-vi-l6u" id="pYP-LX-7QV"/>
                 <outlet property="thisUIAttachmentImage" destination="Ylg-Go-bpN" id="8Fm-LT-9iJ"/>
                 <outlet property="thisUIDateLabel" destination="Jda-im-rip" id="0bO-f3-XFm"/>
                 <outlet property="thisUIDescriptionlabel" destination="MIx-uw-Jbt" id="UYl-Dq-Dx4"/>

@@ -42,48 +42,44 @@
                             <constraint firstAttribute="bottom" secondItem="syX-Jw-jYl" secondAttribute="bottom" id="q7B-so-cQX"/>
                         </constraints>
                     </view>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="C2J-27-sSk">
-                        <rect key="frame" x="0.0" y="118" width="350" height="62"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rituparna Banerjee" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mIM-iE-kyA">
-                                <rect key="frame" x="20" y="11" width="310" height="20"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rituparna Banerjee" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ACO-UD-MdP">
-                                <rect key="frame" x="20" y="34" width="310" height="19"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
+                    <view alpha="0.69999999999999996" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="C2J-27-sSk">
+                        <rect key="frame" x="3" y="113" width="344" height="62"/>
                         <color key="backgroundColor" red="0.0078431372550000003" green="0.58823529409999997" blue="0.60392156860000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="ACO-UD-MdP" firstAttribute="top" secondItem="mIM-iE-kyA" secondAttribute="bottom" constant="3" id="3Cl-dV-qa4"/>
-                            <constraint firstAttribute="trailing" secondItem="mIM-iE-kyA" secondAttribute="trailing" constant="20" id="3iv-8r-uUR"/>
-                            <constraint firstAttribute="trailing" secondItem="ACO-UD-MdP" secondAttribute="trailing" constant="20" id="4cP-55-Nst"/>
-                            <constraint firstItem="ACO-UD-MdP" firstAttribute="leading" secondItem="C2J-27-sSk" secondAttribute="leading" constant="20" id="CIV-zR-X6c"/>
-                            <constraint firstAttribute="bottom" secondItem="ACO-UD-MdP" secondAttribute="bottom" constant="9" id="CYa-yz-u5S"/>
                             <constraint firstAttribute="height" constant="62" id="D4W-kU-8jb"/>
-                            <constraint firstItem="mIM-iE-kyA" firstAttribute="top" secondItem="C2J-27-sSk" secondAttribute="top" constant="11" id="Kn1-ov-qHy"/>
-                            <constraint firstItem="ACO-UD-MdP" firstAttribute="top" secondItem="mIM-iE-kyA" secondAttribute="bottom" constant="3" id="Nik-hX-0Ab"/>
-                            <constraint firstItem="mIM-iE-kyA" firstAttribute="leading" secondItem="C2J-27-sSk" secondAttribute="leading" constant="20" id="YVV-iV-4W5"/>
                         </constraints>
                     </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rituparna Banerjee" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mIM-iE-kyA">
+                        <rect key="frame" x="20" y="126" width="310" height="20"/>
+                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rituparna Banerjee" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ACO-UD-MdP">
+                        <rect key="frame" x="20" y="148" width="310" height="19"/>
+                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
             </view>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstAttribute="bottom" secondItem="C2J-27-sSk" secondAttribute="bottom" id="9NK-el-Ogb"/>
+                <constraint firstItem="mIM-iE-kyA" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="20" id="2RY-xH-FMO"/>
+                <constraint firstAttribute="bottom" secondItem="ACO-UD-MdP" secondAttribute="bottom" constant="13" id="9Ih-0t-BuC"/>
+                <constraint firstAttribute="bottom" secondItem="C2J-27-sSk" secondAttribute="bottom" constant="5" id="9NK-el-Ogb"/>
                 <constraint firstAttribute="bottom" secondItem="Jna-mT-yCV" secondAttribute="bottom" id="BAJ-Lw-2te"/>
                 <constraint firstItem="bx6-sI-xqx" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="20" id="Fjf-Eh-E34"/>
-                <constraint firstAttribute="trailing" secondItem="C2J-27-sSk" secondAttribute="trailing" id="NrX-NY-6bh"/>
+                <constraint firstAttribute="trailing" secondItem="C2J-27-sSk" secondAttribute="trailing" constant="3" id="NrX-NY-6bh"/>
                 <constraint firstAttribute="trailing" secondItem="Jna-mT-yCV" secondAttribute="trailing" id="b58-le-kxJ"/>
-                <constraint firstItem="C2J-27-sSk" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="cn8-7A-ZJ1"/>
+                <constraint firstItem="C2J-27-sSk" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="3" id="cn8-7A-ZJ1"/>
+                <constraint firstAttribute="trailing" secondItem="mIM-iE-kyA" secondAttribute="trailing" constant="20" id="hIq-JX-a27"/>
+                <constraint firstItem="ACO-UD-MdP" firstAttribute="top" secondItem="mIM-iE-kyA" secondAttribute="bottom" constant="2" id="hYo-xw-YfA"/>
+                <constraint firstAttribute="trailing" secondItem="ACO-UD-MdP" secondAttribute="trailing" constant="20" id="lre-Su-ert"/>
                 <constraint firstItem="Jna-mT-yCV" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="rN2-HY-Od9"/>
                 <constraint firstItem="bx6-sI-xqx" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="29" id="ucn-eF-qdx"/>
                 <constraint firstItem="Jna-mT-yCV" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="upo-bs-eIH"/>
+                <constraint firstItem="ACO-UD-MdP" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="20" id="zUi-47-0fJ"/>
             </constraints>
             <connections>
                 <outlet property="thisUIChildButton" destination="syX-Jw-jYl" id="2op-st-Ct1"/>

@@ -10,6 +10,7 @@ import UIKit
 
 class SDBCommentTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var thisUIAttachmentBtn: UIButton!
     
     @IBOutlet weak var thisUINameLabel: SemiBoldLabel!
     

@@ -26,7 +26,7 @@ class LoginService {
             return
         }
         
-        if (pPhoneNumber == "") {
+        if (pPhoneNumber == "" || pPhoneNumber.characters.count > 10) {
             Commons.hideIndicator()
             Commons.showErrorMessage(pMessage: "Please enter the valid phone number")
             return

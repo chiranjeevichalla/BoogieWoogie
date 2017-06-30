@@ -100,12 +100,12 @@ class DashboardViewController: UIViewController, UICollectionViewDelegate, UICol
  */
         
         if let layout = thisUICollectionView.collectionViewLayout as? UICollectionViewFlowLayout {
-            layout.itemSize = CGSize(width: thisUICollectionView.bounds.width-10 , height: thisUICollectionView.bounds.height)
+            layout.itemSize = CGSize(width: thisUICollectionView.bounds.width-10 , height: thisUICollectionView.bounds.height-2)
             print(thisUICollectionView.bounds.height)
             thisScreenWidth = thisUICollectionView.bounds.width
             let bTop = 63 * thisUICollectionView.bounds.height / 201
             
-            layout.sectionInset = UIEdgeInsets(top: -bTop, left: 5, bottom: 0, right: 5)
+            layout.sectionInset = UIEdgeInsets(top: -bTop, left: 5, bottom: 5, right: 5)
             layout.minimumLineSpacing = 10
             layout.invalidateLayout()
         }

@@ -117,7 +117,7 @@ class FireBaseHelper {
                     if callback != nil {
                         callback(bAttendance!, true)
                     } else {
-                        bRef.removeAllObservers()
+//                        bRef.removeAllObservers()
                     }
                 }
                 

@@ -8,8 +8,10 @@
 
 import UIKit
 import Firebase
+import Alamofire
+import QuickLook
 
-class SoundingBoardDetailViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class SoundingBoardDetailViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, QLPreviewControllerDelegate {
     
     @IBOutlet weak var thisUITV: UITableView!
     
@@ -36,6 +38,8 @@ class SoundingBoardDetailViewController: UIViewController, UIImagePickerControll
     var thisComments : [Comment] = []
     var thisSoundingBoard : SoundingBoard!
     var thisFIRDBRef : FIRDatabaseReference!
+    
+    var thisAttachmentUrl : String = ""
     
     private var thisCanScroll = false
     
@@ -369,14 +373,53 @@ extension SoundingBoardDetailViewController : UITableViewDelegate, UITableViewDa
         cell.thisUINameLabel.text = bComment.getPostedBy()
         cell.thisUIDateLabel.text = bComment.getPostedDate()
         cell.thisUIDescriptionlabel.text = bComment.getMessage()
-        
+        cell.thisUIAttachmentBtn.tag = indexPath.row-2
         if bComment.hasAttachment() {
             cell.thisUIAttachmentImage.isHidden = false
+            
+            cell.thisUIAttachmentBtn.addTarget(self, action: #selector(checkAttachment), for: .touchUpInside)
         } else {
             cell.thisUIAttachmentImage.isHidden = true
         }
         
         return cell
+    }
+    
+    func checkAttachment(sender : UIButton!) {
+        self.thisAttachmentUrl = self.thisComments[sender.tag].getAttachment()
+        if !Commons.isFileExist(pFileName: thisAttachmentUrl) {
+                        Commons.showIndicator()
+            
+            let bUrl = Commons.constructUrl(pUrl: thisAttachmentUrl)
+            Alamofire.download(bUrl!, to: Commons.getDestination(pFileName: thisAttachmentUrl))
+                .downloadProgress { progress in
+                    print("Download Progress: \(progress.fractionCompleted)")
+//                    bCell.thisCircularView.setProgress(Float(progress.fractionCompleted), animated: true)
+                }
+                .response { response in
+                    print(response)
+//                    bCell.thisCircularView.isHidden = true
+//                    bCell.thisUIImageView.isHidden = false
+                                    Commons.hideIndicator()
+                    if response.error == nil, let imagePath = response.destinationURL?.path {
+                        print("response path is \(response.destinationURL)")
+                        //                    self.quickLookController.currentPreviewItemIndex = indexPath.row
+                        let quickLookController = QLPreviewController()
+                        quickLookController.delegate = self
+                        quickLookController.dataSource = self
+                        
+                        quickLookController.currentPreviewItemIndex = 0
+                        //                    self.navigationController?.pushViewController(self.quickLookController, animated: true)
+                        self.present(quickLookController, animated: true, completion: nil)
+                    }
+            }
+        } else {
+            let quickLookController = QLPreviewController()
+            quickLookController.delegate = self
+            quickLookController.dataSource = self
+            quickLookController.currentPreviewItemIndex = 0
+            self.present(quickLookController, animated: true, completion: nil)
+        }
     }
 }
 
@@ -400,3 +443,24 @@ extension SoundingBoardDetailViewController: GrowingTextViewDelegate {
         }
     }
 }
+
+extension SoundingBoardDetailViewController : QLPreviewControllerDataSource {
+    
+    func numberOfPreviewItems(in controller: QLPreviewController) -> Int {
+        if self.thisAttachmentUrl == "" {
+            return 0
+        } else {
+            return 1
+        }
+    }
+    
+    
+    func previewController(_ controller: QLPreviewController, previewItemAt index: Int) -> QLPreviewItem {
+
+        return Commons.getFileUrlFromDocDirectory(pFileName: self.thisAttachmentUrl)
+      
+    }
+    
+    
+}
+
