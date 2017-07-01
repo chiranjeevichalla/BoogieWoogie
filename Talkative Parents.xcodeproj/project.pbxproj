@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		180C13FE1F07C5B100BEC9BC /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180C13FC1F07C5B100BEC9BC /* ProfileVC.swift */; };
+		180C13FF1F07C5B100BEC9BC /* ProfileVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 180C13FD1F07C5B100BEC9BC /* ProfileVC.xib */; };
 		181E64761EC9CB70007E7C87 /* UserDefaultsConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181E64751EC9CB70007E7C87 /* UserDefaultsConstants.swift */; };
 		181E64781EC9CB7D007E7C87 /* Commons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181E64771EC9CB7D007E7C87 /* Commons.swift */; };
 		181E647A1EC9CB88007E7C87 /* CommonService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181E64791EC9CB88007E7C87 /* CommonService.swift */; };
@@ -138,6 +140,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		180C13FC1F07C5B100BEC9BC /* ProfileVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
+		180C13FD1F07C5B100BEC9BC /* ProfileVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfileVC.xib; sourceTree = "<group>"; };
 		181E64751EC9CB70007E7C87 /* UserDefaultsConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaultsConstants.swift; sourceTree = "<group>"; };
 		181E64771EC9CB7D007E7C87 /* Commons.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Commons.swift; sourceTree = "<group>"; };
 		181E64791EC9CB88007E7C87 /* CommonService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommonService.swift; sourceTree = "<group>"; };
@@ -293,6 +297,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		180C13FB1F07C5A200BEC9BC /* ProfilePage */ = {
+			isa = PBXGroup;
+			children = (
+				180C13FC1F07C5B100BEC9BC /* ProfileVC.swift */,
+				180C13FD1F07C5B100BEC9BC /* ProfileVC.xib */,
+			);
+			name = ProfilePage;
+			sourceTree = "<group>";
+		};
 		181E64731EC9CA7B007E7C87 /* SERVICES */ = {
 			isa = PBXGroup;
 			children = (
@@ -323,6 +336,7 @@
 		181E64831ECB406D007E7C87 /* ViewController Pages */ = {
 			isa = PBXGroup;
 			children = (
+				180C13FB1F07C5A200BEC9BC /* ProfilePage */,
 				18F58ECE1EE02D600092B7C2 /* AttendancePage */,
 				18B30AFD1EDEA3BB00D5B9F7 /* SocialSharingPage */,
 				188829551EDDBE9000C51AC4 /* MoreTabPage */,
@@ -819,6 +833,7 @@
 				187435EB1ED43E4B00150ACD /* NWebViewTableViewCell.xib in Resources */,
 				18379F0A1ED0603500F75C31 /* OpenSans-Bold.ttf in Resources */,
 				18F58EE81EE2A5F80092B7C2 /* CategorySelectionViewController.xib in Resources */,
+				180C13FF1F07C5B100BEC9BC /* ProfileVC.xib in Resources */,
 				18379F0C1ED0603900F75C31 /* OpenSans-Semibold.ttf in Resources */,
 				183F93651EC9829300B11BEB /* LaunchScreen.storyboard in Resources */,
 				18F58EDC1EE196DF0092B7C2 /* SoundingBoardTableViewCell.xib in Resources */,
@@ -1010,6 +1025,7 @@
 			files = (
 				18379EFB1ED0578700F75C31 /* NotificationTableViewCell.swift in Sources */,
 				187435F41ED468F400150ACD /* AttachmentCollectionViewCell.swift in Sources */,
+				180C13FE1F07C5B100BEC9BC /* ProfileVC.swift in Sources */,
 				1862F0101ECDBE000084F704 /* ChildrenService.swift in Sources */,
 				18379F011ED0597900F75C31 /* RegularLabel.swift in Sources */,
 				183F935D1EC9829300B11BEB /* SoundingboardViewController.swift in Sources */,

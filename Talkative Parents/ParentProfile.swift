@@ -17,8 +17,8 @@ class ParentProfile : Mappable {
     private var _gender : Int? //1 female, 2 male
     private var _lastName : String?
     private var _lastlogin : String?
-    private var _isPorfilePicUploaded : String?
-    private var _isOffersOptedIn : String?
+    private var _isProfilePicUploaded : Bool = false
+    private var _isOffersOptedIn : Bool?
     private var _middleName : String?
     private var _id : String?
     
@@ -39,7 +39,7 @@ class ParentProfile : Mappable {
         _gender                     <- map["Gender"]
         _lastName                     <- map["LastName"]
         _lastlogin                     <- map["LastLogin"]
-        _isPorfilePicUploaded                     <- map["IsProfilePicUploaded"]
+        _isProfilePicUploaded                     <- map["IsProfilePicUploaded"]
         _isOffersOptedIn                     <- map["IsOffersOptedIn"]
         _middleName                     <- map["MiddleName"]
         _id                     <- map["Id"]
@@ -66,5 +66,24 @@ class ParentProfile : Mappable {
     }
     
     
+    func getEmailAddress() -> String {
+        return _emailAddress ?? "-"
+    }
+    
+    func getGender() -> String {
+        if _gender != nil {
+            if _gender == 1 {
+                return "Female"
+            } else {
+                return "Male"
+            }
+        } else {
+            return "-"
+        }
+    }
+    
+    func getIsProfilePicUploaded() -> Bool {
+        return _isProfilePicUploaded
+    }
     
 }

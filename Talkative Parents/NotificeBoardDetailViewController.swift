@@ -171,7 +171,7 @@ class NotificeBoardDetailViewController: UIViewController, UITableViewDelegate, 
 //            let bCell : NoticeBoardContentTableViewCell = tableView.cellForRow(at: indexPath) as! NoticeBoardContentTableViewCell
             let contentSize = bCell._UITextView.sizeThatFits(bCell._UITextView.bounds.size)
 //            return contentSize.height
-            return getHeightOfWebCell2(pWidth: contentSize.width, pString: thisNotificationDetail.getMessage().data.attributedString!)
+            return getHeightOfWebCell2(pTextView : bCell._UITextView, pWidth: contentSize.width, pString: thisNotificationDetail.getMessage().data.attributedString!)
 //            return 100
         }
         return UITableViewAutomaticDimension
@@ -181,10 +181,10 @@ class NotificeBoardDetailViewController: UIViewController, UITableViewDelegate, 
         return UITableViewAutomaticDimension
     }
     
-    private func getHeightOfWebCell2(pWidth : CGFloat, pString : NSAttributedString) -> CGFloat {
-        let bTextView = UITextView(frame: CGRect(x: 0, y: 0, width: pWidth, height: 10))
-        bTextView.attributedText = pString
-        let size : CGSize = bTextView.sizeThatFits(CGSize(width: pWidth, height: CGFloat.greatestFiniteMagnitude))
+    private func getHeightOfWebCell2(pTextView : UITextView, pWidth : CGFloat, pString : NSAttributedString) -> CGFloat {
+//        let bTextView = UITextView(frame: CGRect(x: 0, y: 0, width: pWidth, height: 10))
+        pTextView.attributedText = pString
+        let size : CGSize = pTextView.sizeThatFits(CGSize(width: pWidth, height: CGFloat.greatestFiniteMagnitude))
         return size.height
     }
     

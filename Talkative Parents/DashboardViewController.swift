@@ -48,11 +48,19 @@ class DashboardViewController: UIViewController, UICollectionViewDelegate, UICol
                 print("USER ID \(userId)")
             }
         }
+        
+        let myimage1 = UIImage(named: "profileNavigation")?.withRenderingMode(.alwaysOriginal)
+        navigationItem.leftBarButtonItem = UIBarButtonItem(image: myimage1, style: .plain, target: self, action: #selector(profileTapped))
     }
     
     func ButtonTapped() {
         print("Button Tapped")
         getChildrenWithChannels()
+    }
+    
+    func profileTapped() {
+        let bVC = ProfileVC()
+        self.navigationController?.pushViewController(bVC, animated: true)
     }
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {

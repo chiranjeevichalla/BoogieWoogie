@@ -12,7 +12,7 @@ protocol updateSelectedCountry {
     func setSelectedCountry(pNewSelectedCountry : Country)
 }
 
-class MobileLoginViewController: UIViewController, updateSelectedCountry {
+class MobileLoginViewController: UIViewController, updateSelectedCountry, UITextFieldDelegate {
 
     
     @IBOutlet weak var thisUICountryBtn: UIButton!
@@ -74,6 +74,18 @@ class MobileLoginViewController: UIViewController, updateSelectedCountry {
             }
         }
         
+    }
+    
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        guard let text = textField.text else { return true }
+        let limitLength = 10
+        
+        
+        let newLength = text.characters.count + string.characters.count - range.length
+        if newLength > limitLength {
+            return false
+        }
+        return true
     }
     
     // MARK : navigate Functions

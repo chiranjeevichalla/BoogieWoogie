@@ -19,11 +19,11 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ff4-7F-fYB">
-                        <rect key="frame" x="8" y="8" width="304" height="28"/>
+                        <rect key="frame" x="8" y="2" width="304" height="39.5"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <attributedString key="attributedText">
                             <fragment>
-                                <mutableString key="content">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
+                                <string key="content">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <attributes>
                                     <font key="NSFont" metaFont="system" size="14"/>
                                     <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
@@ -36,9 +36,9 @@
                 </subviews>
                 <constraints>
                     <constraint firstAttribute="trailing" secondItem="ff4-7F-fYB" secondAttribute="trailing" constant="8" id="1Oe-wB-TDQ"/>
-                    <constraint firstItem="ff4-7F-fYB" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="DOc-Hc-Sd9"/>
+                    <constraint firstItem="ff4-7F-fYB" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="2" id="DOc-Hc-Sd9"/>
                     <constraint firstItem="ff4-7F-fYB" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="KRJ-D4-6m6"/>
-                    <constraint firstAttribute="bottom" secondItem="ff4-7F-fYB" secondAttribute="bottom" constant="7.5" id="qcH-4R-5sg"/>
+                    <constraint firstAttribute="bottom" secondItem="ff4-7F-fYB" secondAttribute="bottom" constant="2" id="qcH-4R-5sg"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>

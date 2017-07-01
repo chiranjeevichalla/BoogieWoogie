@@ -44,7 +44,7 @@ class MoreTabViewController: UIViewController, UITableViewDelegate, UITableViewD
         self.thisTVData.append(OtherObject(pTitle: "Social Media Sharing", pImageName: "moreSocialSharing"))
         self.thisTVData.append(OtherObject(pTitle: "Share this App", pImageName: "moreAppSharing"))
         self.thisTVData.append(OtherObject(pTitle: "Attendance", pImageName: "moreAttendance"))
-        
+        self.thisTVData.append(OtherObject(pTitle: "Profile", pImageName: "moreProfile"))
         
     }
     
@@ -91,6 +91,9 @@ class MoreTabViewController: UIViewController, UITableViewDelegate, UITableViewD
             let backItem = UIBarButtonItem()
             backItem.title = "Back"
             navigationItem.backBarButtonItem = backItem
+            self.navigationController?.pushViewController(bVC, animated: true)
+        } else {
+            let bVC = ProfileVC()
             self.navigationController?.pushViewController(bVC, animated: true)
         }
     }

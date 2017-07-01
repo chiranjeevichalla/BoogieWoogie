@@ -45,7 +45,7 @@ class HelpScreenViewController: UIViewController, UICollectionViewDataSource, UI
 //        bNVC.pushViewController(bVC, animated: true)
 //        return
         
-        if !Constants.sharedInstance._UserDefaults.isLoggedIn() {
+        if Constants.sharedInstance._UserDefaults.isLoggedIn() {
             AppService.GetProfile(callback: { (result) in
                 
             })
