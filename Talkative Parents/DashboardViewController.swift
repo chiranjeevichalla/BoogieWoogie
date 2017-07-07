@@ -51,6 +51,7 @@ class DashboardViewController: UIViewController, UICollectionViewDelegate, UICol
         
         let myimage1 = UIImage(named: "profileNavigation")?.withRenderingMode(.alwaysOriginal)
         navigationItem.leftBarButtonItem = UIBarButtonItem(image: myimage1, style: .plain, target: self, action: #selector(profileTapped))
+        print(Commons.convertUTCToLocal(pCurrentDate: "Thu, 15 Jun 2017 08:10:34 GMT"))
     }
     
     func ButtonTapped() {
@@ -108,13 +109,14 @@ class DashboardViewController: UIViewController, UICollectionViewDelegate, UICol
  */
         
         if let layout = thisUICollectionView.collectionViewLayout as? UICollectionViewFlowLayout {
-            layout.itemSize = CGSize(width: thisUICollectionView.bounds.width-10 , height: thisUICollectionView.bounds.height-2)
-            print(thisUICollectionView.bounds.height)
+            
             thisScreenWidth = thisUICollectionView.bounds.width
             let bTop = 63 * thisUICollectionView.bounds.height / 201
             
-            layout.sectionInset = UIEdgeInsets(top: -bTop, left: 5, bottom: 5, right: 5)
+            layout.sectionInset = UIEdgeInsets(top: -bTop, left: 5, bottom: 4, right: 5)
             layout.minimumLineSpacing = 10
+            layout.itemSize = CGSize(width: thisUICollectionView.bounds.width-10 , height: thisUICollectionView.bounds.height-5)
+            print(thisUICollectionView.bounds.height)
             layout.invalidateLayout()
         }
         

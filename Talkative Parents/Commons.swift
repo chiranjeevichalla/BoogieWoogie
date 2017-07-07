@@ -96,8 +96,9 @@ class Commons {
         return bValue
     }
     
+    //convert local date to UTC
     class func getCurrentDateToString() -> String {
-        let bGMTTimeZone = NSTimeZone(abbreviation: "GMT")
+        let bGMTTimeZone = NSTimeZone(abbreviation: "UTC")
         let bCurrentTimeZone = NSTimeZone.system
         
         let date = NSDate()
@@ -109,30 +110,79 @@ class Commons {
         let bDestinationDate = NSDate(timeInterval: TimeInterval(bGMTOffset), since: date as Date)
         
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "wh"
-        let dateString = dateFormatter.string(from:bDestinationDate as Date)
-        return dateString
+        dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+        let dateString = dateFormatter.string(from:date as Date)
+        return Commons.localToUTC(date: dateString)
     }
     
-    class func convertUTCToLocal() -> String {
-        let bGMTTimeZone = NSTimeZone(abbreviation: "GMT")
-        let bCurrentTimeZone = NSTimeZone.system
+//    class func getCurrentDateToUTCString1() -> String {
+//        let date = NSDate()
+//        let dateFormator = DateFormatter()
+//        let dt = dateFormator.date(from: date)
+//        dateFormator.timeZone = TimeZone(abbreviation: "UTC")
+//        dateFormator.dateFormat = "yyyy-MM-dd HH:mm:ss"
+//        
+//        return dateFormator.string(from: dt!)
+//        
+//        let dateFormator = DateFormatter()
+//        dateFormator.dateFormat = "h:mm a"
+//        dateFormator.calendar = NSCalendar.current
+//        dateFormator.timeZone = TimeZone.current
+//        
+//        let dt = dateFormator.date(from: date)
+//        dateFormator.timeZone = TimeZone(abbreviation: "UTC")
+//        dateFormator.dateFormat = "H:mm:ss"
+//        
+//        return dateFormator.string(from: dt!)
+//
+//    }
+    
+    //convert UTC to local
+    class func convertUTCToLocal(pCurrentDate : String) -> String {
+        //    27 Jun 2017 09:40:00 GMT
+        //    2017-06-27 13:28:52
+        print("=============")
+        print(pCurrentDate)
+        let dateFormator = DateFormatter()
+        dateFormator.dateFormat = "yyyy-MM-dd HH:mm:ss"
+        dateFormator.timeZone = TimeZone(abbreviation: "UTC")
         
-        let date = NSDate()
-        
-        let bGMTOffset = bCurrentTimeZone.secondsFromGMT(for: date as Date)
-        //        let bCurrentOffset = bCurrentTimeZone.secondsFromGMT(for: date as Date)
-        
-        //        let interval : NST = bGMTOffset - bCurrentTimeZone
-        let bDestinationDate = NSDate(timeInterval: TimeInterval(bGMTOffset), since: date as Date)
-        
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "wh"
-        let dateString = dateFormatter.string(from:bDestinationDate as Date)
-        return dateString
+        let dt = dateFormator.date(from: pCurrentDate)
+        if dt != nil {
+            dateFormator.dateFormat = "dd MMM yyy HH:mm a"
+            return dateFormator.string(from: dt!)
+        } else {
+            let bCurrentDate = pCurrentDate.replacingOccurrences(of: " GMT", with: "")
+            dateFormator.dateFormat = "dd MMM yyyy HH:mm:ss"
+            let dt1 = dateFormator.date(from: bCurrentDate)
+            dateFormator.dateFormat = "dd MMM yyy HH:mm a"
+            if dt1 != nil {
+                return dateFormator.string(from: dt1!)
+            } else {
+                let bCurrentDate = pCurrentDate.replacingOccurrences(of: " GMT", with: "")
+                dateFormator.dateFormat = "E, dd MMM yyyy HH:mm:ss"
+                let dt2 = dateFormator.date(from: bCurrentDate)
+                dateFormator.dateFormat = "dd MMM yyy HH:mm a"
+                if dt2 != nil {
+                    return dateFormator.string(from: dt2!)
+                }
+                return pCurrentDate
+            }
+        }
     }
     
-    
+    class func localToUTC(date:String) -> String {
+        let dateFormator = DateFormatter()
+        dateFormator.dateFormat = "yyyy-MM-dd HH:mm:ss"
+        dateFormator.calendar = NSCalendar.current
+        dateFormator.timeZone = TimeZone.current
+        
+        let dt = dateFormator.date(from: date)
+        dateFormator.timeZone = TimeZone(abbreviation: "UTC")
+        dateFormator.dateFormat = "yyyy-MM-dd HH:mm:ss"
+        
+        return dateFormator.string(from: dt!)
+    }
     
     class func convertStringToDateFormat(pDate: String) -> String {
         let words = pDate.components(separatedBy: ".")
@@ -561,6 +611,9 @@ class Commons {
     class func clearAllNotificationTags() {
 //        OneSignal.de
     }
+    
+//    27 Jun 2017 09:40:00 GMT
+//    2017-06-27 13:28:52
     
     //    class func ConvertJSONToString(pData : NSDictionary, callback (String) -> Void) -> Void {
     //        let jsonData: NSDate = JSONSerialization.data(withJSONObject: pData, options: .prettyPrinted)

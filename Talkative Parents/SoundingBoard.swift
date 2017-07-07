@@ -28,6 +28,7 @@ class SoundingBoard : Mappable {
     private var _sectionId : String?
     private var _firebaseKey: String = ""
     private var _attachment : String?
+    private var _isActive : Bool?
     
     required init?(map: Map) {
         
@@ -55,6 +56,10 @@ class SoundingBoard : Mappable {
         _standardId                     <- map["standardId"]
         _sectionId                     <- map["sectionId"]
         _attachment                     <- map ["attachment"]
+        _isActive                       <- map ["isActive"]
+        if _createdDate != nil {
+            _createdDate = Commons.convertUTCToLocal(pCurrentDate: _createdDate!)
+        }
     }
     
     func getSubject() -> String {
@@ -135,6 +140,10 @@ class SoundingBoard : Mappable {
     
     func getAttachment() -> String {
         return _attachment ?? ""
+    }
+    
+    func setActive(pBool : Bool) {
+        _isActive = pBool
     }
     
 }

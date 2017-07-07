@@ -43,6 +43,10 @@ class Comment : Mappable {
         }
         _postedById                     <- map["postedById"]
         _role                     <- map["role"]
+        
+        if _postedDate != nil {
+            _postedDate = Commons.convertUTCToLocal(pCurrentDate: _postedDate!)
+        }
     }
     
     func getPostedDate() -> String {

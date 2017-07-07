@@ -404,13 +404,20 @@ extension SoundingBoardDetailViewController : UITableViewDelegate, UITableViewDa
                     if response.error == nil, let imagePath = response.destinationURL?.path {
                         print("response path is \(response.destinationURL)")
                         //                    self.quickLookController.currentPreviewItemIndex = indexPath.row
-                        let quickLookController = QLPreviewController()
-                        quickLookController.delegate = self
-                        quickLookController.dataSource = self
+                        DispatchQueue.main.async {
+                            
                         
-                        quickLookController.currentPreviewItemIndex = 0
-                        //                    self.navigationController?.pushViewController(self.quickLookController, animated: true)
-                        self.present(quickLookController, animated: true, completion: nil)
+                            let quickLookController = QLPreviewController()
+                            quickLookController.delegate = self
+                            quickLookController.dataSource = self
+                            
+                            quickLookController.currentPreviewItemIndex = 0
+                            //                    self.navigationController?.pushViewController(self.quickLookController, animated: true)
+                            self.present(quickLookController, animated: true, completion: nil)
+                        }
+                    } else {
+                        let bAlertView = UIAlertView(title: "Error", message: "File could not found/Error while downloading", delegate: nil, cancelButtonTitle: "OK")
+                        bAlertView.show()
                     }
             }
         } else {

@@ -98,8 +98,9 @@ class FireBaseHelper {
         
         
         var bRef : FIRDatabaseReference!
-        bRef = FIRDatabase.database().reference(withPath: "\(Constants.sharedInstance._child.getSchoolId())/\(Constants.sharedInstance._child.getParentId())/\(Constants.sharedInstance._child.getChildId())/\(Constants.sharedInstance._child.getStandardId())||\(Constants.sharedInstance._child.getStandardId())/attendance_msgs")
-        
+        let bString = "||"
+        bRef = FIRDatabase.database().reference(withPath: "\(Constants.sharedInstance._child.getSchoolId())/\(Constants.sharedInstance._child.getParentId())/\(Constants.sharedInstance._child.getChildId())/\(Constants.sharedInstance._child.getStandardId())\(bString)\(Constants.sharedInstance._child.getSectionId())/attendance_msgs")
+        print("attendence url \(bRef.url)")
 //        if !IsConnectedToNetwork() {
 //            Commons.hideIndicator()
 //            Commons.showNoNetwork()
@@ -191,9 +192,12 @@ class FireBaseHelper {
         var bRef : FIRDatabaseReference!
 //        let bPath = "sb-2/\(pType)/S-19107ff1-ea59-43c0-83a2-9962df79dfae-d3aaa86a-4c61-4c60-91dd-9201faa71baa/chat"
       let bPath = "sb-2/\(pType)/\(Constants.sharedInstance._child.getSchoolId())/chat/\(Constants.sharedInstance._child.getSchoolToParentChannelId())"
-        bRef = FIRDatabase.database().reference(withPath: bPath)
-        pMessage.setDate(pValue: Commons.getCurrentDateToString())
         
+        bRef = FIRDatabase.database().reference(withPath: bPath)
+        print("add sounding board message url \(bRef.url)")
+        pMessage.setDate(pValue: Commons.getCurrentDateToString())
+        pMessage.setActive(pBool: true)
+        pMessage.setParentName(pValue: Constants.sharedInstance._parent.getName())
 //        bRef.removeAllObservers()
         if pAttachment != nil {
             AppService.UploadFile(pFileName: Commons.getUniqueStringId(), pImage: pAttachment!, pIsProfile: false, callback: { (pAttachmentLink, result) in
