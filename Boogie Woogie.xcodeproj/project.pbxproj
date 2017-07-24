@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		032B7B39A71D9C8A75E16D75 /* Pods_Boogie_Woogie.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B26D1815220BAF7143AB214 /* Pods_Boogie_Woogie.framework */; };
+		0B6C1B881F17680E00AC7F42 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0B6C1B871F17680E00AC7F42 /* GoogleService-Info.plist */; };
 		180C13FE1F07C5B100BEC9BC /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180C13FC1F07C5B100BEC9BC /* ProfileVC.swift */; };
 		180C13FF1F07C5B100BEC9BC /* ProfileVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 180C13FD1F07C5B100BEC9BC /* ProfileVC.xib */; };
 		181E64761EC9CB70007E7C87 /* UserDefaultsConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181E64751EC9CB70007E7C87 /* UserDefaultsConstants.swift */; };
@@ -116,9 +118,10 @@
 		18F58EE31EE29B660092B7C2 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F58EE21EE29B660092B7C2 /* Category.swift */; };
 		18F58EE71EE2A5F80092B7C2 /* CategorySelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F58EE51EE2A5F80092B7C2 /* CategorySelectionViewController.swift */; };
 		18F58EE81EE2A5F80092B7C2 /* CategorySelectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18F58EE61EE2A5F80092B7C2 /* CategorySelectionViewController.xib */; };
-		18F691E61ED8701B00FA80AC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 18F691E51ED8701B00FA80AC /* GoogleService-Info.plist */; };
+		2E74F7106A15D229A5F9A6BE /* Pods_Boogie_WoogieTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9F9D0FF4A1D59CA80ACED9B /* Pods_Boogie_WoogieTests.framework */; };
+		5875DD9B1F1F29FA0004B1DC /* tabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5875DD9A1F1F29FA0004B1DC /* tabBarController.swift */; };
 		6E91B36D65901A4382092B6A /* Pods_Talkative_ParentsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A55DDBCD178F55B485AC29B /* Pods_Talkative_ParentsTests.framework */; };
-		809F2700F3A6C4483A7F37CD /* Pods_Talkative_Parents.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A819ED0EACF43F78280E979 /* Pods_Talkative_Parents.framework */; };
+		A3B85D2DBC75B20BBC51F1D1 /* Pods_Boogie_WoogieUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F006149B22C159C25E977A5E /* Pods_Boogie_WoogieUITests.framework */; };
 		A3D0D6BE9AF322A44030801F /* Pods_Talkative_ParentsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1AA3821C99BBDDBCA5941E8 /* Pods_Talkative_ParentsUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -140,6 +143,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0B6C1B871F17680E00AC7F42 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		180C13FC1F07C5B100BEC9BC /* ProfileVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
 		180C13FD1F07C5B100BEC9BC /* ProfileVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfileVC.xib; sourceTree = "<group>"; };
 		181E64751EC9CB70007E7C87 /* UserDefaultsConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaultsConstants.swift; sourceTree = "<group>"; };
@@ -174,7 +178,7 @@
 		18379F061ED059E700F75C31 /* OpenSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Bold.ttf"; sourceTree = "<group>"; };
 		18379F081ED05B7600F75C31 /* Basic.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Basic.xcdatamodel; sourceTree = "<group>"; };
 		18379F0D1ED0731E00F75C31 /* Notification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Notification.swift; sourceTree = "<group>"; };
-		183F93551EC9829300B11BEB /* Talkative Parents.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Talkative Parents.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		183F93551EC9829300B11BEB /* Boogie Woogie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Boogie Woogie.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		183F93581EC9829300B11BEB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		183F935A1EC9829300B11BEB /* NotificationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsViewController.swift; sourceTree = "<group>"; };
 		183F935C1EC9829300B11BEB /* SoundingboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundingboardViewController.swift; sourceTree = "<group>"; };
@@ -182,10 +186,10 @@
 		183F93611EC9829300B11BEB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		183F93641EC9829300B11BEB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		183F93661EC9829300B11BEB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		183F936B1EC9829400B11BEB /* Talkative ParentsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Talkative ParentsTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		183F936B1EC9829400B11BEB /* Boogie WoogieTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Boogie WoogieTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		183F936F1EC9829400B11BEB /* Talkative_ParentsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Talkative_ParentsTests.swift; sourceTree = "<group>"; };
 		183F93711EC9829400B11BEB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		183F93761EC9829400B11BEB /* Talkative ParentsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Talkative ParentsUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		183F93761EC9829400B11BEB /* Boogie WoogieUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Boogie WoogieUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		183F937A1EC9829400B11BEB /* Talkative_ParentsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Talkative_ParentsUITests.swift; sourceTree = "<group>"; };
 		183F937C1EC9829400B11BEB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		185983B71EE52FC9008E6CEC /* ProgressCellTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressCellTableViewCell.swift; sourceTree = "<group>"; };
@@ -257,16 +261,25 @@
 		18F58EE21EE29B660092B7C2 /* Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		18F58EE51EE2A5F80092B7C2 /* CategorySelectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategorySelectionViewController.swift; sourceTree = "<group>"; };
 		18F58EE61EE2A5F80092B7C2 /* CategorySelectionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CategorySelectionViewController.xib; sourceTree = "<group>"; };
-		18F691E51ED8701B00FA80AC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		2AD509CD274D6B8A1C439CF9 /* Pods-Talkative ParentsUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Talkative ParentsUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Talkative ParentsUITests/Pods-Talkative ParentsUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		34FB83C7C6BCA64B2D305BAB /* Pods-Talkative Parents.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Talkative Parents.release.xcconfig"; path = "Pods/Target Support Files/Pods-Talkative Parents/Pods-Talkative Parents.release.xcconfig"; sourceTree = "<group>"; };
 		4B8E0B6B42749C64D03BBBDE /* Pods-Talkative ParentsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Talkative ParentsTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Talkative ParentsTests/Pods-Talkative ParentsTests.release.xcconfig"; sourceTree = "<group>"; };
+		5875DD9A1F1F29FA0004B1DC /* tabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = tabBarController.swift; sourceTree = "<group>"; };
 		6A819ED0EACF43F78280E979 /* Pods_Talkative_Parents.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Talkative_Parents.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7B26D1815220BAF7143AB214 /* Pods_Boogie_Woogie.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Boogie_Woogie.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		891B5558B7A460EB819A08AE /* Pods-Boogie WoogieUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Boogie WoogieUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Boogie WoogieUITests/Pods-Boogie WoogieUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		8A55DDBCD178F55B485AC29B /* Pods_Talkative_ParentsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Talkative_ParentsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9780FA6B6FCEBBF94D6B4533 /* Pods-Talkative ParentsUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Talkative ParentsUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Talkative ParentsUITests/Pods-Talkative ParentsUITests.release.xcconfig"; sourceTree = "<group>"; };
 		9D9F0F59583670902A541D75 /* Pods-Talkative ParentsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Talkative ParentsTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Talkative ParentsTests/Pods-Talkative ParentsTests.debug.xcconfig"; sourceTree = "<group>"; };
+		A173CAD603F608B09C5CA4DE /* Pods-Boogie WoogieTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Boogie WoogieTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Boogie WoogieTests/Pods-Boogie WoogieTests.release.xcconfig"; sourceTree = "<group>"; };
+		B44E5ED71F6247D7386095A2 /* Pods-Boogie WoogieTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Boogie WoogieTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Boogie WoogieTests/Pods-Boogie WoogieTests.debug.xcconfig"; sourceTree = "<group>"; };
 		C1A9C620147BD8FA4BC8437C /* Pods-Talkative Parents.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Talkative Parents.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Talkative Parents/Pods-Talkative Parents.debug.xcconfig"; sourceTree = "<group>"; };
+		D5A1197839FE785D85D3B7EC /* Pods-Boogie Woogie.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Boogie Woogie.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Boogie Woogie/Pods-Boogie Woogie.debug.xcconfig"; sourceTree = "<group>"; };
+		E3E3E7200A57EDAA866D689F /* Pods-Boogie Woogie.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Boogie Woogie.release.xcconfig"; path = "Pods/Target Support Files/Pods-Boogie Woogie/Pods-Boogie Woogie.release.xcconfig"; sourceTree = "<group>"; };
+		E444BAF9B9240CF8FE73E6ED /* Pods-Boogie WoogieUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Boogie WoogieUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Boogie WoogieUITests/Pods-Boogie WoogieUITests.release.xcconfig"; sourceTree = "<group>"; };
+		F006149B22C159C25E977A5E /* Pods_Boogie_WoogieUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Boogie_WoogieUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1AA3821C99BBDDBCA5941E8 /* Pods_Talkative_ParentsUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Talkative_ParentsUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F9F9D0FF4A1D59CA80ACED9B /* Pods_Boogie_WoogieTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Boogie_WoogieTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -274,7 +287,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				809F2700F3A6C4483A7F37CD /* Pods_Talkative_Parents.framework in Frameworks */,
+				032B7B39A71D9C8A75E16D75 /* Pods_Boogie_Woogie.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -283,6 +296,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6E91B36D65901A4382092B6A /* Pods_Talkative_ParentsTests.framework in Frameworks */,
+				2E74F7106A15D229A5F9A6BE /* Pods_Boogie_WoogieTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -291,6 +305,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A3D0D6BE9AF322A44030801F /* Pods_Talkative_ParentsUITests.framework in Frameworks */,
+				A3B85D2DBC75B20BBC51F1D1 /* Pods_Boogie_WoogieUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -336,18 +351,19 @@
 		181E64831ECB406D007E7C87 /* ViewController Pages */ = {
 			isa = PBXGroup;
 			children = (
+				5812BE901F1E35EB00A6F821 /* TabBarVC */,
 				180C13FB1F07C5A200BEC9BC /* ProfilePage */,
 				18F58ECE1EE02D600092B7C2 /* AttendancePage */,
 				18B30AFD1EDEA3BB00D5B9F7 /* SocialSharingPage */,
 				188829551EDDBE9000C51AC4 /* MoreTabPage */,
 				188829501EDD5E1B00C51AC4 /* CalendarDetailPage */,
 				188829441ED9C3B300C51AC4 /* CalendarPage */,
-				187FAC291ED5689200A9A15E /* DocumentViewerPage */,
-				182EA8E31ED31FBB00589E8C /* NotificationDetailPage */,
 				185983BD1EE813E9008E6CEC /* SoundingBoardDetailPage */,
 				18F58EE11EE281C30092B7C2 /* CreateSoundingBoardPage */,
 				18379EF81ED056FA00F75C31 /* SoundingBoardPage */,
 				18379EF71ED056EF00F75C31 /* NoticeboardPage */,
+				182EA8E31ED31FBB00589E8C /* NotificationDetailPage */,
+				187FAC291ED5689200A9A15E /* DocumentViewerPage */,
 				1862F0111ECDC80E0084F704 /* Dashboard */,
 				1862F0041ECD86290084F704 /* CountrySelectionPage */,
 				181E64941ECC65E9007E7C87 /* OTPVerificationPage */,
@@ -470,9 +486,9 @@
 		183F93561EC9829300B11BEB /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				183F93551EC9829300B11BEB /* Talkative Parents.app */,
-				183F936B1EC9829400B11BEB /* Talkative ParentsTests.xctest */,
-				183F93761EC9829400B11BEB /* Talkative ParentsUITests.xctest */,
+				183F93551EC9829300B11BEB /* Boogie Woogie.app */,
+				183F936B1EC9829400B11BEB /* Boogie WoogieTests.xctest */,
+				183F93761EC9829400B11BEB /* Boogie WoogieUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -490,7 +506,7 @@
 				181E64891ECB474C007E7C87 /* UIModules */,
 				181E64831ECB406D007E7C87 /* ViewController Pages */,
 				183F93581EC9829300B11BEB /* AppDelegate.swift */,
-				18F691E51ED8701B00FA80AC /* GoogleService-Info.plist */,
+				0B6C1B871F17680E00AC7F42 /* GoogleService-Info.plist */,
 				183F935E1EC9829300B11BEB /* Main.storyboard */,
 				183F93611EC9829300B11BEB /* Assets.xcassets */,
 				183F93631EC9829300B11BEB /* LaunchScreen.storyboard */,
@@ -687,8 +703,22 @@
 				4B8E0B6B42749C64D03BBBDE /* Pods-Talkative ParentsTests.release.xcconfig */,
 				2AD509CD274D6B8A1C439CF9 /* Pods-Talkative ParentsUITests.debug.xcconfig */,
 				9780FA6B6FCEBBF94D6B4533 /* Pods-Talkative ParentsUITests.release.xcconfig */,
+				D5A1197839FE785D85D3B7EC /* Pods-Boogie Woogie.debug.xcconfig */,
+				E3E3E7200A57EDAA866D689F /* Pods-Boogie Woogie.release.xcconfig */,
+				B44E5ED71F6247D7386095A2 /* Pods-Boogie WoogieTests.debug.xcconfig */,
+				A173CAD603F608B09C5CA4DE /* Pods-Boogie WoogieTests.release.xcconfig */,
+				891B5558B7A460EB819A08AE /* Pods-Boogie WoogieUITests.debug.xcconfig */,
+				E444BAF9B9240CF8FE73E6ED /* Pods-Boogie WoogieUITests.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		5812BE901F1E35EB00A6F821 /* TabBarVC */ = {
+			isa = PBXGroup;
+			children = (
+				5875DD9A1F1F29FA0004B1DC /* tabBarController.swift */,
+			);
+			name = TabBarVC;
 			sourceTree = "<group>";
 		};
 		7212E0C9C208C037ECC2A4EC /* Frameworks */ = {
@@ -698,6 +728,9 @@
 				6A819ED0EACF43F78280E979 /* Pods_Talkative_Parents.framework */,
 				8A55DDBCD178F55B485AC29B /* Pods_Talkative_ParentsTests.framework */,
 				F1AA3821C99BBDDBCA5941E8 /* Pods_Talkative_ParentsUITests.framework */,
+				7B26D1815220BAF7143AB214 /* Pods_Boogie_Woogie.framework */,
+				F9F9D0FF4A1D59CA80ACED9B /* Pods_Boogie_WoogieTests.framework */,
+				F006149B22C159C25E977A5E /* Pods_Boogie_WoogieUITests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -705,9 +738,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		183F93541EC9829300B11BEB /* Talkative Parents */ = {
+		183F93541EC9829300B11BEB /* Boogie Woogie */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 183F937F1EC9829400B11BEB /* Build configuration list for PBXNativeTarget "Talkative Parents" */;
+			buildConfigurationList = 183F937F1EC9829400B11BEB /* Build configuration list for PBXNativeTarget "Boogie Woogie" */;
 			buildPhases = (
 				CB0D53F793E7B3B0D4C564C3 /* [CP] Check Pods Manifest.lock */,
 				183F93511EC9829300B11BEB /* Sources */,
@@ -720,14 +753,14 @@
 			);
 			dependencies = (
 			);
-			name = "Talkative Parents";
+			name = "Boogie Woogie";
 			productName = "Talkative Parents";
-			productReference = 183F93551EC9829300B11BEB /* Talkative Parents.app */;
+			productReference = 183F93551EC9829300B11BEB /* Boogie Woogie.app */;
 			productType = "com.apple.product-type.application";
 		};
-		183F936A1EC9829400B11BEB /* Talkative ParentsTests */ = {
+		183F936A1EC9829400B11BEB /* Boogie WoogieTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 183F93821EC9829400B11BEB /* Build configuration list for PBXNativeTarget "Talkative ParentsTests" */;
+			buildConfigurationList = 183F93821EC9829400B11BEB /* Build configuration list for PBXNativeTarget "Boogie WoogieTests" */;
 			buildPhases = (
 				55F14B1AC3507CF78D9778F5 /* [CP] Check Pods Manifest.lock */,
 				183F93671EC9829400B11BEB /* Sources */,
@@ -741,14 +774,14 @@
 			dependencies = (
 				183F936D1EC9829400B11BEB /* PBXTargetDependency */,
 			);
-			name = "Talkative ParentsTests";
+			name = "Boogie WoogieTests";
 			productName = "Talkative ParentsTests";
-			productReference = 183F936B1EC9829400B11BEB /* Talkative ParentsTests.xctest */;
+			productReference = 183F936B1EC9829400B11BEB /* Boogie WoogieTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		183F93751EC9829400B11BEB /* Talkative ParentsUITests */ = {
+		183F93751EC9829400B11BEB /* Boogie WoogieUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 183F93851EC9829400B11BEB /* Build configuration list for PBXNativeTarget "Talkative ParentsUITests" */;
+			buildConfigurationList = 183F93851EC9829400B11BEB /* Build configuration list for PBXNativeTarget "Boogie WoogieUITests" */;
 			buildPhases = (
 				219C94E8C0C937A25E3E41C2 /* [CP] Check Pods Manifest.lock */,
 				183F93721EC9829400B11BEB /* Sources */,
@@ -762,9 +795,9 @@
 			dependencies = (
 				183F93781EC9829400B11BEB /* PBXTargetDependency */,
 			);
-			name = "Talkative ParentsUITests";
+			name = "Boogie WoogieUITests";
 			productName = "Talkative ParentsUITests";
-			productReference = 183F93761EC9829400B11BEB /* Talkative ParentsUITests.xctest */;
+			productReference = 183F93761EC9829400B11BEB /* Boogie WoogieUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -799,7 +832,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 183F93501EC9829300B11BEB /* Build configuration list for PBXProject "Talkative Parents" */;
+			buildConfigurationList = 183F93501EC9829300B11BEB /* Build configuration list for PBXProject "Boogie Woogie" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -812,9 +845,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				183F93541EC9829300B11BEB /* Talkative Parents */,
-				183F936A1EC9829400B11BEB /* Talkative ParentsTests */,
-				183F93751EC9829400B11BEB /* Talkative ParentsUITests */,
+				183F93541EC9829300B11BEB /* Boogie Woogie */,
+				183F936A1EC9829400B11BEB /* Boogie WoogieTests */,
+				183F93751EC9829400B11BEB /* Boogie WoogieUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -830,6 +863,7 @@
 				182EA8EB1ED32C0300589E8C /* NoticeBoardDetailHeaderTableViewCell.xib in Resources */,
 				189F90371EE923F3000C4802 /* SBDHeaderTableViewCell.xib in Resources */,
 				182EA8E71ED31FDD00589E8C /* NotificeBoardDetailViewController.xib in Resources */,
+				0B6C1B881F17680E00AC7F42 /* GoogleService-Info.plist in Resources */,
 				187435EB1ED43E4B00150ACD /* NWebViewTableViewCell.xib in Resources */,
 				18379F0A1ED0603500F75C31 /* OpenSans-Bold.ttf in Resources */,
 				18F58EE81EE2A5F80092B7C2 /* CategorySelectionViewController.xib in Resources */,
@@ -853,7 +887,6 @@
 				185983C11EE81410008E6CEC /* SoundingBoardDetailViewController.xib in Resources */,
 				18F58EE01EE281B90092B7C2 /* CreateSoundingBoardMessageViewController.xib in Resources */,
 				18F58ED21EE02D710092B7C2 /* AttendanceViewController.xib in Resources */,
-				18F691E61ED8701B00FA80AC /* GoogleService-Info.plist in Resources */,
 				187435F11ED45F3400150ACD /* NoticeBoardAttachmentTableViewCell.xib in Resources */,
 				182EA8EF1ED32EAE00589E8C /* NoticeBoardWebViewTableViewCell.xib in Resources */,
 				189F903B1EE9250D000C4802 /* SBDDescriptionTableViewCell.xib in Resources */,
@@ -893,7 +926,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Talkative ParentsUITests/Pods-Talkative ParentsUITests-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Boogie WoogieUITests/Pods-Boogie WoogieUITests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		219C94E8C0C937A25E3E41C2 /* [CP] Check Pods Manifest.lock */ = {
@@ -908,7 +941,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		2BF98AA39E7E758C5DDABBBF /* [CP] Embed Pods Frameworks */ = {
@@ -923,7 +956,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Talkative ParentsTests/Pods-Talkative ParentsTests-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Boogie WoogieTests/Pods-Boogie WoogieTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		3A3C1275DB19F5A6E4F63BD9 /* [CP] Copy Pods Resources */ = {
@@ -938,7 +971,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Talkative Parents/Pods-Talkative Parents-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Boogie Woogie/Pods-Boogie Woogie-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		55F14B1AC3507CF78D9778F5 /* [CP] Check Pods Manifest.lock */ = {
@@ -953,7 +986,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		93A7913CDE31BCEE8F52810D /* [CP] Embed Pods Frameworks */ = {
@@ -968,7 +1001,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Talkative Parents/Pods-Talkative Parents-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Boogie Woogie/Pods-Boogie Woogie-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		A64DA01973021862DABEF10F /* [CP] Copy Pods Resources */ = {
@@ -983,7 +1016,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Talkative ParentsTests/Pods-Talkative ParentsTests-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Boogie WoogieTests/Pods-Boogie WoogieTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		CB0D53F793E7B3B0D4C564C3 /* [CP] Check Pods Manifest.lock */ = {
@@ -998,7 +1031,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		FC6246F371431030F10F9288 /* [CP] Copy Pods Resources */ = {
@@ -1013,7 +1046,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Talkative ParentsUITests/Pods-Talkative ParentsUITests-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Boogie WoogieUITests/Pods-Boogie WoogieUITests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -1048,6 +1081,7 @@
 				1862F00E1ECD8E360084F704 /* LoginService.swift in Sources */,
 				18AD626D1EEFBC9D0057B778 /* EventHelper.swift in Sources */,
 				181E647A1EC9CB88007E7C87 /* CommonService.swift in Sources */,
+				5875DD9B1F1F29FA0004B1DC /* tabBarController.swift in Sources */,
 				181E64781EC9CB7D007E7C87 /* Commons.swift in Sources */,
 				1862F00B1ECD88300084F704 /* CountrySelectionTableViewCell.swift in Sources */,
 				181E64921ECC5832007E7C87 /* MobileLoginViewController.swift in Sources */,
@@ -1118,12 +1152,12 @@
 /* Begin PBXTargetDependency section */
 		183F936D1EC9829400B11BEB /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 183F93541EC9829300B11BEB /* Talkative Parents */;
+			target = 183F93541EC9829300B11BEB /* Boogie Woogie */;
 			targetProxy = 183F936C1EC9829400B11BEB /* PBXContainerItemProxy */;
 		};
 		183F93781EC9829400B11BEB /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 183F93541EC9829300B11BEB /* Talkative Parents */;
+			target = 183F93541EC9829300B11BEB /* Boogie Woogie */;
 			targetProxy = 183F93771EC9829400B11BEB /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -1243,7 +1277,7 @@
 		};
 		183F93801EC9829400B11BEB /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C1A9C620147BD8FA4BC8437C /* Pods-Talkative Parents.debug.xcconfig */;
+			baseConfigurationReference = D5A1197839FE785D85D3B7EC /* Pods-Boogie Woogie.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "Talkative Parents/Talkative Parents.entitlements";
@@ -1251,7 +1285,7 @@
 				INFOPLIST_FILE = "Talkative Parents/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.talkativeparents;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tpboogie;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -1259,7 +1293,7 @@
 		};
 		183F93811EC9829400B11BEB /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 34FB83C7C6BCA64B2D305BAB /* Pods-Talkative Parents.release.xcconfig */;
+			baseConfigurationReference = E3E3E7200A57EDAA866D689F /* Pods-Boogie Woogie.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "Talkative Parents/Talkative Parents.entitlements";
@@ -1267,7 +1301,7 @@
 				INFOPLIST_FILE = "Talkative Parents/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.talkativeparents;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tpboogie;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -1275,7 +1309,7 @@
 		};
 		183F93831EC9829400B11BEB /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9D9F0F59583670902A541D75 /* Pods-Talkative ParentsTests.debug.xcconfig */;
+			baseConfigurationReference = B44E5ED71F6247D7386095A2 /* Pods-Boogie WoogieTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -1284,13 +1318,13 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.talkativeparents.Talkative-ParentsTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Talkative Parents.app/Talkative Parents";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Boogie Woogie.app/Boogie Woogie";
 			};
 			name = Debug;
 		};
 		183F93841EC9829400B11BEB /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4B8E0B6B42749C64D03BBBDE /* Pods-Talkative ParentsTests.release.xcconfig */;
+			baseConfigurationReference = A173CAD603F608B09C5CA4DE /* Pods-Boogie WoogieTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -1299,13 +1333,13 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.talkativeparents.Talkative-ParentsTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Talkative Parents.app/Talkative Parents";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Boogie Woogie.app/Boogie Woogie";
 			};
 			name = Release;
 		};
 		183F93861EC9829400B11BEB /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2AD509CD274D6B8A1C439CF9 /* Pods-Talkative ParentsUITests.debug.xcconfig */;
+			baseConfigurationReference = 891B5558B7A460EB819A08AE /* Pods-Boogie WoogieUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				INFOPLIST_FILE = "Talkative ParentsUITests/Info.plist";
@@ -1319,7 +1353,7 @@
 		};
 		183F93871EC9829400B11BEB /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9780FA6B6FCEBBF94D6B4533 /* Pods-Talkative ParentsUITests.release.xcconfig */;
+			baseConfigurationReference = E444BAF9B9240CF8FE73E6ED /* Pods-Boogie WoogieUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				INFOPLIST_FILE = "Talkative ParentsUITests/Info.plist";
@@ -1334,7 +1368,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		183F93501EC9829300B11BEB /* Build configuration list for PBXProject "Talkative Parents" */ = {
+		183F93501EC9829300B11BEB /* Build configuration list for PBXProject "Boogie Woogie" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				183F937D1EC9829400B11BEB /* Debug */,
@@ -1343,7 +1377,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		183F937F1EC9829400B11BEB /* Build configuration list for PBXNativeTarget "Talkative Parents" */ = {
+		183F937F1EC9829400B11BEB /* Build configuration list for PBXNativeTarget "Boogie Woogie" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				183F93801EC9829400B11BEB /* Debug */,
@@ -1352,7 +1386,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		183F93821EC9829400B11BEB /* Build configuration list for PBXNativeTarget "Talkative ParentsTests" */ = {
+		183F93821EC9829400B11BEB /* Build configuration list for PBXNativeTarget "Boogie WoogieTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				183F93831EC9829400B11BEB /* Debug */,
@@ -1361,7 +1395,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		183F93851EC9829400B11BEB /* Build configuration list for PBXNativeTarget "Talkative ParentsUITests" */ = {
+		183F93851EC9829400B11BEB /* Build configuration list for PBXNativeTarget "Boogie WoogieUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				183F93861EC9829400B11BEB /* Debug */,

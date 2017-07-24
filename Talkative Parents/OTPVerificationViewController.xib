@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="OTPVerificationViewController" customModule="Talkative_Parents" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="OTPVerificationViewController" customModule="Boogie_Woogie" customModuleProvider="target">
             <connections>
                 <outlet property="thisUISubTitleLabel" destination="ydT-Zt-CZH" id="aWk-oS-m57"/>
                 <outlet property="thisUITF1" destination="uUr-pq-Rq6" id="XV0-Jh-b1n"/>
@@ -28,26 +28,26 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mobileOTPIcon" translatesAutoresizingMaskIntoConstraints="NO" id="pm8-tq-dWA">
-                    <rect key="frame" x="157" y="80" width="62" height="80"/>
+                    <rect key="frame" x="157" y="65" width="62" height="80"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="62" id="Ctg-GK-3nw"/>
                         <constraint firstAttribute="height" constant="80" id="Vv8-U2-2WV"/>
                     </constraints>
                 </imageView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Thank you for downloading Talkative Parents" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SLn-1b-Yf5">
-                    <rect key="frame" x="34" y="184" width="307" height="42"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Thank you for downloading Boogie Woogie" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SLn-1b-Yf5">
+                    <rect key="frame" x="34" y="160" width="307" height="42"/>
                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
                     <color key="textColor" red="0.0" green="0.35686274509999999" blue="0.43137254899999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="We’ve sent OTP to +919845098450 via SMS. Please enter the code sent to your mobile." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ydT-Zt-CZH">
-                    <rect key="frame" x="35" y="239" width="307" height="35"/>
+                    <rect key="frame" x="35" y="207" width="307" height="35"/>
                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
                     <color key="textColor" red="0.60784313729999995" green="0.60784313729999995" blue="0.60784313729999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Q4Y-pU-P6t">
-                    <rect key="frame" x="0.0" y="293" width="375" height="65"/>
+                    <rect key="frame" x="0.0" y="252" width="375" height="65"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cxr-n2-BoT" userLabel="View1">
                             <rect key="frame" x="23" y="0.0" width="44" height="65"/>
@@ -194,7 +194,7 @@
                     </constraints>
                 </view>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2XN-lD-ckK">
-                    <rect key="frame" x="130" y="389" width="115" height="33"/>
+                    <rect key="frame" x="130" y="348" width="115" height="33"/>
                     <color key="backgroundColor" red="0.32549019610000002" green="0.72941176470000002" blue="0.81960784310000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="115" id="xjC-ZY-SpY"/>
@@ -214,10 +214,10 @@
                 <constraint firstItem="pm8-tq-dWA" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="2uG-Rg-vF5"/>
                 <constraint firstAttribute="trailing" secondItem="SLn-1b-Yf5" secondAttribute="trailing" constant="34" id="AI7-ZR-wMR"/>
                 <constraint firstAttribute="trailing" secondItem="Q4Y-pU-P6t" secondAttribute="trailing" id="CMx-yY-qvS"/>
-                <constraint firstItem="SLn-1b-Yf5" firstAttribute="top" secondItem="pm8-tq-dWA" secondAttribute="bottom" constant="24" id="H6m-Ye-4pd"/>
-                <constraint firstItem="ydT-Zt-CZH" firstAttribute="top" secondItem="SLn-1b-Yf5" secondAttribute="bottom" constant="13" id="HCo-Pl-5fb"/>
-                <constraint firstItem="Q4Y-pU-P6t" firstAttribute="top" secondItem="ydT-Zt-CZH" secondAttribute="bottom" constant="19" id="Hjq-Vf-qYB"/>
-                <constraint firstItem="pm8-tq-dWA" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="80" id="Olz-0V-T2u"/>
+                <constraint firstItem="SLn-1b-Yf5" firstAttribute="top" secondItem="pm8-tq-dWA" secondAttribute="bottom" constant="15" id="H6m-Ye-4pd"/>
+                <constraint firstItem="ydT-Zt-CZH" firstAttribute="top" secondItem="SLn-1b-Yf5" secondAttribute="bottom" constant="5" id="HCo-Pl-5fb"/>
+                <constraint firstItem="Q4Y-pU-P6t" firstAttribute="top" secondItem="ydT-Zt-CZH" secondAttribute="bottom" constant="10" id="Hjq-Vf-qYB"/>
+                <constraint firstItem="pm8-tq-dWA" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="65" id="Olz-0V-T2u"/>
                 <constraint firstItem="2XN-lD-ckK" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="TxZ-E8-xPX"/>
                 <constraint firstItem="2XN-lD-ckK" firstAttribute="top" secondItem="Q4Y-pU-P6t" secondAttribute="bottom" constant="31" id="WeY-0q-uTi"/>
                 <constraint firstItem="SLn-1b-Yf5" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="34" id="Y6d-8e-meb"/>

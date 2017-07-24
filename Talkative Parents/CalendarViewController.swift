@@ -22,7 +22,7 @@ class CalendarViewController: UIViewController {
     
     @IBOutlet weak var thisUIEventsTableView: UITableView!
     
-    var thisFIRDBRef : FIRDatabaseReference!
+    var thisFIRDBRef : DatabaseReference!
     
     var thisCalendarEvents : [CalendarEvent] = []
     

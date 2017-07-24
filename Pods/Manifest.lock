@@ -1,6 +1,6 @@
 PODS:
-  - Alamofire (4.4.0)
-  - AnimatedCollectionViewLayout (0.2.0)
+  - Alamofire (4.5.0)
+  - AnimatedCollectionViewLayout (0.3.0)
   - AsyncSwift (2.0.1)
   - CCBottomRefreshControl (0.5.2)
   - ChameleonFramework/Default (2.1.0)
@@ -8,28 +8,29 @@ PODS:
     - ChameleonFramework/Default
   - DZNEmptyDataSet (1.8.1)
   - Eureka (3.0.0)
-  - Firebase/Core (3.16.0):
-    - FirebaseAnalytics (= 3.8.0)
-    - FirebaseCore (= 3.6.0)
-  - Firebase/Database (3.16.0):
+  - Firebase/Core (4.0.4):
+    - FirebaseAnalytics (= 4.0.2)
+    - FirebaseCore (= 4.0.4)
+  - Firebase/Database (4.0.4):
     - Firebase/Core
-    - FirebaseDatabase (= 3.1.2)
-  - FirebaseAnalytics (3.8.0):
-    - FirebaseCore (~> 3.6)
-    - FirebaseInstanceID (~> 1.0)
+    - FirebaseDatabase (= 4.0.0)
+  - FirebaseAnalytics (4.0.2):
+    - FirebaseCore (~> 4.0)
+    - FirebaseInstanceID (~> 2.0)
     - GoogleToolboxForMac/NSData+zlib (~> 2.1)
-  - FirebaseCore (3.6.0):
+  - FirebaseCore (4.0.4):
     - GoogleToolboxForMac/NSData+zlib (~> 2.1)
-  - FirebaseDatabase (3.1.2):
-    - FirebaseAnalytics (~> 3.7)
-  - FirebaseInstanceID (1.0.10):
-    - FirebaseCore (~> 3.6)
-  - FSCalendar (2.7.4)
+    - nanopb (~> 0.3)
+  - FirebaseDatabase (4.0.0):
+    - FirebaseAnalytics (~> 4.0)
+  - FirebaseInstanceID (2.0.0):
+    - FirebaseCore (~> 4.0)
+  - FSCalendar (2.7.9)
   - GoogleToolboxForMac/Defines (2.1.1)
   - GoogleToolboxForMac/NSData+zlib (2.1.1):
     - GoogleToolboxForMac/Defines (= 2.1.1)
   - KILabel (1.0.0)
-  - Kingfisher (3.6.2)
+  - Kingfisher (3.10.3)
   - MRProgress (0.8.3):
     - MRProgress/ActivityIndicator (= 0.8.3)
     - MRProgress/Blur (= 0.8.3)
@@ -58,8 +59,13 @@ PODS:
   - MRProgress/ProgressBaseClass (0.8.3)
   - MRProgress/Stopable (0.8.3):
     - MRProgress/Helper
-  - ObjectMapper (2.2.6)
-  - OneSignal (2.5.2)
+  - nanopb (0.3.8):
+    - nanopb/decode (= 0.3.8)
+    - nanopb/encode (= 0.3.8)
+  - nanopb/decode (0.3.8)
+  - nanopb/encode (0.3.8)
+  - ObjectMapper (2.2.8)
+  - OneSignal (2.5.4)
   - RKDropdownAlert (0.3.0)
   - SwiftyJSON (3.1.4)
 
@@ -88,32 +94,33 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   ChameleonFramework:
-    :commit: acc480fbe023c6e5fe40f68593f4a70a8c4c7ad5
+    :commit: 6dd284bde21ea2e7f9fd89bc36f40df16e16369d
     :git: https://github.com/ViccAlexander/Chameleon.git
 
 SPEC CHECKSUMS:
-  Alamofire: dc44b1600b800eb63da6a19039a0083d62a6a62d
-  AnimatedCollectionViewLayout: 6f385ed7deb673af8989f5240c4b0c32c9d25276
+  Alamofire: f28cdffd29de33a7bfa022cbd63ae95a27fae140
+  AnimatedCollectionViewLayout: 504b992a4258eb39d2dd2b2b48e84b4b95860fd7
   AsyncSwift: 632138e42ead868b53c745fcde9bf733ce1527ad
   CCBottomRefreshControl: 389780b4488321c91d18f66a6da5ef9606df6de5
   ChameleonFramework: d21a3cc247abfe5e37609a283a8238b03575cf64
   DZNEmptyDataSet: 9525833b9e68ac21c30253e1d3d7076cc828eaa7
   Eureka: f36fd440c3ebb7bfea0a4fbe6f16a05f1cb35906
-  Firebase: 21bf4a89d3f01bfbe11adc3a5d934a4a3d3a5fd6
-  FirebaseAnalytics: 920e46455f27b0a52a80907a6d9b73ee4bd1c635
-  FirebaseCore: 9691ee2ade70c098d7cf92440f4303f16d83ca75
-  FirebaseDatabase: 05c96d7b43a7368dc91c07791adb49683e1738d1
-  FirebaseInstanceID: b9eedd6846fb5e1f0f7279e1deaa7a7e4cf8392e
-  FSCalendar: e95995a746acae531c4a7dd636b8393233125ec5
+  Firebase: 1492bf04e1b73a7353b4fb2cf5a20bac9692f341
+  FirebaseAnalytics: ad41720e3e67fc63fbe3d2948d3e26932a8de311
+  FirebaseCore: cfc042628ef9f20debe09c0eb683135fcd404cb4
+  FirebaseDatabase: d829b3a8c3e2ac7a16773c5df226966b0805dfc2
+  FirebaseInstanceID: 9fbf536668f4d3f0880e7438456dabd1376e294b
+  FSCalendar: a04b09f16f811bc92e82f3cf852a15225233b9d5
   GoogleToolboxForMac: 8e329f1b599f2512c6b10676d45736bcc2cbbeb0
   KILabel: 84049969642d4ac1061ebe38ad4c0da37fed108b
-  Kingfisher: 2c94e72c6830622c71d06adf4ea024c37d316830
+  Kingfisher: a0ac82dc5bcf0388dd74b294cf2cc13730c63436
   MRProgress: 16de7cc9f347e8846797a770db102a323fe7ef09
-  ObjectMapper: 042708195cc46c20871cbcbec0453826398273fd
-  OneSignal: 66d08b6b1e3c3858cbf28207ed20f1fa865ab2a2
+  nanopb: 22bc080fa3955e2116b6ff3ee6c2cb3c15ab97cb
+  ObjectMapper: 3d571bb5af471c779e1160828cd9ad5c4ef90958
+  OneSignal: da994bcf6a2efbdceaf71e389e1d05245c562899
   RKDropdownAlert: f4b3364c251829ad439dc666836a1f2dad26f4c7
   SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
 
-PODFILE CHECKSUM: f482a2f1bf82e465a962be60f7d2b1f7b415b1ce
+PODFILE CHECKSUM: bf0cee299f72842ce071d88fcc5eeee92be6f7d3
 
-COCOAPODS: 1.1.1
+COCOAPODS: 1.2.1

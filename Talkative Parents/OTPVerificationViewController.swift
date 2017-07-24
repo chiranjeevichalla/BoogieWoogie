@@ -44,6 +44,8 @@ class OTPVerificationViewController: UIViewController, UITextFieldDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+       
         self.title = "Mobile Verification"
         // Do any additional setup after loading the view.
         self.thisUISubTitleLabel.text = "We’ve sent OTP to +\(thisPhoneNumber) via SMS. Please enter the code sent to your mobile."
@@ -64,6 +66,7 @@ class OTPVerificationViewController: UIViewController, UITextFieldDelegate {
         thisUITF5.returnKeyType = UIReturnKeyType.next
         thisUITF6.delegate = self
         thisUITF6.returnKeyType = UIReturnKeyType.go
+        
         
     }
     

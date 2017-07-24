@@ -31,11 +31,11 @@ class Attendance : Mappable {
     
     
     func getCategory() -> String {
-        return _category ?? ""
+        return _category ?? "-"
     }
     
     func getDate() -> String {
-        return _date ?? ""
+        return _date ?? "-"
     }
     
     func isPresent() -> Bool {
@@ -48,7 +48,7 @@ class Attendance : Mappable {
     }
     
     func getMessage() -> String {
-        return _message ?? ""
+        return _message ?? "-"
     }
     
 }

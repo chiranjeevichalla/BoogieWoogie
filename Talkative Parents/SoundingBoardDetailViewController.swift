@@ -37,7 +37,7 @@ class SoundingBoardDetailViewController: UIViewController, UIImagePickerControll
     
     var thisComments : [Comment] = []
     var thisSoundingBoard : SoundingBoard!
-    var thisFIRDBRef : FIRDatabaseReference!
+    var thisFIRDBRef : DatabaseReference!
     
     var thisAttachmentUrl : String = ""
     
@@ -372,7 +372,15 @@ extension SoundingBoardDetailViewController : UITableViewDelegate, UITableViewDa
         
         cell.thisUINameLabel.text = bComment.getPostedBy()
         cell.thisUIDateLabel.text = bComment.getPostedDate()
-        cell.thisUIDescriptionlabel.text = bComment.getMessage()
+        
+        let urlString = bComment.getMessage().replacingOccurrences(of: "<p>", with: "")
+        
+        
+        
+        
+        //cell.thisUIDescriptionlabel.text = bComment.getMessage()
+        cell.thisUIDescriptionlabel.text = urlString.replacingOccurrences(of: "</p>", with: "")
+        
         cell.thisUIAttachmentBtn.tag = indexPath.row-2
         if bComment.hasAttachment() {
             cell.thisUIAttachmentImage.isHidden = false

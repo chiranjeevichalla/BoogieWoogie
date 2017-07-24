@@ -32,8 +32,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         
         //Configure Firebase
-        FIRApp.configure()
-        FIRDatabase.database().persistenceEnabled = true
+        FirebaseApp.configure()
+        Database.database().isPersistenceEnabled = true
         
         
         //One signal

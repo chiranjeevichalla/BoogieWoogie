@@ -20,7 +20,7 @@ class Constants: NSObject {
     
     
     //One Signal details
-    private let _oneSignalAppId = "8c09536b-71d0-4ee5-b085-dfe25387cdb9"
+    private let _oneSignalAppId = "63ecf0ed-da40-447a-aabf-95555d9389ac"
     
     //Dev details   Sample-env-1.kxd3eiwmzj.us-east-1.elasticbeanstalk.com
     //

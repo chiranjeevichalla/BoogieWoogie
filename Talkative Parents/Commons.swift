@@ -98,20 +98,23 @@ class Commons {
     
     //convert local date to UTC
     class func getCurrentDateToString() -> String {
-        let bGMTTimeZone = NSTimeZone(abbreviation: "UTC")
-        let bCurrentTimeZone = NSTimeZone.system
+//        let bGMTTimeZone = NSTimeZone(abbreviation: "UTC")
+//        let bCurrentTimeZone = NSTimeZone.system
         
         let date = NSDate()
         
-        let bGMTOffset = bCurrentTimeZone.secondsFromGMT(for: date as Date)
-//        let bCurrentOffset = bCurrentTimeZone.secondsFromGMT(for: date as Date)
-        
-//        let interval : NST = bGMTOffset - bCurrentTimeZone
-        let bDestinationDate = NSDate(timeInterval: TimeInterval(bGMTOffset), since: date as Date)
+//        let bGMTOffset = bCurrentTimeZone.secondsFromGMT(for: date as Date)
+////        let bCurrentOffset = bCurrentTimeZone.secondsFromGMT(for: date as Date)
+//        
+////        let interval : NST = bGMTOffset - bCurrentTimeZone
+//        let bDestinationDate = NSDate(timeInterval: TimeInterval(bGMTOffset), since: date as Date)
         
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
         let dateString = dateFormatter.string(from:date as Date)
+        
+        
+        print("date",dateString, (Commons.localToUTC(date: dateString)))
         return Commons.localToUTC(date: dateString)
     }
     
@@ -149,20 +152,26 @@ class Commons {
         
         let dt = dateFormator.date(from: pCurrentDate)
         if dt != nil {
-            dateFormator.dateFormat = "dd MMM yyy HH:mm a"
+            dateFormator.timeZone = TimeZone.current
+            dateFormator.dateFormat = "dd MMM yyy hh:mm a"
             return dateFormator.string(from: dt!)
         } else {
             let bCurrentDate = pCurrentDate.replacingOccurrences(of: " GMT", with: "")
+            
             dateFormator.dateFormat = "dd MMM yyyy HH:mm:ss"
             let dt1 = dateFormator.date(from: bCurrentDate)
-            dateFormator.dateFormat = "dd MMM yyy HH:mm a"
+            
+            dateFormator.timeZone = TimeZone.current
+            dateFormator.dateFormat = "dd MMM yyy hh:mm a"
             if dt1 != nil {
                 return dateFormator.string(from: dt1!)
             } else {
                 let bCurrentDate = pCurrentDate.replacingOccurrences(of: " GMT", with: "")
+                dateFormator.timeZone = TimeZone.current
                 dateFormator.dateFormat = "E, dd MMM yyyy HH:mm:ss"
                 let dt2 = dateFormator.date(from: bCurrentDate)
-                dateFormator.dateFormat = "dd MMM yyy HH:mm a"
+                dateFormator.timeZone = TimeZone.current
+                dateFormator.dateFormat = "dd MMM yyy hh:mm a"
                 if dt2 != nil {
                     return dateFormator.string(from: dt2!)
                 }
@@ -170,6 +179,59 @@ class Commons {
             }
         }
     }
+
+    
+   class func UTCToLocal(date:String) -> String {
+    
+    print(date)
+    
+        let dateFormator = DateFormatter()
+        dateFormator.dateFormat = "yyyy-MM-dd HH:mm:ss"
+        dateFormator.timeZone = TimeZone(abbreviation: "UTC")
+        
+        let dt = dateFormator.date(from: date)
+    
+    if dt != nil {
+        
+        dateFormator.timeZone = TimeZone.current
+        dateFormator.dateFormat = "dd MMM yyy hh:mm a"
+        
+        return dateFormator.string(from: dt!)
+        
+    }
+    else
+    {
+       return date
+    }
+    
+    }
+    
+    class func UTCToLocal2(date:String) -> String {
+        
+        print(date)
+        
+        let dateFormator = DateFormatter()
+        dateFormator.dateFormat = "dd MMM yyy hh:mm a"
+        dateFormator.timeZone = TimeZone(abbreviation: "UTC")
+        
+        let dt = dateFormator.date(from: date)
+        
+        if dt != nil {
+            
+            dateFormator.timeZone = TimeZone.current
+            dateFormator.dateFormat = "dd MMM yyy hh:mm a"
+            
+            return dateFormator.string(from: dt!)
+            
+        }
+        else
+        {
+            return date
+        }
+        
+    }
+
+    
     
     class func localToUTC(date:String) -> String {
         let dateFormator = DateFormatter()
@@ -183,6 +245,7 @@ class Commons {
         
         return dateFormator.string(from: dt!)
     }
+    
     
     class func convertStringToDateFormat(pDate: String) -> String {
         let words = pDate.components(separatedBy: ".")
@@ -607,6 +670,26 @@ class Commons {
         appDelegate.window?.rootViewController = initialViewController
         appDelegate.window?.makeKeyAndVisible()
     }
+    
+    
+    class func badgeCount(thisNotifications: [TPNotification] = []) -> (Int)? {
+        var badgeCount: Int = 0
+        
+        for  i in (0..<thisNotifications.count)
+        {
+            
+            if (thisNotifications[i].getDidRead())
+            {
+                
+            }
+            else{
+                badgeCount += 1
+            }
+        }
+        return badgeCount
+    }
+    
+    
     
     class func clearAllNotificationTags() {
 //        OneSignal.de

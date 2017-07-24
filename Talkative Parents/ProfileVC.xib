@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ProfileVC" customModule="Talkative_Parents" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ProfileVC" customModule="Boogie_Woogie" customModuleProvider="target">
             <connections>
                 <outlet property="emailLbl" destination="Ske-UU-69p" id="52l-mN-V7T"/>
                 <outlet property="genderLbl" destination="dxm-cq-MZI" id="ERI-B9-Fbr"/>
@@ -55,7 +55,7 @@
                                     </constraints>
                                 </view>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fmn-uN-iGd">
-                                    <rect key="frame" x="31" y="259" width="125" height="21"/>
+                                    <rect key="frame" x="30" y="259" width="125" height="21"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="21" id="JsO-g3-9Pq"/>
                                         <constraint firstAttribute="width" constant="125" id="Zzt-Rf-uy1"/>
@@ -65,13 +65,13 @@
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Spm-aW-esE">
-                                    <rect key="frame" x="31" y="403" width="125" height="21"/>
+                                    <rect key="frame" x="30" y="403" width="125" height="21"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chiru challa" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LHB-vy-Rf4">
-                                    <rect key="frame" x="26.5" y="290" width="322.5" height="21"/>
+                                    <rect key="frame" x="30" y="290" width="322.5" height="21"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="21" id="GmG-WH-SVn"/>
                                     </constraints>
@@ -80,19 +80,19 @@
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Male" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dxm-cq-MZI">
-                                    <rect key="frame" x="26.5" y="362" width="322.5" height="21"/>
+                                    <rect key="frame" x="30" y="362" width="322.5" height="21"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chiranjeevi@gettalktive.com" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ske-UU-69p">
-                                    <rect key="frame" x="26.5" y="434" width="322.5" height="21"/>
+                                    <rect key="frame" x="30" y="434" width="322.5" height="21"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gender:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bj1-ST-NrU">
-                                    <rect key="frame" x="31" y="331" width="125" height="21"/>
+                                    <rect key="frame" x="30" y="331" width="125" height="21"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                     <nil key="highlightedColor"/>
@@ -110,7 +110,8 @@
                                 <constraint firstItem="bj1-ST-NrU" firstAttribute="top" secondItem="LHB-vy-Rf4" secondAttribute="bottom" constant="20" id="8HN-A2-ICy"/>
                                 <constraint firstItem="Ske-UU-69p" firstAttribute="height" secondItem="dxm-cq-MZI" secondAttribute="height" id="EPE-2T-vpe"/>
                                 <constraint firstItem="bj1-ST-NrU" firstAttribute="width" secondItem="fmn-uN-iGd" secondAttribute="width" id="Emn-XV-7p0"/>
-                                <constraint firstItem="fmn-uN-iGd" firstAttribute="leading" secondItem="dsR-6r-QlN" secondAttribute="leading" constant="31" id="Ey7-3y-GMR"/>
+                                <constraint firstItem="fmn-uN-iGd" firstAttribute="leading" secondItem="dsR-6r-QlN" secondAttribute="leading" constant="30" id="Ey7-3y-GMR"/>
+                                <constraint firstItem="LHB-vy-Rf4" firstAttribute="leading" secondItem="dsR-6r-QlN" secondAttribute="leading" constant="30" id="Ich-Uc-Ac5"/>
                                 <constraint firstItem="Ske-UU-69p" firstAttribute="top" secondItem="Spm-aW-esE" secondAttribute="bottom" constant="10" id="Oa3-gn-2FG"/>
                                 <constraint firstItem="LHB-vy-Rf4" firstAttribute="centerX" secondItem="dsR-6r-QlN" secondAttribute="centerX" id="Uq9-Dc-SoH"/>
                                 <constraint firstItem="Spm-aW-esE" firstAttribute="centerX" secondItem="bj1-ST-NrU" secondAttribute="centerX" id="V1I-g0-mvH"/>
@@ -131,8 +132,13 @@
                                 <constraint firstItem="fmn-uN-iGd" firstAttribute="top" secondItem="ofv-NE-jKr" secondAttribute="bottom" constant="20" id="vHO-ot-GIe"/>
                                 <constraint firstItem="bj1-ST-NrU" firstAttribute="height" secondItem="fmn-uN-iGd" secondAttribute="height" id="vKi-sF-BZl"/>
                             </constraints>
+                            <variation key="default">
+                                <mask key="constraints">
+                                    <exclude reference="Uq9-Dc-SoH"/>
+                                </mask>
+                            </variation>
                         </view>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="parentProfile" translatesAutoresizingMaskIntoConstraints="NO" id="E1V-4Y-uif">
+                        <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="parentProfile" translatesAutoresizingMaskIntoConstraints="NO" id="E1V-4Y-uif">
                             <rect key="frame" x="122" y="30" width="130" height="130"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="130" id="CNg-Yf-qca"/>

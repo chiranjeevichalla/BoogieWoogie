@@ -105,7 +105,9 @@ class NotificeBoardDetailViewController: UIViewController, UITableViewDelegate, 
     private func getSubjectView(indexPath: IndexPath) -> UITableViewCell {
         let cell: NoticeBoardDetailHeaderTableViewCell = self.thisUINoticeBoardTV.dequeueReusableCell(withIdentifier: "NoticeBoardDetailHeaderTableViewCell", for: indexPath) as! NoticeBoardDetailHeaderTableViewCell
         cell.thisUILabelSubject.text = thisNotificationDetail.getSubject()
-        cell.thisUILabelDate.text = thisNotificationDetail.getDisplayDate()
+        //cell.thisUILabelDate.text = thisNotificationDetail.getDisplayDate()
+        cell.thisUILabelDate.text = Commons.UTCToLocal2(date:thisNotificationDetail.getDisplayDate())
+        
         return cell
     }
     

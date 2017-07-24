@@ -15,7 +15,7 @@ class FireBaseHelper {
     
     
     
-    class func SetCalendarFirebaseEventObserver(pSchoolId : String, callback:@escaping (CalendarEvent,Bool) -> Void, callback1:@escaping ([CalendarEvent],Bool) -> Void) -> FIRDatabaseReference {
+    class func SetCalendarFirebaseEventObserver(pSchoolId : String, callback:@escaping (CalendarEvent,Bool) -> Void, callback1:@escaping ([CalendarEvent],Bool) -> Void) -> DatabaseReference {
         
         Commons.showIndicator()
         
@@ -23,8 +23,8 @@ class FireBaseHelper {
 //        
 //
 //        let bSchoolId = "21ae64c2-f0f1-44d8-a1d2-606b09b32e75"
-        var bRef : FIRDatabaseReference!
-        bRef = FIRDatabase.database().reference(withPath: "\(pSchoolId)/calender")
+        var bRef : DatabaseReference!
+        bRef = Database.database().reference(withPath: "\(pSchoolId)/calender")
         
         if !IsConnectedToNetwork() {
                         Commons.hideIndicator()
@@ -94,12 +94,12 @@ class FireBaseHelper {
     }
     
     
-    class func GetAttendanceList(callback:@escaping (Attendance,Bool) -> Void, callback1:@escaping ([Attendance],Bool) -> Void) -> FIRDatabaseReference {
+    class func GetAttendanceList(callback:@escaping (Attendance,Bool) -> Void, callback1:@escaping ([Attendance],Bool) -> Void) -> DatabaseReference {
         
         
-        var bRef : FIRDatabaseReference!
+        var bRef : DatabaseReference!
         let bString = "||"
-        bRef = FIRDatabase.database().reference(withPath: "\(Constants.sharedInstance._child.getSchoolId())/\(Constants.sharedInstance._child.getParentId())/\(Constants.sharedInstance._child.getChildId())/\(Constants.sharedInstance._child.getStandardId())\(bString)\(Constants.sharedInstance._child.getSectionId())/attendance_msgs")
+        bRef = Database.database().reference(withPath: "\(Constants.sharedInstance._child.getSchoolId())/\(Constants.sharedInstance._child.getParentId())/\(Constants.sharedInstance._child.getChildId())/\(Constants.sharedInstance._child.getStandardId())\(bString)\(Constants.sharedInstance._child.getSectionId())/attendance_msgs")
         print("attendence url \(bRef.url)")
 //        if !IsConnectedToNetwork() {
 //            Commons.hideIndicator()
@@ -132,13 +132,13 @@ class FireBaseHelper {
         
     }
     
-    class func GetCategories(callback:@escaping (Category,Bool) -> Void, callback1:@escaping ([Category],Bool) -> Void) -> FIRDatabaseReference {
+    class func GetCategories(callback:@escaping (Category,Bool) -> Void, callback1:@escaping ([Category],Bool) -> Void) -> DatabaseReference {
         
         Commons.showIndicator()
-        var bRef : FIRDatabaseReference!
+        var bRef : DatabaseReference!
 //        let bPath = "19107ff1-ea59-43c0-83a2-9962df79dfae/addCategories"
         let bPath = "\(Constants.sharedInstance._child.getSchoolId())/addCategories"
-        bRef = FIRDatabase.database().reference(withPath: bPath)
+        bRef = Database.database().reference(withPath: bPath)
         
         
         bRef.removeAllObservers()
@@ -164,7 +164,7 @@ class FireBaseHelper {
         
         bRef.observeSingleEvent(of: .value, with: { (snapshot) in
             var bCategories : [Category] = []
-            if let snapshots = snapshot.children.allObjects as? [FIRDataSnapshot] {
+            if let snapshots = snapshot.children.allObjects as? [DataSnapshot] {
                 for snap in snapshots {
                     if let postDict = snap.value as? [String : AnyObject] {
                         let bCategory = Mapper<Category>().map(JSON: postDict)
@@ -189,11 +189,11 @@ class FireBaseHelper {
     class func AddSoundingBoardMessage(pAttachment : UIImage?, pMessage : SoundingBoard, pType : String, callback:@escaping (Bool) -> Void) {
         
         //pType is private or public
-        var bRef : FIRDatabaseReference!
+        var bRef : DatabaseReference!
 //        let bPath = "sb-2/\(pType)/S-19107ff1-ea59-43c0-83a2-9962df79dfae-d3aaa86a-4c61-4c60-91dd-9201faa71baa/chat"
       let bPath = "sb-2/\(pType)/\(Constants.sharedInstance._child.getSchoolId())/chat/\(Constants.sharedInstance._child.getSchoolToParentChannelId())"
         
-        bRef = FIRDatabase.database().reference(withPath: bPath)
+        bRef = Database.database().reference(withPath: bPath)
         print("add sounding board message url \(bRef.url)")
         pMessage.setDate(pValue: Commons.getCurrentDateToString())
         pMessage.setActive(pBool: true)
@@ -217,11 +217,11 @@ class FireBaseHelper {
     class func AddCommentToSoundingBoardMessage(pAttachment: UIImage? ,pComment : Comment, pType : String, pSoundingBoard : SoundingBoard, callback:@escaping (Bool) -> Void) {
 //        Commons.showIndicator()
         //pType is private or public
-        var bRef : FIRDatabaseReference!
+        var bRef : DatabaseReference!
 //        -KlxJRcspKKlyL0830Za
         //        let bPath = "sb-2/\(pType)/S-19107ff1-ea59-43c0-83a2-9962df79dfae-d3aaa86a-4c61-4c60-91dd-9201faa71baa/comments/-KlxJRcspKKlyL0830Za"
         let bPath = "sb-2/\(pType)/\(Constants.sharedInstance._child.getSchoolId())/comments/\(Constants.sharedInstance._child.getSchoolToParentChannelId())/\(pSoundingBoard.getFirebaseKey())"
-        bRef = FIRDatabase.database().reference(withPath: bPath)
+        bRef = Database.database().reference(withPath: bPath)
         pComment.setPostedDate(pValue: Commons.getCurrentDateToString())
         pComment.setPostedBy(pValue: Constants.sharedInstance._parent.getName())
         pComment.setPostedById(pValue: Constants.sharedInstance._parent.getId())
@@ -251,22 +251,22 @@ class FireBaseHelper {
     
     //done
     class func UpdateSoundingBoardCommentsCount(pType: String, pCount : Int, pSoundingBoard : SoundingBoard) {
-        var bRef : FIRDatabaseReference!
+        var bRef : DatabaseReference!
         //        -KlxJRcspKKlyL0830Za
         //        let bPath = "sb-2/\(pType)/S-19107ff1-ea59-43c0-83a2-9962df79dfae-d3aaa86a-4c61-4c60-91dd-9201faa71baa/comments/-KlxJRcspKKlyL0830Za"
         let bPath = "sb-2/\(pType)/\(Constants.sharedInstance._child.getSchoolId())/chat/\(Constants.sharedInstance._child.getSchoolToParentChannelId())/\(pSoundingBoard.getFirebaseKey())/commentsCount"
-        bRef = FIRDatabase.database().reference(withPath: bPath)
+        bRef = Database.database().reference(withPath: bPath)
 
         bRef.setValue(pCount)
         
     }
     //done
-    class func GetSoundingBoard(pType : String, callback:@escaping (SoundingBoard,Bool) -> Void, callback1:@escaping ([SoundingBoard],Bool) -> Void, onChildChanged:@escaping (SoundingBoard,Bool) -> Void) -> FIRDatabaseReference {
+    class func GetSoundingBoard(pType : String, callback:@escaping (SoundingBoard,Bool) -> Void, callback1:@escaping ([SoundingBoard],Bool) -> Void, onChildChanged:@escaping (SoundingBoard,Bool) -> Void) -> DatabaseReference {
         
         
-        var bRef : FIRDatabaseReference!
+        var bRef : DatabaseReference!
         let bPath = "sb-2/\(pType)/\(Constants.sharedInstance._child.getSchoolId())/chat/\(Constants.sharedInstance._child.getSchoolToParentChannelId())"
-        bRef = FIRDatabase.database().reference(withPath: bPath)
+        bRef = Database.database().reference(withPath: bPath)
         
         //        if !IsConnectedToNetwork() {
         //            Commons.hideIndicator()
@@ -312,12 +312,12 @@ class FireBaseHelper {
     }
     
     //done
-    class func GetSoundingBoardComments(pType : String, pSoundingBoard : SoundingBoard, callback:@escaping (Comment,Bool) -> Void, callback1:@escaping ([Comment],Bool) -> Void) -> FIRDatabaseReference {
+    class func GetSoundingBoardComments(pType : String, pSoundingBoard : SoundingBoard, callback:@escaping (Comment,Bool) -> Void, callback1:@escaping ([Comment],Bool) -> Void) -> DatabaseReference {
         
         
-        var bRef : FIRDatabaseReference!
+        var bRef : DatabaseReference!
         let bPath = "sb-2/\(pType)/\(Constants.sharedInstance._child.getSchoolId())/comments/\(Constants.sharedInstance._child.getSchoolToParentChannelId())/\(pSoundingBoard.getFirebaseKey())"
-        bRef = FIRDatabase.database().reference(withPath: bPath)
+        bRef = Database.database().reference(withPath: bPath)
         
         //        if !IsConnectedToNetwork() {
         //            Commons.hideIndicator()

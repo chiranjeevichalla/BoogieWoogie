@@ -58,7 +58,7 @@ class SoundingBoard : Mappable {
         _attachment                     <- map ["attachment"]
         _isActive                       <- map ["isActive"]
         if _createdDate != nil {
-            _createdDate = Commons.convertUTCToLocal(pCurrentDate: _createdDate!)
+            _createdDate = Commons.UTCToLocal(date: _createdDate!)
         }
     }
     

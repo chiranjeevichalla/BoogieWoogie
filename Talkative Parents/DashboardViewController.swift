@@ -28,7 +28,7 @@ class DashboardViewController: UIViewController, UICollectionViewDelegate, UICol
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "Talkative Parents"
+        self.title = "Boogie Woogie"
         let myimage = UIImage(named: "refresh1")?.withRenderingMode(.alwaysOriginal)
         navigationItem.rightBarButtonItem = UIBarButtonItem(image: myimage, style: .plain, target: self, action: #selector(ButtonTapped))
 
@@ -51,6 +51,7 @@ class DashboardViewController: UIViewController, UICollectionViewDelegate, UICol
         
         let myimage1 = UIImage(named: "profileNavigation")?.withRenderingMode(.alwaysOriginal)
         navigationItem.leftBarButtonItem = UIBarButtonItem(image: myimage1, style: .plain, target: self, action: #selector(profileTapped))
+        
         print(Commons.convertUTCToLocal(pCurrentDate: "Thu, 15 Jun 2017 08:10:34 GMT"))
     }
     

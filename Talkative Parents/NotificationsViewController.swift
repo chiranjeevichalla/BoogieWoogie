@@ -33,10 +33,16 @@ class NotificationsViewController: UIViewController, UITableViewDelegate, UITabl
     let bRefreshControl = UIRefreshControl()
     private var thisSchoolNotificationPageNumber = 0
     private var thisAdminNotificationPageNumber = 0
+    
+    var badgeCount: Int = 0
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
+        
+        
+        //self.navigationController?.tabBarItem.badgeValue = String(badgeCount)
 //        self.title = Constants.sharedInstance._child.getName()
         self.navigationItem.title = Constants.sharedInstance._child.getName()
         // Do any additional setup after loading the view, typically from a nib.
@@ -88,6 +94,34 @@ class NotificationsViewController: UIViewController, UITableViewDelegate, UITabl
         navigationController?.navigationBar.setBackgroundImage(nil, for: .default)
         navigationController?.navigationBar.shadowImage =  nil
         UIApplication.shared.statusBarView?.backgroundColor = nil
+        
+        //# pragma - Badge count
+        self.navigationController?.tabBarItem.badgeValue = nil
+        self.badgeCount = 0
+        print(self.thisNotifications.count)
+        for  i in (0..<self.thisNotifications.count)
+        {
+            
+            if (self.thisNotifications[i].getDidRead())
+            {
+                
+            }
+            else{
+                self.badgeCount += 1
+            }
+            
+            if (self.badgeCount > 0)
+            {
+                self.navigationController?.tabBarItem.badgeValue = String(self.badgeCount)
+            }
+            else
+            {
+                self.navigationController?.tabBarItem.badgeValue = nil
+            }
+            
+            
+        }
+
     }
     
     func refresh() {
@@ -115,9 +149,16 @@ class NotificationsViewController: UIViewController, UITableViewDelegate, UITabl
     
     fileprivate func getNotificationByType(pRow : Int) -> TPNotification {
         if thisUISegmentController.index == 0 {
+            
+           // print("Notification:",self.thisNotifications[pRow])
+
             return self.thisNotifications[pRow]
         } else {
+            
+           // print("thisAdminNotifications:",thisAdminNotifications)
+
             return self.thisAdminNotifications[pRow]
+            
         }
         
     }
@@ -138,14 +179,24 @@ class NotificationsViewController: UIViewController, UITableViewDelegate, UITabl
         
         let cell: NotificationTableViewCell = self.thisUINotificationsTV.dequeueReusableCell(withIdentifier: "NotificationTableViewCell", for: indexPath) as! NotificationTableViewCell
         
+        
+        print("date:",Commons.UTCToLocal2(date:bNotification.getDisplayDate()))
+        
         cell.thisUITitle.text = bNotification.getSubject()
         
-        cell.thisUISubTitle.text = bNotification.getDisplayDate()
+        
+        
+        
+        
+        cell.thisUISubTitle.text = Commons.UTCToLocal2(date:bNotification.getDisplayDate())
         
         if bNotification.getDidRead() {
+            
             cell.thisUINotificationImage.image = UIImage(named: "notificationRead")
         } else {
             cell.thisUINotificationImage.image = UIImage(named: "notificationUnread")
+            
+            
         }
         
         if bNotification.hasAttachment() {
@@ -211,6 +262,35 @@ class NotificationsViewController: UIViewController, UITableViewDelegate, UITabl
                 for bNotification in pNotifications {
                     bNotification._didRead = self.didRead(pId: bNotification.getId())
                     self.thisNotifications.append(bNotification)
+                    
+                    //# pragma - Badge count
+                    self.navigationController?.tabBarItem.badgeValue = nil
+                    self.badgeCount = 0
+                    
+                    print(self.thisNotifications.count)
+                    for  i in (0..<self.thisNotifications.count)
+                    {
+                        
+                        if (self.thisNotifications[i].getDidRead())
+                        {
+                            
+                        }
+                        else{
+                            self.badgeCount += 1
+                        }
+                        
+                        if (self.badgeCount > 0)
+                        {
+                            self.navigationController?.tabBarItem.badgeValue = String(self.badgeCount)
+                        }
+                        else
+                        {
+                            self.navigationController?.tabBarItem.badgeValue = nil
+                        }
+                        
+                        
+                    }
+
                 }
                 if self.thisNotifications.count > 0 {
                     if pNotifications.count == 0 {
@@ -266,9 +346,58 @@ class NotificationsViewController: UIViewController, UITableViewDelegate, UITabl
         if sender.index == 0 {
             print("Turning lights on.")
             
+            //# pragma - Badge count
+            self.navigationController?.tabBarItem.badgeValue = nil
+            badgeCount = 0
+            for  i in (0..<self.thisNotifications.count)
+            {
+                if (self.thisNotifications[i].getDidRead())
+                {
+                    
+                }
+                else{
+                    badgeCount += 1
+                }
+                if (badgeCount > 0)
+                {
+                    self.navigationController?.tabBarItem.badgeValue = String(badgeCount)
+                }
+                else
+                {
+                    self.navigationController?.tabBarItem.badgeValue = nil
+                }
+            }
+
+            
         }
         else {
             print("Turning lights off.")
+            
+            //# pragma - Badge count
+            self.navigationController?.tabBarItem.badgeValue = nil
+            badgeCount = 0
+            for i in (0..<self.thisAdminNotifications.count)
+            {
+                if (self.thisAdminNotifications[i].getDidRead())
+                {
+                    
+                }
+                else{
+                    badgeCount += 1
+                }
+                
+                if (badgeCount > 0)
+                {
+                    self.navigationController?.tabBarItem.badgeValue = String(badgeCount)
+                }
+                else
+                {
+                    self.navigationController?.tabBarItem.badgeValue = nil
+                }
+                
+                
+            }
+
             
         }
     }

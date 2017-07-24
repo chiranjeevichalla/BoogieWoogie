@@ -40,6 +40,11 @@ class MobileLoginViewController: UIViewController, updateSelectedCountry, UIText
     override func viewDidLoad() {
         super.viewDidLoad()
 //        self.navigationItem.leftBarButtonItem?.title = "Back"
+        
+        //Looks for single or multiple taps.
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
+         view.addGestureRecognizer(tap)
+        
         self.title = "Mobile Verification"
         Commons.applyCommonBtnRadius(pBtn: thisUISubmitBtn)
         thisSelectedCountry._id = 1
@@ -51,6 +56,12 @@ class MobileLoginViewController: UIViewController, updateSelectedCountry, UIText
         // Do any additional setup after loading the view.
         
         
+    }
+    
+    
+    func dismissKeyboard() {
+        //Causes the view (or one of its embedded text fields) to resign the first responder status.
+        view.endEditing(true)
     }
     
     // MARK: - Actions

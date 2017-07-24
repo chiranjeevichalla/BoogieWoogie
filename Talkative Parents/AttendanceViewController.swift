@@ -16,7 +16,7 @@ class AttendanceViewController: UIViewController, UITableViewDelegate, UITableVi
     
     private var thisAttendanceList : [Attendance] = []
     
-    var thisFIRDBRef : FIRDatabaseReference!
+    var thisFIRDBRef : DatabaseReference!
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
@@ -85,7 +85,10 @@ class AttendanceViewController: UIViewController, UITableViewDelegate, UITableVi
         
         cell.thisUIHeaderLabel.text = self.thisAttendanceList[indexPath.row].getCategory()
         cell.thisUIMessageLabel.text = self.thisAttendanceList[indexPath.row].getMessage()
-        cell.thisUITimeLabel.text = self.thisAttendanceList[indexPath.row].getDate()
+        
+        
+       // cell.thisUITimeLabel.text = self.thisAttendanceList[indexPath.row].getDate()
+        cell.thisUITimeLabel.text = Commons.convertUTCToLocal(pCurrentDate:self.thisAttendanceList[indexPath.row].getDate())
         
         if self.thisAttendanceList[indexPath.row].isPresent() {
             cell.accessoryType = .checkmark

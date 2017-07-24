@@ -135,6 +135,8 @@ class LoginService {
                         Constants.sharedInstance._UserDefaults.setLogginned()
                         AppService.GetProfile(callback: { (result) in
                             
+                            print(bContent)
+                            
                         })
                         callback(true)
                         

@@ -1,12 +1,26 @@
 {
   "images" : [
     {
-      "idiom" : "universal",
-      "filename" : "bgSplash-3.pdf"
+      "idiom" : "iphone",
+      "filename" : "bgSplash.png",
+      "scale" : "1x"
+    },
+    {
+      "idiom" : "iphone",
+      "filename" : "bgSplash@2x.png",
+      "scale" : "2x"
+    },
+    {
+      "idiom" : "iphone",
+      "scale" : "3x"
     }
   ],
   "info" : {
     "version" : 1,
     "author" : "xcode"
+  },
+  "properties" : {
+    "compression-type" : "lossy",
+    "template-rendering-intent" : "original"
   }
 }

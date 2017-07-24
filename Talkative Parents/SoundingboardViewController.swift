@@ -18,6 +18,9 @@ class SoundingboardViewController: UIViewController, UITableViewDelegate, UITabl
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //self.navigationController?.tabBarItem.badgeValue = "3"
+        
         self.navigationItem.title = Constants.sharedInstance._child.getName()
         self.thisUISBTV.emptyDataSetSource = self
         self.thisUISBTV.emptyDataSetDelegate = self
@@ -95,7 +98,7 @@ class SoundingboardViewController: UIViewController, UITableViewDelegate, UITabl
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell : SoundingBoardTableViewCell = tableView.dequeueReusableCell(withIdentifier: "SoundingBoardTableViewCell", for: indexPath) as! SoundingBoardTableViewCell
-        let bMessage =  self.thisMessages[indexPath.row]
+        let bMessage =  self.thisMessages.reversed()[indexPath.row]
         cell.thisUISubjectLabel.text = bMessage.getSubject()
         
         if bMessage.getCommentsCount() == 0 {
@@ -110,7 +113,11 @@ class SoundingboardViewController: UIViewController, UITableViewDelegate, UITabl
             cell.thisUIAttachmentLabel.text = "\(bMessage.getAttachmentCount()) Attachments"
         }
         
-        cell.thisUISubTitleLabel.text = "\(bMessage.getCategoryName()) - \(bMessage.getDate())"
+        cell.thisUISubTitleLabel.text = "\(bMessage.getCategoryName()) - \(Commons.UTCToLocal(date:bMessage.getDate()))"
+        //convertUTCToLocal
+//        print("Date",bMessage.getDate(), Commons.convertUTCToLocal(pCurrentDate:bMessage.getDate()))
+        
+//        Commons.convertUTCToLocal(pCurrentDate:bMessage.getDate())
         
         cell.thisUIDescriptionLabel.text = bMessage.getDescription()
         
@@ -120,7 +127,7 @@ class SoundingboardViewController: UIViewController, UITableViewDelegate, UITabl
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         let bVC = SoundingBoardDetailViewController()
-        bVC.thisSoundingBoard = self.thisMessages[indexPath.row]
+        bVC.thisSoundingBoard = self.thisMessages.reversed()[indexPath.row]
         self.present(bVC, animated: true, completion: nil)
     }
     

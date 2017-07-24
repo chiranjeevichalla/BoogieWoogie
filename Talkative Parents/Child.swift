@@ -17,6 +17,7 @@ class Child : Mappable {
     var _schoolLogo : String?
     var _tag : String?
     var _sectionId : String?
+    var _sectionLookupId : String?
     var _channels : [String]?
     var _picture : String?
     var _relationId : String?
@@ -60,6 +61,7 @@ class Child : Mappable {
         _cityId         <- map ["CityId"]
         _countryId      <- map ["CountryId"]
         _lastName       <- map ["LastName"]
+        _sectionLookupId    <- map["SectionLookupId"]
         
         if _tag != nil {
             let words = Commons.splitString(pString: _tag!, pSplitBy: "-")
@@ -129,7 +131,7 @@ class Child : Mappable {
     }
     
     func getSectionId() -> String {
-        return _sectionId ?? ""
+        return _sectionLookupId ?? ""
     }
     
     func getStandardId() -> String {

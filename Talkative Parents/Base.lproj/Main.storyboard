@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="6CW-cO-vSn">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="6CW-cO-vSn">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -14,7 +14,7 @@
         <!--Notifications View Controller-->
         <scene sceneID="hNz-n2-bh7">
             <objects>
-                <viewController id="9pv-A4-QxB" customClass="NotificationsViewController" customModule="Talkative_Parents" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="9pv-A4-QxB" customClass="NotificationsViewController" customModule="Boogie_Woogie" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Ia1-K6-d13"/>
                         <viewControllerLayoutGuide type="bottom" id="4ug-Mw-9AY"/>
@@ -39,7 +39,7 @@
                                     <constraint firstAttribute="height" constant="62" id="Q0t-K8-QU2"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="u8n-ev-7os" customClass="BetterSegmentedControl" customModule="Talkative_Parents" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="u8n-ev-7os" customClass="BetterSegmentedControl" customModule="Boogie_Woogie" customModuleProvider="target">
                                 <rect key="frame" x="67" y="73" width="240" height="44"/>
                                 <color key="backgroundColor" red="0.96470588239999999" green="0.96470588239999999" blue="0.96470588239999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -92,7 +92,7 @@
         <!--Soundingboard View Controller-->
         <scene sceneID="wg7-f3-ORb">
             <objects>
-                <viewController id="8rJ-Kc-sve" customClass="SoundingboardViewController" customModule="Talkative_Parents" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="8rJ-Kc-sve" customClass="SoundingboardViewController" customModule="Boogie_Woogie" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="L7p-HK-0SC"/>
                         <viewControllerLayoutGuide type="bottom" id="Djb-ko-YwX"/>
@@ -130,7 +130,7 @@
         <!--Help Screen View Controller-->
         <scene sceneID="BEH-iK-Khs">
             <objects>
-                <viewController id="6CW-cO-vSn" customClass="HelpScreenViewController" customModule="Talkative_Parents" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="6CW-cO-vSn" customClass="HelpScreenViewController" customModule="Boogie_Woogie" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="MyV-HQ-gol"/>
                         <viewControllerLayoutGuide type="bottom" id="9xN-mV-oH7"/>
@@ -149,7 +149,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="helpScreenUiCollectionViewCell" id="jWq-6o-lPp" customClass="HelpScreenCollectionViewCell" customModule="Talkative_Parents" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="helpScreenUiCollectionViewCell" id="jWq-6o-lPp" customClass="HelpScreenCollectionViewCell" customModule="Boogie_Woogie" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -201,7 +201,7 @@
                                     <action selector="onTapContinue:" destination="6CW-cO-vSn" eventType="touchUpInside" id="gK7-7B-Ydw"/>
                                 </connections>
                             </button>
-                            <pageControl opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="5" translatesAutoresizingMaskIntoConstraints="NO" id="iKM-vK-hqF" customClass="CustomImagePageControl" customModule="Talkative_Parents" customModuleProvider="target">
+                            <pageControl opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="5" translatesAutoresizingMaskIntoConstraints="NO" id="iKM-vK-hqF" customClass="CustomImagePageControl" customModule="Boogie_Woogie" customModuleProvider="target">
                                 <rect key="frame" x="74" y="491" width="227" height="37"/>
                             </pageControl>
                         </subviews>
@@ -236,7 +236,7 @@
         <!--Eula Agreement View Controller-->
         <scene sceneID="Daw-oP-qNb">
             <objects>
-                <viewController storyboardIdentifier="EulaAgreementPage" id="MZu-Nd-hHh" customClass="EulaAgreementViewController" customModule="Talkative_Parents" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="EulaAgreementPage" id="MZu-Nd-hHh" customClass="EulaAgreementViewController" customModule="Boogie_Woogie" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Zrl-Ba-anv"/>
                         <viewControllerLayoutGuide type="bottom" id="zdp-0r-O4b"/>
@@ -404,7 +404,7 @@ Should you have any questions concerning this Agreement, or if you desire to con
         <!--Dashboard View Controller-->
         <scene sceneID="iwv-4i-KKe">
             <objects>
-                <viewController id="fe5-QV-XCn" customClass="DashboardViewController" customModule="Talkative_Parents" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="fe5-QV-XCn" customClass="DashboardViewController" customModule="Boogie_Woogie" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="aSb-m3-ju8"/>
                         <viewControllerLayoutGuide type="bottom" id="m9Q-fi-5R9"/>
@@ -482,7 +482,7 @@ Should you have any questions concerning this Agreement, or if you desire to con
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
             <objects>
-                <tabBarController storyboardIdentifier="tabBarController1" id="49e-Tb-3d3" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="tabBarController1" id="49e-Tb-3d3" customClass="tabBarController" customModule="Boogie_Woogie" customModuleProvider="target" sceneMemberID="viewController">
                     <nil key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="W28-zg-YXA">
                         <rect key="frame" x="0.0" y="975" width="768" height="49"/>
@@ -541,7 +541,7 @@ Should you have any questions concerning this Agreement, or if you desire to con
         <!--More Tab View Controller-->
         <scene sceneID="25x-Gr-fLt">
             <objects>
-                <viewController id="bqP-MA-NJY" customClass="MoreTabViewController" customModule="Talkative_Parents" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="bqP-MA-NJY" customClass="MoreTabViewController" customModule="Boogie_Woogie" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="v4j-1i-lju"/>
                         <viewControllerLayoutGuide type="bottom" id="Btw-8D-nzp"/>
@@ -599,7 +599,7 @@ Should you have any questions concerning this Agreement, or if you desire to con
         <!--Data Source-->
         <scene sceneID="GNh-9L-8k1">
             <objects>
-                <viewController id="JHs-yv-QFk" customClass="CalendarViewController" customModule="Talkative_Parents" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="JHs-yv-QFk" customClass="CalendarViewController" customModule="Boogie_Woogie" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="0QD-H2-J1H"/>
                         <viewControllerLayoutGuide type="bottom" id="DyH-KT-RUz"/>
@@ -711,7 +711,7 @@ Should you have any questions concerning this Agreement, or if you desire to con
         <scene sceneID="4xa-cD-2me">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="A9O-EK-TOh" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Calendar" image="tabCalendarUnselected" selectedImage="tabCalendarSelected" id="f2H-7z-KOm"/>
+                    <tabBarItem key="tabBarItem" title="Calendar" image="tabCalendarUnselected" id="f2H-7z-KOm"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="FDf-jP-3S7">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -747,8 +747,7 @@ Should you have any questions concerning this Agreement, or if you desire to con
         </scene>
     </scenes>
     <resources>
-        <image name="helpBg1" width="750" height="1334"/>
-        <image name="tabCalendarSelected" width="23" height="25"/>
+        <image name="helpBg1" width="749" height="1332"/>
         <image name="tabCalendarUnselected" width="23" height="25"/>
         <image name="tabMoreSelected" width="25" height="25"/>
         <image name="tabMoreUnselected" width="25" height="25"/>

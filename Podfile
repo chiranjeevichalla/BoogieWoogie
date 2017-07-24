@@ -1,7 +1,7 @@
 # Uncomment the next line to define a global platform for your project
 # platform :ios, '9.0'
 
-target 'Talkative Parents' do
+target 'Boogie Woogie' do
   # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
   use_frameworks!
   pod 'Alamofire', '~> 4.0'
@@ -13,10 +13,10 @@ target 'Talkative Parents' do
   pod 'Eureka'
   pod 'AnimatedCollectionViewLayout'
   pod 'Kingfisher', '~> 3.0'
-#  pod 'SugarRecord/CoreData'
+  #  pod 'SugarRecord/CoreData'
   pod 'KILabel', '1.0.0'
-#  pod 'AMPPreviewController'
-#  pod 'BetterSegmentedControl', '~> 0.8'
+  #  pod 'AMPPreviewController'
+  #  pod 'BetterSegmentedControl', '~> 0.8'
   pod 'DZNEmptyDataSet'
   pod 'CCBottomRefreshControl'
   pod 'Firebase/Core'
@@ -24,15 +24,14 @@ target 'Talkative Parents' do
   pod 'FSCalendar'
   pod 'MRProgress'
   pod 'OneSignal', '>= 2.5.2', '< 3.0'
+  # Pods for Boogie Woogie
 
-  # Pods for Talkative Parents
-
-  target 'Talkative ParentsTests' do
+  target 'Boogie WoogieTests' do
     inherit! :search_paths
     # Pods for testing
   end
 
-  target 'Talkative ParentsUITests' do
+  target 'Boogie WoogieUITests' do
     inherit! :search_paths
     # Pods for testing
   end

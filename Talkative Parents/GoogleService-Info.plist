@@ -7,21 +7,21 @@
 	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
 	<string>ca-app-pub-3940256099942544/4411468910</string>
 	<key>CLIENT_ID</key>
-	<string>1045603562391-hr5h8cqbf1dphjddgmm5kvpa1n374cnv.apps.googleusercontent.com</string>
+	<string>510143851100-ntm3njahj613hpe0rmt2rn6544gl4jem.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.1045603562391-hr5h8cqbf1dphjddgmm5kvpa1n374cnv</string>
+	<string>com.googleusercontent.apps.510143851100-ntm3njahj613hpe0rmt2rn6544gl4jem</string>
 	<key>API_KEY</key>
-	<string>AIzaSyDqpAouDTyj0bSsxZVtQUNxV0DWiwyG4S0</string>
+	<string>AIzaSyA7PC4PI4Qk27gyWpfeE6tIxdSwW6dmwtA</string>
 	<key>GCM_SENDER_ID</key>
-	<string>1045603562391</string>
+	<string>510143851100</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>com.talkativeparents</string>
+	<string>com.tpboogie</string>
 	<key>PROJECT_ID</key>
-	<string>project-3333275275859062414</string>
+	<string>project-7859700869990238889</string>
 	<key>STORAGE_BUCKET</key>
-	<string>project-3333275275859062414.appspot.com</string>
+	<string>project-7859700869990238889.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
 	<true/>
 	<key>IS_ANALYTICS_ENABLED</key>
@@ -33,8 +33,8 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true/>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:1045603562391:ios:c694f326851b9e23</string>
+	<string>1:510143851100:ios:07002c55c862f12e</string>
 	<key>DATABASE_URL</key>
-	<string>https://project-3333275275859062414.firebaseio.com</string>
+	<string>https://project-7859700869990238889.firebaseio.com</string>
 </dict>
 </plist>

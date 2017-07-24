@@ -45,7 +45,7 @@ class Comment : Mappable {
         _role                     <- map["role"]
         
         if _postedDate != nil {
-            _postedDate = Commons.convertUTCToLocal(pCurrentDate: _postedDate!)
+            _postedDate = Commons.UTCToLocal(date: _postedDate!)
         }
     }
     

@@ -1,8 +1,18 @@
 {
   "images" : [
     {
-      "idiom" : "universal",
-      "filename" : "splashWelcome.pdf"
+      "idiom" : "iphone",
+      "filename" : "splashWelcome.png",
+      "scale" : "1x"
+    },
+    {
+      "idiom" : "iphone",
+      "filename" : "splashWelcome@2x.png",
+      "scale" : "2x"
+    },
+    {
+      "idiom" : "iphone",
+      "scale" : "3x"
     }
   ],
   "info" : {
