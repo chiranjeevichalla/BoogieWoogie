@@ -84,6 +84,9 @@ class CalendarViewController: UIViewController {
         }, callback1: { (pEvents, result) in
             self.thisUICalendar.reloadData()
         })
+        
+        print("Evevnt",self.thisCalendarEvents)
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -161,6 +164,9 @@ extension CalendarViewController: UITableViewDelegate, UITableViewDataSource {
         cell.thisUITitleLabel.text = self.thisSelectedCalendarEvents[indexPath.row].getTitle()
         cell.thisUITimeLabel.text = self.thisSelectedCalendarEvents[indexPath.row].getDisplayDate()
         cell.thisUIPinButton.tag = indexPath.row
+        
+//         print("pin or unpin the events",self.thisSelectedCalendarEvents[indexPath.row].getResultDynamic(pData: <#Any?#>, pValue: <#Any#>))
+        
         cell.thisUIPinButton.addTarget(self, action: #selector(self.tapOnPinBtn), for: .touchUpInside)
         return cell
     }

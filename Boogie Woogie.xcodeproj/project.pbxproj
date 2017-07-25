@@ -119,6 +119,7 @@
 		18F58EE71EE2A5F80092B7C2 /* CategorySelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F58EE51EE2A5F80092B7C2 /* CategorySelectionViewController.swift */; };
 		18F58EE81EE2A5F80092B7C2 /* CategorySelectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18F58EE61EE2A5F80092B7C2 /* CategorySelectionViewController.xib */; };
 		2E74F7106A15D229A5F9A6BE /* Pods_Boogie_WoogieTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9F9D0FF4A1D59CA80ACED9B /* Pods_Boogie_WoogieTests.framework */; };
+		584C457D1F2727D000586E5C /* PinButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 584C457C1F2727D000586E5C /* PinButton.swift */; };
 		5875DD9B1F1F29FA0004B1DC /* tabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5875DD9A1F1F29FA0004B1DC /* tabBarController.swift */; };
 		6E91B36D65901A4382092B6A /* Pods_Talkative_ParentsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A55DDBCD178F55B485AC29B /* Pods_Talkative_ParentsTests.framework */; };
 		A3B85D2DBC75B20BBC51F1D1 /* Pods_Boogie_WoogieUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F006149B22C159C25E977A5E /* Pods_Boogie_WoogieUITests.framework */; };
@@ -264,6 +265,7 @@
 		2AD509CD274D6B8A1C439CF9 /* Pods-Talkative ParentsUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Talkative ParentsUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Talkative ParentsUITests/Pods-Talkative ParentsUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		34FB83C7C6BCA64B2D305BAB /* Pods-Talkative Parents.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Talkative Parents.release.xcconfig"; path = "Pods/Target Support Files/Pods-Talkative Parents/Pods-Talkative Parents.release.xcconfig"; sourceTree = "<group>"; };
 		4B8E0B6B42749C64D03BBBDE /* Pods-Talkative ParentsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Talkative ParentsTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Talkative ParentsTests/Pods-Talkative ParentsTests.release.xcconfig"; sourceTree = "<group>"; };
+		584C457C1F2727D000586E5C /* PinButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PinButton.swift; sourceTree = "<group>"; };
 		5875DD9A1F1F29FA0004B1DC /* tabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = tabBarController.swift; sourceTree = "<group>"; };
 		6A819ED0EACF43F78280E979 /* Pods_Talkative_Parents.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Talkative_Parents.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B26D1815220BAF7143AB214 /* Pods_Boogie_Woogie.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Boogie_Woogie.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -336,6 +338,7 @@
 		181E64741EC9CA84007E7C87 /* COMMONS */ = {
 			isa = PBXGroup;
 			children = (
+				584C457C1F2727D000586E5C /* PinButton.swift */,
 				185983C21EE81F89008E6CEC /* GrowingTextView.swift */,
 				187FAC2E1ED6B4F000A9A15E /* BetterSegmentedControl.swift */,
 				181E64811ECAD7F2007E7C87 /* ProgressHUD.swift */,
@@ -1080,6 +1083,7 @@
 				187A21C81F026B120062BA58 /* NoticeBoardContentTableViewCell.swift in Sources */,
 				1862F00E1ECD8E360084F704 /* LoginService.swift in Sources */,
 				18AD626D1EEFBC9D0057B778 /* EventHelper.swift in Sources */,
+				584C457D1F2727D000586E5C /* PinButton.swift in Sources */,
 				181E647A1EC9CB88007E7C87 /* CommonService.swift in Sources */,
 				5875DD9B1F1F29FA0004B1DC /* tabBarController.swift in Sources */,
 				181E64781EC9CB7D007E7C87 /* Commons.swift in Sources */,
